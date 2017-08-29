@@ -1,0 +1,14 @@
+package org.xtext.example.siddhi.ui.syntaxhighlighting;
+
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfigurationAcceptor;
+
+public class SiddhiHighlightingConfiguration implements IHighlightingConfiguration {
+
+	@Override
+	public void configure(IHighlightingConfigurationAcceptor acceptor) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

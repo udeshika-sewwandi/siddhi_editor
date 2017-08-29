@@ -1,0 +1,5 @@
+package org.xtext.example.siddhi.ui.syntaxhighlighting;
+
+public class SiddhiQLAntlrTokenToAttributeMapper {
+
+}

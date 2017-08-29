@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="org.xtext.example.siddhi.feature" version="0.0.0">
+		<category name="main"/>
+	</feature>
+	<feature id="org.xtext.example.siddhi.feature.source" version="0.0.0">
+		<category name="main.source"/>
+	</feature>
+	<category-def name="main" label="Siddhi"/>
+	<category-def name="main.source" label="Siddhi (Sources)"/>
+</site>
