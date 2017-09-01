@@ -19,12 +19,14 @@ import org.xtext.example.siddhi.siddhi.JoinSource;
 import org.xtext.example.siddhi.siddhi.JoinStream;
 import org.xtext.example.siddhi.siddhi.MainSource;
 import org.xtext.example.siddhi.siddhi.ON;
+import org.xtext.example.siddhi.siddhi.Per1;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 import org.xtext.example.siddhi.siddhi.Source;
 import org.xtext.example.siddhi.siddhi.StandardStream;
 import org.xtext.example.siddhi.siddhi.StreamAlias;
 import org.xtext.example.siddhi.siddhi.UNIDIRECTIONAL;
-import org.xtext.example.siddhi.siddhi.WithinTime;
+import org.xtext.example.siddhi.siddhi.Win;
+import org.xtext.example.siddhi.siddhi.WithinTimeRange;
 import org.xtext.example.siddhi.siddhi.joins;
 
 /**
@@ -40,9 +42,11 @@ import org.xtext.example.siddhi.siddhi.joins;
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getRight_uni <em>Right uni</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getOn <em>On</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getExpr <em>Expr</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getWt <em>Wt</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getWtr <em>Wtr</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getP <em>P</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getJoin <em>Join</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getLeft_uni <em>Left uni</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getWindow <em>Window</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getA <em>A</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getStrAlias <em>Str Alias</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl#getPostWindowHandlers <em>Post Window Handlers</em>}</li>
@@ -105,14 +109,24 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
   protected Expression expr;
 
   /**
-   * The cached value of the '{@link #getWt() <em>Wt</em>}' containment reference.
+   * The cached value of the '{@link #getWtr() <em>Wtr</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getWt()
+   * @see #getWtr()
    * @generated
    * @ordered
    */
-  protected WithinTime wt;
+  protected WithinTimeRange wtr;
+
+  /**
+   * The cached value of the '{@link #getP() <em>P</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getP()
+   * @generated
+   * @ordered
+   */
+  protected Per1 p;
 
   /**
    * The cached value of the '{@link #getJoin() <em>Join</em>}' containment reference.
@@ -133,6 +147,16 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
    * @ordered
    */
   protected UNIDIRECTIONAL left_uni;
+
+  /**
+   * The cached value of the '{@link #getWindow() <em>Window</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getWindow()
+   * @generated
+   * @ordered
+   */
+  protected Win window;
 
   /**
    * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
@@ -450,9 +474,9 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
    * <!-- end-user-doc -->
    * @generated
    */
-  public WithinTime getWt()
+  public WithinTimeRange getWtr()
   {
-    return wt;
+    return wtr;
   }
 
   /**
@@ -460,13 +484,13 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetWt(WithinTime newWt, NotificationChain msgs)
+  public NotificationChain basicSetWtr(WithinTimeRange newWtr, NotificationChain msgs)
   {
-    WithinTime oldWt = wt;
-    wt = newWt;
+    WithinTimeRange oldWtr = wtr;
+    wtr = newWtr;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WT, oldWt, newWt);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WTR, oldWtr, newWtr);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -477,20 +501,68 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setWt(WithinTime newWt)
+  public void setWtr(WithinTimeRange newWtr)
   {
-    if (newWt != wt)
+    if (newWtr != wtr)
     {
       NotificationChain msgs = null;
-      if (wt != null)
-        msgs = ((InternalEObject)wt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WT, null, msgs);
-      if (newWt != null)
-        msgs = ((InternalEObject)newWt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WT, null, msgs);
-      msgs = basicSetWt(newWt, msgs);
+      if (wtr != null)
+        msgs = ((InternalEObject)wtr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WTR, null, msgs);
+      if (newWtr != null)
+        msgs = ((InternalEObject)newWtr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WTR, null, msgs);
+      msgs = basicSetWtr(newWtr, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WT, newWt, newWt));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WTR, newWtr, newWtr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Per1 getP()
+  {
+    return p;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetP(Per1 newP, NotificationChain msgs)
+  {
+    Per1 oldP = p;
+    p = newP;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__P, oldP, newP);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setP(Per1 newP)
+  {
+    if (newP != p)
+    {
+      NotificationChain msgs = null;
+      if (p != null)
+        msgs = ((InternalEObject)p).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__P, null, msgs);
+      if (newP != null)
+        msgs = ((InternalEObject)newP).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__P, null, msgs);
+      msgs = basicSetP(newP, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__P, newP, newP));
   }
 
   /**
@@ -587,6 +659,54 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__LEFT_UNI, newLeft_uni, newLeft_uni));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Win getWindow()
+  {
+    return window;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetWindow(Win newWindow, NotificationChain msgs)
+  {
+    Win oldWindow = window;
+    window = newWindow;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WINDOW, oldWindow, newWindow);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setWindow(Win newWindow)
+  {
+    if (newWindow != window)
+    {
+      NotificationChain msgs = null;
+      if (window != null)
+        msgs = ((InternalEObject)window).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WINDOW, null, msgs);
+      if (newWindow != null)
+        msgs = ((InternalEObject)newWindow).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MAIN_SOURCE__WINDOW, null, msgs);
+      msgs = basicSetWindow(newWindow, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MAIN_SOURCE__WINDOW, newWindow, newWindow));
   }
 
   /**
@@ -849,12 +969,16 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
         return basicSetOn(null, msgs);
       case SiddhiPackage.MAIN_SOURCE__EXPR:
         return basicSetExpr(null, msgs);
-      case SiddhiPackage.MAIN_SOURCE__WT:
-        return basicSetWt(null, msgs);
+      case SiddhiPackage.MAIN_SOURCE__WTR:
+        return basicSetWtr(null, msgs);
+      case SiddhiPackage.MAIN_SOURCE__P:
+        return basicSetP(null, msgs);
       case SiddhiPackage.MAIN_SOURCE__JOIN:
         return basicSetJoin(null, msgs);
       case SiddhiPackage.MAIN_SOURCE__LEFT_UNI:
         return basicSetLeft_uni(null, msgs);
+      case SiddhiPackage.MAIN_SOURCE__WINDOW:
+        return basicSetWindow(null, msgs);
       case SiddhiPackage.MAIN_SOURCE__A:
         return basicSetA(null, msgs);
       case SiddhiPackage.MAIN_SOURCE__STR_ALIAS:
@@ -889,12 +1013,16 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
         return getOn();
       case SiddhiPackage.MAIN_SOURCE__EXPR:
         return getExpr();
-      case SiddhiPackage.MAIN_SOURCE__WT:
-        return getWt();
+      case SiddhiPackage.MAIN_SOURCE__WTR:
+        return getWtr();
+      case SiddhiPackage.MAIN_SOURCE__P:
+        return getP();
       case SiddhiPackage.MAIN_SOURCE__JOIN:
         return getJoin();
       case SiddhiPackage.MAIN_SOURCE__LEFT_UNI:
         return getLeft_uni();
+      case SiddhiPackage.MAIN_SOURCE__WINDOW:
+        return getWindow();
       case SiddhiPackage.MAIN_SOURCE__A:
         return getA();
       case SiddhiPackage.MAIN_SOURCE__STR_ALIAS:
@@ -934,14 +1062,20 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
       case SiddhiPackage.MAIN_SOURCE__EXPR:
         setExpr((Expression)newValue);
         return;
-      case SiddhiPackage.MAIN_SOURCE__WT:
-        setWt((WithinTime)newValue);
+      case SiddhiPackage.MAIN_SOURCE__WTR:
+        setWtr((WithinTimeRange)newValue);
+        return;
+      case SiddhiPackage.MAIN_SOURCE__P:
+        setP((Per1)newValue);
         return;
       case SiddhiPackage.MAIN_SOURCE__JOIN:
         setJoin((joins)newValue);
         return;
       case SiddhiPackage.MAIN_SOURCE__LEFT_UNI:
         setLeft_uni((UNIDIRECTIONAL)newValue);
+        return;
+      case SiddhiPackage.MAIN_SOURCE__WINDOW:
+        setWindow((Win)newValue);
         return;
       case SiddhiPackage.MAIN_SOURCE__A:
         setA((AS)newValue);
@@ -987,14 +1121,20 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
       case SiddhiPackage.MAIN_SOURCE__EXPR:
         setExpr((Expression)null);
         return;
-      case SiddhiPackage.MAIN_SOURCE__WT:
-        setWt((WithinTime)null);
+      case SiddhiPackage.MAIN_SOURCE__WTR:
+        setWtr((WithinTimeRange)null);
+        return;
+      case SiddhiPackage.MAIN_SOURCE__P:
+        setP((Per1)null);
         return;
       case SiddhiPackage.MAIN_SOURCE__JOIN:
         setJoin((joins)null);
         return;
       case SiddhiPackage.MAIN_SOURCE__LEFT_UNI:
         setLeft_uni((UNIDIRECTIONAL)null);
+        return;
+      case SiddhiPackage.MAIN_SOURCE__WINDOW:
+        setWindow((Win)null);
         return;
       case SiddhiPackage.MAIN_SOURCE__A:
         setA((AS)null);
@@ -1035,12 +1175,16 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
         return on != null;
       case SiddhiPackage.MAIN_SOURCE__EXPR:
         return expr != null;
-      case SiddhiPackage.MAIN_SOURCE__WT:
-        return wt != null;
+      case SiddhiPackage.MAIN_SOURCE__WTR:
+        return wtr != null;
+      case SiddhiPackage.MAIN_SOURCE__P:
+        return p != null;
       case SiddhiPackage.MAIN_SOURCE__JOIN:
         return join != null;
       case SiddhiPackage.MAIN_SOURCE__LEFT_UNI:
         return left_uni != null;
+      case SiddhiPackage.MAIN_SOURCE__WINDOW:
+        return window != null;
       case SiddhiPackage.MAIN_SOURCE__A:
         return a != null;
       case SiddhiPackage.MAIN_SOURCE__STR_ALIAS:
@@ -1072,7 +1216,8 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
         case SiddhiPackage.MAIN_SOURCE__RIGHT_UNI: return SiddhiPackage.JOIN_STREAM__RIGHT_UNI;
         case SiddhiPackage.MAIN_SOURCE__ON: return SiddhiPackage.JOIN_STREAM__ON;
         case SiddhiPackage.MAIN_SOURCE__EXPR: return SiddhiPackage.JOIN_STREAM__EXPR;
-        case SiddhiPackage.MAIN_SOURCE__WT: return SiddhiPackage.JOIN_STREAM__WT;
+        case SiddhiPackage.MAIN_SOURCE__WTR: return SiddhiPackage.JOIN_STREAM__WTR;
+        case SiddhiPackage.MAIN_SOURCE__P: return SiddhiPackage.JOIN_STREAM__P;
         case SiddhiPackage.MAIN_SOURCE__JOIN: return SiddhiPackage.JOIN_STREAM__JOIN;
         case SiddhiPackage.MAIN_SOURCE__LEFT_UNI: return SiddhiPackage.JOIN_STREAM__LEFT_UNI;
         default: return -1;
@@ -1105,7 +1250,8 @@ public class MainSourceImpl extends JoinSourceImpl implements MainSource
         case SiddhiPackage.JOIN_STREAM__RIGHT_UNI: return SiddhiPackage.MAIN_SOURCE__RIGHT_UNI;
         case SiddhiPackage.JOIN_STREAM__ON: return SiddhiPackage.MAIN_SOURCE__ON;
         case SiddhiPackage.JOIN_STREAM__EXPR: return SiddhiPackage.MAIN_SOURCE__EXPR;
-        case SiddhiPackage.JOIN_STREAM__WT: return SiddhiPackage.MAIN_SOURCE__WT;
+        case SiddhiPackage.JOIN_STREAM__WTR: return SiddhiPackage.MAIN_SOURCE__WTR;
+        case SiddhiPackage.JOIN_STREAM__P: return SiddhiPackage.MAIN_SOURCE__P;
         case SiddhiPackage.JOIN_STREAM__JOIN: return SiddhiPackage.MAIN_SOURCE__JOIN;
         case SiddhiPackage.JOIN_STREAM__LEFT_UNI: return SiddhiPackage.MAIN_SOURCE__LEFT_UNI;
         default: return -1;

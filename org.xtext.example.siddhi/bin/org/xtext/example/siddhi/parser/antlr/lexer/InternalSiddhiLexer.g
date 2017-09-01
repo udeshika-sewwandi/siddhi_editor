@@ -239,13 +239,11 @@ RULE_SCRIPT : '{' RULE_SCRIPT_ATOM* '}';
 
 fragment RULE_SCRIPT_ATOM : (~(('{'|'}'))|'"' ~('"')* '"'|'//' ~(('\r'|'\n'))*|RULE_SCRIPT);
 
-RULE_ID_QUOTES : '`' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`';
-
 RULE_ID : '`'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`'?;
 
 RULE_INT : '0'..'9';
 
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
+RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/ ';
 
 RULE_SL_COMMENT : '--' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
@@ -253,4 +251,4 @@ RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
 RULE_ANY_OTHER : .;
 
-RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\''|'"""' .* '"""');

@@ -20,7 +20,7 @@ package org.xtext.example.siddhi.siddhi;
  * @model
  * @generated
  */
-public interface NotOperation extends MathOperation
+public interface NotOperation extends MathOtherOperations
 {
   /**
    * Returns the value of the '<em><b>Not</b></em>' containment reference.

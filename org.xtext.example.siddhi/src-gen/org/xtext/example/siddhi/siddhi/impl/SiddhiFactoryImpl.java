@@ -75,7 +75,7 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
       case SiddhiPackage.DEFINITION_FUNCTION: return createDefinitionFunction();
       case SiddhiPackage.DEFINITION_AGGREGATION: return createDefinitionAggregation();
       case SiddhiPackage.AGGREGATION_TIME: return createAggregationTime();
-      case SiddhiPackage.AGGREGATION_TIME_INTERVAL: return createaggregation_time_interval();
+      case SiddhiPackage.AGGREGATION_TIME_INTERVAL: return createAggregationTimeInterval();
       case SiddhiPackage.AGGREGATION_TIME_DURATION: return createAggregationTimeDuration();
       case SiddhiPackage.AGGREGATION_TIME_RANGE: return createAggregationTimeRange();
       case SiddhiPackage.FUNCTION_NAME: return createFunctionName();
@@ -90,35 +90,27 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
       case SiddhiPackage.PROPERTY_SEPARATOR: return createPropertySeparator();
       case SiddhiPackage.FEATURES: return createFeatures();
       case SiddhiPackage.ATTRIBUTE_TYPE: return createAttributeType();
+      case SiddhiPackage.SOURCE: return createSource();
+      case SiddhiPackage.SOURCE1: return createSource1();
       case SiddhiPackage.EXEC_PARTITION: return createExecPartition();
       case SiddhiPackage.PARTITION_WITH_STREAM: return createPartitionWithStream();
       case SiddhiPackage.CONDITION_RANGES: return createConditionRanges();
       case SiddhiPackage.CONDITION_RANGE: return createConditionRange();
       case SiddhiPackage.QUERY: return createQuery();
+      case SiddhiPackage.QUERY_OUTPUT: return createQueryOutput();
+      case SiddhiPackage.TARGET: return createTarget();
+      case SiddhiPackage.SET_CLAUSE: return createSetClause();
+      case SiddhiPackage.SET_ASSIGNMENT: return createSetAssignment();
+      case SiddhiPackage.OUTPUT_EVENT_TYPE: return createOutputEventType();
+      case SiddhiPackage.OUTPUT_RATE: return createOutputRate();
+      case SiddhiPackage.OUTPUT_RATE_TYPE: return createOutputRateType();
+      case SiddhiPackage.GROUP_BY_QUERY_SELECTION: return createGroupByQuerySelection();
+      case SiddhiPackage.QUERY_SECTION: return createQuerySection();
+      case SiddhiPackage.GROUP_BY: return createGroupBy();
+      case SiddhiPackage.HAVING_EXPR: return createHavingExpr();
+      case SiddhiPackage.OUTPUT_ATTRIBUTE: return createOutputAttribute();
+      case SiddhiPackage.OUT_ATTR: return createOutAttr();
       case SiddhiPackage.QUERY_INPUT: return createQueryInput();
-      case SiddhiPackage.JOIN_STREAM: return createJoinStream();
-      case SiddhiPackage.WITHIN_TIME_RANGE: return createWithinTimeRange();
-      case SiddhiPackage.PER1: return createPer1();
-      case SiddhiPackage.JOIN_SOURCE: return createJoinSource();
-      case SiddhiPackage.STREAM_ALIAS: return createStreamAlias();
-      case SiddhiPackage.JOINS: return createjoins();
-      case SiddhiPackage.STANDARD_STREAM: return createStandardStream();
-      case SiddhiPackage.MAIN_SOURCE: return createMainSource();
-      case SiddhiPackage.PATTERN_STREAM: return createPatternStream();
-      case SiddhiPackage.EVERY_PATTERN_SOURCE_CHAIN: return createEveryPatternSourceChain();
-      case SiddhiPackage.PATTERN_SOURCE_CHAIN: return createPatternSourceChain();
-      case SiddhiPackage.PATTERN_SOURCE: return createPatternSource();
-      case SiddhiPackage.LOGICAL_STATEFUL_SOURCE: return createLogicalStatefulSource();
-      case SiddhiPackage.PATTERN_COLLECTION_STATEFUL_SOURCE: return createPatternCollectionStatefulSource();
-      case SiddhiPackage.COLLECT: return createCollect();
-      case SiddhiPackage.WITHIN_TIME: return createWithinTime();
-      case SiddhiPackage.LOGICAL_ABSENT_STATEFUL_SOURCE: return createLogicalAbsentStatefulSource();
-      case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN: return createAbsentPatternSourceChain();
-      case SiddhiPackage.EVERY_ABSENT_PATTERN_SOURCE: return createEveryAbsentPatternSource();
-      case SiddhiPackage.BASIC_ABSENT_PATTERN_SOURCE: return createBasicAbsentPatternSource();
-      case SiddhiPackage.FOR_TIME: return createForTime();
-      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE: return createLeftAbsentPatternSource();
-      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE: return createRightAbsentPatternSource();
       case SiddhiPackage.SEQUENCE_STREAM: return createSequenceStream();
       case SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN: return createEverySequenceSourceChain();
       case SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN: return createEveryAbsentSequenceSourceChain();
@@ -129,12 +121,29 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
       case SiddhiPackage.SEQUENCE_SOURCE: return createSequenceSource();
       case SiddhiPackage.SEQUENCE_COLLECTION_STATEFUL_SOURCE: return createSequenceCollectionStatefulSource();
       case SiddhiPackage.ANONYMOUS_STREAM: return createAnonymousStream();
-      case SiddhiPackage.OUTPUT_RATE: return createOutputRate();
-      case SiddhiPackage.OUTPUT_RATE_TYPE: return createOutputRateType();
-      case SiddhiPackage.QUERY_OUTPUT: return createQueryOutput();
-      case SiddhiPackage.SET_CLAUSE: return createSetClause();
-      case SiddhiPackage.SET_ASSIGNMENT: return createSetAssignment();
-      case SiddhiPackage.OUTPUT_EVENT_TYPE: return createOutputEventType();
+      case SiddhiPackage.PATTERN_STREAM: return createPatternStream();
+      case SiddhiPackage.EVERY_PATTERN_SOURCE_CHAIN: return createEveryPatternSourceChain();
+      case SiddhiPackage.PATTERN_SOURCE_CHAIN: return createPatternSourceChain();
+      case SiddhiPackage.PATTERN_SOURCE: return createPatternSource();
+      case SiddhiPackage.LOGICAL_STATEFUL_SOURCE: return createLogicalStatefulSource();
+      case SiddhiPackage.PATTERN_COLLECTION_STATEFUL_SOURCE: return createPatternCollectionStatefulSource();
+      case SiddhiPackage.COLLECT: return createCollect();
+      case SiddhiPackage.LOGICAL_ABSENT_STATEFUL_SOURCE: return createLogicalAbsentStatefulSource();
+      case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN: return createAbsentPatternSourceChain();
+      case SiddhiPackage.EVERY_ABSENT_PATTERN_SOURCE: return createEveryAbsentPatternSource();
+      case SiddhiPackage.BASIC_ABSENT_PATTERN_SOURCE: return createBasicAbsentPatternSource();
+      case SiddhiPackage.FOR_TIME: return createForTime();
+      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE: return createLeftAbsentPatternSource();
+      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE: return createRightAbsentPatternSource();
+      case SiddhiPackage.JOIN_STREAM: return createJoinStream();
+      case SiddhiPackage.WITHIN_TIME_RANGE: return createWithinTimeRange();
+      case SiddhiPackage.PER1: return createPer1();
+      case SiddhiPackage.JOIN_SOURCE: return createJoinSource();
+      case SiddhiPackage.STREAM_ALIAS: return createStreamAlias();
+      case SiddhiPackage.WITHIN_TIME: return createWithinTime();
+      case SiddhiPackage.JOINS: return createjoins();
+      case SiddhiPackage.STANDARD_STREAM: return createStandardStream();
+      case SiddhiPackage.MAIN_SOURCE: return createMainSource();
       case SiddhiPackage.BASIC_SOURCE_STREAM_HANDLERS: return createBasicSourceStreamHandlers();
       case SiddhiPackage.BASIC_SOURCE_STREAM_HANDLERS1: return createBasicSourceStreamHandlers1();
       case SiddhiPackage.BASIC_SOURCE_STREAM_HANDLER: return createBasicSourceStreamHandler();
@@ -142,34 +151,29 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
       case SiddhiPackage.STREAM_FUNCTION: return createStreamFunction();
       case SiddhiPackage.WIN: return createWin();
       case SiddhiPackage.EXPRESSION: return createExpression();
+      case SiddhiPackage.MATH_OPERATION: return createMathOperation();
+      case SiddhiPackage.MATH_ADDSUB_OPERATION: return createMathAddsubOperation();
+      case SiddhiPackage.MATH_DIVMUL_OPERATION: return createMathDivmulOperation();
+      case SiddhiPackage.MATH_OTHER_OPERATIONS: return createMathOtherOperations();
+      case SiddhiPackage.NULL_CHECK: return createNullCheck();
+      case SiddhiPackage.STREAM_REFERENCE: return createStreamReference();
+      case SiddhiPackage.LITERAL: return createLiteral();
+      case SiddhiPackage.ATTRIBUTE_REFERENCE: return createAttributeReference();
+      case SiddhiPackage.FEATURES_OR_OUT_ATTR: return createFeaturesOrOutAttr();
+      case SiddhiPackage.FEATURES_OR_OUT_ATTR_REFERENCE: return createFeaturesOrOutAttrReference();
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE: return createStandardStatefulSource();
+      case SiddhiPackage.BASIC_SOURCE: return createBasicSource();
+      case SiddhiPackage.SOURCE1_OR_STANDARD_STATEFUL_SOURCE: return createSource1OrStandardStatefulSource();
+      case SiddhiPackage.SOURCE_OR_EVENT_REFERENCE: return createSourceOrEventReference();
+      case SiddhiPackage.ATTRIBUTE_NAME_REFERENCE: return createAttributeNameReference();
+      case SiddhiPackage.ATTRIBUTE_INDEX: return createAttributeIndex();
+      case SiddhiPackage.CONSTANT_VALUE: return createConstantValue();
       case SiddhiPackage.FUNCTION_OPERATION: return createFunctionOperation();
       case SiddhiPackage.FUNCTION_NAMESPACE: return createFunctionNamespace();
       case SiddhiPackage.FUNCTION_ID: return createFunctionId();
       case SiddhiPackage.ATTRIBUTE_LIST: return createAttributeList();
       case SiddhiPackage.ATTRIBUTE: return createAttribute();
-      case SiddhiPackage.GROUP_BY_QUERY_SELECTION: return createGroupByQuerySelection();
-      case SiddhiPackage.QUERY_SECTION: return createQuerySection();
-      case SiddhiPackage.OUTPUT_ATTRIBUTE: return createOutputAttribute();
-      case SiddhiPackage.OUT_ATTR: return createOutAttr();
-      case SiddhiPackage.GROUP_BY: return createGroupBy();
-      case SiddhiPackage.HAVING_EXPR: return createHavingExpr();
-      case SiddhiPackage.MATH_OPERATION: return createMathOperation();
-      case SiddhiPackage.NULL_CHECK: return createNullCheck();
-      case SiddhiPackage.STREAM_REFERENCE: return createStreamReference();
-      case SiddhiPackage.MATH_OTHER_OPERATIONS1: return createMathOtherOperations1();
-      case SiddhiPackage.ATTRIBUTE_REFERENCE: return createAttributeReference();
-      case SiddhiPackage.ATTRIBUTE_NAME_REFERENCE: return createAttributeNameReference();
-      case SiddhiPackage.ATTRIBUTE_INDEX: return createAttributeIndex();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE: return createStandardStatefulSource();
-      case SiddhiPackage.SOURCE1_OR_STANDARD_STATEFUL_SOURCE: return createSource1OrStandardStatefulSource();
-      case SiddhiPackage.SOURCE_OR_EVENT_REFERENCE: return createSourceOrEventReference();
-      case SiddhiPackage.BASIC_SOURCE: return createBasicSource();
-      case SiddhiPackage.FEATURES_OR_OUT_ATTR: return createFeaturesOrOutAttr();
-      case SiddhiPackage.FEATURES_OR_OUT_ATTR_REFERENCE: return createFeaturesOrOutAttrReference();
-      case SiddhiPackage.CONSTANT_VALUE: return createConstantValue();
       case SiddhiPackage.NAME: return createName();
-      case SiddhiPackage.SOURCE: return createSource();
-      case SiddhiPackage.SOURCE1: return createSource1();
       case SiddhiPackage.BOOL_VALUE: return createBoolValue();
       case SiddhiPackage.SIGNED_DOUBLE_VALUE: return createSignedDoubleValue();
       case SiddhiPackage.SIGNED_FLOAT_VALUE: return createSignedFloatValue();
@@ -264,16 +268,14 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
       case SiddhiPackage.MILLISECONDS: return createMILLISECONDS();
       case SiddhiPackage.FALSE: return createFALSE();
       case SiddhiPackage.TRUE: return createTRUE();
-      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE1: return createLeftAbsentPatternSource1();
-      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE1: return createRightAbsentPatternSource1();
       case SiddhiPackage.LEFT_ABSENT_SEQUENCE_SOURCE1: return createLeftAbsentSequenceSource1();
       case SiddhiPackage.RIGHT_ABSENT_SEQUENCE_SOURCE1: return createRightAbsentSequenceSource1();
+      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE1: return createLeftAbsentPatternSource1();
+      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE1: return createRightAbsentPatternSource1();
       case SiddhiPackage.MATH_LOGICAL_OPERATION: return createMathLogicalOperation();
       case SiddhiPackage.MATH_IN_OPERATION: return createMathInOperation();
       case SiddhiPackage.MATH_GT_LT_OPERATION: return createMathGtLtOperation();
       case SiddhiPackage.MATH_EQUAL_OPERATION: return createMathEqualOperation();
-      case SiddhiPackage.MATH_ADDSUB_OPERATION: return createMathAddsubOperation();
-      case SiddhiPackage.MATH_DIVMUL_OPERATION: return createMathDivmulOperation();
       case SiddhiPackage.NOT_OPERATION: return createNotOperation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -395,10 +397,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public aggregation_time_interval createaggregation_time_interval()
+  public AggregationTimeInterval createAggregationTimeInterval()
   {
-    aggregation_time_intervalImpl aggregation_time_interval = new aggregation_time_intervalImpl();
-    return aggregation_time_interval;
+    AggregationTimeIntervalImpl aggregationTimeInterval = new AggregationTimeIntervalImpl();
+    return aggregationTimeInterval;
   }
 
   /**
@@ -560,6 +562,28 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Source createSource()
+  {
+    SourceImpl source = new SourceImpl();
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Source1 createSource1()
+  {
+    Source1Impl source1 = new Source1Impl();
+    return source1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ExecPartition createExecPartition()
   {
     ExecPartitionImpl execPartition = new ExecPartitionImpl();
@@ -615,263 +639,153 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public QueryOutput createQueryOutput()
+  {
+    QueryOutputImpl queryOutput = new QueryOutputImpl();
+    return queryOutput;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Target createTarget()
+  {
+    TargetImpl target = new TargetImpl();
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SetClause createSetClause()
+  {
+    SetClauseImpl setClause = new SetClauseImpl();
+    return setClause;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SetAssignment createSetAssignment()
+  {
+    SetAssignmentImpl setAssignment = new SetAssignmentImpl();
+    return setAssignment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutputEventType createOutputEventType()
+  {
+    OutputEventTypeImpl outputEventType = new OutputEventTypeImpl();
+    return outputEventType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutputRate createOutputRate()
+  {
+    OutputRateImpl outputRate = new OutputRateImpl();
+    return outputRate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutputRateType createOutputRateType()
+  {
+    OutputRateTypeImpl outputRateType = new OutputRateTypeImpl();
+    return outputRateType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroupByQuerySelection createGroupByQuerySelection()
+  {
+    GroupByQuerySelectionImpl groupByQuerySelection = new GroupByQuerySelectionImpl();
+    return groupByQuerySelection;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QuerySection createQuerySection()
+  {
+    QuerySectionImpl querySection = new QuerySectionImpl();
+    return querySection;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroupBy createGroupBy()
+  {
+    GroupByImpl groupBy = new GroupByImpl();
+    return groupBy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HavingExpr createHavingExpr()
+  {
+    HavingExprImpl havingExpr = new HavingExprImpl();
+    return havingExpr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutputAttribute createOutputAttribute()
+  {
+    OutputAttributeImpl outputAttribute = new OutputAttributeImpl();
+    return outputAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutAttr createOutAttr()
+  {
+    OutAttrImpl outAttr = new OutAttrImpl();
+    return outAttr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public QueryInput createQueryInput()
   {
     QueryInputImpl queryInput = new QueryInputImpl();
     return queryInput;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public JoinStream createJoinStream()
-  {
-    JoinStreamImpl joinStream = new JoinStreamImpl();
-    return joinStream;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public WithinTimeRange createWithinTimeRange()
-  {
-    WithinTimeRangeImpl withinTimeRange = new WithinTimeRangeImpl();
-    return withinTimeRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Per1 createPer1()
-  {
-    Per1Impl per1 = new Per1Impl();
-    return per1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public JoinSource createJoinSource()
-  {
-    JoinSourceImpl joinSource = new JoinSourceImpl();
-    return joinSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StreamAlias createStreamAlias()
-  {
-    StreamAliasImpl streamAlias = new StreamAliasImpl();
-    return streamAlias;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public joins createjoins()
-  {
-    joinsImpl joins = new joinsImpl();
-    return joins;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StandardStream createStandardStream()
-  {
-    StandardStreamImpl standardStream = new StandardStreamImpl();
-    return standardStream;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MainSource createMainSource()
-  {
-    MainSourceImpl mainSource = new MainSourceImpl();
-    return mainSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PatternStream createPatternStream()
-  {
-    PatternStreamImpl patternStream = new PatternStreamImpl();
-    return patternStream;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EveryPatternSourceChain createEveryPatternSourceChain()
-  {
-    EveryPatternSourceChainImpl everyPatternSourceChain = new EveryPatternSourceChainImpl();
-    return everyPatternSourceChain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PatternSourceChain createPatternSourceChain()
-  {
-    PatternSourceChainImpl patternSourceChain = new PatternSourceChainImpl();
-    return patternSourceChain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PatternSource createPatternSource()
-  {
-    PatternSourceImpl patternSource = new PatternSourceImpl();
-    return patternSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LogicalStatefulSource createLogicalStatefulSource()
-  {
-    LogicalStatefulSourceImpl logicalStatefulSource = new LogicalStatefulSourceImpl();
-    return logicalStatefulSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PatternCollectionStatefulSource createPatternCollectionStatefulSource()
-  {
-    PatternCollectionStatefulSourceImpl patternCollectionStatefulSource = new PatternCollectionStatefulSourceImpl();
-    return patternCollectionStatefulSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Collect createCollect()
-  {
-    CollectImpl collect = new CollectImpl();
-    return collect;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public WithinTime createWithinTime()
-  {
-    WithinTimeImpl withinTime = new WithinTimeImpl();
-    return withinTime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LogicalAbsentStatefulSource createLogicalAbsentStatefulSource()
-  {
-    LogicalAbsentStatefulSourceImpl logicalAbsentStatefulSource = new LogicalAbsentStatefulSourceImpl();
-    return logicalAbsentStatefulSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AbsentPatternSourceChain createAbsentPatternSourceChain()
-  {
-    AbsentPatternSourceChainImpl absentPatternSourceChain = new AbsentPatternSourceChainImpl();
-    return absentPatternSourceChain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EveryAbsentPatternSource createEveryAbsentPatternSource()
-  {
-    EveryAbsentPatternSourceImpl everyAbsentPatternSource = new EveryAbsentPatternSourceImpl();
-    return everyAbsentPatternSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BasicAbsentPatternSource createBasicAbsentPatternSource()
-  {
-    BasicAbsentPatternSourceImpl basicAbsentPatternSource = new BasicAbsentPatternSourceImpl();
-    return basicAbsentPatternSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ForTime createForTime()
-  {
-    ForTimeImpl forTime = new ForTimeImpl();
-    return forTime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LeftAbsentPatternSource createLeftAbsentPatternSource()
-  {
-    LeftAbsentPatternSourceImpl leftAbsentPatternSource = new LeftAbsentPatternSourceImpl();
-    return leftAbsentPatternSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RightAbsentPatternSource createRightAbsentPatternSource()
-  {
-    RightAbsentPatternSourceImpl rightAbsentPatternSource = new RightAbsentPatternSourceImpl();
-    return rightAbsentPatternSource;
   }
 
   /**
@@ -989,10 +903,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OutputRate createOutputRate()
+  public PatternStream createPatternStream()
   {
-    OutputRateImpl outputRate = new OutputRateImpl();
-    return outputRate;
+    PatternStreamImpl patternStream = new PatternStreamImpl();
+    return patternStream;
   }
 
   /**
@@ -1000,10 +914,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OutputRateType createOutputRateType()
+  public EveryPatternSourceChain createEveryPatternSourceChain()
   {
-    OutputRateTypeImpl outputRateType = new OutputRateTypeImpl();
-    return outputRateType;
+    EveryPatternSourceChainImpl everyPatternSourceChain = new EveryPatternSourceChainImpl();
+    return everyPatternSourceChain;
   }
 
   /**
@@ -1011,10 +925,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public QueryOutput createQueryOutput()
+  public PatternSourceChain createPatternSourceChain()
   {
-    QueryOutputImpl queryOutput = new QueryOutputImpl();
-    return queryOutput;
+    PatternSourceChainImpl patternSourceChain = new PatternSourceChainImpl();
+    return patternSourceChain;
   }
 
   /**
@@ -1022,10 +936,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SetClause createSetClause()
+  public PatternSource createPatternSource()
   {
-    SetClauseImpl setClause = new SetClauseImpl();
-    return setClause;
+    PatternSourceImpl patternSource = new PatternSourceImpl();
+    return patternSource;
   }
 
   /**
@@ -1033,10 +947,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SetAssignment createSetAssignment()
+  public LogicalStatefulSource createLogicalStatefulSource()
   {
-    SetAssignmentImpl setAssignment = new SetAssignmentImpl();
-    return setAssignment;
+    LogicalStatefulSourceImpl logicalStatefulSource = new LogicalStatefulSourceImpl();
+    return logicalStatefulSource;
   }
 
   /**
@@ -1044,10 +958,197 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OutputEventType createOutputEventType()
+  public PatternCollectionStatefulSource createPatternCollectionStatefulSource()
   {
-    OutputEventTypeImpl outputEventType = new OutputEventTypeImpl();
-    return outputEventType;
+    PatternCollectionStatefulSourceImpl patternCollectionStatefulSource = new PatternCollectionStatefulSourceImpl();
+    return patternCollectionStatefulSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Collect createCollect()
+  {
+    CollectImpl collect = new CollectImpl();
+    return collect;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalAbsentStatefulSource createLogicalAbsentStatefulSource()
+  {
+    LogicalAbsentStatefulSourceImpl logicalAbsentStatefulSource = new LogicalAbsentStatefulSourceImpl();
+    return logicalAbsentStatefulSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbsentPatternSourceChain createAbsentPatternSourceChain()
+  {
+    AbsentPatternSourceChainImpl absentPatternSourceChain = new AbsentPatternSourceChainImpl();
+    return absentPatternSourceChain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EveryAbsentPatternSource createEveryAbsentPatternSource()
+  {
+    EveryAbsentPatternSourceImpl everyAbsentPatternSource = new EveryAbsentPatternSourceImpl();
+    return everyAbsentPatternSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BasicAbsentPatternSource createBasicAbsentPatternSource()
+  {
+    BasicAbsentPatternSourceImpl basicAbsentPatternSource = new BasicAbsentPatternSourceImpl();
+    return basicAbsentPatternSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ForTime createForTime()
+  {
+    ForTimeImpl forTime = new ForTimeImpl();
+    return forTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LeftAbsentPatternSource createLeftAbsentPatternSource()
+  {
+    LeftAbsentPatternSourceImpl leftAbsentPatternSource = new LeftAbsentPatternSourceImpl();
+    return leftAbsentPatternSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RightAbsentPatternSource createRightAbsentPatternSource()
+  {
+    RightAbsentPatternSourceImpl rightAbsentPatternSource = new RightAbsentPatternSourceImpl();
+    return rightAbsentPatternSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JoinStream createJoinStream()
+  {
+    JoinStreamImpl joinStream = new JoinStreamImpl();
+    return joinStream;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public WithinTimeRange createWithinTimeRange()
+  {
+    WithinTimeRangeImpl withinTimeRange = new WithinTimeRangeImpl();
+    return withinTimeRange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Per1 createPer1()
+  {
+    Per1Impl per1 = new Per1Impl();
+    return per1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JoinSource createJoinSource()
+  {
+    JoinSourceImpl joinSource = new JoinSourceImpl();
+    return joinSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StreamAlias createStreamAlias()
+  {
+    StreamAliasImpl streamAlias = new StreamAliasImpl();
+    return streamAlias;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public WithinTime createWithinTime()
+  {
+    WithinTimeImpl withinTime = new WithinTimeImpl();
+    return withinTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public joins createjoins()
+  {
+    joinsImpl joins = new joinsImpl();
+    return joins;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StandardStream createStandardStream()
+  {
+    StandardStreamImpl standardStream = new StandardStreamImpl();
+    return standardStream;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MainSource createMainSource()
+  {
+    MainSourceImpl mainSource = new MainSourceImpl();
+    return mainSource;
   }
 
   /**
@@ -1132,6 +1233,193 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public MathOperation createMathOperation()
+  {
+    MathOperationImpl mathOperation = new MathOperationImpl();
+    return mathOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MathAddsubOperation createMathAddsubOperation()
+  {
+    MathAddsubOperationImpl mathAddsubOperation = new MathAddsubOperationImpl();
+    return mathAddsubOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MathDivmulOperation createMathDivmulOperation()
+  {
+    MathDivmulOperationImpl mathDivmulOperation = new MathDivmulOperationImpl();
+    return mathDivmulOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MathOtherOperations createMathOtherOperations()
+  {
+    MathOtherOperationsImpl mathOtherOperations = new MathOtherOperationsImpl();
+    return mathOtherOperations;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NullCheck createNullCheck()
+  {
+    NullCheckImpl nullCheck = new NullCheckImpl();
+    return nullCheck;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StreamReference createStreamReference()
+  {
+    StreamReferenceImpl streamReference = new StreamReferenceImpl();
+    return streamReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AttributeReference createAttributeReference()
+  {
+    AttributeReferenceImpl attributeReference = new AttributeReferenceImpl();
+    return attributeReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FeaturesOrOutAttr createFeaturesOrOutAttr()
+  {
+    FeaturesOrOutAttrImpl featuresOrOutAttr = new FeaturesOrOutAttrImpl();
+    return featuresOrOutAttr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FeaturesOrOutAttrReference createFeaturesOrOutAttrReference()
+  {
+    FeaturesOrOutAttrReferenceImpl featuresOrOutAttrReference = new FeaturesOrOutAttrReferenceImpl();
+    return featuresOrOutAttrReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StandardStatefulSource createStandardStatefulSource()
+  {
+    StandardStatefulSourceImpl standardStatefulSource = new StandardStatefulSourceImpl();
+    return standardStatefulSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BasicSource createBasicSource()
+  {
+    BasicSourceImpl basicSource = new BasicSourceImpl();
+    return basicSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Source1OrStandardStatefulSource createSource1OrStandardStatefulSource()
+  {
+    Source1OrStandardStatefulSourceImpl source1OrStandardStatefulSource = new Source1OrStandardStatefulSourceImpl();
+    return source1OrStandardStatefulSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SourceOrEventReference createSourceOrEventReference()
+  {
+    SourceOrEventReferenceImpl sourceOrEventReference = new SourceOrEventReferenceImpl();
+    return sourceOrEventReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AttributeNameReference createAttributeNameReference()
+  {
+    AttributeNameReferenceImpl attributeNameReference = new AttributeNameReferenceImpl();
+    return attributeNameReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AttributeIndex createAttributeIndex()
+  {
+    AttributeIndexImpl attributeIndex = new AttributeIndexImpl();
+    return attributeIndex;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConstantValue createConstantValue()
+  {
+    ConstantValueImpl constantValue = new ConstantValueImpl();
+    return constantValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FunctionOperation createFunctionOperation()
   {
     FunctionOperationImpl functionOperation = new FunctionOperationImpl();
@@ -1187,252 +1475,10 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public GroupByQuerySelection createGroupByQuerySelection()
-  {
-    GroupByQuerySelectionImpl groupByQuerySelection = new GroupByQuerySelectionImpl();
-    return groupByQuerySelection;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public QuerySection createQuerySection()
-  {
-    QuerySectionImpl querySection = new QuerySectionImpl();
-    return querySection;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public OutputAttribute createOutputAttribute()
-  {
-    OutputAttributeImpl outputAttribute = new OutputAttributeImpl();
-    return outputAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public OutAttr createOutAttr()
-  {
-    OutAttrImpl outAttr = new OutAttrImpl();
-    return outAttr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GroupBy createGroupBy()
-  {
-    GroupByImpl groupBy = new GroupByImpl();
-    return groupBy;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public HavingExpr createHavingExpr()
-  {
-    HavingExprImpl havingExpr = new HavingExprImpl();
-    return havingExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOperation createMathOperation()
-  {
-    MathOperationImpl mathOperation = new MathOperationImpl();
-    return mathOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NullCheck createNullCheck()
-  {
-    NullCheckImpl nullCheck = new NullCheckImpl();
-    return nullCheck;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StreamReference createStreamReference()
-  {
-    StreamReferenceImpl streamReference = new StreamReferenceImpl();
-    return streamReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOtherOperations1 createMathOtherOperations1()
-  {
-    MathOtherOperations1Impl mathOtherOperations1 = new MathOtherOperations1Impl();
-    return mathOtherOperations1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AttributeReference createAttributeReference()
-  {
-    AttributeReferenceImpl attributeReference = new AttributeReferenceImpl();
-    return attributeReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AttributeNameReference createAttributeNameReference()
-  {
-    AttributeNameReferenceImpl attributeNameReference = new AttributeNameReferenceImpl();
-    return attributeNameReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AttributeIndex createAttributeIndex()
-  {
-    AttributeIndexImpl attributeIndex = new AttributeIndexImpl();
-    return attributeIndex;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StandardStatefulSource createStandardStatefulSource()
-  {
-    StandardStatefulSourceImpl standardStatefulSource = new StandardStatefulSourceImpl();
-    return standardStatefulSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Source1OrStandardStatefulSource createSource1OrStandardStatefulSource()
-  {
-    Source1OrStandardStatefulSourceImpl source1OrStandardStatefulSource = new Source1OrStandardStatefulSourceImpl();
-    return source1OrStandardStatefulSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SourceOrEventReference createSourceOrEventReference()
-  {
-    SourceOrEventReferenceImpl sourceOrEventReference = new SourceOrEventReferenceImpl();
-    return sourceOrEventReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BasicSource createBasicSource()
-  {
-    BasicSourceImpl basicSource = new BasicSourceImpl();
-    return basicSource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FeaturesOrOutAttr createFeaturesOrOutAttr()
-  {
-    FeaturesOrOutAttrImpl featuresOrOutAttr = new FeaturesOrOutAttrImpl();
-    return featuresOrOutAttr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FeaturesOrOutAttrReference createFeaturesOrOutAttrReference()
-  {
-    FeaturesOrOutAttrReferenceImpl featuresOrOutAttrReference = new FeaturesOrOutAttrReferenceImpl();
-    return featuresOrOutAttrReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ConstantValue createConstantValue()
-  {
-    ConstantValueImpl constantValue = new ConstantValueImpl();
-    return constantValue;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Name createName()
   {
     NameImpl name = new NameImpl();
     return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Source createSource()
-  {
-    SourceImpl source = new SourceImpl();
-    return source;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Source1 createSource1()
-  {
-    Source1Impl source1 = new Source1Impl();
-    return source1;
   }
 
   /**
@@ -2474,28 +2520,6 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public LeftAbsentPatternSource1 createLeftAbsentPatternSource1()
-  {
-    LeftAbsentPatternSource1Impl leftAbsentPatternSource1 = new LeftAbsentPatternSource1Impl();
-    return leftAbsentPatternSource1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RightAbsentPatternSource1 createRightAbsentPatternSource1()
-  {
-    RightAbsentPatternSource1Impl rightAbsentPatternSource1 = new RightAbsentPatternSource1Impl();
-    return rightAbsentPatternSource1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public LeftAbsentSequenceSource1 createLeftAbsentSequenceSource1()
   {
     LeftAbsentSequenceSource1Impl leftAbsentSequenceSource1 = new LeftAbsentSequenceSource1Impl();
@@ -2511,6 +2535,28 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
   {
     RightAbsentSequenceSource1Impl rightAbsentSequenceSource1 = new RightAbsentSequenceSource1Impl();
     return rightAbsentSequenceSource1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LeftAbsentPatternSource1 createLeftAbsentPatternSource1()
+  {
+    LeftAbsentPatternSource1Impl leftAbsentPatternSource1 = new LeftAbsentPatternSource1Impl();
+    return leftAbsentPatternSource1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RightAbsentPatternSource1 createRightAbsentPatternSource1()
+  {
+    RightAbsentPatternSource1Impl rightAbsentPatternSource1 = new RightAbsentPatternSource1Impl();
+    return rightAbsentPatternSource1;
   }
 
   /**
@@ -2555,28 +2601,6 @@ public class SiddhiFactoryImpl extends EFactoryImpl implements SiddhiFactory
   {
     MathEqualOperationImpl mathEqualOperation = new MathEqualOperationImpl();
     return mathEqualOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathAddsubOperation createMathAddsubOperation()
-  {
-    MathAddsubOperationImpl mathAddsubOperation = new MathAddsubOperationImpl();
-    return mathAddsubOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathDivmulOperation createMathDivmulOperation()
-  {
-    MathDivmulOperationImpl mathDivmulOperation = new MathDivmulOperationImpl();
-    return mathDivmulOperation;
   }
 
   /**

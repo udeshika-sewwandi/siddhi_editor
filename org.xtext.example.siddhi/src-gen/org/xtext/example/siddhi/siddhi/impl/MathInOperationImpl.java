@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.siddhi.siddhi.IN;
 import org.xtext.example.siddhi.siddhi.MathInOperation;
-import org.xtext.example.siddhi.siddhi.MathOperation;
 import org.xtext.example.siddhi.siddhi.Name;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
@@ -25,25 +24,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathInOperationImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathInOperationImpl#getIn <em>In</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathInOperationImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathInOperationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MathInOperationImpl extends MathOperationImpl implements MathInOperation
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected MathOperation left;
-
   /**
    * The cached value of the '{@link #getIn() <em>In</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -55,14 +43,14 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   protected IN in;
 
   /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Name right;
+  protected Name name;
 
   /**
    * <!-- begin-user-doc -->
@@ -83,54 +71,6 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getMathInOperation();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOperation getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
-  {
-    MathOperation oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(MathOperation newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -186,9 +126,9 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getRight()
+  public Name getName()
   {
-    return right;
+    return name;
   }
 
   /**
@@ -196,13 +136,13 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(Name newRight, NotificationChain msgs)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    Name oldRight = right;
-    right = newRight;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -213,20 +153,20 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(Name newRight)
+  public void setName(Name newName)
   {
-    if (newRight != right)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__RIGHT, null, msgs);
-      if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__RIGHT, null, msgs);
-      msgs = basicSetRight(newRight, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_IN_OPERATION__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_IN_OPERATION__NAME, newName, newName));
   }
 
   /**
@@ -239,12 +179,10 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_IN_OPERATION__LEFT:
-        return basicSetLeft(null, msgs);
       case SiddhiPackage.MATH_IN_OPERATION__IN:
         return basicSetIn(null, msgs);
-      case SiddhiPackage.MATH_IN_OPERATION__RIGHT:
-        return basicSetRight(null, msgs);
+      case SiddhiPackage.MATH_IN_OPERATION__NAME:
+        return basicSetName(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -259,12 +197,10 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_IN_OPERATION__LEFT:
-        return getLeft();
       case SiddhiPackage.MATH_IN_OPERATION__IN:
         return getIn();
-      case SiddhiPackage.MATH_IN_OPERATION__RIGHT:
-        return getRight();
+      case SiddhiPackage.MATH_IN_OPERATION__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -279,14 +215,11 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_IN_OPERATION__LEFT:
-        setLeft((MathOperation)newValue);
-        return;
       case SiddhiPackage.MATH_IN_OPERATION__IN:
         setIn((IN)newValue);
         return;
-      case SiddhiPackage.MATH_IN_OPERATION__RIGHT:
-        setRight((Name)newValue);
+      case SiddhiPackage.MATH_IN_OPERATION__NAME:
+        setName((Name)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -302,14 +235,11 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_IN_OPERATION__LEFT:
-        setLeft((MathOperation)null);
-        return;
       case SiddhiPackage.MATH_IN_OPERATION__IN:
         setIn((IN)null);
         return;
-      case SiddhiPackage.MATH_IN_OPERATION__RIGHT:
-        setRight((Name)null);
+      case SiddhiPackage.MATH_IN_OPERATION__NAME:
+        setName((Name)null);
         return;
     }
     super.eUnset(featureID);
@@ -325,12 +255,10 @@ public class MathInOperationImpl extends MathOperationImpl implements MathInOper
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_IN_OPERATION__LEFT:
-        return left != null;
       case SiddhiPackage.MATH_IN_OPERATION__IN:
         return in != null;
-      case SiddhiPackage.MATH_IN_OPERATION__RIGHT:
-        return right != null;
+      case SiddhiPackage.MATH_IN_OPERATION__NAME:
+        return name != null;
     }
     return super.eIsSet(featureID);
   }

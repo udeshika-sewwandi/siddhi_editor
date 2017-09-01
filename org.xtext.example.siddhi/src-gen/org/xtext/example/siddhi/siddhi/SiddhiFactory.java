@@ -114,13 +114,13 @@ public interface SiddhiFactory extends EFactory
   AggregationTime createAggregationTime();
 
   /**
-   * Returns a new object of class '<em>aggregation time interval</em>'.
+   * Returns a new object of class '<em>Aggregation Time Interval</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>aggregation time interval</em>'.
+   * @return a new object of class '<em>Aggregation Time Interval</em>'.
    * @generated
    */
-  aggregation_time_interval createaggregation_time_interval();
+  AggregationTimeInterval createAggregationTimeInterval();
 
   /**
    * Returns a new object of class '<em>Aggregation Time Duration</em>'.
@@ -249,6 +249,24 @@ public interface SiddhiFactory extends EFactory
   AttributeType createAttributeType();
 
   /**
+   * Returns a new object of class '<em>Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Source</em>'.
+   * @generated
+   */
+  Source createSource();
+
+  /**
+   * Returns a new object of class '<em>Source1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Source1</em>'.
+   * @generated
+   */
+  Source1 createSource1();
+
+  /**
    * Returns a new object of class '<em>Exec Partition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -294,6 +312,123 @@ public interface SiddhiFactory extends EFactory
   Query createQuery();
 
   /**
+   * Returns a new object of class '<em>Query Output</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Query Output</em>'.
+   * @generated
+   */
+  QueryOutput createQueryOutput();
+
+  /**
+   * Returns a new object of class '<em>Target</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Target</em>'.
+   * @generated
+   */
+  Target createTarget();
+
+  /**
+   * Returns a new object of class '<em>Set Clause</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Set Clause</em>'.
+   * @generated
+   */
+  SetClause createSetClause();
+
+  /**
+   * Returns a new object of class '<em>Set Assignment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Set Assignment</em>'.
+   * @generated
+   */
+  SetAssignment createSetAssignment();
+
+  /**
+   * Returns a new object of class '<em>Output Event Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Output Event Type</em>'.
+   * @generated
+   */
+  OutputEventType createOutputEventType();
+
+  /**
+   * Returns a new object of class '<em>Output Rate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Output Rate</em>'.
+   * @generated
+   */
+  OutputRate createOutputRate();
+
+  /**
+   * Returns a new object of class '<em>Output Rate Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Output Rate Type</em>'.
+   * @generated
+   */
+  OutputRateType createOutputRateType();
+
+  /**
+   * Returns a new object of class '<em>Group By Query Selection</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Group By Query Selection</em>'.
+   * @generated
+   */
+  GroupByQuerySelection createGroupByQuerySelection();
+
+  /**
+   * Returns a new object of class '<em>Query Section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Query Section</em>'.
+   * @generated
+   */
+  QuerySection createQuerySection();
+
+  /**
+   * Returns a new object of class '<em>Group By</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Group By</em>'.
+   * @generated
+   */
+  GroupBy createGroupBy();
+
+  /**
+   * Returns a new object of class '<em>Having Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Having Expr</em>'.
+   * @generated
+   */
+  HavingExpr createHavingExpr();
+
+  /**
+   * Returns a new object of class '<em>Output Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Output Attribute</em>'.
+   * @generated
+   */
+  OutputAttribute createOutputAttribute();
+
+  /**
+   * Returns a new object of class '<em>Out Attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Out Attr</em>'.
+   * @generated
+   */
+  OutAttr createOutAttr();
+
+  /**
    * Returns a new object of class '<em>Query Input</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -301,213 +436,6 @@ public interface SiddhiFactory extends EFactory
    * @generated
    */
   QueryInput createQueryInput();
-
-  /**
-   * Returns a new object of class '<em>Join Stream</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Join Stream</em>'.
-   * @generated
-   */
-  JoinStream createJoinStream();
-
-  /**
-   * Returns a new object of class '<em>Within Time Range</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Within Time Range</em>'.
-   * @generated
-   */
-  WithinTimeRange createWithinTimeRange();
-
-  /**
-   * Returns a new object of class '<em>Per1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Per1</em>'.
-   * @generated
-   */
-  Per1 createPer1();
-
-  /**
-   * Returns a new object of class '<em>Join Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Join Source</em>'.
-   * @generated
-   */
-  JoinSource createJoinSource();
-
-  /**
-   * Returns a new object of class '<em>Stream Alias</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Stream Alias</em>'.
-   * @generated
-   */
-  StreamAlias createStreamAlias();
-
-  /**
-   * Returns a new object of class '<em>joins</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>joins</em>'.
-   * @generated
-   */
-  joins createjoins();
-
-  /**
-   * Returns a new object of class '<em>Standard Stream</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Standard Stream</em>'.
-   * @generated
-   */
-  StandardStream createStandardStream();
-
-  /**
-   * Returns a new object of class '<em>Main Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Main Source</em>'.
-   * @generated
-   */
-  MainSource createMainSource();
-
-  /**
-   * Returns a new object of class '<em>Pattern Stream</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pattern Stream</em>'.
-   * @generated
-   */
-  PatternStream createPatternStream();
-
-  /**
-   * Returns a new object of class '<em>Every Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Every Pattern Source Chain</em>'.
-   * @generated
-   */
-  EveryPatternSourceChain createEveryPatternSourceChain();
-
-  /**
-   * Returns a new object of class '<em>Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pattern Source Chain</em>'.
-   * @generated
-   */
-  PatternSourceChain createPatternSourceChain();
-
-  /**
-   * Returns a new object of class '<em>Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pattern Source</em>'.
-   * @generated
-   */
-  PatternSource createPatternSource();
-
-  /**
-   * Returns a new object of class '<em>Logical Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Logical Stateful Source</em>'.
-   * @generated
-   */
-  LogicalStatefulSource createLogicalStatefulSource();
-
-  /**
-   * Returns a new object of class '<em>Pattern Collection Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pattern Collection Stateful Source</em>'.
-   * @generated
-   */
-  PatternCollectionStatefulSource createPatternCollectionStatefulSource();
-
-  /**
-   * Returns a new object of class '<em>Collect</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Collect</em>'.
-   * @generated
-   */
-  Collect createCollect();
-
-  /**
-   * Returns a new object of class '<em>Within Time</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Within Time</em>'.
-   * @generated
-   */
-  WithinTime createWithinTime();
-
-  /**
-   * Returns a new object of class '<em>Logical Absent Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Logical Absent Stateful Source</em>'.
-   * @generated
-   */
-  LogicalAbsentStatefulSource createLogicalAbsentStatefulSource();
-
-  /**
-   * Returns a new object of class '<em>Absent Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Absent Pattern Source Chain</em>'.
-   * @generated
-   */
-  AbsentPatternSourceChain createAbsentPatternSourceChain();
-
-  /**
-   * Returns a new object of class '<em>Every Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Every Absent Pattern Source</em>'.
-   * @generated
-   */
-  EveryAbsentPatternSource createEveryAbsentPatternSource();
-
-  /**
-   * Returns a new object of class '<em>Basic Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Basic Absent Pattern Source</em>'.
-   * @generated
-   */
-  BasicAbsentPatternSource createBasicAbsentPatternSource();
-
-  /**
-   * Returns a new object of class '<em>For Time</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>For Time</em>'.
-   * @generated
-   */
-  ForTime createForTime();
-
-  /**
-   * Returns a new object of class '<em>Left Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Left Absent Pattern Source</em>'.
-   * @generated
-   */
-  LeftAbsentPatternSource createLeftAbsentPatternSource();
-
-  /**
-   * Returns a new object of class '<em>Right Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Right Absent Pattern Source</em>'.
-   * @generated
-   */
-  RightAbsentPatternSource createRightAbsentPatternSource();
 
   /**
    * Returns a new object of class '<em>Sequence Stream</em>'.
@@ -600,58 +528,211 @@ public interface SiddhiFactory extends EFactory
   AnonymousStream createAnonymousStream();
 
   /**
-   * Returns a new object of class '<em>Output Rate</em>'.
+   * Returns a new object of class '<em>Pattern Stream</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Output Rate</em>'.
+   * @return a new object of class '<em>Pattern Stream</em>'.
    * @generated
    */
-  OutputRate createOutputRate();
+  PatternStream createPatternStream();
 
   /**
-   * Returns a new object of class '<em>Output Rate Type</em>'.
+   * Returns a new object of class '<em>Every Pattern Source Chain</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Output Rate Type</em>'.
+   * @return a new object of class '<em>Every Pattern Source Chain</em>'.
    * @generated
    */
-  OutputRateType createOutputRateType();
+  EveryPatternSourceChain createEveryPatternSourceChain();
 
   /**
-   * Returns a new object of class '<em>Query Output</em>'.
+   * Returns a new object of class '<em>Pattern Source Chain</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Query Output</em>'.
+   * @return a new object of class '<em>Pattern Source Chain</em>'.
    * @generated
    */
-  QueryOutput createQueryOutput();
+  PatternSourceChain createPatternSourceChain();
 
   /**
-   * Returns a new object of class '<em>Set Clause</em>'.
+   * Returns a new object of class '<em>Pattern Source</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Set Clause</em>'.
+   * @return a new object of class '<em>Pattern Source</em>'.
    * @generated
    */
-  SetClause createSetClause();
+  PatternSource createPatternSource();
 
   /**
-   * Returns a new object of class '<em>Set Assignment</em>'.
+   * Returns a new object of class '<em>Logical Stateful Source</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Set Assignment</em>'.
+   * @return a new object of class '<em>Logical Stateful Source</em>'.
    * @generated
    */
-  SetAssignment createSetAssignment();
+  LogicalStatefulSource createLogicalStatefulSource();
 
   /**
-   * Returns a new object of class '<em>Output Event Type</em>'.
+   * Returns a new object of class '<em>Pattern Collection Stateful Source</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Output Event Type</em>'.
+   * @return a new object of class '<em>Pattern Collection Stateful Source</em>'.
    * @generated
    */
-  OutputEventType createOutputEventType();
+  PatternCollectionStatefulSource createPatternCollectionStatefulSource();
+
+  /**
+   * Returns a new object of class '<em>Collect</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Collect</em>'.
+   * @generated
+   */
+  Collect createCollect();
+
+  /**
+   * Returns a new object of class '<em>Logical Absent Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Absent Stateful Source</em>'.
+   * @generated
+   */
+  LogicalAbsentStatefulSource createLogicalAbsentStatefulSource();
+
+  /**
+   * Returns a new object of class '<em>Absent Pattern Source Chain</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Absent Pattern Source Chain</em>'.
+   * @generated
+   */
+  AbsentPatternSourceChain createAbsentPatternSourceChain();
+
+  /**
+   * Returns a new object of class '<em>Every Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Every Absent Pattern Source</em>'.
+   * @generated
+   */
+  EveryAbsentPatternSource createEveryAbsentPatternSource();
+
+  /**
+   * Returns a new object of class '<em>Basic Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Basic Absent Pattern Source</em>'.
+   * @generated
+   */
+  BasicAbsentPatternSource createBasicAbsentPatternSource();
+
+  /**
+   * Returns a new object of class '<em>For Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>For Time</em>'.
+   * @generated
+   */
+  ForTime createForTime();
+
+  /**
+   * Returns a new object of class '<em>Left Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Left Absent Pattern Source</em>'.
+   * @generated
+   */
+  LeftAbsentPatternSource createLeftAbsentPatternSource();
+
+  /**
+   * Returns a new object of class '<em>Right Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Right Absent Pattern Source</em>'.
+   * @generated
+   */
+  RightAbsentPatternSource createRightAbsentPatternSource();
+
+  /**
+   * Returns a new object of class '<em>Join Stream</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Join Stream</em>'.
+   * @generated
+   */
+  JoinStream createJoinStream();
+
+  /**
+   * Returns a new object of class '<em>Within Time Range</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Within Time Range</em>'.
+   * @generated
+   */
+  WithinTimeRange createWithinTimeRange();
+
+  /**
+   * Returns a new object of class '<em>Per1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Per1</em>'.
+   * @generated
+   */
+  Per1 createPer1();
+
+  /**
+   * Returns a new object of class '<em>Join Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Join Source</em>'.
+   * @generated
+   */
+  JoinSource createJoinSource();
+
+  /**
+   * Returns a new object of class '<em>Stream Alias</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Stream Alias</em>'.
+   * @generated
+   */
+  StreamAlias createStreamAlias();
+
+  /**
+   * Returns a new object of class '<em>Within Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Within Time</em>'.
+   * @generated
+   */
+  WithinTime createWithinTime();
+
+  /**
+   * Returns a new object of class '<em>joins</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>joins</em>'.
+   * @generated
+   */
+  joins createjoins();
+
+  /**
+   * Returns a new object of class '<em>Standard Stream</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Standard Stream</em>'.
+   * @generated
+   */
+  StandardStream createStandardStream();
+
+  /**
+   * Returns a new object of class '<em>Main Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Main Source</em>'.
+   * @generated
+   */
+  MainSource createMainSource();
 
   /**
    * Returns a new object of class '<em>Basic Source Stream Handlers</em>'.
@@ -717,6 +798,159 @@ public interface SiddhiFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Math Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Math Operation</em>'.
+   * @generated
+   */
+  MathOperation createMathOperation();
+
+  /**
+   * Returns a new object of class '<em>Math Addsub Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Math Addsub Operation</em>'.
+   * @generated
+   */
+  MathAddsubOperation createMathAddsubOperation();
+
+  /**
+   * Returns a new object of class '<em>Math Divmul Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Math Divmul Operation</em>'.
+   * @generated
+   */
+  MathDivmulOperation createMathDivmulOperation();
+
+  /**
+   * Returns a new object of class '<em>Math Other Operations</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Math Other Operations</em>'.
+   * @generated
+   */
+  MathOtherOperations createMathOtherOperations();
+
+  /**
+   * Returns a new object of class '<em>Null Check</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Null Check</em>'.
+   * @generated
+   */
+  NullCheck createNullCheck();
+
+  /**
+   * Returns a new object of class '<em>Stream Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Stream Reference</em>'.
+   * @generated
+   */
+  StreamReference createStreamReference();
+
+  /**
+   * Returns a new object of class '<em>Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal</em>'.
+   * @generated
+   */
+  Literal createLiteral();
+
+  /**
+   * Returns a new object of class '<em>Attribute Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Reference</em>'.
+   * @generated
+   */
+  AttributeReference createAttributeReference();
+
+  /**
+   * Returns a new object of class '<em>Features Or Out Attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Features Or Out Attr</em>'.
+   * @generated
+   */
+  FeaturesOrOutAttr createFeaturesOrOutAttr();
+
+  /**
+   * Returns a new object of class '<em>Features Or Out Attr Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Features Or Out Attr Reference</em>'.
+   * @generated
+   */
+  FeaturesOrOutAttrReference createFeaturesOrOutAttrReference();
+
+  /**
+   * Returns a new object of class '<em>Standard Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Standard Stateful Source</em>'.
+   * @generated
+   */
+  StandardStatefulSource createStandardStatefulSource();
+
+  /**
+   * Returns a new object of class '<em>Basic Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Basic Source</em>'.
+   * @generated
+   */
+  BasicSource createBasicSource();
+
+  /**
+   * Returns a new object of class '<em>Source1 Or Standard Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Source1 Or Standard Stateful Source</em>'.
+   * @generated
+   */
+  Source1OrStandardStatefulSource createSource1OrStandardStatefulSource();
+
+  /**
+   * Returns a new object of class '<em>Source Or Event Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Source Or Event Reference</em>'.
+   * @generated
+   */
+  SourceOrEventReference createSourceOrEventReference();
+
+  /**
+   * Returns a new object of class '<em>Attribute Name Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Name Reference</em>'.
+   * @generated
+   */
+  AttributeNameReference createAttributeNameReference();
+
+  /**
+   * Returns a new object of class '<em>Attribute Index</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Index</em>'.
+   * @generated
+   */
+  AttributeIndex createAttributeIndex();
+
+  /**
+   * Returns a new object of class '<em>Constant Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Constant Value</em>'.
+   * @generated
+   */
+  ConstantValue createConstantValue();
+
+  /**
    * Returns a new object of class '<em>Function Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -762,186 +996,6 @@ public interface SiddhiFactory extends EFactory
   Attribute createAttribute();
 
   /**
-   * Returns a new object of class '<em>Group By Query Selection</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Group By Query Selection</em>'.
-   * @generated
-   */
-  GroupByQuerySelection createGroupByQuerySelection();
-
-  /**
-   * Returns a new object of class '<em>Query Section</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Query Section</em>'.
-   * @generated
-   */
-  QuerySection createQuerySection();
-
-  /**
-   * Returns a new object of class '<em>Output Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Output Attribute</em>'.
-   * @generated
-   */
-  OutputAttribute createOutputAttribute();
-
-  /**
-   * Returns a new object of class '<em>Out Attr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Out Attr</em>'.
-   * @generated
-   */
-  OutAttr createOutAttr();
-
-  /**
-   * Returns a new object of class '<em>Group By</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Group By</em>'.
-   * @generated
-   */
-  GroupBy createGroupBy();
-
-  /**
-   * Returns a new object of class '<em>Having Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Having Expr</em>'.
-   * @generated
-   */
-  HavingExpr createHavingExpr();
-
-  /**
-   * Returns a new object of class '<em>Math Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Math Operation</em>'.
-   * @generated
-   */
-  MathOperation createMathOperation();
-
-  /**
-   * Returns a new object of class '<em>Null Check</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Null Check</em>'.
-   * @generated
-   */
-  NullCheck createNullCheck();
-
-  /**
-   * Returns a new object of class '<em>Stream Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Stream Reference</em>'.
-   * @generated
-   */
-  StreamReference createStreamReference();
-
-  /**
-   * Returns a new object of class '<em>Math Other Operations1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Math Other Operations1</em>'.
-   * @generated
-   */
-  MathOtherOperations1 createMathOtherOperations1();
-
-  /**
-   * Returns a new object of class '<em>Attribute Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute Reference</em>'.
-   * @generated
-   */
-  AttributeReference createAttributeReference();
-
-  /**
-   * Returns a new object of class '<em>Attribute Name Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute Name Reference</em>'.
-   * @generated
-   */
-  AttributeNameReference createAttributeNameReference();
-
-  /**
-   * Returns a new object of class '<em>Attribute Index</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute Index</em>'.
-   * @generated
-   */
-  AttributeIndex createAttributeIndex();
-
-  /**
-   * Returns a new object of class '<em>Standard Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Standard Stateful Source</em>'.
-   * @generated
-   */
-  StandardStatefulSource createStandardStatefulSource();
-
-  /**
-   * Returns a new object of class '<em>Source1 Or Standard Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Source1 Or Standard Stateful Source</em>'.
-   * @generated
-   */
-  Source1OrStandardStatefulSource createSource1OrStandardStatefulSource();
-
-  /**
-   * Returns a new object of class '<em>Source Or Event Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Source Or Event Reference</em>'.
-   * @generated
-   */
-  SourceOrEventReference createSourceOrEventReference();
-
-  /**
-   * Returns a new object of class '<em>Basic Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Basic Source</em>'.
-   * @generated
-   */
-  BasicSource createBasicSource();
-
-  /**
-   * Returns a new object of class '<em>Features Or Out Attr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Features Or Out Attr</em>'.
-   * @generated
-   */
-  FeaturesOrOutAttr createFeaturesOrOutAttr();
-
-  /**
-   * Returns a new object of class '<em>Features Or Out Attr Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Features Or Out Attr Reference</em>'.
-   * @generated
-   */
-  FeaturesOrOutAttrReference createFeaturesOrOutAttrReference();
-
-  /**
-   * Returns a new object of class '<em>Constant Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Constant Value</em>'.
-   * @generated
-   */
-  ConstantValue createConstantValue();
-
-  /**
    * Returns a new object of class '<em>Name</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -949,24 +1003,6 @@ public interface SiddhiFactory extends EFactory
    * @generated
    */
   Name createName();
-
-  /**
-   * Returns a new object of class '<em>Source</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Source</em>'.
-   * @generated
-   */
-  Source createSource();
-
-  /**
-   * Returns a new object of class '<em>Source1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Source1</em>'.
-   * @generated
-   */
-  Source1 createSource1();
 
   /**
    * Returns a new object of class '<em>Bool Value</em>'.
@@ -1815,24 +1851,6 @@ public interface SiddhiFactory extends EFactory
   TRUE createTRUE();
 
   /**
-   * Returns a new object of class '<em>Left Absent Pattern Source1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Left Absent Pattern Source1</em>'.
-   * @generated
-   */
-  LeftAbsentPatternSource1 createLeftAbsentPatternSource1();
-
-  /**
-   * Returns a new object of class '<em>Right Absent Pattern Source1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Right Absent Pattern Source1</em>'.
-   * @generated
-   */
-  RightAbsentPatternSource1 createRightAbsentPatternSource1();
-
-  /**
    * Returns a new object of class '<em>Left Absent Sequence Source1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1849,6 +1867,24 @@ public interface SiddhiFactory extends EFactory
    * @generated
    */
   RightAbsentSequenceSource1 createRightAbsentSequenceSource1();
+
+  /**
+   * Returns a new object of class '<em>Left Absent Pattern Source1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Left Absent Pattern Source1</em>'.
+   * @generated
+   */
+  LeftAbsentPatternSource1 createLeftAbsentPatternSource1();
+
+  /**
+   * Returns a new object of class '<em>Right Absent Pattern Source1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Right Absent Pattern Source1</em>'.
+   * @generated
+   */
+  RightAbsentPatternSource1 createRightAbsentPatternSource1();
 
   /**
    * Returns a new object of class '<em>Math Logical Operation</em>'.
@@ -1885,24 +1921,6 @@ public interface SiddhiFactory extends EFactory
    * @generated
    */
   MathEqualOperation createMathEqualOperation();
-
-  /**
-   * Returns a new object of class '<em>Math Addsub Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Math Addsub Operation</em>'.
-   * @generated
-   */
-  MathAddsubOperation createMathAddsubOperation();
-
-  /**
-   * Returns a new object of class '<em>Math Divmul Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Math Divmul Operation</em>'.
-   * @generated
-   */
-  MathDivmulOperation createMathDivmulOperation();
 
   /**
    * Returns a new object of class '<em>Not Operation</em>'.

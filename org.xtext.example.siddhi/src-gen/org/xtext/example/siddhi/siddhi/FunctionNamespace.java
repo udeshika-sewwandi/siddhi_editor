@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getFunctionNamespace()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface FunctionNamespace extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Na</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Na</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Na</em>' attribute.
-   * @see #setNa(String)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getFunctionNamespace_Na()
-   * @model
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Name)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getFunctionNamespace_Name()
+   * @model containment="true"
    * @generated
    */
-  String getNa();
+  Name getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getNa <em>Na</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Na</em>' attribute.
-   * @see #getNa()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setNa(String value);
+  void setName(Name value);
 
 } // FunctionNamespace

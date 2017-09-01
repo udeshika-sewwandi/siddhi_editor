@@ -126,9 +126,9 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createAggregationTimeAdapter();
       }
       @Override
-      public Adapter caseaggregation_time_interval(aggregation_time_interval object)
+      public Adapter caseAggregationTimeInterval(AggregationTimeInterval object)
       {
-        return createaggregation_time_intervalAdapter();
+        return createAggregationTimeIntervalAdapter();
       }
       @Override
       public Adapter caseAggregationTimeDuration(AggregationTimeDuration object)
@@ -201,6 +201,16 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createAttributeTypeAdapter();
       }
       @Override
+      public Adapter caseSource(Source object)
+      {
+        return createSourceAdapter();
+      }
+      @Override
+      public Adapter caseSource1(Source1 object)
+      {
+        return createSource1Adapter();
+      }
+      @Override
       public Adapter caseExecPartition(ExecPartition object)
       {
         return createExecPartitionAdapter();
@@ -226,124 +236,74 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createQueryAdapter();
       }
       @Override
+      public Adapter caseQueryOutput(QueryOutput object)
+      {
+        return createQueryOutputAdapter();
+      }
+      @Override
+      public Adapter caseTarget(Target object)
+      {
+        return createTargetAdapter();
+      }
+      @Override
+      public Adapter caseSetClause(SetClause object)
+      {
+        return createSetClauseAdapter();
+      }
+      @Override
+      public Adapter caseSetAssignment(SetAssignment object)
+      {
+        return createSetAssignmentAdapter();
+      }
+      @Override
+      public Adapter caseOutputEventType(OutputEventType object)
+      {
+        return createOutputEventTypeAdapter();
+      }
+      @Override
+      public Adapter caseOutputRate(OutputRate object)
+      {
+        return createOutputRateAdapter();
+      }
+      @Override
+      public Adapter caseOutputRateType(OutputRateType object)
+      {
+        return createOutputRateTypeAdapter();
+      }
+      @Override
+      public Adapter caseGroupByQuerySelection(GroupByQuerySelection object)
+      {
+        return createGroupByQuerySelectionAdapter();
+      }
+      @Override
+      public Adapter caseQuerySection(QuerySection object)
+      {
+        return createQuerySectionAdapter();
+      }
+      @Override
+      public Adapter caseGroupBy(GroupBy object)
+      {
+        return createGroupByAdapter();
+      }
+      @Override
+      public Adapter caseHavingExpr(HavingExpr object)
+      {
+        return createHavingExprAdapter();
+      }
+      @Override
+      public Adapter caseOutputAttribute(OutputAttribute object)
+      {
+        return createOutputAttributeAdapter();
+      }
+      @Override
+      public Adapter caseOutAttr(OutAttr object)
+      {
+        return createOutAttrAdapter();
+      }
+      @Override
       public Adapter caseQueryInput(QueryInput object)
       {
         return createQueryInputAdapter();
-      }
-      @Override
-      public Adapter caseJoinStream(JoinStream object)
-      {
-        return createJoinStreamAdapter();
-      }
-      @Override
-      public Adapter caseWithinTimeRange(WithinTimeRange object)
-      {
-        return createWithinTimeRangeAdapter();
-      }
-      @Override
-      public Adapter casePer1(Per1 object)
-      {
-        return createPer1Adapter();
-      }
-      @Override
-      public Adapter caseJoinSource(JoinSource object)
-      {
-        return createJoinSourceAdapter();
-      }
-      @Override
-      public Adapter caseStreamAlias(StreamAlias object)
-      {
-        return createStreamAliasAdapter();
-      }
-      @Override
-      public Adapter casejoins(joins object)
-      {
-        return createjoinsAdapter();
-      }
-      @Override
-      public Adapter caseStandardStream(StandardStream object)
-      {
-        return createStandardStreamAdapter();
-      }
-      @Override
-      public Adapter caseMainSource(MainSource object)
-      {
-        return createMainSourceAdapter();
-      }
-      @Override
-      public Adapter casePatternStream(PatternStream object)
-      {
-        return createPatternStreamAdapter();
-      }
-      @Override
-      public Adapter caseEveryPatternSourceChain(EveryPatternSourceChain object)
-      {
-        return createEveryPatternSourceChainAdapter();
-      }
-      @Override
-      public Adapter casePatternSourceChain(PatternSourceChain object)
-      {
-        return createPatternSourceChainAdapter();
-      }
-      @Override
-      public Adapter casePatternSource(PatternSource object)
-      {
-        return createPatternSourceAdapter();
-      }
-      @Override
-      public Adapter caseLogicalStatefulSource(LogicalStatefulSource object)
-      {
-        return createLogicalStatefulSourceAdapter();
-      }
-      @Override
-      public Adapter casePatternCollectionStatefulSource(PatternCollectionStatefulSource object)
-      {
-        return createPatternCollectionStatefulSourceAdapter();
-      }
-      @Override
-      public Adapter caseCollect(Collect object)
-      {
-        return createCollectAdapter();
-      }
-      @Override
-      public Adapter caseWithinTime(WithinTime object)
-      {
-        return createWithinTimeAdapter();
-      }
-      @Override
-      public Adapter caseLogicalAbsentStatefulSource(LogicalAbsentStatefulSource object)
-      {
-        return createLogicalAbsentStatefulSourceAdapter();
-      }
-      @Override
-      public Adapter caseAbsentPatternSourceChain(AbsentPatternSourceChain object)
-      {
-        return createAbsentPatternSourceChainAdapter();
-      }
-      @Override
-      public Adapter caseEveryAbsentPatternSource(EveryAbsentPatternSource object)
-      {
-        return createEveryAbsentPatternSourceAdapter();
-      }
-      @Override
-      public Adapter caseBasicAbsentPatternSource(BasicAbsentPatternSource object)
-      {
-        return createBasicAbsentPatternSourceAdapter();
-      }
-      @Override
-      public Adapter caseForTime(ForTime object)
-      {
-        return createForTimeAdapter();
-      }
-      @Override
-      public Adapter caseLeftAbsentPatternSource(LeftAbsentPatternSource object)
-      {
-        return createLeftAbsentPatternSourceAdapter();
-      }
-      @Override
-      public Adapter caseRightAbsentPatternSource(RightAbsentPatternSource object)
-      {
-        return createRightAbsentPatternSourceAdapter();
       }
       @Override
       public Adapter caseSequenceStream(SequenceStream object)
@@ -396,34 +356,119 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createAnonymousStreamAdapter();
       }
       @Override
-      public Adapter caseOutputRate(OutputRate object)
+      public Adapter casePatternStream(PatternStream object)
       {
-        return createOutputRateAdapter();
+        return createPatternStreamAdapter();
       }
       @Override
-      public Adapter caseOutputRateType(OutputRateType object)
+      public Adapter caseEveryPatternSourceChain(EveryPatternSourceChain object)
       {
-        return createOutputRateTypeAdapter();
+        return createEveryPatternSourceChainAdapter();
       }
       @Override
-      public Adapter caseQueryOutput(QueryOutput object)
+      public Adapter casePatternSourceChain(PatternSourceChain object)
       {
-        return createQueryOutputAdapter();
+        return createPatternSourceChainAdapter();
       }
       @Override
-      public Adapter caseSetClause(SetClause object)
+      public Adapter casePatternSource(PatternSource object)
       {
-        return createSetClauseAdapter();
+        return createPatternSourceAdapter();
       }
       @Override
-      public Adapter caseSetAssignment(SetAssignment object)
+      public Adapter caseLogicalStatefulSource(LogicalStatefulSource object)
       {
-        return createSetAssignmentAdapter();
+        return createLogicalStatefulSourceAdapter();
       }
       @Override
-      public Adapter caseOutputEventType(OutputEventType object)
+      public Adapter casePatternCollectionStatefulSource(PatternCollectionStatefulSource object)
       {
-        return createOutputEventTypeAdapter();
+        return createPatternCollectionStatefulSourceAdapter();
+      }
+      @Override
+      public Adapter caseCollect(Collect object)
+      {
+        return createCollectAdapter();
+      }
+      @Override
+      public Adapter caseLogicalAbsentStatefulSource(LogicalAbsentStatefulSource object)
+      {
+        return createLogicalAbsentStatefulSourceAdapter();
+      }
+      @Override
+      public Adapter caseAbsentPatternSourceChain(AbsentPatternSourceChain object)
+      {
+        return createAbsentPatternSourceChainAdapter();
+      }
+      @Override
+      public Adapter caseEveryAbsentPatternSource(EveryAbsentPatternSource object)
+      {
+        return createEveryAbsentPatternSourceAdapter();
+      }
+      @Override
+      public Adapter caseBasicAbsentPatternSource(BasicAbsentPatternSource object)
+      {
+        return createBasicAbsentPatternSourceAdapter();
+      }
+      @Override
+      public Adapter caseForTime(ForTime object)
+      {
+        return createForTimeAdapter();
+      }
+      @Override
+      public Adapter caseLeftAbsentPatternSource(LeftAbsentPatternSource object)
+      {
+        return createLeftAbsentPatternSourceAdapter();
+      }
+      @Override
+      public Adapter caseRightAbsentPatternSource(RightAbsentPatternSource object)
+      {
+        return createRightAbsentPatternSourceAdapter();
+      }
+      @Override
+      public Adapter caseJoinStream(JoinStream object)
+      {
+        return createJoinStreamAdapter();
+      }
+      @Override
+      public Adapter caseWithinTimeRange(WithinTimeRange object)
+      {
+        return createWithinTimeRangeAdapter();
+      }
+      @Override
+      public Adapter casePer1(Per1 object)
+      {
+        return createPer1Adapter();
+      }
+      @Override
+      public Adapter caseJoinSource(JoinSource object)
+      {
+        return createJoinSourceAdapter();
+      }
+      @Override
+      public Adapter caseStreamAlias(StreamAlias object)
+      {
+        return createStreamAliasAdapter();
+      }
+      @Override
+      public Adapter caseWithinTime(WithinTime object)
+      {
+        return createWithinTimeAdapter();
+      }
+      @Override
+      public Adapter casejoins(joins object)
+      {
+        return createjoinsAdapter();
+      }
+      @Override
+      public Adapter caseStandardStream(StandardStream object)
+      {
+        return createStandardStreamAdapter();
+      }
+      @Override
+      public Adapter caseMainSource(MainSource object)
+      {
+        return createMainSourceAdapter();
       }
       @Override
       public Adapter caseBasicSourceStreamHandlers(BasicSourceStreamHandlers object)
@@ -461,6 +506,91 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseMathOperation(MathOperation object)
+      {
+        return createMathOperationAdapter();
+      }
+      @Override
+      public Adapter caseMathAddsubOperation(MathAddsubOperation object)
+      {
+        return createMathAddsubOperationAdapter();
+      }
+      @Override
+      public Adapter caseMathDivmulOperation(MathDivmulOperation object)
+      {
+        return createMathDivmulOperationAdapter();
+      }
+      @Override
+      public Adapter caseMathOtherOperations(MathOtherOperations object)
+      {
+        return createMathOtherOperationsAdapter();
+      }
+      @Override
+      public Adapter caseNullCheck(NullCheck object)
+      {
+        return createNullCheckAdapter();
+      }
+      @Override
+      public Adapter caseStreamReference(StreamReference object)
+      {
+        return createStreamReferenceAdapter();
+      }
+      @Override
+      public Adapter caseLiteral(Literal object)
+      {
+        return createLiteralAdapter();
+      }
+      @Override
+      public Adapter caseAttributeReference(AttributeReference object)
+      {
+        return createAttributeReferenceAdapter();
+      }
+      @Override
+      public Adapter caseFeaturesOrOutAttr(FeaturesOrOutAttr object)
+      {
+        return createFeaturesOrOutAttrAdapter();
+      }
+      @Override
+      public Adapter caseFeaturesOrOutAttrReference(FeaturesOrOutAttrReference object)
+      {
+        return createFeaturesOrOutAttrReferenceAdapter();
+      }
+      @Override
+      public Adapter caseStandardStatefulSource(StandardStatefulSource object)
+      {
+        return createStandardStatefulSourceAdapter();
+      }
+      @Override
+      public Adapter caseBasicSource(BasicSource object)
+      {
+        return createBasicSourceAdapter();
+      }
+      @Override
+      public Adapter caseSource1OrStandardStatefulSource(Source1OrStandardStatefulSource object)
+      {
+        return createSource1OrStandardStatefulSourceAdapter();
+      }
+      @Override
+      public Adapter caseSourceOrEventReference(SourceOrEventReference object)
+      {
+        return createSourceOrEventReferenceAdapter();
+      }
+      @Override
+      public Adapter caseAttributeNameReference(AttributeNameReference object)
+      {
+        return createAttributeNameReferenceAdapter();
+      }
+      @Override
+      public Adapter caseAttributeIndex(AttributeIndex object)
+      {
+        return createAttributeIndexAdapter();
+      }
+      @Override
+      public Adapter caseConstantValue(ConstantValue object)
+      {
+        return createConstantValueAdapter();
+      }
+      @Override
       public Adapter caseFunctionOperation(FunctionOperation object)
       {
         return createFunctionOperationAdapter();
@@ -486,119 +616,9 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createAttributeAdapter();
       }
       @Override
-      public Adapter caseGroupByQuerySelection(GroupByQuerySelection object)
-      {
-        return createGroupByQuerySelectionAdapter();
-      }
-      @Override
-      public Adapter caseQuerySection(QuerySection object)
-      {
-        return createQuerySectionAdapter();
-      }
-      @Override
-      public Adapter caseOutputAttribute(OutputAttribute object)
-      {
-        return createOutputAttributeAdapter();
-      }
-      @Override
-      public Adapter caseOutAttr(OutAttr object)
-      {
-        return createOutAttrAdapter();
-      }
-      @Override
-      public Adapter caseGroupBy(GroupBy object)
-      {
-        return createGroupByAdapter();
-      }
-      @Override
-      public Adapter caseHavingExpr(HavingExpr object)
-      {
-        return createHavingExprAdapter();
-      }
-      @Override
-      public Adapter caseMathOperation(MathOperation object)
-      {
-        return createMathOperationAdapter();
-      }
-      @Override
-      public Adapter caseNullCheck(NullCheck object)
-      {
-        return createNullCheckAdapter();
-      }
-      @Override
-      public Adapter caseStreamReference(StreamReference object)
-      {
-        return createStreamReferenceAdapter();
-      }
-      @Override
-      public Adapter caseMathOtherOperations1(MathOtherOperations1 object)
-      {
-        return createMathOtherOperations1Adapter();
-      }
-      @Override
-      public Adapter caseAttributeReference(AttributeReference object)
-      {
-        return createAttributeReferenceAdapter();
-      }
-      @Override
-      public Adapter caseAttributeNameReference(AttributeNameReference object)
-      {
-        return createAttributeNameReferenceAdapter();
-      }
-      @Override
-      public Adapter caseAttributeIndex(AttributeIndex object)
-      {
-        return createAttributeIndexAdapter();
-      }
-      @Override
-      public Adapter caseStandardStatefulSource(StandardStatefulSource object)
-      {
-        return createStandardStatefulSourceAdapter();
-      }
-      @Override
-      public Adapter caseSource1OrStandardStatefulSource(Source1OrStandardStatefulSource object)
-      {
-        return createSource1OrStandardStatefulSourceAdapter();
-      }
-      @Override
-      public Adapter caseSourceOrEventReference(SourceOrEventReference object)
-      {
-        return createSourceOrEventReferenceAdapter();
-      }
-      @Override
-      public Adapter caseBasicSource(BasicSource object)
-      {
-        return createBasicSourceAdapter();
-      }
-      @Override
-      public Adapter caseFeaturesOrOutAttr(FeaturesOrOutAttr object)
-      {
-        return createFeaturesOrOutAttrAdapter();
-      }
-      @Override
-      public Adapter caseFeaturesOrOutAttrReference(FeaturesOrOutAttrReference object)
-      {
-        return createFeaturesOrOutAttrReferenceAdapter();
-      }
-      @Override
-      public Adapter caseConstantValue(ConstantValue object)
-      {
-        return createConstantValueAdapter();
-      }
-      @Override
       public Adapter caseName(Name object)
       {
         return createNameAdapter();
-      }
-      @Override
-      public Adapter caseSource(Source object)
-      {
-        return createSourceAdapter();
-      }
-      @Override
-      public Adapter caseSource1(Source1 object)
-      {
-        return createSource1Adapter();
       }
       @Override
       public Adapter caseBoolValue(BoolValue object)
@@ -1071,16 +1091,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
         return createTRUEAdapter();
       }
       @Override
-      public Adapter caseLeftAbsentPatternSource1(LeftAbsentPatternSource1 object)
-      {
-        return createLeftAbsentPatternSource1Adapter();
-      }
-      @Override
-      public Adapter caseRightAbsentPatternSource1(RightAbsentPatternSource1 object)
-      {
-        return createRightAbsentPatternSource1Adapter();
-      }
-      @Override
       public Adapter caseLeftAbsentSequenceSource1(LeftAbsentSequenceSource1 object)
       {
         return createLeftAbsentSequenceSource1Adapter();
@@ -1089,6 +1099,16 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRightAbsentSequenceSource1(RightAbsentSequenceSource1 object)
       {
         return createRightAbsentSequenceSource1Adapter();
+      }
+      @Override
+      public Adapter caseLeftAbsentPatternSource1(LeftAbsentPatternSource1 object)
+      {
+        return createLeftAbsentPatternSource1Adapter();
+      }
+      @Override
+      public Adapter caseRightAbsentPatternSource1(RightAbsentPatternSource1 object)
+      {
+        return createRightAbsentPatternSource1Adapter();
       }
       @Override
       public Adapter caseMathLogicalOperation(MathLogicalOperation object)
@@ -1109,16 +1129,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMathEqualOperation(MathEqualOperation object)
       {
         return createMathEqualOperationAdapter();
-      }
-      @Override
-      public Adapter caseMathAddsubOperation(MathAddsubOperation object)
-      {
-        return createMathAddsubOperationAdapter();
-      }
-      @Override
-      public Adapter caseMathDivmulOperation(MathDivmulOperation object)
-      {
-        return createMathDivmulOperationAdapter();
       }
       @Override
       public Adapter caseNotOperation(NotOperation object)
@@ -1298,16 +1308,16 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.aggregation_time_interval <em>aggregation time interval</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AggregationTimeInterval <em>Aggregation Time Interval</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.aggregation_time_interval
+   * @see org.xtext.example.siddhi.siddhi.AggregationTimeInterval
    * @generated
    */
-  public Adapter createaggregation_time_intervalAdapter()
+  public Adapter createAggregationTimeIntervalAdapter()
   {
     return null;
   }
@@ -1523,6 +1533,36 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Source
+   * @generated
+   */
+  public Adapter createSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source1 <em>Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Source1
+   * @generated
+   */
+  public Adapter createSource1Adapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.ExecPartition <em>Exec Partition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1598,6 +1638,201 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.QueryOutput <em>Query Output</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput
+   * @generated
+   */
+  public Adapter createQueryOutputAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Target <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Target
+   * @generated
+   */
+  public Adapter createTargetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SetClause <em>Set Clause</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.SetClause
+   * @generated
+   */
+  public Adapter createSetClauseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SetAssignment <em>Set Assignment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.SetAssignment
+   * @generated
+   */
+  public Adapter createSetAssignmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputEventType <em>Output Event Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.OutputEventType
+   * @generated
+   */
+  public Adapter createOutputEventTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputRate <em>Output Rate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.OutputRate
+   * @generated
+   */
+  public Adapter createOutputRateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputRateType <em>Output Rate Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.OutputRateType
+   * @generated
+   */
+  public Adapter createOutputRateTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection <em>Group By Query Selection</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection
+   * @generated
+   */
+  public Adapter createGroupByQuerySelectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.QuerySection <em>Query Section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.QuerySection
+   * @generated
+   */
+  public Adapter createQuerySectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.GroupBy <em>Group By</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.GroupBy
+   * @generated
+   */
+  public Adapter createGroupByAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.HavingExpr <em>Having Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.HavingExpr
+   * @generated
+   */
+  public Adapter createHavingExprAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputAttribute <em>Output Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.OutputAttribute
+   * @generated
+   */
+  public Adapter createOutputAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutAttr <em>Out Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.OutAttr
+   * @generated
+   */
+  public Adapter createOutAttrAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.QueryInput <em>Query Input</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1608,351 +1843,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createQueryInputAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.JoinStream <em>Join Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream
-   * @generated
-   */
-  public Adapter createJoinStreamAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange <em>Within Time Range</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange
-   * @generated
-   */
-  public Adapter createWithinTimeRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Per1 <em>Per1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.Per1
-   * @generated
-   */
-  public Adapter createPer1Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.JoinSource <em>Join Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.JoinSource
-   * @generated
-   */
-  public Adapter createJoinSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StreamAlias <em>Stream Alias</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.StreamAlias
-   * @generated
-   */
-  public Adapter createStreamAliasAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.joins <em>joins</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.joins
-   * @generated
-   */
-  public Adapter createjoinsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StandardStream <em>Standard Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.StandardStream
-   * @generated
-   */
-  public Adapter createStandardStreamAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MainSource <em>Main Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.MainSource
-   * @generated
-   */
-  public Adapter createMainSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternStream <em>Pattern Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.PatternStream
-   * @generated
-   */
-  public Adapter createPatternStreamAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain <em>Every Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain
-   * @generated
-   */
-  public Adapter createEveryPatternSourceChainAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain <em>Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain
-   * @generated
-   */
-  public Adapter createPatternSourceChainAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternSource <em>Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource
-   * @generated
-   */
-  public Adapter createPatternSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource <em>Logical Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource
-   * @generated
-   */
-  public Adapter createLogicalStatefulSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource <em>Pattern Collection Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource
-   * @generated
-   */
-  public Adapter createPatternCollectionStatefulSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Collect <em>Collect</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.Collect
-   * @generated
-   */
-  public Adapter createCollectAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.WithinTime <em>Within Time</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.WithinTime
-   * @generated
-   */
-  public Adapter createWithinTimeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource <em>Logical Absent Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource
-   * @generated
-   */
-  public Adapter createLogicalAbsentStatefulSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain <em>Absent Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain
-   * @generated
-   */
-  public Adapter createAbsentPatternSourceChainAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource <em>Every Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource
-   * @generated
-   */
-  public Adapter createEveryAbsentPatternSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource
-   * @generated
-   */
-  public Adapter createBasicAbsentPatternSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.ForTime <em>For Time</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.ForTime
-   * @generated
-   */
-  public Adapter createForTimeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource <em>Left Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource
-   * @generated
-   */
-  public Adapter createLeftAbsentPatternSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource <em>Right Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource
-   * @generated
-   */
-  public Adapter createRightAbsentPatternSourceAdapter()
   {
     return null;
   }
@@ -2108,91 +1998,346 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputRate <em>Output Rate</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternStream <em>Pattern Stream</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.OutputRate
+   * @see org.xtext.example.siddhi.siddhi.PatternStream
    * @generated
    */
-  public Adapter createOutputRateAdapter()
+  public Adapter createPatternStreamAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputRateType <em>Output Rate Type</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain <em>Every Pattern Source Chain</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.OutputRateType
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain
    * @generated
    */
-  public Adapter createOutputRateTypeAdapter()
+  public Adapter createEveryPatternSourceChainAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.QueryOutput <em>Query Output</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain <em>Pattern Source Chain</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain
    * @generated
    */
-  public Adapter createQueryOutputAdapter()
+  public Adapter createPatternSourceChainAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SetClause <em>Set Clause</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternSource <em>Pattern Source</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.SetClause
+   * @see org.xtext.example.siddhi.siddhi.PatternSource
    * @generated
    */
-  public Adapter createSetClauseAdapter()
+  public Adapter createPatternSourceAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SetAssignment <em>Set Assignment</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource <em>Logical Stateful Source</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.SetAssignment
+   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource
    * @generated
    */
-  public Adapter createSetAssignmentAdapter()
+  public Adapter createLogicalStatefulSourceAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputEventType <em>Output Event Type</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource <em>Pattern Collection Stateful Source</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.OutputEventType
+   * @see org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource
    * @generated
    */
-  public Adapter createOutputEventTypeAdapter()
+  public Adapter createPatternCollectionStatefulSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Collect <em>Collect</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Collect
+   * @generated
+   */
+  public Adapter createCollectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource <em>Logical Absent Stateful Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource
+   * @generated
+   */
+  public Adapter createLogicalAbsentStatefulSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain <em>Absent Pattern Source Chain</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain
+   * @generated
+   */
+  public Adapter createAbsentPatternSourceChainAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource <em>Every Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource
+   * @generated
+   */
+  public Adapter createEveryAbsentPatternSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource
+   * @generated
+   */
+  public Adapter createBasicAbsentPatternSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.ForTime <em>For Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.ForTime
+   * @generated
+   */
+  public Adapter createForTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource <em>Left Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource
+   * @generated
+   */
+  public Adapter createLeftAbsentPatternSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource <em>Right Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource
+   * @generated
+   */
+  public Adapter createRightAbsentPatternSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.JoinStream <em>Join Stream</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream
+   * @generated
+   */
+  public Adapter createJoinStreamAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange <em>Within Time Range</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange
+   * @generated
+   */
+  public Adapter createWithinTimeRangeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Per1 <em>Per1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Per1
+   * @generated
+   */
+  public Adapter createPer1Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.JoinSource <em>Join Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.JoinSource
+   * @generated
+   */
+  public Adapter createJoinSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StreamAlias <em>Stream Alias</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.StreamAlias
+   * @generated
+   */
+  public Adapter createStreamAliasAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.WithinTime <em>Within Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.WithinTime
+   * @generated
+   */
+  public Adapter createWithinTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.joins <em>joins</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.joins
+   * @generated
+   */
+  public Adapter createjoinsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StandardStream <em>Standard Stream</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.StandardStream
+   * @generated
+   */
+  public Adapter createStandardStreamAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MainSource <em>Main Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.MainSource
+   * @generated
+   */
+  public Adapter createMainSourceAdapter()
   {
     return null;
   }
@@ -2303,6 +2448,261 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathOperation <em>Math Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.MathOperation
+   * @generated
+   */
+  public Adapter createMathOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation <em>Math Addsub Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation
+   * @generated
+   */
+  public Adapter createMathAddsubOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation <em>Math Divmul Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation
+   * @generated
+   */
+  public Adapter createMathDivmulOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations <em>Math Other Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations
+   * @generated
+   */
+  public Adapter createMathOtherOperationsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.NullCheck <em>Null Check</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.NullCheck
+   * @generated
+   */
+  public Adapter createNullCheckAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StreamReference <em>Stream Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.StreamReference
+   * @generated
+   */
+  public Adapter createStreamReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Literal
+   * @generated
+   */
+  public Adapter createLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeReference <em>Attribute Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.AttributeReference
+   * @generated
+   */
+  public Adapter createAttributeReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr <em>Features Or Out Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr
+   * @generated
+   */
+  public Adapter createFeaturesOrOutAttrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference <em>Features Or Out Attr Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference
+   * @generated
+   */
+  public Adapter createFeaturesOrOutAttrReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource <em>Standard Stateful Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.StandardStatefulSource
+   * @generated
+   */
+  public Adapter createStandardStatefulSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.BasicSource <em>Basic Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.BasicSource
+   * @generated
+   */
+  public Adapter createBasicSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource <em>Source1 Or Standard Stateful Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource
+   * @generated
+   */
+  public Adapter createSource1OrStandardStatefulSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SourceOrEventReference <em>Source Or Event Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.SourceOrEventReference
+   * @generated
+   */
+  public Adapter createSourceOrEventReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference <em>Attribute Name Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference
+   * @generated
+   */
+  public Adapter createAttributeNameReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeIndex <em>Attribute Index</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.AttributeIndex
+   * @generated
+   */
+  public Adapter createAttributeIndexAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.ConstantValue <em>Constant Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.ConstantValue
+   * @generated
+   */
+  public Adapter createConstantValueAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.FunctionOperation <em>Function Operation</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2378,306 +2778,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection <em>Group By Query Selection</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection
-   * @generated
-   */
-  public Adapter createGroupByQuerySelectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.QuerySection <em>Query Section</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.QuerySection
-   * @generated
-   */
-  public Adapter createQuerySectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutputAttribute <em>Output Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.OutputAttribute
-   * @generated
-   */
-  public Adapter createOutputAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.OutAttr <em>Out Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.OutAttr
-   * @generated
-   */
-  public Adapter createOutAttrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.GroupBy <em>Group By</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.GroupBy
-   * @generated
-   */
-  public Adapter createGroupByAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.HavingExpr <em>Having Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.HavingExpr
-   * @generated
-   */
-  public Adapter createHavingExprAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathOperation <em>Math Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.MathOperation
-   * @generated
-   */
-  public Adapter createMathOperationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.NullCheck <em>Null Check</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.NullCheck
-   * @generated
-   */
-  public Adapter createNullCheckAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StreamReference <em>Stream Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.StreamReference
-   * @generated
-   */
-  public Adapter createStreamReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations1 <em>Math Other Operations1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations1
-   * @generated
-   */
-  public Adapter createMathOtherOperations1Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeReference <em>Attribute Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.AttributeReference
-   * @generated
-   */
-  public Adapter createAttributeReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference <em>Attribute Name Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference
-   * @generated
-   */
-  public Adapter createAttributeNameReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.AttributeIndex <em>Attribute Index</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.AttributeIndex
-   * @generated
-   */
-  public Adapter createAttributeIndexAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource <em>Standard Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.StandardStatefulSource
-   * @generated
-   */
-  public Adapter createStandardStatefulSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource <em>Source1 Or Standard Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource
-   * @generated
-   */
-  public Adapter createSource1OrStandardStatefulSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.SourceOrEventReference <em>Source Or Event Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.SourceOrEventReference
-   * @generated
-   */
-  public Adapter createSourceOrEventReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.BasicSource <em>Basic Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.BasicSource
-   * @generated
-   */
-  public Adapter createBasicSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr <em>Features Or Out Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr
-   * @generated
-   */
-  public Adapter createFeaturesOrOutAttrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference <em>Features Or Out Attr Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference
-   * @generated
-   */
-  public Adapter createFeaturesOrOutAttrReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.ConstantValue <em>Constant Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.ConstantValue
-   * @generated
-   */
-  public Adapter createConstantValueAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Name <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2688,36 +2788,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createNameAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source <em>Source</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.Source
-   * @generated
-   */
-  public Adapter createSourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.Source1 <em>Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.Source1
-   * @generated
-   */
-  public Adapter createSource1Adapter()
   {
     return null;
   }
@@ -4133,36 +4203,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1 <em>Left Absent Pattern Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1
-   * @generated
-   */
-  public Adapter createLeftAbsentPatternSource1Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource1 <em>Right Absent Pattern Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource1
-   * @generated
-   */
-  public Adapter createRightAbsentPatternSource1Adapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1 <em>Left Absent Sequence Source1</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -4188,6 +4228,36 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRightAbsentSequenceSource1Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1 <em>Left Absent Pattern Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1
+   * @generated
+   */
+  public Adapter createLeftAbsentPatternSource1Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource1 <em>Right Absent Pattern Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource1
+   * @generated
+   */
+  public Adapter createRightAbsentPatternSource1Adapter()
   {
     return null;
   }
@@ -4248,36 +4318,6 @@ public class SiddhiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMathEqualOperationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation <em>Math Addsub Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation
-   * @generated
-   */
-  public Adapter createMathAddsubOperationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation <em>Math Divmul Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation
-   * @generated
-   */
-  public Adapter createMathDivmulOperationAdapter()
   {
     return null;
   }

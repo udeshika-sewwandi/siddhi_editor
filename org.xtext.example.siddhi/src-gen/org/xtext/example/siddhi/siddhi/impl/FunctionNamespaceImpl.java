@@ -4,13 +4,16 @@
 package org.xtext.example.siddhi.siddhi.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.siddhi.siddhi.FunctionNamespace;
+import org.xtext.example.siddhi.siddhi.Name;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
 /**
@@ -21,7 +24,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +32,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implements FunctionNamespace
 {
   /**
-   * The default value of the '{@link #getNa() <em>Na</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NA_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNa()
-   * @generated
-   * @ordered
-   */
-  protected String na = NA_EDEFAULT;
+  protected Name name;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +67,9 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNa()
+  public Name getName()
   {
-    return na;
+    return name;
   }
 
   /**
@@ -84,12 +77,53 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(String newNa)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    String oldNa = na;
-    na = newNa;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_NAMESPACE__NA, oldNa, na));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_NAMESPACE__NAME, oldName, newName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(Name newName)
+  {
+    if (newName != name)
+    {
+      NotificationChain msgs = null;
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_NAMESPACE__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_NAMESPACE__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_NAMESPACE__NAME, newName, newName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SiddhiPackage.FUNCTION_NAMESPACE__NAME:
+        return basicSetName(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -102,8 +136,8 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_NAMESPACE__NA:
-        return getNa();
+      case SiddhiPackage.FUNCTION_NAMESPACE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +152,8 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_NAMESPACE__NA:
-        setNa((String)newValue);
+      case SiddhiPackage.FUNCTION_NAMESPACE__NAME:
+        setName((Name)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +169,8 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_NAMESPACE__NA:
-        setNa(NA_EDEFAULT);
+      case SiddhiPackage.FUNCTION_NAMESPACE__NAME:
+        setName((Name)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,27 +186,10 @@ public class FunctionNamespaceImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_NAMESPACE__NA:
-        return NA_EDEFAULT == null ? na != null : !NA_EDEFAULT.equals(na);
+      case SiddhiPackage.FUNCTION_NAMESPACE__NAME:
+        return name != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (na: ");
-    result.append(na);
-    result.append(')');
-    return result.toString();
   }
 
 } //FunctionNamespaceImpl

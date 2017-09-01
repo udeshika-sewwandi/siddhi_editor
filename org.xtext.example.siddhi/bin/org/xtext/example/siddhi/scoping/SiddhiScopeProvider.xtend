@@ -26,7 +26,7 @@ import org.eclipse.xtext.scoping.IScope
 class SiddhiScopeProvider extends AbstractSiddhiScopeProvider {
 	override getScope(EObject context, EReference reference) {
 		//scope the feature names
-		if (reference === SiddhiPackage.eINSTANCE.attributeNameReference_AttrName1 || reference === SiddhiPackage.eINSTANCE.attributeReference_Attr_name) {
+		/*if (reference === SiddhiPackage.eINSTANCE.attributeNameReference_AttrName1 || reference === SiddhiPackage.eINSTANCE.attributeReference_Attr_name) {
 			val execPlan = EcoreUtil2.getContainerOfType(context, ExecutionPlan)
 			if (execPlan !== null) {
 				val scope = <Features>newArrayList()
@@ -38,8 +38,9 @@ class SiddhiScopeProvider extends AbstractSiddhiScopeProvider {
 			/*else if(!execPlan.def_table.empty){
 				return Scopes.scopeFor(execPlan.def_table.map[feature].flatten)
 			}*/
-		}
-		else if(reference === SiddhiPackage.eINSTANCE.featuresOrOutAttrReference_SrcoutAttrref){//scope feature names and user defined words with as keyword
+		//}
+		/*else 
+		if(reference === SiddhiPackage.eINSTANCE.featuresOrOutAttrReference_SrcoutAttrref){//scope feature names and user defined words with as keyword
 			val execPlan = EcoreUtil2.getContainerOfType(context, ExecutionPlan)
 			if (execPlan !== null) {
 				val candidates = EcoreUtil2.getAllContentsOfType(execPlan,OutAttr)
@@ -52,19 +53,20 @@ class SiddhiScopeProvider extends AbstractSiddhiScopeProvider {
 				return Scopes.scopeFor(scope)
 			}
 		}
-		else if (reference === SiddhiPackage.eINSTANCE.source_StrId  ){//scope user defined stream and table names
+		/*else if (reference === SiddhiPackage.eINSTANCE.source_StrId  ){//scope user defined stream and table names
 			val execPlan = EcoreUtil2.getContainerOfType(context, ExecutionPlan)
 				if (execPlan !== null) {
 					val candidates = EcoreUtil2.getAllContentsOfType(execPlan,Source1)
 					
 					val scope = <Source1>newArrayList()
 					
-					scope.addAll(candidates)
+					//scope.addAll(candidates)
 					//scope.addAll(execPlan.defStream.map[src])
 					//scope.addAll(execPlan.defTable.map[src])
 										
-					return Scopes.scopeFor(scope)
+					//return Scopes.scopeFor(scope)
 				}
+			super.getScope(context, reference)	
 				
 		}
 		else if(reference === SiddhiPackage.eINSTANCE.sourceOrEventReference_Na || reference === SiddhiPackage.eINSTANCE.attributeReference_Name1 || reference === SiddhiPackage.eINSTANCE.attributeReference_Name2){	//scope stream,table names and event names				
@@ -84,9 +86,9 @@ class SiddhiScopeProvider extends AbstractSiddhiScopeProvider {
 		}
 		else {
 			return IScope.NULLSCOPE;
-	    }
+	    }*/
 				
-		//super.getScope(context, reference)
+		super.getScope(context, reference)
 	}
 
 }

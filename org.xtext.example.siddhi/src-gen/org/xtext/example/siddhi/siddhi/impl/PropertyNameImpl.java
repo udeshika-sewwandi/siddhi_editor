@@ -30,7 +30,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.PropertyNameImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.PropertyNameImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.PropertyNameImpl#getPs <em>Ps</em>}</li>
  * </ul>
  *
@@ -39,14 +39,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class PropertyNameImpl extends MinimalEObjectImpl.Container implements PropertyName
 {
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference list.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<Name> na;
+  protected EList<Name> name;
 
   /**
    * The cached value of the '{@link #getPs() <em>Ps</em>}' containment reference list.
@@ -84,13 +84,13 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Name> getNa()
+  public EList<Name> getName()
   {
-    if (na == null)
+    if (name == null)
     {
-      na = new EObjectContainmentEList<Name>(Name.class, this, SiddhiPackage.PROPERTY_NAME__NA);
+      name = new EObjectContainmentEList<Name>(Name.class, this, SiddhiPackage.PROPERTY_NAME__NAME);
     }
-    return na;
+    return name;
   }
 
   /**
@@ -117,8 +117,8 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
   {
     switch (featureID)
     {
-      case SiddhiPackage.PROPERTY_NAME__NA:
-        return ((InternalEList<?>)getNa()).basicRemove(otherEnd, msgs);
+      case SiddhiPackage.PROPERTY_NAME__NAME:
+        return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
       case SiddhiPackage.PROPERTY_NAME__PS:
         return ((InternalEList<?>)getPs()).basicRemove(otherEnd, msgs);
     }
@@ -135,8 +135,8 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
   {
     switch (featureID)
     {
-      case SiddhiPackage.PROPERTY_NAME__NA:
-        return getNa();
+      case SiddhiPackage.PROPERTY_NAME__NAME:
+        return getName();
       case SiddhiPackage.PROPERTY_NAME__PS:
         return getPs();
     }
@@ -154,9 +154,9 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
   {
     switch (featureID)
     {
-      case SiddhiPackage.PROPERTY_NAME__NA:
-        getNa().clear();
-        getNa().addAll((Collection<? extends Name>)newValue);
+      case SiddhiPackage.PROPERTY_NAME__NAME:
+        getName().clear();
+        getName().addAll((Collection<? extends Name>)newValue);
         return;
       case SiddhiPackage.PROPERTY_NAME__PS:
         getPs().clear();
@@ -176,8 +176,8 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
   {
     switch (featureID)
     {
-      case SiddhiPackage.PROPERTY_NAME__NA:
-        getNa().clear();
+      case SiddhiPackage.PROPERTY_NAME__NAME:
+        getName().clear();
         return;
       case SiddhiPackage.PROPERTY_NAME__PS:
         getPs().clear();
@@ -196,8 +196,8 @@ public class PropertyNameImpl extends MinimalEObjectImpl.Container implements Pr
   {
     switch (featureID)
     {
-      case SiddhiPackage.PROPERTY_NAME__NA:
-        return na != null && !na.isEmpty();
+      case SiddhiPackage.PROPERTY_NAME__NAME:
+        return name != null && !name.isEmpty();
       case SiddhiPackage.PROPERTY_NAME__PS:
         return ps != null && !ps.isEmpty();
     }

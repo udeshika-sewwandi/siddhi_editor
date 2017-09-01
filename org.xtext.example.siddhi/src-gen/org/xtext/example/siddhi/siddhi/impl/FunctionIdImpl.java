@@ -24,7 +24,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -32,14 +32,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class FunctionIdImpl extends MinimalEObjectImpl.Container implements FunctionId
 {
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Name na;
+  protected Name name;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,9 +67,9 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getNa()
+  public Name getName()
   {
-    return na;
+    return name;
   }
 
   /**
@@ -77,13 +77,13 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNa(Name newNa, NotificationChain msgs)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    Name oldNa = na;
-    na = newNa;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_ID__NA, oldNa, newNa);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_ID__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -94,20 +94,20 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(Name newNa)
+  public void setName(Name newName)
   {
-    if (newNa != na)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (na != null)
-        msgs = ((InternalEObject)na).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_ID__NA, null, msgs);
-      if (newNa != null)
-        msgs = ((InternalEObject)newNa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_ID__NA, null, msgs);
-      msgs = basicSetNa(newNa, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_ID__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FUNCTION_ID__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_ID__NA, newNa, newNa));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.FUNCTION_ID__NAME, newName, newName));
   }
 
   /**
@@ -120,8 +120,8 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_ID__NA:
-        return basicSetNa(null, msgs);
+      case SiddhiPackage.FUNCTION_ID__NAME:
+        return basicSetName(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -136,8 +136,8 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_ID__NA:
-        return getNa();
+      case SiddhiPackage.FUNCTION_ID__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,8 +152,8 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_ID__NA:
-        setNa((Name)newValue);
+      case SiddhiPackage.FUNCTION_ID__NAME:
+        setName((Name)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,8 +169,8 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_ID__NA:
-        setNa((Name)null);
+      case SiddhiPackage.FUNCTION_ID__NAME:
+        setName((Name)null);
         return;
     }
     super.eUnset(featureID);
@@ -186,8 +186,8 @@ public class FunctionIdImpl extends MinimalEObjectImpl.Container implements Func
   {
     switch (featureID)
     {
-      case SiddhiPackage.FUNCTION_ID__NA:
-        return na != null;
+      case SiddhiPackage.FUNCTION_ID__NAME:
+        return name != null;
     }
     return super.eIsSet(featureID);
   }

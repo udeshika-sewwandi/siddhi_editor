@@ -21,7 +21,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.NameImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.NameImpl#getNa <em>Na</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +29,24 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class NameImpl extends MinimalEObjectImpl.Container implements Name
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getNa() <em>Na</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNa()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String NA_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNa() <em>Na</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNa()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String na = NA_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +74,9 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getNa()
   {
-    return name;
+    return na;
   }
 
   /**
@@ -84,12 +84,12 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setNa(String newNa)
   {
-    String oldName = name;
-    name = newName;
+    String oldNa = na;
+    na = newNa;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.NAME__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.NAME__NA, oldNa, na));
   }
 
   /**
@@ -102,8 +102,8 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
   {
     switch (featureID)
     {
-      case SiddhiPackage.NAME__NAME:
-        return getName();
+      case SiddhiPackage.NAME__NA:
+        return getNa();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +118,8 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
   {
     switch (featureID)
     {
-      case SiddhiPackage.NAME__NAME:
-        setName((String)newValue);
+      case SiddhiPackage.NAME__NA:
+        setNa((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +135,8 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
   {
     switch (featureID)
     {
-      case SiddhiPackage.NAME__NAME:
-        setName(NAME_EDEFAULT);
+      case SiddhiPackage.NAME__NA:
+        setNa(NA_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -152,8 +152,8 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
   {
     switch (featureID)
     {
-      case SiddhiPackage.NAME__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case SiddhiPackage.NAME__NA:
+        return NA_EDEFAULT == null ? na != null : !NA_EDEFAULT.equals(na);
     }
     return super.eIsSet(featureID);
   }
@@ -169,8 +169,8 @@ public class NameImpl extends MinimalEObjectImpl.Container implements Name
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (na: ");
+    result.append(na);
     result.append(')');
     return result.toString();
   }

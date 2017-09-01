@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDef_window <em>Def window</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefTrigger <em>Def Trigger</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefFunction <em>Def Function</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAgrregation <em>Def Agrregation</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAggregation <em>Def Aggregation</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getExElement <em>Ex Element</em>}</li>
  * </ul>
  *
@@ -129,20 +129,20 @@ public interface ExecutionPlan extends EObject
   EList<DefinitionFunction> getDefFunction();
 
   /**
-   * Returns the value of the '<em><b>Def Agrregation</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Def Aggregation</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.example.siddhi.siddhi.DefinitionAggregation}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Def Agrregation</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Def Aggregation</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Def Agrregation</em>' containment reference list.
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getExecutionPlan_DefAgrregation()
+   * @return the value of the '<em>Def Aggregation</em>' containment reference list.
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getExecutionPlan_DefAggregation()
    * @model containment="true"
    * @generated
    */
-  EList<DefinitionAggregation> getDefAgrregation();
+  EList<DefinitionAggregation> getDefAggregation();
 
   /**
    * Returns the value of the '<em><b>Ex Element</b></em>' containment reference list.

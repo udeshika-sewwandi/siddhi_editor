@@ -13,9 +13,8 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathInOperation#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathInOperation#getIn <em>In</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathInOperation#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathInOperation#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathInOperation()
@@ -24,32 +23,6 @@ package org.xtext.example.siddhi.siddhi;
  */
 public interface MathInOperation extends MathOperation
 {
-  /**
-   * Returns the value of the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Left</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathInOperation_Left()
-   * @model containment="true"
-   * @generated
-   */
-  MathOperation getLeft();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getLeft <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left</em>' containment reference.
-   * @see #getLeft()
-   * @generated
-   */
-  void setLeft(MathOperation value);
-
   /**
    * Returns the value of the '<em><b>In</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -77,29 +50,29 @@ public interface MathInOperation extends MathOperation
   void setIn(IN value);
 
   /**
-   * Returns the value of the '<em><b>Right</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Right</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(Name)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathInOperation_Right()
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Name)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathInOperation_Name()
    * @model containment="true"
    * @generated
    */
-  Name getRight();
+  Name getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getRight <em>Right</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Right</em>' containment reference.
-   * @see #getRight()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setRight(Name value);
+  void setName(Name value);
 
 } // MathInOperation

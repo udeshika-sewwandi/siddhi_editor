@@ -13,6 +13,7 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MainSource#getWindow <em>Window</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MainSource#getA <em>A</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MainSource#getStrAlias <em>Str Alias</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MainSource#getPostWindowHandlers <em>Post Window Handlers</em>}</li>
@@ -26,6 +27,32 @@ package org.xtext.example.siddhi.siddhi;
  */
 public interface MainSource extends JoinSource, StandardStream
 {
+  /**
+   * Returns the value of the '<em><b>Window</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Window</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Window</em>' containment reference.
+   * @see #setWindow(Win)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMainSource_Window()
+   * @model containment="true"
+   * @generated
+   */
+  Win getWindow();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MainSource#getWindow <em>Window</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Window</em>' containment reference.
+   * @see #getWindow()
+   * @generated
+   */
+  void setWindow(Win value);
+
   /**
    * Returns the value of the '<em><b>A</b></em>' containment reference.
    * <!-- begin-user-doc -->

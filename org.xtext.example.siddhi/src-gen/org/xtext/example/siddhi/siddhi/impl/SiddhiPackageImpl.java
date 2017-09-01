@@ -115,7 +115,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass aggregation_time_intervalEClass = null;
+  private EClass aggregationTimeIntervalEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -220,6 +220,20 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass sourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass source1EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass execPartitionEClass = null;
 
   /**
@@ -255,168 +269,98 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass queryOutputEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass targetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass setClauseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass setAssignmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass outputEventTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass outputRateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass outputRateTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groupByQuerySelectionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass querySectionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groupByEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass havingExprEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass outputAttributeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass outAttrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass queryInputEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass joinStreamEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass withinTimeRangeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass per1EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass joinSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass streamAliasEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass joinsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass standardStreamEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mainSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patternStreamEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass everyPatternSourceChainEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patternSourceChainEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patternSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass logicalStatefulSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patternCollectionStatefulSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass collectEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass withinTimeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass logicalAbsentStatefulSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass absentPatternSourceChainEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass everyAbsentPatternSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass basicAbsentPatternSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass forTimeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass leftAbsentPatternSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass rightAbsentPatternSourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -493,42 +437,161 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass outputRateEClass = null;
+  private EClass patternStreamEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass outputRateTypeEClass = null;
+  private EClass everyPatternSourceChainEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass queryOutputEClass = null;
+  private EClass patternSourceChainEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass setClauseEClass = null;
+  private EClass patternSourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass setAssignmentEClass = null;
+  private EClass logicalStatefulSourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass outputEventTypeEClass = null;
+  private EClass patternCollectionStatefulSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass collectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logicalAbsentStatefulSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass absentPatternSourceChainEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass everyAbsentPatternSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass basicAbsentPatternSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass forTimeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass leftAbsentPatternSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rightAbsentPatternSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass joinStreamEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass withinTimeRangeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass per1EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass joinSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass streamAliasEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass withinTimeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass joinsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass standardStreamEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mainSourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -584,6 +647,125 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass mathOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mathAddsubOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mathDivmulOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mathOtherOperationsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nullCheckEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass streamReferenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass attributeReferenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass featuresOrOutAttrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass featuresOrOutAttrReferenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass standardStatefulSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass basicSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass source1OrStandardStatefulSourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sourceOrEventReferenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass attributeNameReferenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass attributeIndexEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constantValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass functionOperationEClass = null;
 
   /**
@@ -619,161 +801,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass groupByQuerySelectionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass querySectionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass outputAttributeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass outAttrEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass groupByEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass havingExprEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mathOperationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass nullCheckEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass streamReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mathOtherOperations1EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass attributeReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass attributeNameReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass attributeIndexEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass standardStatefulSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass source1OrStandardStatefulSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass sourceOrEventReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass basicSourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass featuresOrOutAttrEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass featuresOrOutAttrReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass constantValueEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass nameEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass sourceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass source1EClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1438,20 +1466,6 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass leftAbsentPatternSource1EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass rightAbsentPatternSource1EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass leftAbsentSequenceSource1EClass = null;
 
   /**
@@ -1460,6 +1474,20 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * @generated
    */
   private EClass rightAbsentSequenceSource1EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass leftAbsentPatternSource1EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rightAbsentPatternSource1EClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1488,20 +1516,6 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * @generated
    */
   private EClass mathEqualOperationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mathAddsubOperationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass mathDivmulOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1674,7 +1688,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExecutionPlan_DefAgrregation()
+  public EReference getExecutionPlan_DefAggregation()
   {
         return (EReference)getExecutionPlan().getEStructuralFeatures().get(6);
   }
@@ -2096,13 +2110,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getaggregation_time_interval()
+  public EClass getAggregationTimeInterval()
   {
-    if (aggregation_time_intervalEClass == null)
+    if (aggregationTimeIntervalEClass == null)
     {
-      aggregation_time_intervalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(10);
+      aggregationTimeIntervalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(10);
     }
-    return aggregation_time_intervalEClass;
+    return aggregationTimeIntervalEClass;
   }
 
   /**
@@ -2262,7 +2276,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAnnotation_Na()
+  public EReference getAnnotation_Name()
   {
         return (EReference)getAnnotation().getEStructuralFeatures().get(0);
   }
@@ -2364,7 +2378,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPropertyName_Na()
+  public EReference getPropertyName_Name()
   {
         return (EReference)getPropertyName().getEStructuralFeatures().get(0);
   }
@@ -2412,9 +2426,19 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFeatures_Type()
+  public EReference getFeatures_Nam()
   {
         return (EReference)getFeatures().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFeatures_Type()
+  {
+        return (EReference)getFeatures().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2436,11 +2460,59 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getSource()
+  {
+    if (sourceEClass == null)
+    {
+      sourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(25);
+    }
+    return sourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSource_StrId()
+  {
+        return (EReference)getSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSource1()
+  {
+    if (source1EClass == null)
+    {
+      source1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(26);
+    }
+    return source1EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSource1_Inner()
+  {
+        return (EAttribute)getSource1().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getExecPartition()
   {
     if (execPartitionEClass == null)
     {
-      execPartitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(25);
+      execPartitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(27);
     }
     return execPartitionEClass;
   }
@@ -2484,7 +2556,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (partitionWithStreamEClass == null)
     {
-      partitionWithStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(26);
+      partitionWithStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(28);
     }
     return partitionWithStreamEClass;
   }
@@ -2498,7 +2570,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (conditionRangesEClass == null)
     {
-      conditionRangesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(27);
+      conditionRangesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(29);
     }
     return conditionRangesEClass;
   }
@@ -2552,7 +2624,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (conditionRangeEClass == null)
     {
-      conditionRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(28);
+      conditionRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(30);
     }
     return conditionRangeEClass;
   }
@@ -2596,7 +2668,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (queryEClass == null)
     {
-      queryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(29);
+      queryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(31);
     }
     return queryEClass;
   }
@@ -2656,11 +2728,413 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getQueryOutput()
+  {
+    if (queryOutputEClass == null)
+    {
+      queryOutputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(32);
+    }
+    return queryOutputEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_OutEventType()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_Tar()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_On()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_Expr()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_Or()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryOutput_SetClause()
+  {
+        return (EReference)getQueryOutput().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTarget()
+  {
+    if (targetEClass == null)
+    {
+      targetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(33);
+    }
+    return targetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTarget_Na()
+  {
+        return (EReference)getTarget().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTarget_Src()
+  {
+        return (EReference)getTarget().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSetClause()
+  {
+    if (setClauseEClass == null)
+    {
+      setClauseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(34);
+    }
+    return setClauseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSetClause_SetAssignment()
+  {
+        return (EReference)getSetClause().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSetAssignment()
+  {
+    if (setAssignmentEClass == null)
+    {
+      setAssignmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(35);
+    }
+    return setAssignmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOutputEventType()
+  {
+    if (outputEventTypeEClass == null)
+    {
+      outputEventTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(36);
+    }
+    return outputEventTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOutputRate()
+  {
+    if (outputRateEClass == null)
+    {
+      outputRateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(37);
+    }
+    return outputRateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutputRate_Op_rate_type()
+  {
+        return (EReference)getOutputRate().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutputRate_Every()
+  {
+        return (EReference)getOutputRate().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutputRate_Tv()
+  {
+        return (EReference)getOutputRate().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOutputRateType()
+  {
+    if (outputRateTypeEClass == null)
+    {
+      outputRateTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(38);
+    }
+    return outputRateTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroupByQuerySelection()
+  {
+    if (groupByQuerySelectionEClass == null)
+    {
+      groupByQuerySelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(39);
+    }
+    return groupByQuerySelectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGroupByQuerySelection_Out_att()
+  {
+        return (EReference)getGroupByQuerySelection().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGroupByQuerySelection_Grp_by()
+  {
+        return (EReference)getGroupByQuerySelection().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQuerySection()
+  {
+    if (querySectionEClass == null)
+    {
+      querySectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(40);
+    }
+    return querySectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQuerySection_GrpByQuerySel()
+  {
+        return (EReference)getQuerySection().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQuerySection_Having()
+  {
+        return (EReference)getQuerySection().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroupBy()
+  {
+    if (groupByEClass == null)
+    {
+      groupByEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(41);
+    }
+    return groupByEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGroupBy_Attr_ref()
+  {
+        return (EReference)getGroupBy().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHavingExpr()
+  {
+    if (havingExprEClass == null)
+    {
+      havingExprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(42);
+    }
+    return havingExprEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getHavingExpr_Expr()
+  {
+        return (EReference)getHavingExpr().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOutputAttribute()
+  {
+    if (outputAttributeEClass == null)
+    {
+      outputAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(43);
+    }
+    return outputAttributeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutputAttribute_OutAttr()
+  {
+        return (EReference)getOutputAttribute().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutputAttribute_Attr_ref()
+  {
+        return (EReference)getOutputAttribute().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOutAttr()
+  {
+    if (outAttrEClass == null)
+    {
+      outAttrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(44);
+    }
+    return outAttrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutAttr_Attr()
+  {
+        return (EReference)getOutAttr().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOutAttr_A()
+  {
+        return (EReference)getOutAttr().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getQueryInput()
   {
     if (queryInputEClass == null)
     {
-      queryInputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(30);
+      queryInputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(45);
     }
     return queryInputEClass;
   }
@@ -2710,1013 +3184,11 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getJoinStream()
-  {
-    if (joinStreamEClass == null)
-    {
-      joinStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(31);
-    }
-    return joinStreamEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Left_source()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Right_source()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Right_uni()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_On()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Expr()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Wt()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Join()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJoinStream_Left_uni()
-  {
-        return (EReference)getJoinStream().getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getWithinTimeRange()
-  {
-    if (withinTimeRangeEClass == null)
-    {
-      withinTimeRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(32);
-    }
-    return withinTimeRangeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getWithinTimeRange_StartPattern()
-  {
-        return (EReference)getWithinTimeRange().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getWithinTimeRange_EndPattern()
-  {
-        return (EReference)getWithinTimeRange().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPer1()
-  {
-    if (per1EClass == null)
-    {
-      per1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(33);
-    }
-    return per1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPer1_Exp()
-  {
-        return (EReference)getPer1().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getJoinSource()
-  {
-    if (joinSourceEClass == null)
-    {
-      joinSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(34);
-    }
-    return joinSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStreamAlias()
-  {
-    if (streamAliasEClass == null)
-    {
-      streamAliasEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(35);
-    }
-    return streamAliasEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getStreamAlias_Na()
-  {
-        return (EReference)getStreamAlias().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getjoins()
-  {
-    if (joinsEClass == null)
-    {
-      joinsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(36);
-    }
-    return joinsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStandardStream()
-  {
-    if (standardStreamEClass == null)
-    {
-      standardStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(37);
-    }
-    return standardStreamEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMainSource()
-  {
-    if (mainSourceEClass == null)
-    {
-      mainSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(38);
-    }
-    return mainSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMainSource_A()
-  {
-        return (EReference)getMainSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMainSource_StrAlias()
-  {
-        return (EReference)getMainSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMainSource_PostWindowHandlers()
-  {
-        return (EReference)getMainSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMainSource_Src()
-  {
-        return (EReference)getMainSource().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMainSource_BasicSSh()
-  {
-        return (EReference)getMainSource().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPatternStream()
-  {
-    if (patternStreamEClass == null)
-    {
-      patternStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(39);
-    }
-    return patternStreamEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getEveryPatternSourceChain()
-  {
-    if (everyPatternSourceChainEClass == null)
-    {
-      everyPatternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(40);
-    }
-    return everyPatternSourceChainEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Left()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEveryPatternSourceChain_Op()
-  {
-        return (EAttribute)getEveryPatternSourceChain().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Right()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Eps()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Wt()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Psc()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryPatternSourceChain_Every()
-  {
-        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPatternSourceChain()
-  {
-    if (patternSourceChainEClass == null)
-    {
-      patternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(41);
-    }
-    return patternSourceChainEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSourceChain_Left()
-  {
-        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPatternSourceChain_Op()
-  {
-        return (EAttribute)getPatternSourceChain().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSourceChain_Right()
-  {
-        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSourceChain_Psc_2()
-  {
-        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSourceChain_Wt()
-  {
-        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSourceChain_Ps()
-  {
-        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPatternSource()
-  {
-    if (patternSourceEClass == null)
-    {
-      patternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(42);
-    }
-    return patternSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSource_Lss()
-  {
-        return (EReference)getPatternSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSource_Pss()
-  {
-        return (EReference)getPatternSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSource_Stdss()
-  {
-        return (EReference)getPatternSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatternSource_LogicalAbsStatefulSrc()
-  {
-        return (EReference)getPatternSource().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLogicalStatefulSource()
-  {
-    if (logicalStatefulSourceEClass == null)
-    {
-      logicalStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(43);
-    }
-    return logicalStatefulSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalStatefulSource_StdSource()
-  {
-        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalStatefulSource_And()
-  {
-        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalStatefulSource_Or()
-  {
-        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPatternCollectionStatefulSource()
-  {
-    if (patternCollectionStatefulSourceEClass == null)
-    {
-      patternCollectionStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(44);
-    }
-    return patternCollectionStatefulSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCollect()
-  {
-    if (collectEClass == null)
-    {
-      collectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(45);
-    }
-    return collectEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCollect_Start()
-  {
-        return (EAttribute)getCollect().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCollect_End()
-  {
-        return (EAttribute)getCollect().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getWithinTime()
-  {
-    if (withinTimeEClass == null)
-    {
-      withinTimeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(46);
-    }
-    return withinTimeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getWithinTime_Tv()
-  {
-        return (EReference)getWithinTime().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLogicalAbsentStatefulSource()
-  {
-    if (logicalAbsentStatefulSourceEClass == null)
-    {
-      logicalAbsentStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(47);
-    }
-    return logicalAbsentStatefulSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_LogicalAbsStatefulSrc()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_StdSource()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_And()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_Not()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_Bs()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource1()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource2()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAbsentStatefulSource_O()
-  {
-        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAbsentPatternSourceChain()
-  {
-    if (absentPatternSourceChainEClass == null)
-    {
-      absentPatternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(48);
-    }
-    return absentPatternSourceChainEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAbsentPatternSourceChain_AbsentPatternSrcChain()
-  {
-        return (EReference)getAbsentPatternSourceChain().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAbsentPatternSourceChain_Wt1()
-  {
-        return (EReference)getAbsentPatternSourceChain().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getEveryAbsentPatternSource()
-  {
-    if (everyAbsentPatternSourceEClass == null)
-    {
-      everyAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(49);
-    }
-    return everyAbsentPatternSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEveryAbsentPatternSource_BasicAbsentPS()
-  {
-        return (EReference)getEveryAbsentPatternSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBasicAbsentPatternSource()
-  {
-    if (basicAbsentPatternSourceEClass == null)
-    {
-      basicAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(50);
-    }
-    return basicAbsentPatternSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getForTime()
-  {
-    if (forTimeEClass == null)
-    {
-      forTimeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(51);
-    }
-    return forTimeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getForTime_Tv()
-  {
-        return (EReference)getForTime().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLeftAbsentPatternSource()
-  {
-    if (leftAbsentPatternSourceEClass == null)
-    {
-      leftAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(52);
-    }
-    return leftAbsentPatternSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_Left()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLeftAbsentPatternSource_Fb1()
-  {
-        return (EAttribute)getLeftAbsentPatternSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_Right()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_LeftAbsPS()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_Wt2()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_EveryAbsPS()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_EveryPSC()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLeftAbsentPatternSource_LeftAbsPatternSrc()
-  {
-        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRightAbsentPatternSource()
-  {
-    if (rightAbsentPatternSourceEClass == null)
-    {
-      rightAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(53);
-    }
-    return rightAbsentPatternSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_Left1()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRightAbsentPatternSource_Fb2()
-  {
-        return (EAttribute)getRightAbsentPatternSource().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_Right1()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_RightAbsPS()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_Wt3()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_EveryPSC1()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentPatternSource_EveryAbsPS1()
-  {
-        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getSequenceStream()
   {
     if (sequenceStreamEClass == null)
     {
-      sequenceStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(54);
+      sequenceStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(46);
     }
     return sequenceStreamEClass;
   }
@@ -3750,7 +3222,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (everySequenceSourceChainEClass == null)
     {
-      everySequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(55);
+      everySequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(47);
     }
     return everySequenceSourceChainEClass;
   }
@@ -3794,7 +3266,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (everyAbsentSequenceSourceChainEClass == null)
     {
-      everyAbsentSequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(56);
+      everyAbsentSequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(48);
     }
     return everyAbsentSequenceSourceChainEClass;
   }
@@ -3828,7 +3300,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (absentSequenceSourceChainEClass == null)
     {
-      absentSequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(57);
+      absentSequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(49);
     }
     return absentSequenceSourceChainEClass;
   }
@@ -3892,7 +3364,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (leftAbsentSequenceSourceEClass == null)
     {
-      leftAbsentSequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(58);
+      leftAbsentSequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(50);
     }
     return leftAbsentSequenceSourceEClass;
   }
@@ -4006,7 +3478,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (rightAbsentSequenceSourceEClass == null)
     {
-      rightAbsentSequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(59);
+      rightAbsentSequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(51);
     }
     return rightAbsentSequenceSourceEClass;
   }
@@ -4120,7 +3592,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (sequenceSourceChainEClass == null)
     {
-      sequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(60);
+      sequenceSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(52);
     }
     return sequenceSourceChainEClass;
   }
@@ -4174,7 +3646,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (sequenceSourceEClass == null)
     {
-      sequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(61);
+      sequenceSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(53);
     }
     return sequenceSourceEClass;
   }
@@ -4198,7 +3670,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (sequenceCollectionStatefulSourceEClass == null)
     {
-      sequenceCollectionStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(62);
+      sequenceCollectionStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(54);
     }
     return sequenceCollectionStatefulSourceEClass;
   }
@@ -4212,7 +3684,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (anonymousStreamEClass == null)
     {
-      anonymousStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(63);
+      anonymousStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(55);
     }
     return anonymousStreamEClass;
   }
@@ -4262,13 +3734,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getOutputRate()
+  public EClass getPatternStream()
   {
-    if (outputRateEClass == null)
+    if (patternStreamEClass == null)
     {
-      outputRateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(64);
+      patternStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(56);
     }
-    return outputRateEClass;
+    return patternStreamEClass;
   }
 
   /**
@@ -4276,43 +3748,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOutputRate_Op_rate_type()
+  public EClass getEveryPatternSourceChain()
   {
-        return (EReference)getOutputRate().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutputRate_Every()
-  {
-        return (EReference)getOutputRate().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutputRate_Tv()
-  {
-        return (EReference)getOutputRate().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getOutputRateType()
-  {
-    if (outputRateTypeEClass == null)
+    if (everyPatternSourceChainEClass == null)
     {
-      outputRateTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(65);
+      everyPatternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(57);
     }
-    return outputRateTypeEClass;
+    return everyPatternSourceChainEClass;
   }
 
   /**
@@ -4320,13 +3762,83 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getQueryOutput()
+  public EReference getEveryPatternSourceChain_Left()
   {
-    if (queryOutputEClass == null)
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEveryPatternSourceChain_Op()
+  {
+        return (EAttribute)getEveryPatternSourceChain().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryPatternSourceChain_Right()
+  {
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryPatternSourceChain_Eps()
+  {
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryPatternSourceChain_Wt()
+  {
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryPatternSourceChain_Psc()
+  {
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryPatternSourceChain_Every()
+  {
+        return (EReference)getEveryPatternSourceChain().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPatternSourceChain()
+  {
+    if (patternSourceChainEClass == null)
     {
-      queryOutputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(66);
+      patternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(58);
     }
-    return queryOutputEClass;
+    return patternSourceChainEClass;
   }
 
   /**
@@ -4334,9 +3846,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_OutEventType()
+  public EReference getPatternSourceChain_Left()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(0);
+        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4344,9 +3856,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_Tar()
+  public EAttribute getPatternSourceChain_Op()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(1);
+        return (EAttribute)getPatternSourceChain().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4354,9 +3866,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_On()
+  public EReference getPatternSourceChain_Right()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(2);
+        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4364,9 +3876,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_Expr()
+  public EReference getPatternSourceChain_Psc_2()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(3);
+        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4374,9 +3886,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_Or()
+  public EReference getPatternSourceChain_Wt()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(4);
+        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -4384,9 +3896,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryOutput_SetClause()
+  public EReference getPatternSourceChain_Ps()
   {
-        return (EReference)getQueryOutput().getEStructuralFeatures().get(5);
+        return (EReference)getPatternSourceChain().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -4394,13 +3906,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSetClause()
+  public EClass getPatternSource()
   {
-    if (setClauseEClass == null)
+    if (patternSourceEClass == null)
     {
-      setClauseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(67);
+      patternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(59);
     }
-    return setClauseEClass;
+    return patternSourceEClass;
   }
 
   /**
@@ -4408,9 +3920,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSetClause_SetAssignment()
+  public EReference getPatternSource_Lss()
   {
-        return (EReference)getSetClause().getEStructuralFeatures().get(0);
+        return (EReference)getPatternSource().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4418,13 +3930,43 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSetAssignment()
+  public EReference getPatternSource_Pss()
   {
-    if (setAssignmentEClass == null)
+        return (EReference)getPatternSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatternSource_Stdss()
+  {
+        return (EReference)getPatternSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatternSource_LogicalAbsStatefulSrc()
+  {
+        return (EReference)getPatternSource().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogicalStatefulSource()
+  {
+    if (logicalStatefulSourceEClass == null)
     {
-      setAssignmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(68);
+      logicalStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(60);
     }
-    return setAssignmentEClass;
+    return logicalStatefulSourceEClass;
   }
 
   /**
@@ -4432,13 +3974,781 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getOutputEventType()
+  public EReference getLogicalStatefulSource_StdSource()
   {
-    if (outputEventTypeEClass == null)
+        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalStatefulSource_And()
+  {
+        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalStatefulSource_Or()
+  {
+        return (EReference)getLogicalStatefulSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPatternCollectionStatefulSource()
+  {
+    if (patternCollectionStatefulSourceEClass == null)
     {
-      outputEventTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(69);
+      patternCollectionStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(61);
     }
-    return outputEventTypeEClass;
+    return patternCollectionStatefulSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCollect()
+  {
+    if (collectEClass == null)
+    {
+      collectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(62);
+    }
+    return collectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCollect_Start()
+  {
+        return (EAttribute)getCollect().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCollect_End()
+  {
+        return (EAttribute)getCollect().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogicalAbsentStatefulSource()
+  {
+    if (logicalAbsentStatefulSourceEClass == null)
+    {
+      logicalAbsentStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(63);
+    }
+    return logicalAbsentStatefulSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_LogicalAbsStatefulSrc()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_StdSource()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_And()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_Not()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_Bs()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource1()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource2()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAbsentStatefulSource_O()
+  {
+        return (EReference)getLogicalAbsentStatefulSource().getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAbsentPatternSourceChain()
+  {
+    if (absentPatternSourceChainEClass == null)
+    {
+      absentPatternSourceChainEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(64);
+    }
+    return absentPatternSourceChainEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAbsentPatternSourceChain_AbsentPatternSrcChain()
+  {
+        return (EReference)getAbsentPatternSourceChain().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAbsentPatternSourceChain_Wt1()
+  {
+        return (EReference)getAbsentPatternSourceChain().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEveryAbsentPatternSource()
+  {
+    if (everyAbsentPatternSourceEClass == null)
+    {
+      everyAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(65);
+    }
+    return everyAbsentPatternSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEveryAbsentPatternSource_BasicAbsentPS()
+  {
+        return (EReference)getEveryAbsentPatternSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBasicAbsentPatternSource()
+  {
+    if (basicAbsentPatternSourceEClass == null)
+    {
+      basicAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(66);
+    }
+    return basicAbsentPatternSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getForTime()
+  {
+    if (forTimeEClass == null)
+    {
+      forTimeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(67);
+    }
+    return forTimeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getForTime_Tv()
+  {
+        return (EReference)getForTime().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLeftAbsentPatternSource()
+  {
+    if (leftAbsentPatternSourceEClass == null)
+    {
+      leftAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(68);
+    }
+    return leftAbsentPatternSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_Left()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLeftAbsentPatternSource_Fb1()
+  {
+        return (EAttribute)getLeftAbsentPatternSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_Right()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_LeftAbsPS()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_Wt2()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_EveryAbsPS()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_EveryPSC()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeftAbsentPatternSource_LeftAbsPatternSrc()
+  {
+        return (EReference)getLeftAbsentPatternSource().getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRightAbsentPatternSource()
+  {
+    if (rightAbsentPatternSourceEClass == null)
+    {
+      rightAbsentPatternSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(69);
+    }
+    return rightAbsentPatternSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_Left1()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRightAbsentPatternSource_Fb2()
+  {
+        return (EAttribute)getRightAbsentPatternSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_Right1()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_RightAbsPS()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_Wt3()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_EveryPSC1()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentPatternSource_EveryAbsPS1()
+  {
+        return (EReference)getRightAbsentPatternSource().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getJoinStream()
+  {
+    if (joinStreamEClass == null)
+    {
+      joinStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(70);
+    }
+    return joinStreamEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Left_source()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Right_source()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Right_uni()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_On()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Expr()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Wtr()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_P()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Join()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getJoinStream_Left_uni()
+  {
+        return (EReference)getJoinStream().getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getWithinTimeRange()
+  {
+    if (withinTimeRangeEClass == null)
+    {
+      withinTimeRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(71);
+    }
+    return withinTimeRangeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWithinTimeRange_StartPattern()
+  {
+        return (EReference)getWithinTimeRange().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWithinTimeRange_EndPattern()
+  {
+        return (EReference)getWithinTimeRange().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPer1()
+  {
+    if (per1EClass == null)
+    {
+      per1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(72);
+    }
+    return per1EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPer1_Exp()
+  {
+        return (EReference)getPer1().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getJoinSource()
+  {
+    if (joinSourceEClass == null)
+    {
+      joinSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(73);
+    }
+    return joinSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStreamAlias()
+  {
+    if (streamAliasEClass == null)
+    {
+      streamAliasEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(74);
+    }
+    return streamAliasEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStreamAlias_Nam()
+  {
+        return (EReference)getStreamAlias().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getWithinTime()
+  {
+    if (withinTimeEClass == null)
+    {
+      withinTimeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(75);
+    }
+    return withinTimeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWithinTime_Tv()
+  {
+        return (EReference)getWithinTime().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getjoins()
+  {
+    if (joinsEClass == null)
+    {
+      joinsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(76);
+    }
+    return joinsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStandardStream()
+  {
+    if (standardStreamEClass == null)
+    {
+      standardStreamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(77);
+    }
+    return standardStreamEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMainSource()
+  {
+    if (mainSourceEClass == null)
+    {
+      mainSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(78);
+    }
+    return mainSourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_Window()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_A()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_StrAlias()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_PostWindowHandlers()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_Src()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMainSource_BasicSSh()
+  {
+        return (EReference)getMainSource().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -4450,7 +4760,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (basicSourceStreamHandlersEClass == null)
     {
-      basicSourceStreamHandlersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(70);
+      basicSourceStreamHandlersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(79);
     }
     return basicSourceStreamHandlersEClass;
   }
@@ -4474,7 +4784,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (basicSourceStreamHandlers1EClass == null)
     {
-      basicSourceStreamHandlers1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(71);
+      basicSourceStreamHandlers1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(80);
     }
     return basicSourceStreamHandlers1EClass;
   }
@@ -4518,7 +4828,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (basicSourceStreamHandlerEClass == null)
     {
-      basicSourceStreamHandlerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(72);
+      basicSourceStreamHandlerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(81);
     }
     return basicSourceStreamHandlerEClass;
   }
@@ -4552,7 +4862,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (filterEClass == null)
     {
-      filterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(73);
+      filterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(82);
     }
     return filterEClass;
   }
@@ -4576,7 +4886,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (streamFunctionEClass == null)
     {
-      streamFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(74);
+      streamFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(83);
     }
     return streamFunctionEClass;
   }
@@ -4600,7 +4910,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (winEClass == null)
     {
-      winEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(75);
+      winEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(84);
     }
     return winEClass;
   }
@@ -4624,333 +4934,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (expressionEClass == null)
     {
-      expressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(76);
+      expressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(85);
     }
     return expressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionOperation()
-  {
-    if (functionOperationEClass == null)
-    {
-      functionOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(77);
-    }
-    return functionOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionOperation_FuncNamespace()
-  {
-        return (EReference)getFunctionOperation().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionOperation_FuncId()
-  {
-        return (EReference)getFunctionOperation().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionOperation_AttrList()
-  {
-        return (EReference)getFunctionOperation().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionNamespace()
-  {
-    if (functionNamespaceEClass == null)
-    {
-      functionNamespaceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(78);
-    }
-    return functionNamespaceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFunctionNamespace_Na()
-  {
-        return (EAttribute)getFunctionNamespace().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionId()
-  {
-    if (functionIdEClass == null)
-    {
-      functionIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(79);
-    }
-    return functionIdEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionId_Na()
-  {
-        return (EReference)getFunctionId().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAttributeList()
-  {
-    if (attributeListEClass == null)
-    {
-      attributeListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(80);
-    }
-    return attributeListEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAttributeList_Attr()
-  {
-        return (EReference)getAttributeList().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAttribute()
-  {
-    if (attributeEClass == null)
-    {
-      attributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(81);
-    }
-    return attributeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAttribute_MathOp()
-  {
-        return (EReference)getAttribute().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getGroupByQuerySelection()
-  {
-    if (groupByQuerySelectionEClass == null)
-    {
-      groupByQuerySelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(82);
-    }
-    return groupByQuerySelectionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGroupByQuerySelection_Out_att()
-  {
-        return (EReference)getGroupByQuerySelection().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGroupByQuerySelection_Grp_by()
-  {
-        return (EReference)getGroupByQuerySelection().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getQuerySection()
-  {
-    if (querySectionEClass == null)
-    {
-      querySectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(83);
-    }
-    return querySectionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getQuerySection_GrpByQuerySel()
-  {
-        return (EReference)getQuerySection().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getQuerySection_Having()
-  {
-        return (EReference)getQuerySection().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getOutputAttribute()
-  {
-    if (outputAttributeEClass == null)
-    {
-      outputAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(84);
-    }
-    return outputAttributeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutputAttribute_OutAttr()
-  {
-        return (EReference)getOutputAttribute().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutputAttribute_Attr_ref()
-  {
-        return (EReference)getOutputAttribute().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getOutAttr()
-  {
-    if (outAttrEClass == null)
-    {
-      outAttrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(85);
-    }
-    return outAttrEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutAttr_Attr()
-  {
-        return (EReference)getOutAttr().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOutAttr_A()
-  {
-        return (EReference)getOutAttr().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getGroupBy()
-  {
-    if (groupByEClass == null)
-    {
-      groupByEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(86);
-    }
-    return groupByEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGroupBy_Attr_ref()
-  {
-        return (EReference)getGroupBy().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getHavingExpr()
-  {
-    if (havingExprEClass == null)
-    {
-      havingExprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(87);
-    }
-    return havingExprEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getHavingExpr_Expr()
-  {
-        return (EReference)getHavingExpr().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4962,7 +4948,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (mathOperationEClass == null)
     {
-      mathOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(88);
+      mathOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(86);
     }
     return mathOperationEClass;
   }
@@ -4982,7 +4968,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathOperation_Op()
+  public EReference getMathOperation_Left()
   {
         return (EReference)getMathOperation().getEStructuralFeatures().get(1);
   }
@@ -4992,9 +4978,121 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathOperation_MathOtherOperations1()
+  public EClass getMathAddsubOperation()
   {
-        return (EReference)getMathOperation().getEStructuralFeatures().get(2);
+    if (mathAddsubOperationEClass == null)
+    {
+      mathAddsubOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(87);
+    }
+    return mathAddsubOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathAddsubOperation_Add()
+  {
+        return (EAttribute)getMathAddsubOperation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathAddsubOperation_Substract()
+  {
+        return (EAttribute)getMathAddsubOperation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMathAddsubOperation_Right()
+  {
+        return (EReference)getMathAddsubOperation().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMathDivmulOperation()
+  {
+    if (mathDivmulOperationEClass == null)
+    {
+      mathDivmulOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(88);
+    }
+    return mathDivmulOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathDivmulOperation_Multiply()
+  {
+        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathDivmulOperation_Devide()
+  {
+        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathDivmulOperation_Mod()
+  {
+        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMathOtherOperations()
+  {
+    if (mathOtherOperationsEClass == null)
+    {
+      mathOtherOperationsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(89);
+    }
+    return mathOtherOperationsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMathOtherOperations_Op()
+  {
+        return (EReference)getMathOtherOperations().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMathOtherOperations_Lit()
+  {
+        return (EReference)getMathOtherOperations().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5006,7 +5104,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (nullCheckEClass == null)
     {
-      nullCheckEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(89);
+      nullCheckEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(90);
     }
     return nullCheckEClass;
   }
@@ -5050,7 +5148,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (streamReferenceEClass == null)
     {
-      streamReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(90);
+      streamReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(91);
     }
     return streamReferenceEClass;
   }
@@ -5070,7 +5168,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStreamReference_Na()
+  public EReference getStreamReference_Name()
   {
         return (EReference)getStreamReference().getEStructuralFeatures().get(1);
   }
@@ -5090,13 +5188,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMathOtherOperations1()
+  public EClass getLiteral()
   {
-    if (mathOtherOperations1EClass == null)
+    if (literalEClass == null)
     {
-      mathOtherOperations1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(91);
+      literalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(92);
     }
-    return mathOtherOperations1EClass;
+    return literalEClass;
   }
 
   /**
@@ -5104,9 +5202,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathOtherOperations1_Const_val()
+  public EReference getLiteral_Const_val()
   {
-        return (EReference)getMathOtherOperations1().getEStructuralFeatures().get(0);
+        return (EReference)getLiteral().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5114,9 +5212,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathOtherOperations1_Fo()
+  public EReference getLiteral_Fo()
   {
-        return (EReference)getMathOtherOperations1().getEStructuralFeatures().get(1);
+        return (EReference)getLiteral().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5124,9 +5222,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathOtherOperations1_AttrRef()
+  public EReference getLiteral_AttrRef()
   {
-        return (EReference)getMathOtherOperations1().getEStructuralFeatures().get(2);
+        return (EReference)getLiteral().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -5138,7 +5236,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (attributeReferenceEClass == null)
     {
-      attributeReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(92);
+      attributeReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(93);
     }
     return attributeReferenceEClass;
   }
@@ -5158,7 +5256,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAttributeReference_Hash1()
+  public EAttribute getAttributeReference_Name()
   {
         return (EAttribute)getAttributeReference().getEStructuralFeatures().get(1);
   }
@@ -5168,9 +5266,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAttributeReference_Name1()
+  public EAttribute getAttributeReference_Hash1()
   {
-        return (EReference)getAttributeReference().getEStructuralFeatures().get(2);
+        return (EAttribute)getAttributeReference().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -5178,7 +5276,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAttributeReference_Attribute_index1()
+  public EReference getAttributeReference_Name1()
   {
         return (EReference)getAttributeReference().getEStructuralFeatures().get(3);
   }
@@ -5188,9 +5286,19 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getAttributeReference_OPEN_SQARE_BRACKETSattribute_index1()
+  {
+        return (EReference)getAttributeReference().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getAttributeReference_Hash2()
   {
-        return (EAttribute)getAttributeReference().getEStructuralFeatures().get(4);
+        return (EAttribute)getAttributeReference().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -5200,16 +5308,6 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    */
   public EReference getAttributeReference_Name2()
   {
-        return (EReference)getAttributeReference().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAttributeReference_Attribute_index2()
-  {
         return (EReference)getAttributeReference().getEStructuralFeatures().get(6);
   }
 
@@ -5218,7 +5316,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAttributeReference_Attr_name()
+  public EReference getAttributeReference_OPEN_SQARE_BRACKETSattribute_index2()
   {
         return (EReference)getAttributeReference().getEStructuralFeatures().get(7);
   }
@@ -5238,13 +5336,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAttributeNameReference()
+  public EClass getFeaturesOrOutAttr()
   {
-    if (attributeNameReferenceEClass == null)
+    if (featuresOrOutAttrEClass == null)
     {
-      attributeNameReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(93);
+      featuresOrOutAttrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(94);
     }
-    return attributeNameReferenceEClass;
+    return featuresOrOutAttrEClass;
   }
 
   /**
@@ -5252,9 +5350,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAttributeNameReference_AttrName1()
+  public EAttribute getFeaturesOrOutAttr_Name()
   {
-        return (EReference)getAttributeNameReference().getEStructuralFeatures().get(0);
+        return (EAttribute)getFeaturesOrOutAttr().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5262,13 +5360,23 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAttributeIndex()
+  public EClass getFeaturesOrOutAttrReference()
   {
-    if (attributeIndexEClass == null)
+    if (featuresOrOutAttrReferenceEClass == null)
     {
-      attributeIndexEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(94);
+      featuresOrOutAttrReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(95);
     }
-    return attributeIndexEClass;
+    return featuresOrOutAttrReferenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFeaturesOrOutAttrReference_SrcoutAttrref()
+  {
+        return (EReference)getFeaturesOrOutAttrReference().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5280,7 +5388,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (standardStatefulSourceEClass == null)
     {
-      standardStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(95);
+      standardStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(96);
     }
     return standardStatefulSourceEClass;
   }
@@ -5330,7 +5438,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStandardStatefulSource_Bs()
+  public EReference getStandardStatefulSource_Src()
   {
         return (EReference)getStandardStatefulSource().getEStructuralFeatures().get(4);
   }
@@ -5340,47 +5448,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSource1OrStandardStatefulSource()
+  public EReference getStandardStatefulSource_Basic_ss_handlers()
   {
-    if (source1OrStandardStatefulSourceEClass == null)
-    {
-      source1OrStandardStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(96);
-    }
-    return source1OrStandardStatefulSourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSource1OrStandardStatefulSource_Name()
-  {
-        return (EAttribute)getSource1OrStandardStatefulSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSourceOrEventReference()
-  {
-    if (sourceOrEventReferenceEClass == null)
-    {
-      sourceOrEventReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(97);
-    }
-    return sourceOrEventReferenceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSourceOrEventReference_Na()
-  {
-        return (EReference)getSourceOrEventReference().getEStructuralFeatures().get(0);
+        return (EReference)getStandardStatefulSource().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -5392,7 +5462,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (basicSourceEClass == null)
     {
-      basicSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(98);
+      basicSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(97);
     }
     return basicSourceEClass;
   }
@@ -5422,13 +5492,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFeaturesOrOutAttr()
+  public EClass getSource1OrStandardStatefulSource()
   {
-    if (featuresOrOutAttrEClass == null)
+    if (source1OrStandardStatefulSourceEClass == null)
     {
-      featuresOrOutAttrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(99);
+      source1OrStandardStatefulSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(98);
     }
-    return featuresOrOutAttrEClass;
+    return source1OrStandardStatefulSourceEClass;
   }
 
   /**
@@ -5436,9 +5506,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeaturesOrOutAttr_Name()
+  public EAttribute getSource1OrStandardStatefulSource_Name()
   {
-        return (EAttribute)getFeaturesOrOutAttr().getEStructuralFeatures().get(0);
+        return (EAttribute)getSource1OrStandardStatefulSource().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5446,13 +5516,13 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFeaturesOrOutAttrReference()
+  public EClass getSourceOrEventReference()
   {
-    if (featuresOrOutAttrReferenceEClass == null)
+    if (sourceOrEventReferenceEClass == null)
     {
-      featuresOrOutAttrReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(100);
+      sourceOrEventReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(99);
     }
-    return featuresOrOutAttrReferenceEClass;
+    return sourceOrEventReferenceEClass;
   }
 
   /**
@@ -5460,9 +5530,47 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFeaturesOrOutAttrReference_SrcoutAttrref()
+  public EReference getSourceOrEventReference_Na()
   {
-        return (EReference)getFeaturesOrOutAttrReference().getEStructuralFeatures().get(0);
+        return (EReference)getSourceOrEventReference().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAttributeNameReference()
+  {
+    if (attributeNameReferenceEClass == null)
+    {
+      attributeNameReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(100);
+    }
+    return attributeNameReferenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAttributeNameReference_AttrName1()
+  {
+        return (EReference)getAttributeNameReference().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAttributeIndex()
+  {
+    if (attributeIndexEClass == null)
+    {
+      attributeIndexEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(101);
+    }
+    return attributeIndexEClass;
   }
 
   /**
@@ -5474,7 +5582,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (constantValueEClass == null)
     {
-      constantValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(101);
+      constantValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(102);
     }
     return constantValueEClass;
   }
@@ -5554,11 +5662,151 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getFunctionOperation()
+  {
+    if (functionOperationEClass == null)
+    {
+      functionOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(103);
+    }
+    return functionOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionOperation_FuncNamespace()
+  {
+        return (EReference)getFunctionOperation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionOperation_FuncId()
+  {
+        return (EReference)getFunctionOperation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionOperation_AttrList()
+  {
+        return (EReference)getFunctionOperation().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctionNamespace()
+  {
+    if (functionNamespaceEClass == null)
+    {
+      functionNamespaceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(104);
+    }
+    return functionNamespaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionNamespace_Name()
+  {
+        return (EReference)getFunctionNamespace().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctionId()
+  {
+    if (functionIdEClass == null)
+    {
+      functionIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(105);
+    }
+    return functionIdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionId_Name()
+  {
+        return (EReference)getFunctionId().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAttributeList()
+  {
+    if (attributeListEClass == null)
+    {
+      attributeListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(106);
+    }
+    return attributeListEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAttributeList_Attr()
+  {
+        return (EReference)getAttributeList().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAttribute()
+  {
+    if (attributeEClass == null)
+    {
+      attributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(107);
+    }
+    return attributeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAttribute_MathOp()
+  {
+        return (EReference)getAttribute().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getName_()
   {
     if (nameEClass == null)
     {
-      nameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(102);
+      nameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(108);
     }
     return nameEClass;
   }
@@ -5568,57 +5816,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getName_Name()
+  public EAttribute getName_Na()
   {
         return (EAttribute)getName_().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSource()
-  {
-    if (sourceEClass == null)
-    {
-      sourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(103);
-    }
-    return sourceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSource_StrId()
-  {
-        return (EReference)getSource().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSource1()
-  {
-    if (source1EClass == null)
-    {
-      source1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(104);
-    }
-    return source1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSource1_Inner()
-  {
-        return (EAttribute)getSource1().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5630,7 +5830,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (boolValueEClass == null)
     {
-      boolValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(105);
+      boolValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(109);
     }
     return boolValueEClass;
   }
@@ -5644,7 +5844,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (signedDoubleValueEClass == null)
     {
-      signedDoubleValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(106);
+      signedDoubleValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(110);
     }
     return signedDoubleValueEClass;
   }
@@ -5658,7 +5858,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (signedFloatValueEClass == null)
     {
-      signedFloatValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(107);
+      signedFloatValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(111);
     }
     return signedFloatValueEClass;
   }
@@ -5672,7 +5872,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (signedLongValueEClass == null)
     {
-      signedLongValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(108);
+      signedLongValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(112);
     }
     return signedLongValueEClass;
   }
@@ -5686,7 +5886,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (stringValueEClass == null)
     {
-      stringValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(109);
+      stringValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(113);
     }
     return stringValueEClass;
   }
@@ -5710,7 +5910,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (timeValueEClass == null)
     {
-      timeValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(110);
+      timeValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(114);
     }
     return timeValueEClass;
   }
@@ -5814,7 +6014,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (yearValueEClass == null)
     {
-      yearValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(111);
+      yearValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(115);
     }
     return yearValueEClass;
   }
@@ -5828,7 +6028,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (monthValueEClass == null)
     {
-      monthValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(112);
+      monthValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(116);
     }
     return monthValueEClass;
   }
@@ -5842,7 +6042,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (weekValueEClass == null)
     {
-      weekValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(113);
+      weekValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(117);
     }
     return weekValueEClass;
   }
@@ -5856,7 +6056,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (dayValueEClass == null)
     {
-      dayValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(114);
+      dayValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(118);
     }
     return dayValueEClass;
   }
@@ -5870,7 +6070,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (hourValueEClass == null)
     {
-      hourValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(115);
+      hourValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(119);
     }
     return hourValueEClass;
   }
@@ -5884,7 +6084,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (minuteValueEClass == null)
     {
-      minuteValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(116);
+      minuteValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(120);
     }
     return minuteValueEClass;
   }
@@ -5898,7 +6098,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (secondValueEClass == null)
     {
-      secondValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(117);
+      secondValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(121);
     }
     return secondValueEClass;
   }
@@ -5912,7 +6112,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (millisecondValueEClass == null)
     {
-      millisecondValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(118);
+      millisecondValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(122);
     }
     return millisecondValueEClass;
   }
@@ -5926,7 +6126,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (doublE_LITERALEClass == null)
     {
-      doublE_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(119);
+      doublE_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(123);
     }
     return doublE_LITERALEClass;
   }
@@ -5960,7 +6160,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (floaT_LITERALEClass == null)
     {
-      floaT_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(120);
+      floaT_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(124);
     }
     return floaT_LITERALEClass;
   }
@@ -5994,7 +6194,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (lonG_LITERALEClass == null)
     {
-      lonG_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(121);
+      lonG_LITERALEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(125);
     }
     return lonG_LITERALEClass;
   }
@@ -6018,7 +6218,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (keywordEClass == null)
     {
-      keywordEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(122);
+      keywordEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(126);
     }
     return keywordEClass;
   }
@@ -6112,7 +6312,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (asEClass == null)
     {
-      asEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(123);
+      asEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(127);
     }
     return asEClass;
   }
@@ -6136,7 +6336,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (onEClass == null)
     {
-      onEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(124);
+      onEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(128);
     }
     return onEClass;
   }
@@ -6160,7 +6360,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (unidirectionalEClass == null)
     {
-      unidirectionalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(125);
+      unidirectionalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(129);
     }
     return unidirectionalEClass;
   }
@@ -6184,7 +6384,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (notEClass == null)
     {
-      notEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(126);
+      notEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(130);
     }
     return notEClass;
   }
@@ -6228,7 +6428,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (everyEClass == null)
     {
-      everyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(127);
+      everyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(131);
     }
     return everyEClass;
   }
@@ -6238,7 +6438,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEVERY_Every()
+  public EAttribute getEVERY_Every1()
   {
         return (EAttribute)getEVERY().getEStructuralFeatures().get(0);
   }
@@ -6252,7 +6452,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (andEClass == null)
     {
-      andEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(128);
+      andEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(132);
     }
     return andEClass;
   }
@@ -6276,7 +6476,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (orEClass == null)
     {
-      orEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(129);
+      orEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(133);
     }
     return orEClass;
   }
@@ -6300,7 +6500,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (inEClass == null)
     {
-      inEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(130);
+      inEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(134);
     }
     return inEClass;
   }
@@ -6324,7 +6524,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (ofEClass == null)
     {
-      ofEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(131);
+      ofEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(135);
     }
     return ofEClass;
   }
@@ -6348,7 +6548,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (eEClass == null)
     {
-      eEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(132);
+      eEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(136);
     }
     return eEClass;
   }
@@ -6372,7 +6572,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (dEClass == null)
     {
-      dEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(133);
+      dEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(137);
     }
     return dEClass;
   }
@@ -6396,7 +6596,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (fEClass == null)
     {
-      fEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(134);
+      fEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(138);
     }
     return fEClass;
   }
@@ -6420,7 +6620,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (lEClass == null)
     {
-      lEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(135);
+      lEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(139);
     }
     return lEClass;
   }
@@ -6444,7 +6644,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (appEClass == null)
     {
-      appEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(136);
+      appEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(140);
     }
     return appEClass;
   }
@@ -6454,7 +6654,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAPP_Na()
+  public EReference getAPP_Name()
   {
         return (EReference)getAPP().getEStructuralFeatures().get(0);
   }
@@ -6488,7 +6688,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (streamEClass == null)
     {
-      streamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(137);
+      streamEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(141);
     }
     return streamEClass;
   }
@@ -6512,7 +6712,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (defineEClass == null)
     {
-      defineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(138);
+      defineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(142);
     }
     return defineEClass;
   }
@@ -6536,7 +6736,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (tableEClass == null)
     {
-      tableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(139);
+      tableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(143);
     }
     return tableEClass;
   }
@@ -6560,7 +6760,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (windowEClass == null)
     {
-      windowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(140);
+      windowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(144);
     }
     return windowEClass;
   }
@@ -6584,7 +6784,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (outputEClass == null)
     {
-      outputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(141);
+      outputEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(145);
     }
     return outputEClass;
   }
@@ -6608,7 +6808,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (stringsEClass == null)
     {
-      stringsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(142);
+      stringsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(146);
     }
     return stringsEClass;
   }
@@ -6632,7 +6832,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (intsEClass == null)
     {
-      intsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(143);
+      intsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(147);
     }
     return intsEClass;
   }
@@ -6656,7 +6856,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (longEClass == null)
     {
-      longEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(144);
+      longEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(148);
     }
     return longEClass;
   }
@@ -6680,7 +6880,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (doubleEClass == null)
     {
-      doubleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(145);
+      doubleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(149);
     }
     return doubleEClass;
   }
@@ -6704,7 +6904,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (floatEClass == null)
     {
-      floatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(146);
+      floatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(150);
     }
     return floatEClass;
   }
@@ -6728,7 +6928,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (boolEClass == null)
     {
-      boolEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(147);
+      boolEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(151);
     }
     return boolEClass;
   }
@@ -6752,7 +6952,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (objectEClass == null)
     {
-      objectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(148);
+      objectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(152);
     }
     return objectEClass;
   }
@@ -6776,7 +6976,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (allEClass == null)
     {
-      allEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(149);
+      allEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(153);
     }
     return allEClass;
   }
@@ -6800,7 +7000,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (eventsEClass == null)
     {
-      eventsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(150);
+      eventsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(154);
     }
     return eventsEClass;
   }
@@ -6824,7 +7024,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (rawEClass == null)
     {
-      rawEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(151);
+      rawEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(155);
     }
     return rawEClass;
   }
@@ -6848,7 +7048,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (expiredEClass == null)
     {
-      expiredEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(152);
+      expiredEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(156);
     }
     return expiredEClass;
   }
@@ -6872,7 +7072,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (currentEClass == null)
     {
-      currentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(153);
+      currentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(157);
     }
     return currentEClass;
   }
@@ -6896,7 +7096,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (lastEClass == null)
     {
-      lastEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(154);
+      lastEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(158);
     }
     return lastEClass;
   }
@@ -6920,7 +7120,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (isEClass == null)
     {
-      isEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(155);
+      isEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(159);
     }
     return isEClass;
   }
@@ -6944,7 +7144,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (nullEClass == null)
     {
-      nullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(156);
+      nullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(160);
     }
     return nullEClass;
   }
@@ -6968,7 +7168,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (triggerEClass == null)
     {
-      triggerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(157);
+      triggerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(161);
     }
     return triggerEClass;
   }
@@ -6992,7 +7192,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (atEClass == null)
     {
-      atEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(158);
+      atEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(162);
     }
     return atEClass;
   }
@@ -7016,7 +7216,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (functionEClass == null)
     {
-      functionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(159);
+      functionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(163);
     }
     return functionEClass;
   }
@@ -7040,7 +7240,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (returnEClass == null)
     {
-      returnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(160);
+      returnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(164);
     }
     return returnEClass;
   }
@@ -7064,7 +7264,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (fromEClass == null)
     {
-      fromEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(161);
+      fromEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(165);
     }
     return fromEClass;
   }
@@ -7088,7 +7288,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (withinEClass == null)
     {
-      withinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(162);
+      withinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(166);
     }
     return withinEClass;
   }
@@ -7112,7 +7312,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (leftEClass == null)
     {
-      leftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(163);
+      leftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(167);
     }
     return leftEClass;
   }
@@ -7136,7 +7336,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (rightEClass == null)
     {
-      rightEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(164);
+      rightEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(168);
     }
     return rightEClass;
   }
@@ -7160,7 +7360,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (fullEClass == null)
     {
-      fullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(165);
+      fullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(169);
     }
     return fullEClass;
   }
@@ -7184,7 +7384,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (joinEClass == null)
     {
-      joinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(166);
+      joinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(170);
     }
     return joinEClass;
   }
@@ -7208,7 +7408,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (innerEClass == null)
     {
-      innerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(167);
+      innerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(171);
     }
     return innerEClass;
   }
@@ -7232,7 +7432,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (outerEClass == null)
     {
-      outerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(168);
+      outerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(172);
     }
     return outerEClass;
   }
@@ -7256,7 +7456,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (selectEClass == null)
     {
-      selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(169);
+      selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(173);
     }
     return selectEClass;
   }
@@ -7280,7 +7480,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (groupEClass == null)
     {
-      groupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(170);
+      groupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(174);
     }
     return groupEClass;
   }
@@ -7304,7 +7504,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (byEClass == null)
     {
-      byEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(171);
+      byEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(175);
     }
     return byEClass;
   }
@@ -7328,7 +7528,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (havingEClass == null)
     {
-      havingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(172);
+      havingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(176);
     }
     return havingEClass;
   }
@@ -7352,7 +7552,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (snapshotEClass == null)
     {
-      snapshotEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(173);
+      snapshotEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(177);
     }
     return snapshotEClass;
   }
@@ -7376,7 +7576,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (firstEClass == null)
     {
-      firstEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(174);
+      firstEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(178);
     }
     return firstEClass;
   }
@@ -7400,7 +7600,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (insertEClass == null)
     {
-      insertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(175);
+      insertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(179);
     }
     return insertEClass;
   }
@@ -7424,7 +7624,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (intoEClass == null)
     {
-      intoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(176);
+      intoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(180);
     }
     return intoEClass;
   }
@@ -7448,7 +7648,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (beginEClass == null)
     {
-      beginEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(177);
+      beginEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(181);
     }
     return beginEClass;
   }
@@ -7472,7 +7672,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (planEClass == null)
     {
-      planEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(178);
+      planEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(182);
     }
     return planEClass;
   }
@@ -7496,7 +7696,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (deleteEClass == null)
     {
-      deleteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(179);
+      deleteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(183);
     }
     return deleteEClass;
   }
@@ -7520,7 +7720,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (forEClass == null)
     {
-      forEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(180);
+      forEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(184);
     }
     return forEClass;
   }
@@ -7544,7 +7744,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (updateEClass == null)
     {
-      updateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(181);
+      updateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(185);
     }
     return updateEClass;
   }
@@ -7568,7 +7768,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (endEClass == null)
     {
-      endEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(182);
+      endEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(186);
     }
     return endEClass;
   }
@@ -7592,7 +7792,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (partitionEClass == null)
     {
-      partitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(183);
+      partitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(187);
     }
     return partitionEClass;
   }
@@ -7616,7 +7816,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (withEClass == null)
     {
-      withEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(184);
+      withEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(188);
     }
     return withEClass;
   }
@@ -7640,7 +7840,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (aggregationEClass == null)
     {
-      aggregationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(185);
+      aggregationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(189);
     }
     return aggregationEClass;
   }
@@ -7664,7 +7864,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (aggregateEClass == null)
     {
-      aggregateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(186);
+      aggregateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(190);
     }
     return aggregateEClass;
   }
@@ -7688,7 +7888,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (setEClass == null)
     {
-      setEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(187);
+      setEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(191);
     }
     return setEClass;
   }
@@ -7712,7 +7912,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (perEClass == null)
     {
-      perEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(188);
+      perEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(192);
     }
     return perEClass;
   }
@@ -7736,7 +7936,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (yearsEClass == null)
     {
-      yearsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(189);
+      yearsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(193);
     }
     return yearsEClass;
   }
@@ -7770,7 +7970,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (monthsEClass == null)
     {
-      monthsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(190);
+      monthsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(194);
     }
     return monthsEClass;
   }
@@ -7804,7 +8004,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (weeksEClass == null)
     {
-      weeksEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(191);
+      weeksEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(195);
     }
     return weeksEClass;
   }
@@ -7838,7 +8038,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (daysEClass == null)
     {
-      daysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(192);
+      daysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(196);
     }
     return daysEClass;
   }
@@ -7872,7 +8072,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (hoursEClass == null)
     {
-      hoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(193);
+      hoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(197);
     }
     return hoursEClass;
   }
@@ -7906,7 +8106,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (minutesEClass == null)
     {
-      minutesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(194);
+      minutesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(198);
     }
     return minutesEClass;
   }
@@ -7950,7 +8150,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (secondsEClass == null)
     {
-      secondsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(195);
+      secondsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(199);
     }
     return secondsEClass;
   }
@@ -7994,7 +8194,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (millisecondsEClass == null)
     {
-      millisecondsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(196);
+      millisecondsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(200);
     }
     return millisecondsEClass;
   }
@@ -8038,7 +8238,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (falseEClass == null)
     {
-      falseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(197);
+      falseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(201);
     }
     return falseEClass;
   }
@@ -8062,7 +8262,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (trueEClass == null)
     {
-      trueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(198);
+      trueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(202);
     }
     return trueEClass;
   }
@@ -8082,11 +8282,59 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLeftAbsentSequenceSource1()
+  {
+    if (leftAbsentSequenceSource1EClass == null)
+    {
+      leftAbsentSequenceSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(203);
+    }
+    return leftAbsentSequenceSource1EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRightAbsentSequenceSource1()
+  {
+    if (rightAbsentSequenceSource1EClass == null)
+    {
+      rightAbsentSequenceSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(204);
+    }
+    return rightAbsentSequenceSource1EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentSequenceSource1_Left()
+  {
+        return (EReference)getRightAbsentSequenceSource1().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRightAbsentSequenceSource1_Right()
+  {
+        return (EReference)getRightAbsentSequenceSource1().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLeftAbsentPatternSource1()
   {
     if (leftAbsentPatternSource1EClass == null)
     {
-      leftAbsentPatternSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(199);
+      leftAbsentPatternSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(205);
     }
     return leftAbsentPatternSource1EClass;
   }
@@ -8110,7 +8358,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (rightAbsentPatternSource1EClass == null)
     {
-      rightAbsentPatternSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(200);
+      rightAbsentPatternSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(206);
     }
     return rightAbsentPatternSource1EClass;
   }
@@ -8150,59 +8398,11 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLeftAbsentSequenceSource1()
-  {
-    if (leftAbsentSequenceSource1EClass == null)
-    {
-      leftAbsentSequenceSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(201);
-    }
-    return leftAbsentSequenceSource1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRightAbsentSequenceSource1()
-  {
-    if (rightAbsentSequenceSource1EClass == null)
-    {
-      rightAbsentSequenceSource1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(202);
-    }
-    return rightAbsentSequenceSource1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentSequenceSource1_Left()
-  {
-        return (EReference)getRightAbsentSequenceSource1().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRightAbsentSequenceSource1_Right()
-  {
-        return (EReference)getRightAbsentSequenceSource1().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getMathLogicalOperation()
   {
     if (mathLogicalOperationEClass == null)
     {
-      mathLogicalOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(203);
+      mathLogicalOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(207);
     }
     return mathLogicalOperationEClass;
   }
@@ -8212,7 +8412,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathLogicalOperation_Left()
+  public EReference getMathLogicalOperation_And()
   {
         return (EReference)getMathLogicalOperation().getEStructuralFeatures().get(0);
   }
@@ -8222,7 +8422,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathLogicalOperation_And()
+  public EReference getMathLogicalOperation_Or()
   {
         return (EReference)getMathLogicalOperation().getEStructuralFeatures().get(1);
   }
@@ -8232,19 +8432,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathLogicalOperation_Or()
-  {
-        return (EReference)getMathLogicalOperation().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getMathLogicalOperation_Right()
   {
-        return (EReference)getMathLogicalOperation().getEStructuralFeatures().get(3);
+        return (EReference)getMathLogicalOperation().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -8256,7 +8446,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (mathInOperationEClass == null)
     {
-      mathInOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(204);
+      mathInOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(208);
     }
     return mathInOperationEClass;
   }
@@ -8266,7 +8456,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathInOperation_Left()
+  public EReference getMathInOperation_In()
   {
         return (EReference)getMathInOperation().getEStructuralFeatures().get(0);
   }
@@ -8276,19 +8466,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathInOperation_In()
+  public EReference getMathInOperation_Name()
   {
         return (EReference)getMathInOperation().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMathInOperation_Right()
-  {
-        return (EReference)getMathInOperation().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -8300,7 +8480,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (mathGtLtOperationEClass == null)
     {
-      mathGtLtOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(205);
+      mathGtLtOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(209);
     }
     return mathGtLtOperationEClass;
   }
@@ -8310,9 +8490,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathGtLtOperation_Left()
+  public EAttribute getMathGtLtOperation_Gt_eq()
   {
-        return (EReference)getMathGtLtOperation().getEStructuralFeatures().get(0);
+        return (EAttribute)getMathGtLtOperation().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -8320,7 +8500,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMathGtLtOperation_Symbol()
+  public EAttribute getMathGtLtOperation_Lt_eq()
   {
         return (EAttribute)getMathGtLtOperation().getEStructuralFeatures().get(1);
   }
@@ -8330,9 +8510,29 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMathGtLtOperation_Gt()
+  {
+        return (EAttribute)getMathGtLtOperation().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMathGtLtOperation_Lt()
+  {
+        return (EAttribute)getMathGtLtOperation().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMathGtLtOperation_Right()
   {
-        return (EReference)getMathGtLtOperation().getEStructuralFeatures().get(2);
+        return (EReference)getMathGtLtOperation().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -8344,7 +8544,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (mathEqualOperationEClass == null)
     {
-      mathEqualOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(206);
+      mathEqualOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(210);
     }
     return mathEqualOperationEClass;
   }
@@ -8354,19 +8554,9 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMathEqualOperation_Left()
-  {
-        return (EReference)getMathEqualOperation().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getMathEqualOperation_Eq()
   {
-        return (EAttribute)getMathEqualOperation().getEStructuralFeatures().get(1);
+        return (EAttribute)getMathEqualOperation().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -8376,7 +8566,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    */
   public EAttribute getMathEqualOperation_Not_eq()
   {
-        return (EAttribute)getMathEqualOperation().getEStructuralFeatures().get(2);
+        return (EAttribute)getMathEqualOperation().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -8386,125 +8576,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
    */
   public EReference getMathEqualOperation_Right()
   {
-        return (EReference)getMathEqualOperation().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMathAddsubOperation()
-  {
-    if (mathAddsubOperationEClass == null)
-    {
-      mathAddsubOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(207);
-    }
-    return mathAddsubOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMathAddsubOperation_Left()
-  {
-        return (EReference)getMathAddsubOperation().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMathAddsubOperation_Add()
-  {
-        return (EAttribute)getMathAddsubOperation().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMathAddsubOperation_Substract()
-  {
-        return (EAttribute)getMathAddsubOperation().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMathAddsubOperation_Right()
-  {
-        return (EReference)getMathAddsubOperation().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMathDivmulOperation()
-  {
-    if (mathDivmulOperationEClass == null)
-    {
-      mathDivmulOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(208);
-    }
-    return mathDivmulOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMathDivmulOperation_Left()
-  {
-        return (EReference)getMathDivmulOperation().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMathDivmulOperation_Multiply()
-  {
-        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMathDivmulOperation_Devide()
-  {
-        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMathDivmulOperation_Mod()
-  {
-        return (EAttribute)getMathDivmulOperation().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMathDivmulOperation_Right()
-  {
-        return (EReference)getMathDivmulOperation().getEStructuralFeatures().get(4);
+        return (EReference)getMathEqualOperation().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -8516,7 +8588,7 @@ public class SiddhiPackageImpl extends EPackageImpl implements SiddhiPackage
   {
     if (notOperationEClass == null)
     {
-      notOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(209);
+      notOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(SiddhiPackage.eNS_URI).getEClassifiers().get(211);
     }
     return notOperationEClass;
   }

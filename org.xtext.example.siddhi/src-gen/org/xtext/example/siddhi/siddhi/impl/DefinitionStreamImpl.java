@@ -24,7 +24,6 @@ import org.xtext.example.siddhi.siddhi.Features;
 import org.xtext.example.siddhi.siddhi.STREAM;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 import org.xtext.example.siddhi.siddhi.Source1;
-import org.xtext.example.siddhi.siddhi.TABLE;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +34,6 @@ import org.xtext.example.siddhi.siddhi.TABLE;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.DefinitionStreamImpl#getStr <em>Str</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.DefinitionStreamImpl#getTable <em>Table</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.DefinitionStreamImpl#getAnn <em>Ann</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.DefinitionStreamImpl#getSrc <em>Src</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.DefinitionStreamImpl#getFeature <em>Feature</em>}</li>
@@ -64,26 +62,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
    * @ordered
    */
   protected String str = STR_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTable() <em>Table</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTable()
-   * @generated
-   * @ordered
-   */
-  protected static final String TABLE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTable() <em>Table</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTable()
-   * @generated
-   * @ordered
-   */
-  protected String table = TABLE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAnn() <em>Ann</em>}' containment reference list.
@@ -157,29 +135,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
     str = newStr;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.DEFINITION_STREAM__STR, oldStr, str));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getTable()
-  {
-    return table;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTable(String newTable)
-  {
-    String oldTable = table;
-    table = newTable;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.DEFINITION_STREAM__TABLE, oldTable, table));
   }
 
   /**
@@ -290,8 +245,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
     {
       case SiddhiPackage.DEFINITION_STREAM__STR:
         return getStr();
-      case SiddhiPackage.DEFINITION_STREAM__TABLE:
-        return getTable();
       case SiddhiPackage.DEFINITION_STREAM__ANN:
         return getAnn();
       case SiddhiPackage.DEFINITION_STREAM__SRC:
@@ -315,9 +268,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
     {
       case SiddhiPackage.DEFINITION_STREAM__STR:
         setStr((String)newValue);
-        return;
-      case SiddhiPackage.DEFINITION_STREAM__TABLE:
-        setTable((String)newValue);
         return;
       case SiddhiPackage.DEFINITION_STREAM__ANN:
         getAnn().clear();
@@ -347,9 +297,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
       case SiddhiPackage.DEFINITION_STREAM__STR:
         setStr(STR_EDEFAULT);
         return;
-      case SiddhiPackage.DEFINITION_STREAM__TABLE:
-        setTable(TABLE_EDEFAULT);
-        return;
       case SiddhiPackage.DEFINITION_STREAM__ANN:
         getAnn().clear();
         return;
@@ -375,8 +322,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
     {
       case SiddhiPackage.DEFINITION_STREAM__STR:
         return STR_EDEFAULT == null ? str != null : !STR_EDEFAULT.equals(str);
-      case SiddhiPackage.DEFINITION_STREAM__TABLE:
-        return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
       case SiddhiPackage.DEFINITION_STREAM__ANN:
         return ann != null && !ann.isEmpty();
       case SiddhiPackage.DEFINITION_STREAM__SRC:
@@ -403,14 +348,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
         default: return -1;
       }
     }
-    if (baseClass == TABLE.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case SiddhiPackage.DEFINITION_STREAM__TABLE: return SiddhiPackage.TABLE__TABLE;
-        default: return -1;
-      }
-    }
     return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
   }
 
@@ -430,14 +367,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
         default: return -1;
       }
     }
-    if (baseClass == TABLE.class)
-    {
-      switch (baseFeatureID)
-      {
-        case SiddhiPackage.TABLE__TABLE: return SiddhiPackage.DEFINITION_STREAM__TABLE;
-        default: return -1;
-      }
-    }
     return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
@@ -454,8 +383,6 @@ public class DefinitionStreamImpl extends DEFINEImpl implements DefinitionStream
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (str: ");
     result.append(str);
-    result.append(", table: ");
-    result.append(table);
     result.append(')');
     return result.toString();
   }

@@ -63,6 +63,7 @@ import org.xtext.example.siddhi.siddhi.RIGHT;
 import org.xtext.example.siddhi.siddhi.SECONDS;
 import org.xtext.example.siddhi.siddhi.SELECT;
 import org.xtext.example.siddhi.siddhi.SNAPSHOT;
+import org.xtext.example.siddhi.siddhi.STREAM;
 import org.xtext.example.siddhi.siddhi.STRINGS;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 import org.xtext.example.siddhi.siddhi.TABLE;
@@ -83,6 +84,7 @@ import org.xtext.example.siddhi.siddhi.YEARS;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.KeywordImpl#getStr <em>Str</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.KeywordImpl#getDefine <em>Define</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.KeywordImpl#getFrom <em>From</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.KeywordImpl#getSelect <em>Select</em>}</li>
@@ -159,8 +161,28 @@ import org.xtext.example.siddhi.siddhi.YEARS;
  *
  * @generated
  */
-public class KeywordImpl extends STREAMImpl implements Keyword
+public class KeywordImpl extends NameImpl implements Keyword
 {
+  /**
+   * The default value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected static final String STR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected String str = STR_EDEFAULT;
+
   /**
    * The default value of the '{@link #getDefine() <em>Define</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -1540,6 +1562,29 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getKeyword();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getStr()
+  {
+    return str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStr(String newStr)
+  {
+    String oldStr = str;
+    str = newStr;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.KEYWORD__STR, oldStr, str));
   }
 
   /**
@@ -3438,6 +3483,8 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   {
     switch (featureID)
     {
+      case SiddhiPackage.KEYWORD__STR:
+        return getStr();
       case SiddhiPackage.KEYWORD__DEFINE:
         return getDefine();
       case SiddhiPackage.KEYWORD__FROM:
@@ -3596,6 +3643,9 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   {
     switch (featureID)
     {
+      case SiddhiPackage.KEYWORD__STR:
+        setStr((String)newValue);
+        return;
       case SiddhiPackage.KEYWORD__DEFINE:
         setDefine((String)newValue);
         return;
@@ -3826,6 +3876,9 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   {
     switch (featureID)
     {
+      case SiddhiPackage.KEYWORD__STR:
+        setStr(STR_EDEFAULT);
+        return;
       case SiddhiPackage.KEYWORD__DEFINE:
         setDefine(DEFINE_EDEFAULT);
         return;
@@ -4056,6 +4109,8 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   {
     switch (featureID)
     {
+      case SiddhiPackage.KEYWORD__STR:
+        return STR_EDEFAULT == null ? str != null : !STR_EDEFAULT.equals(str);
       case SiddhiPackage.KEYWORD__DEFINE:
         return DEFINE_EDEFAULT == null ? define != null : !DEFINE_EDEFAULT.equals(define);
       case SiddhiPackage.KEYWORD__FROM:
@@ -4212,6 +4267,14 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
+    if (baseClass == STREAM.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case SiddhiPackage.KEYWORD__STR: return SiddhiPackage.STREAM__STR;
+        default: return -1;
+      }
+    }
     if (baseClass == DEFINE.class)
     {
       switch (derivedFeatureID)
@@ -4658,6 +4721,14 @@ public class KeywordImpl extends STREAMImpl implements Keyword
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
+    if (baseClass == STREAM.class)
+    {
+      switch (baseFeatureID)
+      {
+        case SiddhiPackage.STREAM__STR: return SiddhiPackage.KEYWORD__STR;
+        default: return -1;
+      }
+    }
     if (baseClass == DEFINE.class)
     {
       switch (baseFeatureID)
@@ -5107,7 +5178,9 @@ public class KeywordImpl extends STREAMImpl implements Keyword
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (define: ");
+    result.append(" (str: ");
+    result.append(str);
+    result.append(", define: ");
     result.append(define);
     result.append(", from: ");
     result.append(from);

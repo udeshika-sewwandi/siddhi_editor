@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.StreamReference#getHash <em>Hash</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.StreamReference#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.StreamReference#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.StreamReference#getAatr_index <em>Aatr index</em>}</li>
  * </ul>
  *
@@ -52,30 +52,30 @@ public interface StreamReference extends EObject
   void setHash(String value);
 
   /**
-   * Returns the value of the '<em><b>Na</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Na</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Na</em>' containment reference.
-   * @see #setNa(Name)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getStreamReference_Na()
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Name)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getStreamReference_Name()
    * @model containment="true"
    * @generated
    */
-  Name getNa();
+  Name getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.StreamReference#getNa <em>Na</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.StreamReference#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Na</em>' containment reference.
-   * @see #getNa()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setNa(Name value);
+  void setName(Name value);
 
   /**
    * Returns the value of the '<em><b>Aatr index</b></em>' containment reference.

@@ -25,7 +25,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathLogicalOperationImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathLogicalOperationImpl#getAnd <em>And</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathLogicalOperationImpl#getOr <em>Or</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathLogicalOperationImpl#getRight <em>Right</em>}</li>
@@ -35,16 +34,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  */
 public class MathLogicalOperationImpl extends MathOperationImpl implements MathLogicalOperation
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected MathOperation left;
-
   /**
    * The cached value of the '{@link #getAnd() <em>And</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -94,54 +83,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getMathLogicalOperation();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOperation getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
-  {
-    MathOperation oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(MathOperation newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -298,8 +239,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT:
-        return basicSetLeft(null, msgs);
       case SiddhiPackage.MATH_LOGICAL_OPERATION__AND:
         return basicSetAnd(null, msgs);
       case SiddhiPackage.MATH_LOGICAL_OPERATION__OR:
@@ -320,8 +259,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT:
-        return getLeft();
       case SiddhiPackage.MATH_LOGICAL_OPERATION__AND:
         return getAnd();
       case SiddhiPackage.MATH_LOGICAL_OPERATION__OR:
@@ -342,9 +279,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT:
-        setLeft((MathOperation)newValue);
-        return;
       case SiddhiPackage.MATH_LOGICAL_OPERATION__AND:
         setAnd((AND)newValue);
         return;
@@ -368,9 +302,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT:
-        setLeft((MathOperation)null);
-        return;
       case SiddhiPackage.MATH_LOGICAL_OPERATION__AND:
         setAnd((AND)null);
         return;
@@ -394,8 +325,6 @@ public class MathLogicalOperationImpl extends MathOperationImpl implements MathL
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_LOGICAL_OPERATION__LEFT:
-        return left != null;
       case SiddhiPackage.MATH_LOGICAL_OPERATION__AND:
         return and != null;
       case SiddhiPackage.MATH_LOGICAL_OPERATION__OR:

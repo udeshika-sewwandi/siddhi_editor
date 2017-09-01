@@ -327,8 +327,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? (ambiguity) ('.' DIGIT*)? d=D
-	 *     (rule start) ('+' | '-')? (ambiguity) ('.' DIGIT*)? e=E
+	 *     (rule start) ('-' | '+')? (ambiguity) ('.' DIGIT*)? d=D
+	 *     (rule start) ('-' | '+')? (ambiguity) ('.' DIGIT*)? e=E
 	 *     (rule start) (ambiguity) ('.' DIGIT*)? d=D
 	 *     (rule start) (ambiguity) ('.' DIGIT*)? e=E
 	 */
@@ -341,7 +341,6 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     e=E ('+' | '-')? (ambiguity) d=D
 	 *     e=E ('-' | '+')? (ambiguity) d=D
 	 */
 	protected void emit_DOUBLE_LITERAL_DIGITParserRuleCall_0_0_3_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -353,7 +352,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? (ambiguity) ('.' DIGIT*)? e=E
+	 *     (rule start) ('-' | '+')? (ambiguity) ('.' DIGIT*)? e=E
 	 *     (rule start) (ambiguity) ('.' DIGIT*)? e=E
 	 */
 	protected void emit_DOUBLE_LITERAL_DIGITParserRuleCall_1_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -365,8 +364,6 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     e=E ('+' | '-')? (ambiguity) (rule end)
-	 *     e=E ('+' | '-')? (ambiguity) d=D
 	 *     e=E ('-' | '+')? (ambiguity) (rule end)
 	 *     e=E ('-' | '+')? (ambiguity) d=D
 	 */
@@ -379,9 +376,9 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? (ambiguity) '.' DIGIT+ (rule start)
-	 *     (rule start) ('+' | '-')? (ambiguity) '.' DIGIT+ d=D
-	 *     (rule start) ('+' | '-')? (ambiguity) '.' DIGIT+ e=E
+	 *     (rule start) ('-' | '+')? (ambiguity) '.' DIGIT+ (rule start)
+	 *     (rule start) ('-' | '+')? (ambiguity) '.' DIGIT+ d=D
+	 *     (rule start) ('-' | '+')? (ambiguity) '.' DIGIT+ e=E
 	 *     (rule start) (ambiguity) '.' DIGIT+ (rule start)
 	 *     (rule start) (ambiguity) '.' DIGIT+ d=D
 	 *     (rule start) (ambiguity) '.' DIGIT+ e=E
@@ -395,9 +392,9 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? DIGIT* '.' (ambiguity) (rule start)
-	 *     (rule start) ('+' | '-')? DIGIT* '.' (ambiguity) d=D
-	 *     (rule start) ('+' | '-')? DIGIT* '.' (ambiguity) e=E
+	 *     (rule start) ('-' | '+')? DIGIT* '.' (ambiguity) (rule start)
+	 *     (rule start) ('-' | '+')? DIGIT* '.' (ambiguity) d=D
+	 *     (rule start) ('-' | '+')? DIGIT* '.' (ambiguity) e=E
 	 *     (rule start) DIGIT* '.' (ambiguity) (rule start)
 	 *     (rule start) DIGIT* '.' (ambiguity) d=D
 	 *     (rule start) DIGIT* '.' (ambiguity) e=E
@@ -411,8 +408,6 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     e=E ('+' | '-')? (ambiguity) (rule end)
-	 *     e=E ('+' | '-')? (ambiguity) d=D
 	 *     e=E ('-' | '+')? (ambiguity) (rule end)
 	 *     e=E ('-' | '+')? (ambiguity) d=D
 	 */
@@ -425,8 +420,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('.' DIGIT*)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? DIGIT+ (ambiguity) d=D
-	 *     (rule start) ('+' | '-')? DIGIT+ (ambiguity) e=E
+	 *     (rule start) ('-' | '+')? DIGIT+ (ambiguity) d=D
+	 *     (rule start) ('-' | '+')? DIGIT+ (ambiguity) e=E
 	 *     (rule start) DIGIT+ (ambiguity) d=D
 	 *     (rule start) DIGIT+ (ambiguity) e=E
 	 */
@@ -439,7 +434,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('.' DIGIT*)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('+' | '-')? DIGIT+ (ambiguity) e=E
+	 *     (rule start) ('-' | '+')? DIGIT+ (ambiguity) e=E
 	 *     (rule start) DIGIT+ (ambiguity) e=E
 	 */
 	protected void emit_DOUBLE_LITERAL___FullStopKeyword_1_2_0_DIGITParserRuleCall_1_2_1_a__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -448,7 +443,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('+' | '-')?
+	 *     ('-' | '+')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     e=E (ambiguity) DIGIT+ d=D
@@ -459,7 +454,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('+' | '-')?
+	 *     ('-' | '+')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     e=E (ambiguity) DIGIT+ (rule end)
@@ -471,7 +466,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('+' | '-')?
+	 *     ('-' | '+')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     e=E (ambiguity) DIGIT+ (rule end)
@@ -497,7 +492,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ';'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     defAgrregation+=DefinitionAggregation (ambiguity) (rule end)
+	 *     defAggregation+=DefinitionAggregation (ambiguity) (rule end)
 	 *     defFunction+=DefinitionFunction (ambiguity) (rule end)
 	 *     defStream+=DefinitionStream (ambiguity) (rule end)
 	 *     defTable+=DefinitionTable (ambiguity) (rule end)
@@ -514,8 +509,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('-' | '+')? (ambiguity) ('.' DIGIT*)? e=E
-	 *     (rule start) ('-' | '+')? (ambiguity) ('.' DIGIT*)? f=F
+	 *     (rule start) ('+' | '-')? (ambiguity) ('.' DIGIT*)? e=E
+	 *     (rule start) ('+' | '-')? (ambiguity) ('.' DIGIT*)? f=F
 	 *     (rule start) (ambiguity) ('.' DIGIT*)? e=E
 	 *     (rule start) (ambiguity) ('.' DIGIT*)? f=F
 	 */
@@ -528,7 +523,6 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     e=E ('+' | '-')? (ambiguity) f=F
 	 *     e=E ('-' | '+')? (ambiguity) f=F
 	 */
 	protected void emit_FLOAT_LITERAL_DIGITParserRuleCall_0_0_3_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -540,8 +534,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('-' | '+')? (ambiguity) '.' DIGIT+ e=E
-	 *     (rule start) ('-' | '+')? (ambiguity) '.' DIGIT+ f=F
+	 *     (rule start) ('+' | '-')? (ambiguity) '.' DIGIT+ e=E
+	 *     (rule start) ('+' | '-')? (ambiguity) '.' DIGIT+ f=F
 	 *     (rule start) (ambiguity) '.' DIGIT+ e=E
 	 *     (rule start) (ambiguity) '.' DIGIT+ f=F
 	 */
@@ -554,8 +548,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('-' | '+')? DIGIT* '.' (ambiguity) e=E
-	 *     (rule start) ('-' | '+')? DIGIT* '.' (ambiguity) f=F
+	 *     (rule start) ('+' | '-')? DIGIT* '.' (ambiguity) e=E
+	 *     (rule start) ('+' | '-')? DIGIT* '.' (ambiguity) f=F
 	 *     (rule start) DIGIT* '.' (ambiguity) e=E
 	 *     (rule start) DIGIT* '.' (ambiguity) f=F
 	 */
@@ -568,6 +562,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     DIGIT+
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     e=E ('+' | '-')? (ambiguity) f=F
 	 *     e=E ('-' | '+')? (ambiguity) f=F
 	 */
 	protected void emit_FLOAT_LITERAL_DIGITParserRuleCall_1_4_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -579,8 +574,8 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('.' DIGIT*)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('-' | '+')? DIGIT+ (ambiguity) e=E
-	 *     (rule start) ('-' | '+')? DIGIT+ (ambiguity) f=F
+	 *     (rule start) ('+' | '-')? DIGIT+ (ambiguity) e=E
+	 *     (rule start) ('+' | '-')? DIGIT+ (ambiguity) f=F
 	 *     (rule start) DIGIT+ (ambiguity) e=E
 	 *     (rule start) DIGIT+ (ambiguity) f=F
 	 */
@@ -590,7 +585,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('+' | '-')?
+	 *     ('-' | '+')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     e=E (ambiguity) DIGIT+ f=F
@@ -601,7 +596,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('-' | '+')?
+	 *     ('+' | '-')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     e=E (ambiguity) DIGIT+ f=F
@@ -652,9 +647,9 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) OPEN_PAR logicalAbsStatefulSrc=LogicalAbsentStatefulSource
 	 *     (rule start) (ambiguity) basicAbsentPatternSource1=BasicAbsentPatternSource
 	 *     (rule start) (ambiguity) basicAbsentPatternSource2=BasicAbsentPatternSource
-	 *     (rule start) (ambiguity) bs=BasicSource
 	 *     (rule start) (ambiguity) name=IdNew
 	 *     (rule start) (ambiguity) not1='not'
+	 *     (rule start) (ambiguity) src=Source
 	 *     (rule start) (ambiguity) stdSource+=StandardStatefulSource
 	 *     (rule start) (ambiguity) stdSource=StandardStatefulSource
 	 *     (rule start) (ambiguity) {SequenceSourceChain.left=}
@@ -676,7 +671,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('+' | '-')?
+	 *     ('-' | '+')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) DIGIT* '.' DIGIT+ (rule start)
@@ -691,7 +686,7 @@ public class SiddhiSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('-' | '+')?
+	 *     ('+' | '-')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) DIGIT* '.' DIGIT+ e=E

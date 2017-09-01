@@ -25,10 +25,9 @@ import org.xtext.example.siddhi.siddhi.EVERY;
 import org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource;
 import org.xtext.example.siddhi.siddhi.EveryAbsentSequenceSourceChain;
 import org.xtext.example.siddhi.siddhi.EveryPatternSourceChain;
-import org.xtext.example.siddhi.siddhi.EverySequenceSourceChain;
 import org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource;
+import org.xtext.example.siddhi.siddhi.PatternStream;
 import org.xtext.example.siddhi.siddhi.RightAbsentPatternSource;
-import org.xtext.example.siddhi.siddhi.SequenceSource;
 import org.xtext.example.siddhi.siddhi.SequenceSourceChain;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 import org.xtext.example.siddhi.siddhi.WithinTime;
@@ -41,6 +40,10 @@ import org.xtext.example.siddhi.siddhi.WithinTime;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getAbsSeqSrcChain <em>Abs Seq Src Chain</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getSeqSrcChain <em>Seq Src Chain</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getAbsentPatternSrcChain <em>Absent Pattern Src Chain</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getWt1 <em>Wt1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getBasicAbsentPS <em>Basic Absent PS</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getFb1 <em>Fb1</em>}</li>
@@ -57,18 +60,53 @@ import org.xtext.example.siddhi.siddhi.WithinTime;
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getWt3 <em>Wt3</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getEveryPSC1 <em>Every PSC1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getEveryAbsPS1 <em>Every Abs PS1</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getSeqSource <em>Seq Source</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getWt <em>Wt</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getSsc <em>Ssc</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getAbsSeqSrcChain <em>Abs Seq Src Chain</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getSeqSrcChain <em>Seq Src Chain</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getEvery <em>Every</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.EVERYImpl#getEvery1 <em>Every1</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
+public class EVERYImpl extends EverySequenceSourceChainImpl implements EVERY
 {
+  /**
+   * The cached value of the '{@link #getAbsSeqSrcChain() <em>Abs Seq Src Chain</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAbsSeqSrcChain()
+   * @generated
+   * @ordered
+   */
+  protected AbsentSequenceSourceChain absSeqSrcChain;
+
+  /**
+   * The cached value of the '{@link #getSeqSrcChain() <em>Seq Src Chain</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSeqSrcChain()
+   * @generated
+   * @ordered
+   */
+  protected SequenceSourceChain seqSrcChain;
+
+  /**
+   * The cached value of the '{@link #getAbsentPatternSrcChain() <em>Absent Pattern Src Chain</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAbsentPatternSrcChain()
+   * @generated
+   * @ordered
+   */
+  protected AbsentPatternSourceChain absentPatternSrcChain;
+
+  /**
+   * The cached value of the '{@link #getWt1() <em>Wt1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getWt1()
+   * @generated
+   * @ordered
+   */
+  protected WithinTime wt1;
+
   /**
    * The cached value of the '{@link #getBasicAbsentPS() <em>Basic Absent PS</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -250,74 +288,24 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   protected EveryAbsentPatternSource everyAbsPS1;
 
   /**
-   * The cached value of the '{@link #getSeqSource() <em>Seq Source</em>}' containment reference.
+   * The default value of the '{@link #getEvery1() <em>Every1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSeqSource()
+   * @see #getEvery1()
    * @generated
    * @ordered
    */
-  protected SequenceSource seqSource;
+  protected static final String EVERY1_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getWt() <em>Wt</em>}' containment reference.
+   * The cached value of the '{@link #getEvery1() <em>Every1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getWt()
+   * @see #getEvery1()
    * @generated
    * @ordered
    */
-  protected WithinTime wt;
-
-  /**
-   * The cached value of the '{@link #getSsc() <em>Ssc</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSsc()
-   * @generated
-   * @ordered
-   */
-  protected SequenceSourceChain ssc;
-
-  /**
-   * The cached value of the '{@link #getAbsSeqSrcChain() <em>Abs Seq Src Chain</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAbsSeqSrcChain()
-   * @generated
-   * @ordered
-   */
-  protected AbsentSequenceSourceChain absSeqSrcChain;
-
-  /**
-   * The cached value of the '{@link #getSeqSrcChain() <em>Seq Src Chain</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSeqSrcChain()
-   * @generated
-   * @ordered
-   */
-  protected SequenceSourceChain seqSrcChain;
-
-  /**
-   * The default value of the '{@link #getEvery() <em>Every</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvery()
-   * @generated
-   * @ordered
-   */
-  protected static final String EVERY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEvery() <em>Every</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvery()
-   * @generated
-   * @ordered
-   */
-  protected String every = EVERY_EDEFAULT;
+  protected String every1 = EVERY1_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -338,6 +326,198 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getEVERY();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbsentSequenceSourceChain getAbsSeqSrcChain()
+  {
+    return absSeqSrcChain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAbsSeqSrcChain(AbsentSequenceSourceChain newAbsSeqSrcChain, NotificationChain msgs)
+  {
+    AbsentSequenceSourceChain oldAbsSeqSrcChain = absSeqSrcChain;
+    absSeqSrcChain = newAbsSeqSrcChain;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, oldAbsSeqSrcChain, newAbsSeqSrcChain);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAbsSeqSrcChain(AbsentSequenceSourceChain newAbsSeqSrcChain)
+  {
+    if (newAbsSeqSrcChain != absSeqSrcChain)
+    {
+      NotificationChain msgs = null;
+      if (absSeqSrcChain != null)
+        msgs = ((InternalEObject)absSeqSrcChain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, null, msgs);
+      if (newAbsSeqSrcChain != null)
+        msgs = ((InternalEObject)newAbsSeqSrcChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, null, msgs);
+      msgs = basicSetAbsSeqSrcChain(newAbsSeqSrcChain, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, newAbsSeqSrcChain, newAbsSeqSrcChain));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SequenceSourceChain getSeqSrcChain()
+  {
+    return seqSrcChain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSeqSrcChain(SequenceSourceChain newSeqSrcChain, NotificationChain msgs)
+  {
+    SequenceSourceChain oldSeqSrcChain = seqSrcChain;
+    seqSrcChain = newSeqSrcChain;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SRC_CHAIN, oldSeqSrcChain, newSeqSrcChain);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSeqSrcChain(SequenceSourceChain newSeqSrcChain)
+  {
+    if (newSeqSrcChain != seqSrcChain)
+    {
+      NotificationChain msgs = null;
+      if (seqSrcChain != null)
+        msgs = ((InternalEObject)seqSrcChain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SRC_CHAIN, null, msgs);
+      if (newSeqSrcChain != null)
+        msgs = ((InternalEObject)newSeqSrcChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SRC_CHAIN, null, msgs);
+      msgs = basicSetSeqSrcChain(newSeqSrcChain, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SRC_CHAIN, newSeqSrcChain, newSeqSrcChain));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbsentPatternSourceChain getAbsentPatternSrcChain()
+  {
+    return absentPatternSrcChain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAbsentPatternSrcChain(AbsentPatternSourceChain newAbsentPatternSrcChain, NotificationChain msgs)
+  {
+    AbsentPatternSourceChain oldAbsentPatternSrcChain = absentPatternSrcChain;
+    absentPatternSrcChain = newAbsentPatternSrcChain;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN, oldAbsentPatternSrcChain, newAbsentPatternSrcChain);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAbsentPatternSrcChain(AbsentPatternSourceChain newAbsentPatternSrcChain)
+  {
+    if (newAbsentPatternSrcChain != absentPatternSrcChain)
+    {
+      NotificationChain msgs = null;
+      if (absentPatternSrcChain != null)
+        msgs = ((InternalEObject)absentPatternSrcChain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN, null, msgs);
+      if (newAbsentPatternSrcChain != null)
+        msgs = ((InternalEObject)newAbsentPatternSrcChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN, null, msgs);
+      msgs = basicSetAbsentPatternSrcChain(newAbsentPatternSrcChain, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN, newAbsentPatternSrcChain, newAbsentPatternSrcChain));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public WithinTime getWt1()
+  {
+    return wt1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetWt1(WithinTime newWt1, NotificationChain msgs)
+  {
+    WithinTime oldWt1 = wt1;
+    wt1 = newWt1;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__WT1, oldWt1, newWt1);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setWt1(WithinTime newWt1)
+  {
+    if (newWt1 != wt1)
+    {
+      NotificationChain msgs = null;
+      if (wt1 != null)
+        msgs = ((InternalEObject)wt1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__WT1, null, msgs);
+      if (newWt1 != null)
+        msgs = ((InternalEObject)newWt1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__WT1, null, msgs);
+      msgs = basicSetWt1(newWt1, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__WT1, newWt1, newWt1));
   }
 
   /**
@@ -995,9 +1175,9 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
    * <!-- end-user-doc -->
    * @generated
    */
-  public SequenceSource getSeqSource()
+  public String getEvery1()
   {
-    return seqSource;
+    return every1;
   }
 
   /**
@@ -1005,252 +1185,12 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSeqSource(SequenceSource newSeqSource, NotificationChain msgs)
+  public void setEvery1(String newEvery1)
   {
-    SequenceSource oldSeqSource = seqSource;
-    seqSource = newSeqSource;
+    String oldEvery1 = every1;
+    every1 = newEvery1;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SOURCE, oldSeqSource, newSeqSource);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSeqSource(SequenceSource newSeqSource)
-  {
-    if (newSeqSource != seqSource)
-    {
-      NotificationChain msgs = null;
-      if (seqSource != null)
-        msgs = ((InternalEObject)seqSource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SOURCE, null, msgs);
-      if (newSeqSource != null)
-        msgs = ((InternalEObject)newSeqSource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SOURCE, null, msgs);
-      msgs = basicSetSeqSource(newSeqSource, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SOURCE, newSeqSource, newSeqSource));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public WithinTime getWt()
-  {
-    return wt;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetWt(WithinTime newWt, NotificationChain msgs)
-  {
-    WithinTime oldWt = wt;
-    wt = newWt;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__WT, oldWt, newWt);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setWt(WithinTime newWt)
-  {
-    if (newWt != wt)
-    {
-      NotificationChain msgs = null;
-      if (wt != null)
-        msgs = ((InternalEObject)wt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__WT, null, msgs);
-      if (newWt != null)
-        msgs = ((InternalEObject)newWt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__WT, null, msgs);
-      msgs = basicSetWt(newWt, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__WT, newWt, newWt));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SequenceSourceChain getSsc()
-  {
-    return ssc;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetSsc(SequenceSourceChain newSsc, NotificationChain msgs)
-  {
-    SequenceSourceChain oldSsc = ssc;
-    ssc = newSsc;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SSC, oldSsc, newSsc);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSsc(SequenceSourceChain newSsc)
-  {
-    if (newSsc != ssc)
-    {
-      NotificationChain msgs = null;
-      if (ssc != null)
-        msgs = ((InternalEObject)ssc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SSC, null, msgs);
-      if (newSsc != null)
-        msgs = ((InternalEObject)newSsc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SSC, null, msgs);
-      msgs = basicSetSsc(newSsc, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SSC, newSsc, newSsc));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AbsentSequenceSourceChain getAbsSeqSrcChain()
-  {
-    return absSeqSrcChain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAbsSeqSrcChain(AbsentSequenceSourceChain newAbsSeqSrcChain, NotificationChain msgs)
-  {
-    AbsentSequenceSourceChain oldAbsSeqSrcChain = absSeqSrcChain;
-    absSeqSrcChain = newAbsSeqSrcChain;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, oldAbsSeqSrcChain, newAbsSeqSrcChain);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAbsSeqSrcChain(AbsentSequenceSourceChain newAbsSeqSrcChain)
-  {
-    if (newAbsSeqSrcChain != absSeqSrcChain)
-    {
-      NotificationChain msgs = null;
-      if (absSeqSrcChain != null)
-        msgs = ((InternalEObject)absSeqSrcChain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, null, msgs);
-      if (newAbsSeqSrcChain != null)
-        msgs = ((InternalEObject)newAbsSeqSrcChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, null, msgs);
-      msgs = basicSetAbsSeqSrcChain(newAbsSeqSrcChain, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN, newAbsSeqSrcChain, newAbsSeqSrcChain));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SequenceSourceChain getSeqSrcChain()
-  {
-    return seqSrcChain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetSeqSrcChain(SequenceSourceChain newSeqSrcChain, NotificationChain msgs)
-  {
-    SequenceSourceChain oldSeqSrcChain = seqSrcChain;
-    seqSrcChain = newSeqSrcChain;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SRC_CHAIN, oldSeqSrcChain, newSeqSrcChain);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSeqSrcChain(SequenceSourceChain newSeqSrcChain)
-  {
-    if (newSeqSrcChain != seqSrcChain)
-    {
-      NotificationChain msgs = null;
-      if (seqSrcChain != null)
-        msgs = ((InternalEObject)seqSrcChain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SRC_CHAIN, null, msgs);
-      if (newSeqSrcChain != null)
-        msgs = ((InternalEObject)newSeqSrcChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.EVERY__SEQ_SRC_CHAIN, null, msgs);
-      msgs = basicSetSeqSrcChain(newSeqSrcChain, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__SEQ_SRC_CHAIN, newSeqSrcChain, newSeqSrcChain));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getEvery()
-  {
-    return every;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEvery(String newEvery)
-  {
-    String oldEvery = every;
-    every = newEvery;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__EVERY, oldEvery, every));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.EVERY__EVERY1, oldEvery1, every1));
   }
 
   /**
@@ -1263,6 +1203,14 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   {
     switch (featureID)
     {
+      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
+        return basicSetAbsSeqSrcChain(null, msgs);
+      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
+        return basicSetSeqSrcChain(null, msgs);
+      case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN:
+        return basicSetAbsentPatternSrcChain(null, msgs);
+      case SiddhiPackage.EVERY__WT1:
+        return basicSetWt1(null, msgs);
       case SiddhiPackage.EVERY__BASIC_ABSENT_PS:
         return basicSetBasicAbsentPS(null, msgs);
       case SiddhiPackage.EVERY__LEFT:
@@ -1291,16 +1239,6 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
         return basicSetEveryPSC1(null, msgs);
       case SiddhiPackage.EVERY__EVERY_ABS_PS1:
         return basicSetEveryAbsPS1(null, msgs);
-      case SiddhiPackage.EVERY__SEQ_SOURCE:
-        return basicSetSeqSource(null, msgs);
-      case SiddhiPackage.EVERY__WT:
-        return basicSetWt(null, msgs);
-      case SiddhiPackage.EVERY__SSC:
-        return basicSetSsc(null, msgs);
-      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
-        return basicSetAbsSeqSrcChain(null, msgs);
-      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
-        return basicSetSeqSrcChain(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -1315,6 +1253,14 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   {
     switch (featureID)
     {
+      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
+        return getAbsSeqSrcChain();
+      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
+        return getSeqSrcChain();
+      case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN:
+        return getAbsentPatternSrcChain();
+      case SiddhiPackage.EVERY__WT1:
+        return getWt1();
       case SiddhiPackage.EVERY__BASIC_ABSENT_PS:
         return getBasicAbsentPS();
       case SiddhiPackage.EVERY__LEFT:
@@ -1347,18 +1293,8 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
         return getEveryPSC1();
       case SiddhiPackage.EVERY__EVERY_ABS_PS1:
         return getEveryAbsPS1();
-      case SiddhiPackage.EVERY__SEQ_SOURCE:
-        return getSeqSource();
-      case SiddhiPackage.EVERY__WT:
-        return getWt();
-      case SiddhiPackage.EVERY__SSC:
-        return getSsc();
-      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
-        return getAbsSeqSrcChain();
-      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
-        return getSeqSrcChain();
-      case SiddhiPackage.EVERY__EVERY:
-        return getEvery();
+      case SiddhiPackage.EVERY__EVERY1:
+        return getEvery1();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -1374,6 +1310,18 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   {
     switch (featureID)
     {
+      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
+        setAbsSeqSrcChain((AbsentSequenceSourceChain)newValue);
+        return;
+      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
+        setSeqSrcChain((SequenceSourceChain)newValue);
+        return;
+      case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN:
+        setAbsentPatternSrcChain((AbsentPatternSourceChain)newValue);
+        return;
+      case SiddhiPackage.EVERY__WT1:
+        setWt1((WithinTime)newValue);
+        return;
       case SiddhiPackage.EVERY__BASIC_ABSENT_PS:
         setBasicAbsentPS((BasicAbsentPatternSource)newValue);
         return;
@@ -1424,23 +1372,8 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
       case SiddhiPackage.EVERY__EVERY_ABS_PS1:
         setEveryAbsPS1((EveryAbsentPatternSource)newValue);
         return;
-      case SiddhiPackage.EVERY__SEQ_SOURCE:
-        setSeqSource((SequenceSource)newValue);
-        return;
-      case SiddhiPackage.EVERY__WT:
-        setWt((WithinTime)newValue);
-        return;
-      case SiddhiPackage.EVERY__SSC:
-        setSsc((SequenceSourceChain)newValue);
-        return;
-      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
-        setAbsSeqSrcChain((AbsentSequenceSourceChain)newValue);
-        return;
-      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
-        setSeqSrcChain((SequenceSourceChain)newValue);
-        return;
-      case SiddhiPackage.EVERY__EVERY:
-        setEvery((String)newValue);
+      case SiddhiPackage.EVERY__EVERY1:
+        setEvery1((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -1456,6 +1389,18 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   {
     switch (featureID)
     {
+      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
+        setAbsSeqSrcChain((AbsentSequenceSourceChain)null);
+        return;
+      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
+        setSeqSrcChain((SequenceSourceChain)null);
+        return;
+      case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN:
+        setAbsentPatternSrcChain((AbsentPatternSourceChain)null);
+        return;
+      case SiddhiPackage.EVERY__WT1:
+        setWt1((WithinTime)null);
+        return;
       case SiddhiPackage.EVERY__BASIC_ABSENT_PS:
         setBasicAbsentPS((BasicAbsentPatternSource)null);
         return;
@@ -1504,23 +1449,8 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
       case SiddhiPackage.EVERY__EVERY_ABS_PS1:
         setEveryAbsPS1((EveryAbsentPatternSource)null);
         return;
-      case SiddhiPackage.EVERY__SEQ_SOURCE:
-        setSeqSource((SequenceSource)null);
-        return;
-      case SiddhiPackage.EVERY__WT:
-        setWt((WithinTime)null);
-        return;
-      case SiddhiPackage.EVERY__SSC:
-        setSsc((SequenceSourceChain)null);
-        return;
-      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
-        setAbsSeqSrcChain((AbsentSequenceSourceChain)null);
-        return;
-      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
-        setSeqSrcChain((SequenceSourceChain)null);
-        return;
-      case SiddhiPackage.EVERY__EVERY:
-        setEvery(EVERY_EDEFAULT);
+      case SiddhiPackage.EVERY__EVERY1:
+        setEvery1(EVERY1_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -1536,6 +1466,14 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   {
     switch (featureID)
     {
+      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
+        return absSeqSrcChain != null;
+      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
+        return seqSrcChain != null;
+      case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN:
+        return absentPatternSrcChain != null;
+      case SiddhiPackage.EVERY__WT1:
+        return wt1 != null;
       case SiddhiPackage.EVERY__BASIC_ABSENT_PS:
         return basicAbsentPS != null;
       case SiddhiPackage.EVERY__LEFT:
@@ -1568,18 +1506,8 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
         return everyPSC1 != null;
       case SiddhiPackage.EVERY__EVERY_ABS_PS1:
         return everyAbsPS1 != null;
-      case SiddhiPackage.EVERY__SEQ_SOURCE:
-        return seqSource != null;
-      case SiddhiPackage.EVERY__WT:
-        return wt != null;
-      case SiddhiPackage.EVERY__SSC:
-        return ssc != null;
-      case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN:
-        return absSeqSrcChain != null;
-      case SiddhiPackage.EVERY__SEQ_SRC_CHAIN:
-        return seqSrcChain != null;
-      case SiddhiPackage.EVERY__EVERY:
-        return EVERY_EDEFAULT == null ? every != null : !EVERY_EDEFAULT.equals(every);
+      case SiddhiPackage.EVERY__EVERY1:
+        return EVERY1_EDEFAULT == null ? every1 != null : !EVERY1_EDEFAULT.equals(every1);
     }
     return super.eIsSet(featureID);
   }
@@ -1592,6 +1520,31 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
+    if (baseClass == EveryAbsentSequenceSourceChain.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN: return SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN;
+        case SiddhiPackage.EVERY__SEQ_SRC_CHAIN: return SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN;
+        default: return -1;
+      }
+    }
+    if (baseClass == PatternStream.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == AbsentPatternSourceChain.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN: return SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN__ABSENT_PATTERN_SRC_CHAIN;
+        case SiddhiPackage.EVERY__WT1: return SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN__WT1;
+        default: return -1;
+      }
+    }
     if (baseClass == EveryAbsentPatternSource.class)
     {
       switch (derivedFeatureID)
@@ -1629,25 +1582,6 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
         default: return -1;
       }
     }
-    if (baseClass == EverySequenceSourceChain.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case SiddhiPackage.EVERY__SEQ_SOURCE: return SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__SEQ_SOURCE;
-        case SiddhiPackage.EVERY__WT: return SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__WT;
-        case SiddhiPackage.EVERY__SSC: return SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__SSC;
-        default: return -1;
-      }
-    }
-    if (baseClass == EveryAbsentSequenceSourceChain.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN: return SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN;
-        case SiddhiPackage.EVERY__SEQ_SRC_CHAIN: return SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN;
-        default: return -1;
-      }
-    }
     return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
   }
 
@@ -1659,6 +1593,31 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
+    if (baseClass == EveryAbsentSequenceSourceChain.class)
+    {
+      switch (baseFeatureID)
+      {
+        case SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN: return SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN;
+        case SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN: return SiddhiPackage.EVERY__SEQ_SRC_CHAIN;
+        default: return -1;
+      }
+    }
+    if (baseClass == PatternStream.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == AbsentPatternSourceChain.class)
+    {
+      switch (baseFeatureID)
+      {
+        case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN__ABSENT_PATTERN_SRC_CHAIN: return SiddhiPackage.EVERY__ABSENT_PATTERN_SRC_CHAIN;
+        case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN__WT1: return SiddhiPackage.EVERY__WT1;
+        default: return -1;
+      }
+    }
     if (baseClass == EveryAbsentPatternSource.class)
     {
       switch (baseFeatureID)
@@ -1696,25 +1655,6 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
         default: return -1;
       }
     }
-    if (baseClass == EverySequenceSourceChain.class)
-    {
-      switch (baseFeatureID)
-      {
-        case SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__SEQ_SOURCE: return SiddhiPackage.EVERY__SEQ_SOURCE;
-        case SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__WT: return SiddhiPackage.EVERY__WT;
-        case SiddhiPackage.EVERY_SEQUENCE_SOURCE_CHAIN__SSC: return SiddhiPackage.EVERY__SSC;
-        default: return -1;
-      }
-    }
-    if (baseClass == EveryAbsentSequenceSourceChain.class)
-    {
-      switch (baseFeatureID)
-      {
-        case SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN: return SiddhiPackage.EVERY__ABS_SEQ_SRC_CHAIN;
-        case SiddhiPackage.EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN: return SiddhiPackage.EVERY__SEQ_SRC_CHAIN;
-        default: return -1;
-      }
-    }
     return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
@@ -1733,8 +1673,8 @@ public class EVERYImpl extends AbsentPatternSourceChainImpl implements EVERY
     result.append(fb1);
     result.append(", fb2: ");
     result.append(fb2);
-    result.append(", every: ");
-    result.append(every);
+    result.append(", every1: ");
+    result.append(every1);
     result.append(')');
     return result.toString();
   }

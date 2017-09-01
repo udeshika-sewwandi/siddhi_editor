@@ -3,7 +3,6 @@
  */
 package org.xtext.example.siddhi.siddhi;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,39 +13,39 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNam <em>Nam</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getStreamAlias()
  * @model
  * @generated
  */
-public interface StreamAlias extends EObject
+public interface StreamAlias extends Source1OrStandardStatefulSource
 {
   /**
-   * Returns the value of the '<em><b>Na</b></em>' containment reference.
+   * Returns the value of the '<em><b>Nam</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Na</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Nam</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Na</em>' containment reference.
-   * @see #setNa(Name)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getStreamAlias_Na()
+   * @return the value of the '<em>Nam</em>' containment reference.
+   * @see #setNam(Name)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getStreamAlias_Nam()
    * @model containment="true"
    * @generated
    */
-  Name getNa();
+  Name getNam();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNa <em>Na</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNam <em>Nam</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Na</em>' containment reference.
-   * @see #getNa()
+   * @param value the new value of the '<em>Nam</em>' containment reference.
+   * @see #getNam()
    * @generated
    */
-  void setNa(Name value);
+  void setNam(Name value);
 
 } // StreamAlias

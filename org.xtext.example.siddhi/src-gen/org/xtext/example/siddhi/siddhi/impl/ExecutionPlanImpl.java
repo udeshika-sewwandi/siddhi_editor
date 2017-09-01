@@ -42,7 +42,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getDef_window <em>Def window</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getDefTrigger <em>Def Trigger</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getDefFunction <em>Def Function</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getDefAgrregation <em>Def Agrregation</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getDefAggregation <em>Def Aggregation</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.ExecutionPlanImpl#getExElement <em>Ex Element</em>}</li>
  * </ul>
  *
@@ -111,14 +111,14 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
   protected EList<DefinitionFunction> defFunction;
 
   /**
-   * The cached value of the '{@link #getDefAgrregation() <em>Def Agrregation</em>}' containment reference list.
+   * The cached value of the '{@link #getDefAggregation() <em>Def Aggregation</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDefAgrregation()
+   * @see #getDefAggregation()
    * @generated
    * @ordered
    */
-  protected EList<DefinitionAggregation> defAgrregation;
+  protected EList<DefinitionAggregation> defAggregation;
 
   /**
    * The cached value of the '{@link #getExElement() <em>Ex Element</em>}' containment reference list.
@@ -240,13 +240,13 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DefinitionAggregation> getDefAgrregation()
+  public EList<DefinitionAggregation> getDefAggregation()
   {
-    if (defAgrregation == null)
+    if (defAggregation == null)
     {
-      defAgrregation = new EObjectContainmentEList<DefinitionAggregation>(DefinitionAggregation.class, this, SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION);
+      defAggregation = new EObjectContainmentEList<DefinitionAggregation>(DefinitionAggregation.class, this, SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION);
     }
-    return defAgrregation;
+    return defAggregation;
   }
 
   /**
@@ -285,8 +285,8 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
         return ((InternalEList<?>)getDefTrigger()).basicRemove(otherEnd, msgs);
       case SiddhiPackage.EXECUTION_PLAN__DEF_FUNCTION:
         return ((InternalEList<?>)getDefFunction()).basicRemove(otherEnd, msgs);
-      case SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION:
-        return ((InternalEList<?>)getDefAgrregation()).basicRemove(otherEnd, msgs);
+      case SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION:
+        return ((InternalEList<?>)getDefAggregation()).basicRemove(otherEnd, msgs);
       case SiddhiPackage.EXECUTION_PLAN__EX_ELEMENT:
         return ((InternalEList<?>)getExElement()).basicRemove(otherEnd, msgs);
     }
@@ -315,8 +315,8 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
         return getDefTrigger();
       case SiddhiPackage.EXECUTION_PLAN__DEF_FUNCTION:
         return getDefFunction();
-      case SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION:
-        return getDefAgrregation();
+      case SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION:
+        return getDefAggregation();
       case SiddhiPackage.EXECUTION_PLAN__EX_ELEMENT:
         return getExElement();
     }
@@ -358,9 +358,9 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
         getDefFunction().clear();
         getDefFunction().addAll((Collection<? extends DefinitionFunction>)newValue);
         return;
-      case SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION:
-        getDefAgrregation().clear();
-        getDefAgrregation().addAll((Collection<? extends DefinitionAggregation>)newValue);
+      case SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION:
+        getDefAggregation().clear();
+        getDefAggregation().addAll((Collection<? extends DefinitionAggregation>)newValue);
         return;
       case SiddhiPackage.EXECUTION_PLAN__EX_ELEMENT:
         getExElement().clear();
@@ -398,8 +398,8 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
       case SiddhiPackage.EXECUTION_PLAN__DEF_FUNCTION:
         getDefFunction().clear();
         return;
-      case SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION:
-        getDefAgrregation().clear();
+      case SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION:
+        getDefAggregation().clear();
         return;
       case SiddhiPackage.EXECUTION_PLAN__EX_ELEMENT:
         getExElement().clear();
@@ -430,8 +430,8 @@ public class ExecutionPlanImpl extends MinimalEObjectImpl.Container implements E
         return defTrigger != null && !defTrigger.isEmpty();
       case SiddhiPackage.EXECUTION_PLAN__DEF_FUNCTION:
         return defFunction != null && !defFunction.isEmpty();
-      case SiddhiPackage.EXECUTION_PLAN__DEF_AGRREGATION:
-        return defAgrregation != null && !defAgrregation.isEmpty();
+      case SiddhiPackage.EXECUTION_PLAN__DEF_AGGREGATION:
+        return defAggregation != null && !defAggregation.isEmpty();
       case SiddhiPackage.EXECUTION_PLAN__EX_ELEMENT:
         return exElement != null && !exElement.isEmpty();
     }

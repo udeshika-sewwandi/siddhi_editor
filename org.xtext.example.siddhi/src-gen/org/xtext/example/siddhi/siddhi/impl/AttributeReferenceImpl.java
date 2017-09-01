@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.siddhi.siddhi.AttributeIndex;
-import org.xtext.example.siddhi.siddhi.AttributeNameReference;
 import org.xtext.example.siddhi.siddhi.AttributeReference;
 import org.xtext.example.siddhi.siddhi.Expression;
 import org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference;
@@ -28,13 +27,13 @@ import org.xtext.example.siddhi.siddhi.SourceOrEventReference;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getHash1 <em>Hash1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getName1 <em>Name1</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getAttribute_index1 <em>Attribute index1</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getOPEN_SQARE_BRACKETSattribute_index1 <em>OPEN SQARE BRACKET Sattribute index1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getHash2 <em>Hash2</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getName2 <em>Name2</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getAttribute_index2 <em>Attribute index2</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getAttr_name <em>Attr name</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getOPEN_SQARE_BRACKETSattribute_index2 <em>OPEN SQARE BRACKET Sattribute index2</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl#getFeaturesOrAttrRef <em>Features Or Attr Ref</em>}</li>
  * </ul>
  *
@@ -51,6 +50,26 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * @ordered
    */
   protected Expression expression;
+
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getHash1() <em>Hash1</em>}' attribute.
@@ -83,14 +102,14 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
   protected SourceOrEventReference name1;
 
   /**
-   * The cached value of the '{@link #getAttribute_index1() <em>Attribute index1</em>}' containment reference.
+   * The cached value of the '{@link #getOPEN_SQARE_BRACKETSattribute_index1() <em>OPEN SQARE BRACKET Sattribute index1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttribute_index1()
+   * @see #getOPEN_SQARE_BRACKETSattribute_index1()
    * @generated
    * @ordered
    */
-  protected AttributeIndex attribute_index1;
+  protected AttributeIndex opeN_SQARE_BRACKETSattribute_index1;
 
   /**
    * The default value of the '{@link #getHash2() <em>Hash2</em>}' attribute.
@@ -123,24 +142,14 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
   protected SourceOrEventReference name2;
 
   /**
-   * The cached value of the '{@link #getAttribute_index2() <em>Attribute index2</em>}' containment reference.
+   * The cached value of the '{@link #getOPEN_SQARE_BRACKETSattribute_index2() <em>OPEN SQARE BRACKET Sattribute index2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttribute_index2()
+   * @see #getOPEN_SQARE_BRACKETSattribute_index2()
    * @generated
    * @ordered
    */
-  protected AttributeIndex attribute_index2;
-
-  /**
-   * The cached value of the '{@link #getAttr_name() <em>Attr name</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAttr_name()
-   * @generated
-   * @ordered
-   */
-  protected AttributeNameReference attr_name;
+  protected AttributeIndex opeN_SQARE_BRACKETSattribute_index2;
 
   /**
    * The cached value of the '{@link #getFeaturesOrAttrRef() <em>Features Or Attr Ref</em>}' containment reference.
@@ -226,6 +235,29 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getHash1()
   {
     return hash1;
@@ -297,9 +329,9 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributeIndex getAttribute_index1()
+  public AttributeIndex getOPEN_SQARE_BRACKETSattribute_index1()
   {
-    return attribute_index1;
+    return opeN_SQARE_BRACKETSattribute_index1;
   }
 
   /**
@@ -307,13 +339,13 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttribute_index1(AttributeIndex newAttribute_index1, NotificationChain msgs)
+  public NotificationChain basicSetOPEN_SQARE_BRACKETSattribute_index1(AttributeIndex newOPEN_SQARE_BRACKETSattribute_index1, NotificationChain msgs)
   {
-    AttributeIndex oldAttribute_index1 = attribute_index1;
-    attribute_index1 = newAttribute_index1;
+    AttributeIndex oldOPEN_SQARE_BRACKETSattribute_index1 = opeN_SQARE_BRACKETSattribute_index1;
+    opeN_SQARE_BRACKETSattribute_index1 = newOPEN_SQARE_BRACKETSattribute_index1;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1, oldAttribute_index1, newAttribute_index1);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1, oldOPEN_SQARE_BRACKETSattribute_index1, newOPEN_SQARE_BRACKETSattribute_index1);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -324,20 +356,20 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttribute_index1(AttributeIndex newAttribute_index1)
+  public void setOPEN_SQARE_BRACKETSattribute_index1(AttributeIndex newOPEN_SQARE_BRACKETSattribute_index1)
   {
-    if (newAttribute_index1 != attribute_index1)
+    if (newOPEN_SQARE_BRACKETSattribute_index1 != opeN_SQARE_BRACKETSattribute_index1)
     {
       NotificationChain msgs = null;
-      if (attribute_index1 != null)
-        msgs = ((InternalEObject)attribute_index1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1, null, msgs);
-      if (newAttribute_index1 != null)
-        msgs = ((InternalEObject)newAttribute_index1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1, null, msgs);
-      msgs = basicSetAttribute_index1(newAttribute_index1, msgs);
+      if (opeN_SQARE_BRACKETSattribute_index1 != null)
+        msgs = ((InternalEObject)opeN_SQARE_BRACKETSattribute_index1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1, null, msgs);
+      if (newOPEN_SQARE_BRACKETSattribute_index1 != null)
+        msgs = ((InternalEObject)newOPEN_SQARE_BRACKETSattribute_index1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1, null, msgs);
+      msgs = basicSetOPEN_SQARE_BRACKETSattribute_index1(newOPEN_SQARE_BRACKETSattribute_index1, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1, newAttribute_index1, newAttribute_index1));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1, newOPEN_SQARE_BRACKETSattribute_index1, newOPEN_SQARE_BRACKETSattribute_index1));
   }
 
   /**
@@ -416,9 +448,9 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributeIndex getAttribute_index2()
+  public AttributeIndex getOPEN_SQARE_BRACKETSattribute_index2()
   {
-    return attribute_index2;
+    return opeN_SQARE_BRACKETSattribute_index2;
   }
 
   /**
@@ -426,13 +458,13 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttribute_index2(AttributeIndex newAttribute_index2, NotificationChain msgs)
+  public NotificationChain basicSetOPEN_SQARE_BRACKETSattribute_index2(AttributeIndex newOPEN_SQARE_BRACKETSattribute_index2, NotificationChain msgs)
   {
-    AttributeIndex oldAttribute_index2 = attribute_index2;
-    attribute_index2 = newAttribute_index2;
+    AttributeIndex oldOPEN_SQARE_BRACKETSattribute_index2 = opeN_SQARE_BRACKETSattribute_index2;
+    opeN_SQARE_BRACKETSattribute_index2 = newOPEN_SQARE_BRACKETSattribute_index2;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2, oldAttribute_index2, newAttribute_index2);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2, oldOPEN_SQARE_BRACKETSattribute_index2, newOPEN_SQARE_BRACKETSattribute_index2);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -443,68 +475,20 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttribute_index2(AttributeIndex newAttribute_index2)
+  public void setOPEN_SQARE_BRACKETSattribute_index2(AttributeIndex newOPEN_SQARE_BRACKETSattribute_index2)
   {
-    if (newAttribute_index2 != attribute_index2)
+    if (newOPEN_SQARE_BRACKETSattribute_index2 != opeN_SQARE_BRACKETSattribute_index2)
     {
       NotificationChain msgs = null;
-      if (attribute_index2 != null)
-        msgs = ((InternalEObject)attribute_index2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2, null, msgs);
-      if (newAttribute_index2 != null)
-        msgs = ((InternalEObject)newAttribute_index2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2, null, msgs);
-      msgs = basicSetAttribute_index2(newAttribute_index2, msgs);
+      if (opeN_SQARE_BRACKETSattribute_index2 != null)
+        msgs = ((InternalEObject)opeN_SQARE_BRACKETSattribute_index2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2, null, msgs);
+      if (newOPEN_SQARE_BRACKETSattribute_index2 != null)
+        msgs = ((InternalEObject)newOPEN_SQARE_BRACKETSattribute_index2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2, null, msgs);
+      msgs = basicSetOPEN_SQARE_BRACKETSattribute_index2(newOPEN_SQARE_BRACKETSattribute_index2, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2, newAttribute_index2, newAttribute_index2));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AttributeNameReference getAttr_name()
-  {
-    return attr_name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAttr_name(AttributeNameReference newAttr_name, NotificationChain msgs)
-  {
-    AttributeNameReference oldAttr_name = attr_name;
-    attr_name = newAttr_name;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME, oldAttr_name, newAttr_name);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAttr_name(AttributeNameReference newAttr_name)
-  {
-    if (newAttr_name != attr_name)
-    {
-      NotificationChain msgs = null;
-      if (attr_name != null)
-        msgs = ((InternalEObject)attr_name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME, null, msgs);
-      if (newAttr_name != null)
-        msgs = ((InternalEObject)newAttr_name).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME, null, msgs);
-      msgs = basicSetAttr_name(newAttr_name, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME, newAttr_name, newAttr_name));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2, newOPEN_SQARE_BRACKETSattribute_index2, newOPEN_SQARE_BRACKETSattribute_index2));
   }
 
   /**
@@ -569,14 +553,12 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
         return basicSetExpression(null, msgs);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME1:
         return basicSetName1(null, msgs);
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1:
-        return basicSetAttribute_index1(null, msgs);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1:
+        return basicSetOPEN_SQARE_BRACKETSattribute_index1(null, msgs);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME2:
         return basicSetName2(null, msgs);
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2:
-        return basicSetAttribute_index2(null, msgs);
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME:
-        return basicSetAttr_name(null, msgs);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2:
+        return basicSetOPEN_SQARE_BRACKETSattribute_index2(null, msgs);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__FEATURES_OR_ATTR_REF:
         return basicSetFeaturesOrAttrRef(null, msgs);
     }
@@ -595,20 +577,20 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
     {
       case SiddhiPackage.ATTRIBUTE_REFERENCE__EXPRESSION:
         return getExpression();
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME:
+        return getName();
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH1:
         return getHash1();
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME1:
         return getName1();
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1:
-        return getAttribute_index1();
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1:
+        return getOPEN_SQARE_BRACKETSattribute_index1();
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH2:
         return getHash2();
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME2:
         return getName2();
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2:
-        return getAttribute_index2();
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME:
-        return getAttr_name();
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2:
+        return getOPEN_SQARE_BRACKETSattribute_index2();
       case SiddhiPackage.ATTRIBUTE_REFERENCE__FEATURES_OR_ATTR_REF:
         return getFeaturesOrAttrRef();
     }
@@ -628,14 +610,17 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
       case SiddhiPackage.ATTRIBUTE_REFERENCE__EXPRESSION:
         setExpression((Expression)newValue);
         return;
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME:
+        setName((String)newValue);
+        return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH1:
         setHash1((String)newValue);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME1:
         setName1((SourceOrEventReference)newValue);
         return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1:
-        setAttribute_index1((AttributeIndex)newValue);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1:
+        setOPEN_SQARE_BRACKETSattribute_index1((AttributeIndex)newValue);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH2:
         setHash2((String)newValue);
@@ -643,11 +628,8 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME2:
         setName2((SourceOrEventReference)newValue);
         return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2:
-        setAttribute_index2((AttributeIndex)newValue);
-        return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME:
-        setAttr_name((AttributeNameReference)newValue);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2:
+        setOPEN_SQARE_BRACKETSattribute_index2((AttributeIndex)newValue);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__FEATURES_OR_ATTR_REF:
         setFeaturesOrAttrRef((FeaturesOrOutAttrReference)newValue);
@@ -669,14 +651,17 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
       case SiddhiPackage.ATTRIBUTE_REFERENCE__EXPRESSION:
         setExpression((Expression)null);
         return;
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH1:
         setHash1(HASH1_EDEFAULT);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME1:
         setName1((SourceOrEventReference)null);
         return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1:
-        setAttribute_index1((AttributeIndex)null);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1:
+        setOPEN_SQARE_BRACKETSattribute_index1((AttributeIndex)null);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH2:
         setHash2(HASH2_EDEFAULT);
@@ -684,11 +669,8 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME2:
         setName2((SourceOrEventReference)null);
         return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2:
-        setAttribute_index2((AttributeIndex)null);
-        return;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME:
-        setAttr_name((AttributeNameReference)null);
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2:
+        setOPEN_SQARE_BRACKETSattribute_index2((AttributeIndex)null);
         return;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__FEATURES_OR_ATTR_REF:
         setFeaturesOrAttrRef((FeaturesOrOutAttrReference)null);
@@ -709,20 +691,20 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
     {
       case SiddhiPackage.ATTRIBUTE_REFERENCE__EXPRESSION:
         return expression != null;
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH1:
         return HASH1_EDEFAULT == null ? hash1 != null : !HASH1_EDEFAULT.equals(hash1);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME1:
         return name1 != null;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1:
-        return attribute_index1 != null;
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1:
+        return opeN_SQARE_BRACKETSattribute_index1 != null;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__HASH2:
         return HASH2_EDEFAULT == null ? hash2 != null : !HASH2_EDEFAULT.equals(hash2);
       case SiddhiPackage.ATTRIBUTE_REFERENCE__NAME2:
         return name2 != null;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2:
-        return attribute_index2 != null;
-      case SiddhiPackage.ATTRIBUTE_REFERENCE__ATTR_NAME:
-        return attr_name != null;
+      case SiddhiPackage.ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2:
+        return opeN_SQARE_BRACKETSattribute_index2 != null;
       case SiddhiPackage.ATTRIBUTE_REFERENCE__FEATURES_OR_ATTR_REF:
         return featuresOrAttrRef != null;
     }
@@ -740,7 +722,9 @@ public class AttributeReferenceImpl extends SetAssignmentImpl implements Attribu
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (hash1: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", hash1: ");
     result.append(hash1);
     result.append(", hash2: ");
     result.append(hash2);

@@ -13,7 +13,6 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getAnd <em>And</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getOr <em>Or</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getRight <em>Right</em>}</li>
@@ -25,32 +24,6 @@ package org.xtext.example.siddhi.siddhi;
  */
 public interface MathLogicalOperation extends MathOperation
 {
-  /**
-   * Returns the value of the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Left</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathLogicalOperation_Left()
-   * @model containment="true"
-   * @generated
-   */
-  MathOperation getLeft();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getLeft <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left</em>' containment reference.
-   * @see #getLeft()
-   * @generated
-   */
-  void setLeft(MathOperation value);
-
   /**
    * Returns the value of the '<em><b>And</b></em>' containment reference.
    * <!-- begin-user-doc -->

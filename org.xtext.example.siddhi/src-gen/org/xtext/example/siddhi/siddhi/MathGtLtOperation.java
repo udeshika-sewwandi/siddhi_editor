@@ -13,8 +13,10 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getSymbol <em>Symbol</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt_eq <em>Gt eq</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt_eq <em>Lt eq</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt <em>Gt</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt <em>Lt</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getRight <em>Right</em>}</li>
  * </ul>
  *
@@ -25,56 +27,108 @@ package org.xtext.example.siddhi.siddhi;
 public interface MathGtLtOperation extends MathOperation
 {
   /**
-   * Returns the value of the '<em><b>Left</b></em>' containment reference.
+   * Returns the value of the '<em><b>Gt eq</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Left</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Gt eq</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Left()
-   * @model containment="true"
-   * @generated
-   */
-  MathOperation getLeft();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLeft <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left</em>' containment reference.
-   * @see #getLeft()
-   * @generated
-   */
-  void setLeft(MathOperation value);
-
-  /**
-   * Returns the value of the '<em><b>Symbol</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Symbol</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Symbol</em>' attribute.
-   * @see #setSymbol(String)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Symbol()
+   * @return the value of the '<em>Gt eq</em>' attribute.
+   * @see #setGt_eq(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Gt_eq()
    * @model
    * @generated
    */
-  String getSymbol();
+  String getGt_eq();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getSymbol <em>Symbol</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt_eq <em>Gt eq</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Symbol</em>' attribute.
-   * @see #getSymbol()
+   * @param value the new value of the '<em>Gt eq</em>' attribute.
+   * @see #getGt_eq()
    * @generated
    */
-  void setSymbol(String value);
+  void setGt_eq(String value);
+
+  /**
+   * Returns the value of the '<em><b>Lt eq</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Lt eq</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lt eq</em>' attribute.
+   * @see #setLt_eq(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Lt_eq()
+   * @model
+   * @generated
+   */
+  String getLt_eq();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt_eq <em>Lt eq</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Lt eq</em>' attribute.
+   * @see #getLt_eq()
+   * @generated
+   */
+  void setLt_eq(String value);
+
+  /**
+   * Returns the value of the '<em><b>Gt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Gt</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Gt</em>' attribute.
+   * @see #setGt(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Gt()
+   * @model
+   * @generated
+   */
+  String getGt();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt <em>Gt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Gt</em>' attribute.
+   * @see #getGt()
+   * @generated
+   */
+  void setGt(String value);
+
+  /**
+   * Returns the value of the '<em><b>Lt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Lt</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lt</em>' attribute.
+   * @see #setLt(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathGtLtOperation_Lt()
+   * @model
+   * @generated
+   */
+  String getLt();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt <em>Lt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Lt</em>' attribute.
+   * @see #getLt()
+   * @generated
+   */
+  void setLt(String value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.

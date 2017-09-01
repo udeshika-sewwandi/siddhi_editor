@@ -13,39 +13,39 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery <em>Every</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery1 <em>Every1</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getEVERY()
  * @model
  * @generated
  */
-public interface EVERY extends AbsentPatternSourceChain, EveryAbsentPatternSource, LeftAbsentPatternSource, RightAbsentPatternSource, EverySequenceSourceChain, EveryAbsentSequenceSourceChain
+public interface EVERY extends EverySequenceSourceChain, EveryAbsentSequenceSourceChain, AbsentPatternSourceChain, EveryAbsentPatternSource, LeftAbsentPatternSource, RightAbsentPatternSource
 {
   /**
-   * Returns the value of the '<em><b>Every</b></em>' attribute.
+   * Returns the value of the '<em><b>Every1</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Every</em>' attribute isn't clear,
+   * If the meaning of the '<em>Every1</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Every</em>' attribute.
-   * @see #setEvery(String)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getEVERY_Every()
+   * @return the value of the '<em>Every1</em>' attribute.
+   * @see #setEvery1(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getEVERY_Every1()
    * @model
    * @generated
    */
-  String getEvery();
+  String getEvery1();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery <em>Every</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery1 <em>Every1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Every</em>' attribute.
-   * @see #getEvery()
+   * @param value the new value of the '<em>Every1</em>' attribute.
+   * @see #getEvery1()
    * @generated
    */
-  void setEvery(String value);
+  void setEvery1(String value);
 
 } // EVERY

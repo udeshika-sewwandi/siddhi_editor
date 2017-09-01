@@ -32,7 +32,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AnnotationImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AnnotationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AnnotationImpl#getAnnElement <em>Ann Element</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.AnnotationImpl#getAnn <em>Ann</em>}</li>
  * </ul>
@@ -42,14 +42,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class AnnotationImpl extends MinimalEObjectImpl.Container implements Annotation
 {
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Name na;
+  protected Name name;
 
   /**
    * The cached value of the '{@link #getAnnElement() <em>Ann Element</em>}' containment reference list.
@@ -97,9 +97,9 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getNa()
+  public Name getName()
   {
-    return na;
+    return name;
   }
 
   /**
@@ -107,13 +107,13 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNa(Name newNa, NotificationChain msgs)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    Name oldNa = na;
-    na = newNa;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ANNOTATION__NA, oldNa, newNa);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.ANNOTATION__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -124,20 +124,20 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(Name newNa)
+  public void setName(Name newName)
   {
-    if (newNa != na)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (na != null)
-        msgs = ((InternalEObject)na).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ANNOTATION__NA, null, msgs);
-      if (newNa != null)
-        msgs = ((InternalEObject)newNa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ANNOTATION__NA, null, msgs);
-      msgs = basicSetNa(newNa, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ANNOTATION__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.ANNOTATION__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ANNOTATION__NA, newNa, newNa));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.ANNOTATION__NAME, newName, newName));
   }
 
   /**
@@ -178,8 +178,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case SiddhiPackage.ANNOTATION__NA:
-        return basicSetNa(null, msgs);
+      case SiddhiPackage.ANNOTATION__NAME:
+        return basicSetName(null, msgs);
       case SiddhiPackage.ANNOTATION__ANN_ELEMENT:
         return ((InternalEList<?>)getAnnElement()).basicRemove(otherEnd, msgs);
       case SiddhiPackage.ANNOTATION__ANN:
@@ -198,8 +198,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case SiddhiPackage.ANNOTATION__NA:
-        return getNa();
+      case SiddhiPackage.ANNOTATION__NAME:
+        return getName();
       case SiddhiPackage.ANNOTATION__ANN_ELEMENT:
         return getAnnElement();
       case SiddhiPackage.ANNOTATION__ANN:
@@ -219,8 +219,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case SiddhiPackage.ANNOTATION__NA:
-        setNa((Name)newValue);
+      case SiddhiPackage.ANNOTATION__NAME:
+        setName((Name)newValue);
         return;
       case SiddhiPackage.ANNOTATION__ANN_ELEMENT:
         getAnnElement().clear();
@@ -244,8 +244,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case SiddhiPackage.ANNOTATION__NA:
-        setNa((Name)null);
+      case SiddhiPackage.ANNOTATION__NAME:
+        setName((Name)null);
         return;
       case SiddhiPackage.ANNOTATION__ANN_ELEMENT:
         getAnnElement().clear();
@@ -267,8 +267,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
   {
     switch (featureID)
     {
-      case SiddhiPackage.ANNOTATION__NA:
-        return na != null;
+      case SiddhiPackage.ANNOTATION__NAME:
+        return name != null;
       case SiddhiPackage.ANNOTATION__ANN_ELEMENT:
         return annElement != null && !annElement.isEmpty();
       case SiddhiPackage.ANNOTATION__ANN:

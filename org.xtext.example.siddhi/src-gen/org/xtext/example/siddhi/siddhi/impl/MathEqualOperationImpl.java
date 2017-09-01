@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.example.siddhi.siddhi.MathAddsubOperation;
 import org.xtext.example.siddhi.siddhi.MathEqualOperation;
-import org.xtext.example.siddhi.siddhi.MathOperation;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
 /**
@@ -23,7 +23,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathEqualOperationImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathEqualOperationImpl#getEq <em>Eq</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathEqualOperationImpl#getNot_eq <em>Not eq</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathEqualOperationImpl#getRight <em>Right</em>}</li>
@@ -33,16 +32,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  */
 public class MathEqualOperationImpl extends MathOperationImpl implements MathEqualOperation
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected MathOperation left;
-
   /**
    * The default value of the '{@link #getEq() <em>Eq</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -91,7 +80,7 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
    * @generated
    * @ordered
    */
-  protected MathOperation right;
+  protected MathAddsubOperation right;
 
   /**
    * <!-- begin-user-doc -->
@@ -112,54 +101,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getMathEqualOperation();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOperation getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
-  {
-    MathOperation oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_EQUAL_OPERATION__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(MathOperation newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_EQUAL_OPERATION__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_EQUAL_OPERATION__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_EQUAL_OPERATION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -213,7 +154,7 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
    * <!-- end-user-doc -->
    * @generated
    */
-  public MathOperation getRight()
+  public MathAddsubOperation getRight()
   {
     return right;
   }
@@ -223,9 +164,9 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(MathOperation newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(MathAddsubOperation newRight, NotificationChain msgs)
   {
-    MathOperation oldRight = right;
+    MathAddsubOperation oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -240,7 +181,7 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(MathOperation newRight)
+  public void setRight(MathAddsubOperation newRight)
   {
     if (newRight != right)
     {
@@ -266,8 +207,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_EQUAL_OPERATION__LEFT:
-        return basicSetLeft(null, msgs);
       case SiddhiPackage.MATH_EQUAL_OPERATION__RIGHT:
         return basicSetRight(null, msgs);
     }
@@ -284,8 +223,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_EQUAL_OPERATION__LEFT:
-        return getLeft();
       case SiddhiPackage.MATH_EQUAL_OPERATION__EQ:
         return getEq();
       case SiddhiPackage.MATH_EQUAL_OPERATION__NOT_EQ:
@@ -306,9 +243,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_EQUAL_OPERATION__LEFT:
-        setLeft((MathOperation)newValue);
-        return;
       case SiddhiPackage.MATH_EQUAL_OPERATION__EQ:
         setEq((String)newValue);
         return;
@@ -316,7 +250,7 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
         setNot_eq((String)newValue);
         return;
       case SiddhiPackage.MATH_EQUAL_OPERATION__RIGHT:
-        setRight((MathOperation)newValue);
+        setRight((MathAddsubOperation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -332,9 +266,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_EQUAL_OPERATION__LEFT:
-        setLeft((MathOperation)null);
-        return;
       case SiddhiPackage.MATH_EQUAL_OPERATION__EQ:
         setEq(EQ_EDEFAULT);
         return;
@@ -342,7 +273,7 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
         setNot_eq(NOT_EQ_EDEFAULT);
         return;
       case SiddhiPackage.MATH_EQUAL_OPERATION__RIGHT:
-        setRight((MathOperation)null);
+        setRight((MathAddsubOperation)null);
         return;
     }
     super.eUnset(featureID);
@@ -358,8 +289,6 @@ public class MathEqualOperationImpl extends MathOperationImpl implements MathEqu
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_EQUAL_OPERATION__LEFT:
-        return left != null;
       case SiddhiPackage.MATH_EQUAL_OPERATION__EQ:
         return EQ_EDEFAULT == null ? eq != null : !EQ_EDEFAULT.equals(eq);
       case SiddhiPackage.MATH_EQUAL_OPERATION__NOT_EQ:

@@ -28,7 +28,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  *
  * @generated
  */
-public class NotOperationImpl extends MathOperationImpl implements NotOperation
+public class NotOperationImpl extends MathOtherOperationsImpl implements NotOperation
 {
   /**
    * The cached value of the '{@link #getNot() <em>Not</em>}' containment reference.

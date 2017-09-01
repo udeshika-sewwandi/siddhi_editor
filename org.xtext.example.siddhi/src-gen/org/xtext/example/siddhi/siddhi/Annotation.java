@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.Annotation#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.Annotation#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.Annotation#getAnnElement <em>Ann Element</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.Annotation#getAnn <em>Ann</em>}</li>
  * </ul>
@@ -28,30 +28,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Annotation extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Na</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Na</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Na</em>' containment reference.
-   * @see #setNa(Name)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAnnotation_Na()
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Name)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAnnotation_Name()
    * @model containment="true"
    * @generated
    */
-  Name getNa();
+  Name getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.Annotation#getNa <em>Na</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.Annotation#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Na</em>' containment reference.
-   * @see #getNa()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setNa(Name value);
+  void setName(Name value);
 
   /**
    * Returns the value of the '<em><b>Ann Element</b></em>' containment reference list.

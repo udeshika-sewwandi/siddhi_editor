@@ -14,13 +14,13 @@ package org.xtext.example.siddhi.siddhi;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getHash1 <em>Hash1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getName1 <em>Name1</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index1 <em>Attribute index1</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index1 <em>OPEN SQARE BRACKET Sattribute index1</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getHash2 <em>Hash2</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getName2 <em>Name2</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index2 <em>Attribute index2</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttr_name <em>Attr name</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index2 <em>OPEN SQARE BRACKET Sattribute index2</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.AttributeReference#getFeaturesOrAttrRef <em>Features Or Attr Ref</em>}</li>
  * </ul>
  *
@@ -55,6 +55,32 @@ public interface AttributeReference extends SetAssignment
    * @generated
    */
   void setExpression(Expression value);
+
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Hash1</b></em>' attribute.
@@ -109,30 +135,30 @@ public interface AttributeReference extends SetAssignment
   void setName1(SourceOrEventReference value);
 
   /**
-   * Returns the value of the '<em><b>Attribute index1</b></em>' containment reference.
+   * Returns the value of the '<em><b>OPEN SQARE BRACKET Sattribute index1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Attribute index1</em>' containment reference isn't clear,
+   * If the meaning of the '<em>OPEN SQARE BRACKET Sattribute index1</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attribute index1</em>' containment reference.
-   * @see #setAttribute_index1(AttributeIndex)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_Attribute_index1()
+   * @return the value of the '<em>OPEN SQARE BRACKET Sattribute index1</em>' containment reference.
+   * @see #setOPEN_SQARE_BRACKETSattribute_index1(AttributeIndex)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_OPEN_SQARE_BRACKETSattribute_index1()
    * @model containment="true"
    * @generated
    */
-  AttributeIndex getAttribute_index1();
+  AttributeIndex getOPEN_SQARE_BRACKETSattribute_index1();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index1 <em>Attribute index1</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index1 <em>OPEN SQARE BRACKET Sattribute index1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Attribute index1</em>' containment reference.
-   * @see #getAttribute_index1()
+   * @param value the new value of the '<em>OPEN SQARE BRACKET Sattribute index1</em>' containment reference.
+   * @see #getOPEN_SQARE_BRACKETSattribute_index1()
    * @generated
    */
-  void setAttribute_index1(AttributeIndex value);
+  void setOPEN_SQARE_BRACKETSattribute_index1(AttributeIndex value);
 
   /**
    * Returns the value of the '<em><b>Hash2</b></em>' attribute.
@@ -187,56 +213,30 @@ public interface AttributeReference extends SetAssignment
   void setName2(SourceOrEventReference value);
 
   /**
-   * Returns the value of the '<em><b>Attribute index2</b></em>' containment reference.
+   * Returns the value of the '<em><b>OPEN SQARE BRACKET Sattribute index2</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Attribute index2</em>' containment reference isn't clear,
+   * If the meaning of the '<em>OPEN SQARE BRACKET Sattribute index2</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attribute index2</em>' containment reference.
-   * @see #setAttribute_index2(AttributeIndex)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_Attribute_index2()
+   * @return the value of the '<em>OPEN SQARE BRACKET Sattribute index2</em>' containment reference.
+   * @see #setOPEN_SQARE_BRACKETSattribute_index2(AttributeIndex)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_OPEN_SQARE_BRACKETSattribute_index2()
    * @model containment="true"
    * @generated
    */
-  AttributeIndex getAttribute_index2();
+  AttributeIndex getOPEN_SQARE_BRACKETSattribute_index2();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index2 <em>Attribute index2</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index2 <em>OPEN SQARE BRACKET Sattribute index2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Attribute index2</em>' containment reference.
-   * @see #getAttribute_index2()
+   * @param value the new value of the '<em>OPEN SQARE BRACKET Sattribute index2</em>' containment reference.
+   * @see #getOPEN_SQARE_BRACKETSattribute_index2()
    * @generated
    */
-  void setAttribute_index2(AttributeIndex value);
-
-  /**
-   * Returns the value of the '<em><b>Attr name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Attr name</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Attr name</em>' containment reference.
-   * @see #setAttr_name(AttributeNameReference)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getAttributeReference_Attr_name()
-   * @model containment="true"
-   * @generated
-   */
-  AttributeNameReference getAttr_name();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttr_name <em>Attr name</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Attr name</em>' containment reference.
-   * @see #getAttr_name()
-   * @generated
-   */
-  void setAttr_name(AttributeNameReference value);
+  void setOPEN_SQARE_BRACKETSattribute_index2(AttributeIndex value);
 
   /**
    * Returns the value of the '<em><b>Features Or Attr Ref</b></em>' containment reference.

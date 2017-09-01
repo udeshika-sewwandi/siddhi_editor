@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getRight_uni <em>Right uni</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getOn <em>On</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getExpr <em>Expr</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getWt <em>Wt</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getWtr <em>Wtr</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getP <em>P</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getJoin <em>Join</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.JoinStream#getLeft_uni <em>Left uni</em>}</li>
  * </ul>
@@ -161,30 +162,56 @@ public interface JoinStream extends EObject
   void setExpr(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Wt</b></em>' containment reference.
+   * Returns the value of the '<em><b>Wtr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Wt</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Wtr</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Wt</em>' containment reference.
-   * @see #setWt(WithinTime)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getJoinStream_Wt()
+   * @return the value of the '<em>Wtr</em>' containment reference.
+   * @see #setWtr(WithinTimeRange)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getJoinStream_Wtr()
    * @model containment="true"
    * @generated
    */
-  WithinTime getWt();
+  WithinTimeRange getWtr();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.JoinStream#getWt <em>Wt</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.JoinStream#getWtr <em>Wtr</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Wt</em>' containment reference.
-   * @see #getWt()
+   * @param value the new value of the '<em>Wtr</em>' containment reference.
+   * @see #getWtr()
    * @generated
    */
-  void setWt(WithinTime value);
+  void setWtr(WithinTimeRange value);
+
+  /**
+   * Returns the value of the '<em><b>P</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>P</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>P</em>' containment reference.
+   * @see #setP(Per1)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getJoinStream_P()
+   * @model containment="true"
+   * @generated
+   */
+  Per1 getP();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.JoinStream#getP <em>P</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>P</em>' containment reference.
+   * @see #getP()
+   * @generated
+   */
+  void setP(Per1 value);
 
   /**
    * Returns the value of the '<em><b>Join</b></em>' containment reference.

@@ -26,7 +26,7 @@ import org.xtext.example.siddhi.siddhi.StreamReference;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamReferenceImpl#getHash <em>Hash</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamReferenceImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamReferenceImpl#getAatr_index <em>Aatr index</em>}</li>
  * </ul>
  *
@@ -55,14 +55,14 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
   protected String hash = HASH_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Name na;
+  protected Name name;
 
   /**
    * The cached value of the '{@link #getAatr_index() <em>Aatr index</em>}' containment reference.
@@ -123,9 +123,9 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getNa()
+  public Name getName()
   {
-    return na;
+    return name;
   }
 
   /**
@@ -133,13 +133,13 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNa(Name newNa, NotificationChain msgs)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    Name oldNa = na;
-    na = newNa;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_REFERENCE__NA, oldNa, newNa);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_REFERENCE__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -150,20 +150,20 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(Name newNa)
+  public void setName(Name newName)
   {
-    if (newNa != na)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (na != null)
-        msgs = ((InternalEObject)na).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_REFERENCE__NA, null, msgs);
-      if (newNa != null)
-        msgs = ((InternalEObject)newNa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_REFERENCE__NA, null, msgs);
-      msgs = basicSetNa(newNa, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_REFERENCE__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_REFERENCE__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_REFERENCE__NA, newNa, newNa));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_REFERENCE__NAME, newName, newName));
   }
 
   /**
@@ -224,8 +224,8 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_REFERENCE__NA:
-        return basicSetNa(null, msgs);
+      case SiddhiPackage.STREAM_REFERENCE__NAME:
+        return basicSetName(null, msgs);
       case SiddhiPackage.STREAM_REFERENCE__AATR_INDEX:
         return basicSetAatr_index(null, msgs);
     }
@@ -244,8 +244,8 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
     {
       case SiddhiPackage.STREAM_REFERENCE__HASH:
         return getHash();
-      case SiddhiPackage.STREAM_REFERENCE__NA:
-        return getNa();
+      case SiddhiPackage.STREAM_REFERENCE__NAME:
+        return getName();
       case SiddhiPackage.STREAM_REFERENCE__AATR_INDEX:
         return getAatr_index();
     }
@@ -265,8 +265,8 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
       case SiddhiPackage.STREAM_REFERENCE__HASH:
         setHash((String)newValue);
         return;
-      case SiddhiPackage.STREAM_REFERENCE__NA:
-        setNa((Name)newValue);
+      case SiddhiPackage.STREAM_REFERENCE__NAME:
+        setName((Name)newValue);
         return;
       case SiddhiPackage.STREAM_REFERENCE__AATR_INDEX:
         setAatr_index((AttributeIndex)newValue);
@@ -288,8 +288,8 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
       case SiddhiPackage.STREAM_REFERENCE__HASH:
         setHash(HASH_EDEFAULT);
         return;
-      case SiddhiPackage.STREAM_REFERENCE__NA:
-        setNa((Name)null);
+      case SiddhiPackage.STREAM_REFERENCE__NAME:
+        setName((Name)null);
         return;
       case SiddhiPackage.STREAM_REFERENCE__AATR_INDEX:
         setAatr_index((AttributeIndex)null);
@@ -310,8 +310,8 @@ public class StreamReferenceImpl extends MinimalEObjectImpl.Container implements
     {
       case SiddhiPackage.STREAM_REFERENCE__HASH:
         return HASH_EDEFAULT == null ? hash != null : !HASH_EDEFAULT.equals(hash);
-      case SiddhiPackage.STREAM_REFERENCE__NA:
-        return na != null;
+      case SiddhiPackage.STREAM_REFERENCE__NAME:
+        return name != null;
       case SiddhiPackage.STREAM_REFERENCE__AATR_INDEX:
         return aatr_index != null;
     }

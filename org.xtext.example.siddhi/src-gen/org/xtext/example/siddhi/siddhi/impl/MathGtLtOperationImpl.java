@@ -23,8 +23,10 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getSymbol <em>Symbol</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getGt_eq <em>Gt eq</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getLt_eq <em>Lt eq</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getGt <em>Gt</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getLt <em>Lt</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl#getRight <em>Right</em>}</li>
  * </ul>
  *
@@ -33,34 +35,84 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLtOperation
 {
   /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * The default value of the '{@link #getGt_eq() <em>Gt eq</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getGt_eq()
    * @generated
    * @ordered
    */
-  protected MathOperation left;
+  protected static final String GT_EQ_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getSymbol() <em>Symbol</em>}' attribute.
+   * The cached value of the '{@link #getGt_eq() <em>Gt eq</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSymbol()
+   * @see #getGt_eq()
    * @generated
    * @ordered
    */
-  protected static final String SYMBOL_EDEFAULT = null;
+  protected String gt_eq = GT_EQ_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSymbol() <em>Symbol</em>}' attribute.
+   * The default value of the '{@link #getLt_eq() <em>Lt eq</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSymbol()
+   * @see #getLt_eq()
    * @generated
    * @ordered
    */
-  protected String symbol = SYMBOL_EDEFAULT;
+  protected static final String LT_EQ_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLt_eq() <em>Lt eq</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLt_eq()
+   * @generated
+   * @ordered
+   */
+  protected String lt_eq = LT_EQ_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getGt() <em>Gt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGt()
+   * @generated
+   * @ordered
+   */
+  protected static final String GT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getGt() <em>Gt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGt()
+   * @generated
+   * @ordered
+   */
+  protected String gt = GT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLt() <em>Lt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLt()
+   * @generated
+   * @ordered
+   */
+  protected static final String LT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLt() <em>Lt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLt()
+   * @generated
+   * @ordered
+   */
+  protected String lt = LT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -98,9 +150,9 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
    * <!-- end-user-doc -->
    * @generated
    */
-  public MathOperation getLeft()
+  public String getGt_eq()
   {
-    return left;
+    return gt_eq;
   }
 
   /**
@@ -108,16 +160,12 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
+  public void setGt_eq(String newGt_eq)
   {
-    MathOperation oldLeft = left;
-    left = newLeft;
+    String oldGt_eq = gt_eq;
+    gt_eq = newGt_eq;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__GT_EQ, oldGt_eq, gt_eq));
   }
 
   /**
@@ -125,20 +173,9 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(MathOperation newLeft)
+  public String getLt_eq()
   {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_GT_LT_OPERATION__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_GT_LT_OPERATION__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__LEFT, newLeft, newLeft));
+    return lt_eq;
   }
 
   /**
@@ -146,22 +183,58 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSymbol()
+  public void setLt_eq(String newLt_eq)
   {
-    return symbol;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSymbol(String newSymbol)
-  {
-    String oldSymbol = symbol;
-    symbol = newSymbol;
+    String oldLt_eq = lt_eq;
+    lt_eq = newLt_eq;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__SYMBOL, oldSymbol, symbol));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__LT_EQ, oldLt_eq, lt_eq));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getGt()
+  {
+    return gt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGt(String newGt)
+  {
+    String oldGt = gt;
+    gt = newGt;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__GT, oldGt, gt));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getLt()
+  {
+    return lt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLt(String newLt)
+  {
+    String oldLt = lt;
+    lt = newLt;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_GT_LT_OPERATION__LT, oldLt, lt));
   }
 
   /**
@@ -222,8 +295,6 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_GT_LT_OPERATION__LEFT:
-        return basicSetLeft(null, msgs);
       case SiddhiPackage.MATH_GT_LT_OPERATION__RIGHT:
         return basicSetRight(null, msgs);
     }
@@ -240,10 +311,14 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_GT_LT_OPERATION__LEFT:
-        return getLeft();
-      case SiddhiPackage.MATH_GT_LT_OPERATION__SYMBOL:
-        return getSymbol();
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT_EQ:
+        return getGt_eq();
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT_EQ:
+        return getLt_eq();
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT:
+        return getGt();
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT:
+        return getLt();
       case SiddhiPackage.MATH_GT_LT_OPERATION__RIGHT:
         return getRight();
     }
@@ -260,11 +335,17 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_GT_LT_OPERATION__LEFT:
-        setLeft((MathOperation)newValue);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT_EQ:
+        setGt_eq((String)newValue);
         return;
-      case SiddhiPackage.MATH_GT_LT_OPERATION__SYMBOL:
-        setSymbol((String)newValue);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT_EQ:
+        setLt_eq((String)newValue);
+        return;
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT:
+        setGt((String)newValue);
+        return;
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT:
+        setLt((String)newValue);
         return;
       case SiddhiPackage.MATH_GT_LT_OPERATION__RIGHT:
         setRight((MathOperation)newValue);
@@ -283,11 +364,17 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_GT_LT_OPERATION__LEFT:
-        setLeft((MathOperation)null);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT_EQ:
+        setGt_eq(GT_EQ_EDEFAULT);
         return;
-      case SiddhiPackage.MATH_GT_LT_OPERATION__SYMBOL:
-        setSymbol(SYMBOL_EDEFAULT);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT_EQ:
+        setLt_eq(LT_EQ_EDEFAULT);
+        return;
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT:
+        setGt(GT_EDEFAULT);
+        return;
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT:
+        setLt(LT_EDEFAULT);
         return;
       case SiddhiPackage.MATH_GT_LT_OPERATION__RIGHT:
         setRight((MathOperation)null);
@@ -306,10 +393,14 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_GT_LT_OPERATION__LEFT:
-        return left != null;
-      case SiddhiPackage.MATH_GT_LT_OPERATION__SYMBOL:
-        return SYMBOL_EDEFAULT == null ? symbol != null : !SYMBOL_EDEFAULT.equals(symbol);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT_EQ:
+        return GT_EQ_EDEFAULT == null ? gt_eq != null : !GT_EQ_EDEFAULT.equals(gt_eq);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT_EQ:
+        return LT_EQ_EDEFAULT == null ? lt_eq != null : !LT_EQ_EDEFAULT.equals(lt_eq);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__GT:
+        return GT_EDEFAULT == null ? gt != null : !GT_EDEFAULT.equals(gt);
+      case SiddhiPackage.MATH_GT_LT_OPERATION__LT:
+        return LT_EDEFAULT == null ? lt != null : !LT_EDEFAULT.equals(lt);
       case SiddhiPackage.MATH_GT_LT_OPERATION__RIGHT:
         return right != null;
     }
@@ -327,8 +418,14 @@ public class MathGtLtOperationImpl extends MathOperationImpl implements MathGtLt
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (symbol: ");
-    result.append(symbol);
+    result.append(" (gt_eq: ");
+    result.append(gt_eq);
+    result.append(", lt_eq: ");
+    result.append(lt_eq);
+    result.append(", gt: ");
+    result.append(gt);
+    result.append(", lt: ");
+    result.append(lt);
     result.append(')');
     return result.toString();
   }

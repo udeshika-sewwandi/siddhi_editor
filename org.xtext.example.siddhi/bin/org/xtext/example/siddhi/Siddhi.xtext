@@ -8,10 +8,10 @@ SiddhiQL:
 ;
 
 ExecutionPlan:
-	(appAnn+=AppAnnotation)*(
-		(=>defStream+=DefinitionStream|=>defTable+=DefinitionTable| =>def_window+=DefinitionWindow| =>defTrigger+=DefinitionTrigger|=>defFunction+=DefinitionFunction|=>defAgrregation+=DefinitionAggregation)=>(';' 
-		(=>defStream+=DefinitionStream|=>defTable+=DefinitionTable| =>def_window+=DefinitionWindow| =>defTrigger+=DefinitionTrigger|=>defFunction+=DefinitionFunction|=>defAgrregation+=DefinitionAggregation))*
-		=>(';'(exElement+=ExecutionElement))* ';'?)
+	(appAnn+=AppAnnotation)*( 
+	(=>defStream+=DefinitionStream|=>defTable+=DefinitionTable| =>def_window+=DefinitionWindow| =>defTrigger+=DefinitionTrigger|=>defFunction+=DefinitionFunction|=>defAggregation+=DefinitionAggregation)=>(';' 
+	(=>defStream+=DefinitionStream|=>defTable+=DefinitionTable| =>def_window+=DefinitionWindow| =>defTrigger+=DefinitionTrigger|=>defFunction+=DefinitionFunction|=>defAggregation+=DefinitionAggregation))*
+	=>(';'(exElement+=ExecutionElement))* ';'?) 
 ;
 
 ExecutionElement:
@@ -19,7 +19,7 @@ ExecutionElement:
 ;
 
 DefinitionStream:
-	{DefinitionStream}(ann += Annotation)* DEFINE (STREAM|TABLE) src=Source1 OPEN_PAR (feature += Features )(',' feature += Features )* CLOSE_PAR		 		
+	(ann += Annotation)* DEFINE STREAM src=Source1 OPEN_PAR feature += Features (',' feature += Features )* CLOSE_PAR		 		
 ;
 
 DefinitionTable:
@@ -44,10 +44,10 @@ DefinitionAggregation:
 
 AggregationTime:
 	 AggregationTimeRange
-    | aggregation_time_interval
+    | AggregationTimeInterval
 ;
 
-aggregation_time_interval:
+AggregationTimeInterval:
       aggrtimeDur+=AggregationTimeDuration (',' aggrtimeDur+=AggregationTimeDuration)*
 ;
    
@@ -58,7 +58,7 @@ AggregationTimeDuration:
 AggregationTimeRange:
      aggrtimeDur+=AggregationTimeDuration TRIPLE_DOT aggrtimeDur+=AggregationTimeDuration
 ;
-     
+
 FunctionName:
 	id=ID
 ;
@@ -87,11 +87,11 @@ TriggerName:
 ;
 
 AppAnnotation:
-	 '@' APP ':' na=Name (OPEN_PAR ann5+=AnnotationElement (',' ann5+=AnnotationElement )* CLOSE_PAR )?
+	 '@' APP ':' name=Name (OPEN_PAR ann5+=AnnotationElement (',' ann5+=AnnotationElement )* CLOSE_PAR )?
 ;
-
+    
 Annotation:
-	'@' na = Name (OPEN_PAR (annElement += AnnotationElement | ann += Annotation) 
+	'@' name = Name (OPEN_PAR (annElement += AnnotationElement | ann += Annotation) 
 		( ',' (annElement += AnnotationElement | ann += Annotation))* CLOSE_PAR	)
 ;
 
@@ -104,7 +104,7 @@ PropertyValue:
 ;
 
 PropertyName:
-	{PropertyName} na+=Name (ps+=PropertySeparator na += Name )*
+	{PropertyName} name+=Name (ps+=PropertySeparator name += Name )*
 ;
 
 PropertySeparator:
@@ -112,11 +112,19 @@ PropertySeparator:
 ;
 
 Features:
-	(name=IdNew) (type = AttributeType)
+	(=>(name=IdNew)|=>(nam=Name)) (type = AttributeType)
 ;
 
 AttributeType:
 	{AttributeType}STRINGS |{AttributeType} INTS|{AttributeType} LONG |{AttributeType} FLOAT |{AttributeType} DOUBLE|{AttributeType} BOOL|{AttributeType} OBJECT 
+;
+
+Source:
+	strId=[Source1|IdNew] 
+;
+
+Source1:
+	inner='#'? name=IdNew
 ;
 
 ExecPartition:
@@ -137,162 +145,72 @@ ConditionRange:
 ;
 
 Query:
-	{Query}(ann3 += Annotation)* FROM (qInp = QueryInput ) (querySec = QuerySection)? outRate=OutputRate? (qOutput = QueryOutput)?
+	{Query}(ann3 += Annotation)* FROM (qInp = QueryInput )(querySec = QuerySection)? outRate=OutputRate? (qOutput = QueryOutput)
+;
+
+QueryOutput:
+	INSERT (outEventType = OutputEventType)? INTO (tar = Target)
+	|DELETE (tar = Target) (FOR outEventType=OutputEventType)? on=ON (expr=Expression)
+	|UPDATE (or=OR INSERT INTO)? (tar=Target) (FOR outEventType=OutputEventType)? setClause=SetClause? on=ON (expr=Expression)
+	//|UPDATE (tar=Source1) (FOR outEventType=OutputEventType)? on=ON (expr=Expression)
+	|RETURN outEventType=OutputEventType?
+;
+
+Target:
+	=>(na=Source1)|=>src=Source//|=>(na=Source1)
+;
+
+SetClause:
+	SET setAssignment+=SetAssignment (',' setAssignment+=SetAssignment)*
+;
+
+SetAssignment:
+	AttributeReference '=' expression=Expression
+;
+
+
+
+OutputEventType:
+	{OutputEventType}ALL EVENTS |{OutputEventType} ALL RAW EVENTS |{OutputEventType} EXPIRED EVENTS |{OutputEventType} EXPIRED RAW EVENTS |{OutputEventType} CURRENT? EVENTS
+;
+
+OutputRate:
+	{OutputRate} OUTPUT op_rate_type=OutputRateType? every=EVERY ( tv=TimeValue | INT_LITERAL EVENTS )
+    |{OutputRate} OUTPUT SNAPSHOT every=EVERY tv=TimeValue
+;
+
+OutputRateType:
+	{OutputRateType}ALL
+    |{OutputRateType} LAST
+    |{OutputRateType}FIRST
+;
+
+GroupByQuerySelection:
+	{GroupByQuerySelection}(SELECT ('*'| (out_att += OutputAttribute (',' out_att +=OutputAttribute)* ))) (grp_by=GroupBy)?
+;
+
+QuerySection:
+	{QuerySection} grpByQuerySel=GroupByQuerySelection (having=HavingExpr)? 
+;
+
+GroupBy:
+	GROUP BY attr_ref+=AttributeReference (',' attr_ref+=AttributeReference)*
+;
+
+HavingExpr:
+	HAVING expr=Expression
+;
+
+OutputAttribute:
+	{OutputAttribute} outAttr=OutAttr | {OutputAttribute} attr_ref=AttributeReference 
+;
+
+OutAttr:
+	attr=Attribute a=AS (name = IdNew)
 ;
 
 QueryInput:
 	{QueryInput}(=>js=JoinStream|=>seqSrcChanin=SequenceStream|=>ps=PatternStream|anonStream=AnonymousStream)
-;
-
-JoinStream:
-	=>(left_source=JoinSource right_source=JoinSource) right_uni=UNIDIRECTIONAL (on=ON expr=Expression)?  wt=WithinTime?//(wtr=WithinTimeRange p=Per1)?
-	|=>(left_source=JoinSource join=joins) right_source=JoinSource (on=ON expr=Expression)? wt=WithinTime?//(wtr=WithinTimeRange p=Per1)?
-	|=>(left_source=JoinSource left_uni=UNIDIRECTIONAL) join=joins right_source=JoinSource (on=ON expr=Expression)? wt=WithinTime?//(wtr=WithinTimeRange p=Per1)?
-	|=>StandardStream
-;
-
-WithinTimeRange:
-    WITHIN startPattern=Expression (',' endPattern=Expression)?
-;
-
-Per1 :
-	PER exp=Expression
-;
-    
-JoinSource:
-	MainSource (a=AS strAlias=StreamAlias)? 
-;
-
-StreamAlias:
-	na=Name
-;
-
-joins:
-	{joins} LEFT OUTER JOIN
-    |{joins} RIGHT OUTER JOIN
-    |{joins} FULL OUTER JOIN
-    |{joins} OUTER JOIN
-    |{joins} INNER? JOIN
-;
-
-StandardStream:
-	 MainSource =>((postWindowHandlers = BasicSourceStreamHandlers)?)
-;
-
-MainSource:
-	//=>(src=Source =>(preWindowHandlers = BasicSourceStreamHandlers)? (=>(window = Win)?))
-	src=Source basicSSh=BasicSourceStreamHandlers1
-;
-
-PatternStream:
-	=>EveryPatternSourceChain
-	|=>AbsentPatternSourceChain
-;
-
-EveryPatternSourceChain:
-	EveryPatternSourceChain1 =>({EveryPatternSourceChain.left=current} op= '->' right=EveryPatternSourceChain1)*     
-;
-
-EveryPatternSourceChain1 returns EveryPatternSourceChain:
-	=>(OPEN_PAR eps=EveryPatternSourceChain CLOSE_PAR wt=WithinTime?)
-	|psc=PatternSourceChain 
-	//|EVERY psc1=PatternSourceChain1 
-	/*|every=EVERY OPEN_PAR psc=PatternSourceChain CLOSE_PAR wt=WithinTime? 
-	|every=EVERY ps1=PatternSource wt=WithinTime? */
-	|every=EVERY psc=PatternSourceChain1
-;
-
-PatternSourceChain:
-	PatternSourceChain1 -> ({PatternSourceChain.left=current} op='->' right=PatternSourceChain1)*
-;
-
-PatternSourceChain1 returns PatternSourceChain:
-	=>(OPEN_PAR psc_2=PatternSourceChain CLOSE_PAR wt=WithinTime?)
-	|ps=PatternSource wt=WithinTime?
-;
-
-PatternSource:
-	=>lss=LogicalStatefulSource|=>pss=PatternCollectionStatefulSource|=>stdss=StandardStatefulSource|=>logicalAbsStatefulSrc=LogicalAbsentStatefulSource
-;
-
-LogicalStatefulSource:
-	//=>(not=NOT stdSource+=StandardStatefulSource (and=AND stdSource+=StandardStatefulSource) )
-    =>(stdSource+=StandardStatefulSource and=AND) stdSource+=StandardStatefulSource
-    |=>(stdSource+=StandardStatefulSource or=OR) stdSource+=StandardStatefulSource
-;
-
-PatternCollectionStatefulSource:
-	StandardStatefulSource '<' coll=Collect '>'
-;
-
-Collect:
-	{Collect}(start=INT_LITERAL ':' end=INT_LITERAL
-    | start=INT_LITERAL ':'
-    | ':' end=INT_LITERAL
-    | INT_LITERAL)
-;
-
-WithinTime:
-	WITHIN tv=TimeValue
-;
-
-LogicalAbsentStatefulSource:
-	=>(OPEN_PAR logicalAbsStatefulSrc=LogicalAbsentStatefulSource CLOSE_PAR)
-	|=>(stdSource=StandardStatefulSource and=AND not=NOT bs=BasicSource)
-	|=>(NOT bs=BasicSource and=AND) stdSource=StandardStatefulSource
-	|=>(stdSource=StandardStatefulSource and=AND basicAbsentPatternSource1=BasicAbsentPatternSource)
-	|=>(basicAbsentPatternSource1=BasicAbsentPatternSource and=AND stdSource=StandardStatefulSource)
-	|=>(basicAbsentPatternSource2=BasicAbsentPatternSource and=AND basicAbsentPatternSource=BasicAbsentPatternSource)
-	|=>(stdSource=StandardStatefulSource o=OR basicAbsentPatternSource1=BasicAbsentPatternSource)
-    |=>(basicAbsentPatternSource1=BasicAbsentPatternSource o=OR stdSource=StandardStatefulSource)
-    |=>(basicAbsentPatternSource2=BasicAbsentPatternSource o=OR basicAbsentPatternSource=BasicAbsentPatternSource)
-;
- 
-AbsentPatternSourceChain:
-	=>(EVERY? OPEN_PAR absentPatternSrcChain=AbsentPatternSourceChain CLOSE_PAR wt1=WithinTime?)
-	|EveryAbsentPatternSource
-	|=>LeftAbsentPatternSource
-	|=>RightAbsentPatternSource
-;
-
-EveryAbsentPatternSource:
-	=>(EVERY? basicAbsentPS=BasicAbsentPatternSource)
-;
-
-BasicAbsentPatternSource:
-	=>(NOT basicSrc=BasicSource ft=ForTime)
-;
-
-ForTime:
-	FOR tv=TimeValue
-;
-
-LeftAbsentPatternSource:
-	LeftAbsentPatternSource1=>({LeftAbsentPatternSource.left=current} fb1='->' right=LeftAbsentPatternSource1)*
-;
-
-LeftAbsentPatternSource1 returns LeftAbsentPatternSource:
-	LeftAbsentPatternSource2=>({LeftAbsentPatternSource1.left=current} fb='->' right=EveryAbsentPatternSource)*
-;
-
-LeftAbsentPatternSource2 returns LeftAbsentPatternSource:
-	=>(EVERY? OPEN_PAR leftAbsPS=LeftAbsentPatternSource CLOSE_PAR wt2+=WithinTime?)
-	|=>(everyAbsPS=EveryAbsentPatternSource '->' everyPSC=EveryPatternSourceChain)
-	|=>(everyPSC=EveryPatternSourceChain '->' leftAbsPatternSrc=LeftAbsentPatternSource)
-;
-
-RightAbsentPatternSource:
-	RightAbsentPatternSource1 =>({RightAbsentPatternSource.left1=current} fb2='->' right1=RightAbsentPatternSource1)*
-;
-
-RightAbsentPatternSource1 returns RightAbsentPatternSource:
-	RightAbsentPatternSource2 =>({RightAbsentPatternSource1.left=current} fb='->' right=EveryAbsentPatternSource)*
-;
-
-RightAbsentPatternSource2 returns RightAbsentPatternSource:
-	=>(EVERY? OPEN_PAR rightAbsPS=RightAbsentPatternSource CLOSE_PAR wt3+=WithinTime?)
-	|=>(everyPSC1=EveryPatternSourceChain '->' everyAbsPS1=EveryAbsentPatternSource)
-	|=>(everyAbsPS1=EveryAbsentPatternSource '->' rightAbsPS=RightAbsentPatternSource)
 ;
 
 SequenceStream:
@@ -365,37 +283,162 @@ AnonymousStream:
     |FROM qi=QueryInput qs=QuerySection? out_rate=OutputRate? RETURN op_event_type=OutputEventType?    
 ;
 
-OutputRate:
-	{OutputRate} OUTPUT op_rate_type=OutputRateType? every=EVERY ( tv=TimeValue | INT_LITERAL EVENTS )
-    |{OutputRate} OUTPUT SNAPSHOT every=EVERY tv=TimeValue
+PatternStream:
+	=>EveryPatternSourceChain
+	|=>AbsentPatternSourceChain
 ;
 
-OutputRateType:
-	{OutputRateType}ALL
-    |{OutputRateType} LAST
-    |{OutputRateType}FIRST
+EveryPatternSourceChain:
+	EveryPatternSourceChain1 =>({EveryPatternSourceChain.left=current} op= '->' right=EveryPatternSourceChain1)*     
 ;
 
-QueryOutput:
-	INSERT (outEventType = OutputEventType)? INTO (tar = Source1)
-	|DELETE (tar = Source1) (FOR outEventType=OutputEventType)? on=ON (expr=Expression)
-	|UPDATE (or=OR INSERT INTO)? (tar=Source1) (FOR outEventType=OutputEventType)? setClause=SetClause? on=ON (expr=Expression)
-	//|UPDATE (tar=Source1) (FOR outEventType=OutputEventType)? on=ON (expr=Expression)
-	|RETURN outEventType=OutputEventType?
+EveryPatternSourceChain1 returns EveryPatternSourceChain:
+	=>(OPEN_PAR eps=EveryPatternSourceChain CLOSE_PAR wt=WithinTime?)
+	|psc=PatternSourceChain 
+	//|EVERY psc1=PatternSourceChain1 
+	/*|every=EVERY OPEN_PAR psc=PatternSourceChain CLOSE_PAR wt=WithinTime? 
+	|every=EVERY ps1=PatternSource wt=WithinTime? */
+	|every=EVERY psc=PatternSourceChain1
 ;
 
-SetClause:
-	SET setAssignment+=SetAssignment (',' setAssignment+=SetAssignment)*
+PatternSourceChain:
+	PatternSourceChain1 -> ({PatternSourceChain.left=current} op='->' right=PatternSourceChain1)*
 ;
 
-SetAssignment:
-	AttributeReference '=' expression=Expression
+PatternSourceChain1 returns PatternSourceChain:
+	=>(OPEN_PAR psc_2=PatternSourceChain CLOSE_PAR wt=WithinTime?)
+	|ps=PatternSource wt=WithinTime?
 ;
 
-OutputEventType:
-	{OutputEventType}ALL EVENTS |{OutputEventType} ALL RAW EVENTS |{OutputEventType} EXPIRED EVENTS |{OutputEventType} EXPIRED RAW EVENTS |{OutputEventType} CURRENT? EVENTS
+PatternSource:
+	=>lss=LogicalStatefulSource|=>pss=PatternCollectionStatefulSource|=>stdss=StandardStatefulSource|=>logicalAbsStatefulSrc=LogicalAbsentStatefulSource
 ;
 
+LogicalStatefulSource:
+	//=>(not=NOT stdSource+=StandardStatefulSource (and=AND stdSource+=StandardStatefulSource) )
+    =>(stdSource+=StandardStatefulSource and=AND) stdSource+=StandardStatefulSource
+    |=>(stdSource+=StandardStatefulSource or=OR) stdSource+=StandardStatefulSource
+;
+
+PatternCollectionStatefulSource:
+	StandardStatefulSource '<' coll=Collect '>'
+;
+
+Collect:
+	{Collect}(start=INT_LITERAL ':' end=INT_LITERAL
+    | start=INT_LITERAL ':'
+    | ':' end=INT_LITERAL
+    | INT_LITERAL)
+;
+
+LogicalAbsentStatefulSource:
+	=>(OPEN_PAR logicalAbsStatefulSrc=LogicalAbsentStatefulSource CLOSE_PAR)
+	|=>(stdSource=StandardStatefulSource and=AND not=NOT bs=BasicSource)
+	|=>(NOT bs=BasicSource and=AND) stdSource=StandardStatefulSource
+	|=>(stdSource=StandardStatefulSource and=AND basicAbsentPatternSource1=BasicAbsentPatternSource)
+	|=>(basicAbsentPatternSource1=BasicAbsentPatternSource and=AND stdSource=StandardStatefulSource)
+	|=>(basicAbsentPatternSource2=BasicAbsentPatternSource and=AND basicAbsentPatternSource=BasicAbsentPatternSource)
+	|=>(stdSource=StandardStatefulSource o=OR basicAbsentPatternSource1=BasicAbsentPatternSource)
+    |=>(basicAbsentPatternSource1=BasicAbsentPatternSource o=OR stdSource=StandardStatefulSource)
+    |=>(basicAbsentPatternSource2=BasicAbsentPatternSource o=OR basicAbsentPatternSource=BasicAbsentPatternSource)
+;
+ 
+AbsentPatternSourceChain:
+	=>(EVERY? OPEN_PAR absentPatternSrcChain=AbsentPatternSourceChain CLOSE_PAR wt1=WithinTime?)
+	|EveryAbsentPatternSource
+	|=>LeftAbsentPatternSource
+	|=>RightAbsentPatternSource
+;
+
+EveryAbsentPatternSource:
+	=>(EVERY? basicAbsentPS=BasicAbsentPatternSource)
+;
+
+BasicAbsentPatternSource:
+	=>(NOT basicSrc=BasicSource ft=ForTime)
+;
+
+ForTime:
+	FOR tv=TimeValue
+;
+
+LeftAbsentPatternSource:
+	LeftAbsentPatternSource1=>({LeftAbsentPatternSource.left=current} fb1='->' right=LeftAbsentPatternSource1)*
+;
+
+LeftAbsentPatternSource1 returns LeftAbsentPatternSource:
+	LeftAbsentPatternSource2=>({LeftAbsentPatternSource1.left=current} fb='->' right=EveryAbsentPatternSource)*
+;
+
+LeftAbsentPatternSource2 returns LeftAbsentPatternSource:
+	=>(EVERY? OPEN_PAR leftAbsPS=LeftAbsentPatternSource CLOSE_PAR wt2+=WithinTime?)
+	|=>(everyAbsPS=EveryAbsentPatternSource '->' everyPSC=EveryPatternSourceChain)
+	|=>(everyPSC=EveryPatternSourceChain '->' leftAbsPatternSrc=LeftAbsentPatternSource)
+;
+
+RightAbsentPatternSource:
+	RightAbsentPatternSource1 =>({RightAbsentPatternSource.left1=current} fb2='->' right1=RightAbsentPatternSource1)*
+;
+
+RightAbsentPatternSource1 returns RightAbsentPatternSource:
+	RightAbsentPatternSource2 =>({RightAbsentPatternSource1.left=current} fb='->' right=EveryAbsentPatternSource)*
+;
+
+RightAbsentPatternSource2 returns RightAbsentPatternSource:
+	=>(EVERY? OPEN_PAR rightAbsPS=RightAbsentPatternSource CLOSE_PAR wt3+=WithinTime?)
+	|=>(everyPSC1=EveryPatternSourceChain '->' everyAbsPS1=EveryAbsentPatternSource)
+	|=>(everyAbsPS1=EveryAbsentPatternSource '->' rightAbsPS=RightAbsentPatternSource)
+;
+
+JoinStream:
+	=>(left_source=JoinSource right_source=JoinSource) right_uni=UNIDIRECTIONAL (on=ON expr=Expression)?  (wtr=WithinTimeRange p=Per1)?
+	|=>(left_source=JoinSource join=joins) right_source=JoinSource (on=ON expr=Expression)? (wtr=WithinTimeRange p=Per1)?
+	|=>(left_source=JoinSource left_uni=UNIDIRECTIONAL) join=joins right_source=JoinSource (on=ON expr=Expression)? (wtr=WithinTimeRange p=Per1)?
+	|=>StandardStream
+;
+
+WithinTimeRange:
+    WITHIN startPattern=Expression (',' endPattern=Expression)?
+;
+
+Per1 :
+	PER exp=Expression
+;
+
+JoinSource:
+	MainSource (window = Win)? (a=AS strAlias=StreamAlias)? 
+;
+
+StreamAlias:
+	=>(name=IdNew) | =>(nam=Name)
+;
+
+WithinTime:
+	WITHIN tv=TimeValue
+;
+  
+joins:
+	{joins} LEFT OUTER JOIN
+    |{joins} RIGHT OUTER JOIN
+    |{joins} FULL OUTER JOIN
+    |{joins} OUTER JOIN
+    |{joins} INNER? JOIN
+;
+
+StandardStream:
+	 MainSource =>((postWindowHandlers = BasicSourceStreamHandlers)?)
+;
+
+MainSource:
+	//=>(src=Source =>(preWindowHandlers = BasicSourceStreamHandlers)? (=>(window = Win)?))
+	src=Source basicSSh=BasicSourceStreamHandlers1
+;
+/*
+ * BasicSource:
+	src=Source basic_ss_handlers = BasicSourceStreamHandlers?
+;
+ */
+ 
 BasicSourceStreamHandlers:
 	(basicSsHandler += BasicSourceStreamHandler)+
 ;
@@ -424,50 +467,6 @@ Expression:
 	MathOperation
 ;
 
-FunctionOperation:
-	{FunctionOperation}(funcNamespace=FunctionNamespace ':')? funcId=FunctionId OPEN_PAR (attrList=AttributeList)? CLOSE_PAR
-;
-
-FunctionNamespace:
-	na=IdNew
-;
-
-FunctionId:
-	na=Name
-;
-
-AttributeList:
-	{AttributeList}((attr += Attribute) (',' attr += Attribute)* ) |{AttributeList}'*'
-;
-
-Attribute:
-	mathOp=MathOperation
-;
-
-GroupByQuerySelection:
-	{GroupByQuerySelection}(SELECT ('*'| (out_att += OutputAttribute (',' out_att +=OutputAttribute)* ))) (grp_by=GroupBy)?
-;
-
-QuerySection:
-	{QuerySection} grpByQuerySel=GroupByQuerySelection (having=HavingExpr)? 
-;
-
-OutputAttribute:
-	{OutputAttribute} outAttr=OutAttr | {OutputAttribute} attr_ref=AttributeReference 
-;
-
-OutAttr:
-	attr=Attribute a=AS (name = IdNew)
-;
-
-GroupBy:
-	GROUP BY attr_ref+=AttributeReference (',' attr_ref+=AttributeReference)*
-;
-
-HavingExpr:
-	HAVING expr=Expression
-;
-
 MathOperation:
 	mlo=MathLogicalOperation
 ;
@@ -477,51 +476,75 @@ MathLogicalOperation returns MathOperation:
 ;
 
 MathInOperation returns MathOperation:
-	MathGtLtOperation =>({MathInOperation.left=current} in=IN right=Name)* //in error
+	MathGtLtOperation =>({MathInOperation.left=current} in=IN name=Name)* //in error
 ;
 
 MathGtLtOperation returns MathOperation:
-	MathEqualOperation =>({MathGtLtOperation.left=current} symbol=('>='|'<='|'>'|'<')/*(gt_eq='>='|lt_eq='<='|gt='>'|lt='<')*/ right=MathGtLtOperation)*
+	MathEqualOperation =>({MathGtLtOperation.left=current} (gt_eq='>='|lt_eq='<='|gt='>'|lt='<') right=MathGtLtOperation)*
 ;
 
 MathEqualOperation returns MathOperation:
 	MathAddsubOperation =>({MathEqualOperation.left=current} (eq='=='|not_eq='!=') right=MathAddsubOperation)*
 ;
 
-MathAddsubOperation returns MathOperation:
+MathAddsubOperation:
 	MathDivmulOperation =>({MathAddsubOperation.left=current} (add='+'|substract='-') right=MathDivmulOperation)*
 ;
 
-MathDivmulOperation returns MathOperation:
+MathDivmulOperation:
 	MathOtherOperations =>({MathDivmulOperation.left=current} (multiply='*'|devide='/'|mod='%') right=MathOtherOperations)*
 ;
 
-MathOtherOperations returns MathOperation:
-	=>({NotOperation} not=NOT op=MathOperation) 
+MathOtherOperations:
+	=>({NotOperation} not=NOT op=MathOperation) //not error
 	|OPEN_PAR op=MathOperation CLOSE_PAR
 	|=>NullCheck
-	|mathOtherOperations1=MathOtherOperations1                         
+	|lit=Literal                         
 ;
 
 NullCheck:
-	(=>stream_ref=StreamReference|=>attr_ref=AttributeReference|=>fo=FunctionOperation) IS NULL
+	(=>stream_ref=StreamReference | attr_ref=AttributeReference|fo=FunctionOperation) IS NULL
 ;
 
 StreamReference:
-	hash='#'? na=Name (OPEN_SQARE_BRACKETS aatr_index=AttributeIndex CLOSE_SQARE_BRACKETS)?
+	hash='#'? name=Name (OPEN_SQARE_BRACKETS aatr_index=AttributeIndex CLOSE_SQARE_BRACKETS)?
 ;
 
-MathOtherOperations1:
+Literal:
 	const_val=ConstantValue  
 	|fo=FunctionOperation
 	|attrRef=AttributeReference                             
 ;
 
 AttributeReference:
-	//=>attrName2 = Name
-	{AttributeReference} hash1='#'? name1=SourceOrEventReference (OPEN_SQARE_BRACKETS attribute_index1=AttributeIndex CLOSE_SQARE_BRACKETS)? (hash2='#' name2=SourceOrEventReference (OPEN_SQARE_BRACKETS attribute_index2=AttributeIndex CLOSE_SQARE_BRACKETS)?)? '.'  attr_name=AttributeNameReference
-	//{AttributeReference} hash1='#'? name1=Source (OPEN_SQARE_BRACKETSattribute_index1=AttributeIndex']')? (hash2='#' name2=Source (OPEN_SQARE_BRACKETSattribute_index2=AttributeIndexCLOSE_SQARE_BRACKETS)?)? '.'  attr_name=AttributeNameReference
-	|featuresOrAttrRef=FeaturesOrOutAttrReference
+	=>({AttributeReference}name=IdNew)	
+	|{AttributeReference} hash1='#'? name1=SourceOrEventReference (OPEN_SQARE_BRACKETSattribute_index1=AttributeIndex CLOSE_SQARE_BRACKETS)? (hash2='#' name2=SourceOrEventReference (OPEN_SQARE_BRACKETSattribute_index2=AttributeIndex CLOSE_SQARE_BRACKETS)?)? '.'  featuresOrAttrRef=FeaturesOrOutAttrReference
+	//{AttributeReference} hash1='#'? name1=Source ('['attribute_index1=AttributeIndex']')? (hash2='#' name2=Source ('['attribute_index2=AttributeIndex']')?)? '.'  attr_name=AttributeNameReference
+	|=>(featuresOrAttrRef=FeaturesOrOutAttrReference)
+;
+
+FeaturesOrOutAttr:
+	 Features| OutAttr 
+;
+
+FeaturesOrOutAttrReference:
+	srcoutAttrref=[FeaturesOrOutAttr|IdNew]
+; 
+
+StandardStatefulSource:
+	(name = IdNew '=')? src=Source basic_ss_handlers = BasicSourceStreamHandlers?//basic_src=BasicSource?
+;
+
+BasicSource:
+	src=Source basic_ss_handlers = BasicSourceStreamHandlers?
+;
+
+Source1OrStandardStatefulSource:
+	StandardStatefulSource|Source1|StreamAlias
+;
+
+SourceOrEventReference:
+	na=[Source1OrStandardStatefulSource|IdNew]
 ;
 
 AttributeNameReference:
@@ -532,34 +555,6 @@ AttributeIndex:
 	{AttributeIndex}INT_LITERAL|{AttributeIndex} LAST ('-' INT_LITERAL)?
 ;
 
-StandardStatefulSource:
-	{StandardStatefulSource}(name = IdNew '=')? bs=BasicSource
-;
-
-Source1OrStandardStatefulSource:
-	StandardStatefulSource|Source1
-;
-
-SourceOrEventReference:
-	na=[Source1OrStandardStatefulSource|IdNew]
-;
-/*
-Event:
-	na=Name
-;
-*/
-BasicSource:
-	src=Source basic_ss_handlers = BasicSourceStreamHandlers?
-;
-
-FeaturesOrOutAttr:
-	 Features| OutAttr 
-;
-
-FeaturesOrOutAttrReference:
-	srcoutAttrref=[FeaturesOrOutAttr|IdNew]
-;
- 
 ConstantValue:
 	{ConstantValue}bv=BoolValue
 	|{ConstantValue}sdv=SignedDoubleValue
@@ -570,17 +565,29 @@ ConstantValue:
 	|{ConstantValue} sv=StringValue
 ;
 
+FunctionOperation:
+	{FunctionOperation}(funcNamespace=FunctionNamespace ':')? funcId=FunctionId OPEN_PAR (attrList=AttributeList)? CLOSE_PAR
+;
+
+FunctionNamespace:
+	name=Name
+;
+
+FunctionId:
+	name=Name
+;
+
+AttributeList:
+	{AttributeList}((attr += Attribute) (',' attr += Attribute)* ) |{AttributeList}'*'
+;
+
+Attribute:
+	mathOp=MathOperation
+;
+
 Name:
-	 name=IdNew//k_word=Keyword |
-;
-
-Source:
-	strId=[Source1|IdNew] 
-;
-
-Source1:
-	inner='#'? name=IdNew
-;
+	 na=IdNew|Keyword
+; 
 
 BoolValue:
 	TRUE|FALSE
@@ -745,7 +752,7 @@ AS: (a='as');
 ON: (on='on');
 UNIDIRECTIONAL: (unidirectional='unidirectional');
 NOT: (not1='not');
-EVERY: (every='every' );
+EVERY: (every1='every' );
 AND: (and='and');
 OR: (or+='or');
 IN: (in='in');
@@ -860,13 +867,13 @@ FOLLOWED_BY:'->';
 HASH:'#';
 
 IdNew: ID;//| ID_QUOTES;
-
+/*
 terminal ID_QUOTES: 
     '`'('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`' ;
-
+ */
 @Override 
 terminal ID:
-	 '`'? ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*  '`'?
+	'`'? ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`'?
 ; 
 
 @Override 
@@ -876,8 +883,8 @@ terminal INT returns ecore::EInt:
 
 @Override 
 terminal ML_COMMENT: 
-    '/*' -> '*/';
-    
+    '/*' -> '*/ ';
+   
 @Override 
 terminal SL_COMMENT: 
     '--' !('\n'|'\r')* ('\r'? '\n')?;
@@ -891,3 +898,11 @@ terminal ANY_OTHER:
     .
 ;
 
+@Override
+terminal STRING	: 
+	'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' 
+	|"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+	|'"""'(.* )*'"""'
+	//| '\'' ( !('\u0000'..'\u001f' | '\''| '\"' ) )* '\''
+	//|'"' ( !('\u0000'..'\u001f'  |'\"') )* '"'  
+; 

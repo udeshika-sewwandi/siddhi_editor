@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.Name#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.Name#getNa <em>Na</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getName_()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Name extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Na</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Na</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getName_Name()
+   * @return the value of the '<em>Na</em>' attribute.
+   * @see #setNa(String)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getName_Na()
    * @model
    * @generated
    */
-  String getName();
+  String getNa();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.Name#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.Name#getNa <em>Na</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Na</em>' attribute.
+   * @see #getNa()
    * @generated
    */
-  void setName(String value);
+  void setNa(String value);
 
 } // Name

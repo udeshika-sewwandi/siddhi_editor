@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.siddhi.siddhi.AttributeType;
 import org.xtext.example.siddhi.siddhi.Features;
+import org.xtext.example.siddhi.siddhi.Name;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
 /**
@@ -23,6 +24,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FeaturesImpl#getNam <em>Nam</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.FeaturesImpl#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -30,6 +32,16 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  */
 public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
 {
+  /**
+   * The cached value of the '{@link #getNam() <em>Nam</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNam()
+   * @generated
+   * @ordered
+   */
+  protected Name nam;
+
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -59,6 +71,54 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getFeatures();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Name getNam()
+  {
+    return nam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetNam(Name newNam, NotificationChain msgs)
+  {
+    Name oldNam = nam;
+    nam = newNam;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.FEATURES__NAM, oldNam, newNam);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNam(Name newNam)
+  {
+    if (newNam != nam)
+    {
+      NotificationChain msgs = null;
+      if (nam != null)
+        msgs = ((InternalEObject)nam).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FEATURES__NAM, null, msgs);
+      if (newNam != null)
+        msgs = ((InternalEObject)newNam).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.FEATURES__NAM, null, msgs);
+      msgs = basicSetNam(newNam, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.FEATURES__NAM, newNam, newNam));
   }
 
   /**
@@ -119,6 +179,8 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   {
     switch (featureID)
     {
+      case SiddhiPackage.FEATURES__NAM:
+        return basicSetNam(null, msgs);
       case SiddhiPackage.FEATURES__TYPE:
         return basicSetType(null, msgs);
     }
@@ -135,6 +197,8 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   {
     switch (featureID)
     {
+      case SiddhiPackage.FEATURES__NAM:
+        return getNam();
       case SiddhiPackage.FEATURES__TYPE:
         return getType();
     }
@@ -151,6 +215,9 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   {
     switch (featureID)
     {
+      case SiddhiPackage.FEATURES__NAM:
+        setNam((Name)newValue);
+        return;
       case SiddhiPackage.FEATURES__TYPE:
         setType((AttributeType)newValue);
         return;
@@ -168,6 +235,9 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   {
     switch (featureID)
     {
+      case SiddhiPackage.FEATURES__NAM:
+        setNam((Name)null);
+        return;
       case SiddhiPackage.FEATURES__TYPE:
         setType((AttributeType)null);
         return;
@@ -185,6 +255,8 @@ public class FeaturesImpl extends FeaturesOrOutAttrImpl implements Features
   {
     switch (featureID)
     {
+      case SiddhiPackage.FEATURES__NAM:
+        return nam != null;
       case SiddhiPackage.FEATURES__TYPE:
         return type != null;
     }

@@ -22,7 +22,7 @@ import org.xtext.example.siddhi.siddhi.QueryOutput;
 import org.xtext.example.siddhi.siddhi.RETURN;
 import org.xtext.example.siddhi.siddhi.SetClause;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
-import org.xtext.example.siddhi.siddhi.Source1;
+import org.xtext.example.siddhi.siddhi.Target;
 import org.xtext.example.siddhi.siddhi.UPDATE;
 
 /**
@@ -168,7 +168,7 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
    * @generated
    * @ordered
    */
-  protected Source1 tar;
+  protected Target tar;
 
   /**
    * The cached value of the '{@link #getOn() <em>On</em>}' containment reference.
@@ -399,7 +399,7 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
    * <!-- end-user-doc -->
    * @generated
    */
-  public Source1 getTar()
+  public Target getTar()
   {
     return tar;
   }
@@ -409,9 +409,9 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTar(Source1 newTar, NotificationChain msgs)
+  public NotificationChain basicSetTar(Target newTar, NotificationChain msgs)
   {
-    Source1 oldTar = tar;
+    Target oldTar = tar;
     tar = newTar;
     if (eNotificationRequired())
     {
@@ -426,7 +426,7 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTar(Source1 newTar)
+  public void setTar(Target newTar)
   {
     if (newTar != tar)
     {
@@ -725,7 +725,7 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
         setOutEventType((OutputEventType)newValue);
         return;
       case SiddhiPackage.QUERY_OUTPUT__TAR:
-        setTar((Source1)newValue);
+        setTar((Target)newValue);
         return;
       case SiddhiPackage.QUERY_OUTPUT__ON:
         setOn((ON)newValue);
@@ -772,7 +772,7 @@ public class QueryOutputImpl extends INSERTImpl implements QueryOutput
         setOutEventType((OutputEventType)null);
         return;
       case SiddhiPackage.QUERY_OUTPUT__TAR:
-        setTar((Source1)null);
+        setTar((Target)null);
         return;
       case SiddhiPackage.QUERY_OUTPUT__ON:
         setOn((ON)null);

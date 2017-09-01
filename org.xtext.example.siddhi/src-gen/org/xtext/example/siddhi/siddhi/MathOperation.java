@@ -14,8 +14,7 @@ package org.xtext.example.siddhi.siddhi;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathOperation#getMlo <em>Mlo</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathOperation#getOp <em>Op</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathOperation#getMathOtherOperations1 <em>Math Other Operations1</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.MathOperation#getLeft <em>Left</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathOperation()
@@ -51,55 +50,29 @@ public interface MathOperation extends Expression
   void setMlo(MathOperation value);
 
   /**
-   * Returns the value of the '<em><b>Op</b></em>' containment reference.
+   * Returns the value of the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Op</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Left</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Op</em>' containment reference.
-   * @see #setOp(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathOperation_Op()
+   * @return the value of the '<em>Left</em>' containment reference.
+   * @see #setLeft(MathOperation)
+   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathOperation_Left()
    * @model containment="true"
    * @generated
    */
-  MathOperation getOp();
+  MathOperation getLeft();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathOperation#getOp <em>Op</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathOperation#getLeft <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Op</em>' containment reference.
-   * @see #getOp()
+   * @param value the new value of the '<em>Left</em>' containment reference.
+   * @see #getLeft()
    * @generated
    */
-  void setOp(MathOperation value);
-
-  /**
-   * Returns the value of the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Math Other Operations1</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Math Other Operations1</em>' containment reference.
-   * @see #setMathOtherOperations1(MathOtherOperations1)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathOperation_MathOtherOperations1()
-   * @model containment="true"
-   * @generated
-   */
-  MathOtherOperations1 getMathOtherOperations1();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathOperation#getMathOtherOperations1 <em>Math Other Operations1</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Math Other Operations1</em>' containment reference.
-   * @see #getMathOtherOperations1()
-   * @generated
-   */
-  void setMathOtherOperations1(MathOtherOperations1 value);
+  void setLeft(MathOperation value);
 
 } // MathOperation

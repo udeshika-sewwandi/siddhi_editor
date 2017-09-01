@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DefinitionStream extends DEFINE, STREAM, TABLE
+public interface DefinitionStream extends DEFINE, STREAM
 {
   /**
    * Returns the value of the '<em><b>Ann</b></em>' containment reference list.

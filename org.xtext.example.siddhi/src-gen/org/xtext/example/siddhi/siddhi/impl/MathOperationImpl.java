@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.siddhi.siddhi.MathOperation;
-import org.xtext.example.siddhi.siddhi.MathOtherOperations1;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
 /**
@@ -24,8 +23,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathOperationImpl#getMlo <em>Mlo</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathOperationImpl#getOp <em>Op</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathOperationImpl#getMathOtherOperations1 <em>Math Other Operations1</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathOperationImpl#getLeft <em>Left</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,24 +41,14 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
   protected MathOperation mlo;
 
   /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOp()
+   * @see #getLeft()
    * @generated
    * @ordered
    */
-  protected MathOperation op;
-
-  /**
-   * The cached value of the '{@link #getMathOtherOperations1() <em>Math Other Operations1</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMathOtherOperations1()
-   * @generated
-   * @ordered
-   */
-  protected MathOtherOperations1 mathOtherOperations1;
+  protected MathOperation left;
 
   /**
    * <!-- begin-user-doc -->
@@ -136,9 +124,9 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
    * <!-- end-user-doc -->
    * @generated
    */
-  public MathOperation getOp()
+  public MathOperation getLeft()
   {
-    return op;
+    return left;
   }
 
   /**
@@ -146,13 +134,13 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOp(MathOperation newOp, NotificationChain msgs)
+  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
   {
-    MathOperation oldOp = op;
-    op = newOp;
+    MathOperation oldLeft = left;
+    left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__OP, oldOp, newOp);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -163,68 +151,20 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(MathOperation newOp)
+  public void setLeft(MathOperation newLeft)
   {
-    if (newOp != op)
+    if (newLeft != left)
     {
       NotificationChain msgs = null;
-      if (op != null)
-        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__OP, null, msgs);
-      if (newOp != null)
-        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__OP, null, msgs);
-      msgs = basicSetOp(newOp, msgs);
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__OP, newOp, newOp));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOtherOperations1 getMathOtherOperations1()
-  {
-    return mathOtherOperations1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetMathOtherOperations1(MathOtherOperations1 newMathOtherOperations1, NotificationChain msgs)
-  {
-    MathOtherOperations1 oldMathOtherOperations1 = mathOtherOperations1;
-    mathOtherOperations1 = newMathOtherOperations1;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1, oldMathOtherOperations1, newMathOtherOperations1);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setMathOtherOperations1(MathOtherOperations1 newMathOtherOperations1)
-  {
-    if (newMathOtherOperations1 != mathOtherOperations1)
-    {
-      NotificationChain msgs = null;
-      if (mathOtherOperations1 != null)
-        msgs = ((InternalEObject)mathOtherOperations1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1, null, msgs);
-      if (newMathOtherOperations1 != null)
-        msgs = ((InternalEObject)newMathOtherOperations1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1, null, msgs);
-      msgs = basicSetMathOtherOperations1(newMathOtherOperations1, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1, newMathOtherOperations1, newMathOtherOperations1));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_OPERATION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -239,10 +179,8 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
     {
       case SiddhiPackage.MATH_OPERATION__MLO:
         return basicSetMlo(null, msgs);
-      case SiddhiPackage.MATH_OPERATION__OP:
-        return basicSetOp(null, msgs);
-      case SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1:
-        return basicSetMathOtherOperations1(null, msgs);
+      case SiddhiPackage.MATH_OPERATION__LEFT:
+        return basicSetLeft(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -259,10 +197,8 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
     {
       case SiddhiPackage.MATH_OPERATION__MLO:
         return getMlo();
-      case SiddhiPackage.MATH_OPERATION__OP:
-        return getOp();
-      case SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1:
-        return getMathOtherOperations1();
+      case SiddhiPackage.MATH_OPERATION__LEFT:
+        return getLeft();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -280,11 +216,8 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
       case SiddhiPackage.MATH_OPERATION__MLO:
         setMlo((MathOperation)newValue);
         return;
-      case SiddhiPackage.MATH_OPERATION__OP:
-        setOp((MathOperation)newValue);
-        return;
-      case SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1:
-        setMathOtherOperations1((MathOtherOperations1)newValue);
+      case SiddhiPackage.MATH_OPERATION__LEFT:
+        setLeft((MathOperation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -303,11 +236,8 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
       case SiddhiPackage.MATH_OPERATION__MLO:
         setMlo((MathOperation)null);
         return;
-      case SiddhiPackage.MATH_OPERATION__OP:
-        setOp((MathOperation)null);
-        return;
-      case SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1:
-        setMathOtherOperations1((MathOtherOperations1)null);
+      case SiddhiPackage.MATH_OPERATION__LEFT:
+        setLeft((MathOperation)null);
         return;
     }
     super.eUnset(featureID);
@@ -325,10 +255,8 @@ public class MathOperationImpl extends ExpressionImpl implements MathOperation
     {
       case SiddhiPackage.MATH_OPERATION__MLO:
         return mlo != null;
-      case SiddhiPackage.MATH_OPERATION__OP:
-        return op != null;
-      case SiddhiPackage.MATH_OPERATION__MATH_OTHER_OPERATIONS1:
-        return mathOtherOperations1 != null;
+      case SiddhiPackage.MATH_OPERATION__LEFT:
+        return left != null;
     }
     return super.eIsSet(featureID);
   }

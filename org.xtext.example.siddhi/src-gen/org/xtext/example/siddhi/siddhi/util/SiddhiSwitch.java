@@ -100,7 +100,6 @@ public class SiddhiSwitch<T> extends Switch<T>
         T result = caseDefinitionStream(definitionStream);
         if (result == null) result = caseDEFINE(definitionStream);
         if (result == null) result = caseSTREAM(definitionStream);
-        if (result == null) result = caseTABLE(definitionStream);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -164,9 +163,9 @@ public class SiddhiSwitch<T> extends Switch<T>
       }
       case SiddhiPackage.AGGREGATION_TIME_INTERVAL:
       {
-        aggregation_time_interval aggregation_time_interval = (aggregation_time_interval)theEObject;
-        T result = caseaggregation_time_interval(aggregation_time_interval);
-        if (result == null) result = caseAggregationTime(aggregation_time_interval);
+        AggregationTimeInterval aggregationTimeInterval = (AggregationTimeInterval)theEObject;
+        T result = caseAggregationTimeInterval(aggregationTimeInterval);
+        if (result == null) result = caseAggregationTime(aggregationTimeInterval);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -284,6 +283,21 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SiddhiPackage.SOURCE:
+      {
+        Source source = (Source)theEObject;
+        T result = caseSource(source);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.SOURCE1:
+      {
+        Source1 source1 = (Source1)theEObject;
+        T result = caseSource1(source1);
+        if (result == null) result = caseSource1OrStandardStatefulSource(source1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SiddhiPackage.EXEC_PARTITION:
       {
         ExecPartition execPartition = (ExecPartition)theEObject;
@@ -325,197 +339,124 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SiddhiPackage.QUERY_OUTPUT:
+      {
+        QueryOutput queryOutput = (QueryOutput)theEObject;
+        T result = caseQueryOutput(queryOutput);
+        if (result == null) result = caseINSERT(queryOutput);
+        if (result == null) result = caseINTO(queryOutput);
+        if (result == null) result = caseDELETE(queryOutput);
+        if (result == null) result = caseFOR(queryOutput);
+        if (result == null) result = caseUPDATE(queryOutput);
+        if (result == null) result = caseRETURN(queryOutput);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.TARGET:
+      {
+        Target target = (Target)theEObject;
+        T result = caseTarget(target);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.SET_CLAUSE:
+      {
+        SetClause setClause = (SetClause)theEObject;
+        T result = caseSetClause(setClause);
+        if (result == null) result = caseSET(setClause);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.SET_ASSIGNMENT:
+      {
+        SetAssignment setAssignment = (SetAssignment)theEObject;
+        T result = caseSetAssignment(setAssignment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.OUTPUT_EVENT_TYPE:
+      {
+        OutputEventType outputEventType = (OutputEventType)theEObject;
+        T result = caseOutputEventType(outputEventType);
+        if (result == null) result = caseALL(outputEventType);
+        if (result == null) result = caseEVENTS(outputEventType);
+        if (result == null) result = caseRAW(outputEventType);
+        if (result == null) result = caseEXPIRED(outputEventType);
+        if (result == null) result = caseCURRENT(outputEventType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.OUTPUT_RATE:
+      {
+        OutputRate outputRate = (OutputRate)theEObject;
+        T result = caseOutputRate(outputRate);
+        if (result == null) result = caseOUTPUT(outputRate);
+        if (result == null) result = caseEVENTS(outputRate);
+        if (result == null) result = caseSNAPSHOT(outputRate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.OUTPUT_RATE_TYPE:
+      {
+        OutputRateType outputRateType = (OutputRateType)theEObject;
+        T result = caseOutputRateType(outputRateType);
+        if (result == null) result = caseALL(outputRateType);
+        if (result == null) result = caseLAST(outputRateType);
+        if (result == null) result = caseFIRST(outputRateType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.GROUP_BY_QUERY_SELECTION:
+      {
+        GroupByQuerySelection groupByQuerySelection = (GroupByQuerySelection)theEObject;
+        T result = caseGroupByQuerySelection(groupByQuerySelection);
+        if (result == null) result = caseSELECT(groupByQuerySelection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.QUERY_SECTION:
+      {
+        QuerySection querySection = (QuerySection)theEObject;
+        T result = caseQuerySection(querySection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.GROUP_BY:
+      {
+        GroupBy groupBy = (GroupBy)theEObject;
+        T result = caseGroupBy(groupBy);
+        if (result == null) result = caseGROUP(groupBy);
+        if (result == null) result = caseBY(groupBy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.HAVING_EXPR:
+      {
+        HavingExpr havingExpr = (HavingExpr)theEObject;
+        T result = caseHavingExpr(havingExpr);
+        if (result == null) result = caseHAVING(havingExpr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.OUTPUT_ATTRIBUTE:
+      {
+        OutputAttribute outputAttribute = (OutputAttribute)theEObject;
+        T result = caseOutputAttribute(outputAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.OUT_ATTR:
+      {
+        OutAttr outAttr = (OutAttr)theEObject;
+        T result = caseOutAttr(outAttr);
+        if (result == null) result = caseFeaturesOrOutAttr(outAttr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SiddhiPackage.QUERY_INPUT:
       {
         QueryInput queryInput = (QueryInput)theEObject;
         T result = caseQueryInput(queryInput);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.JOIN_STREAM:
-      {
-        JoinStream joinStream = (JoinStream)theEObject;
-        T result = caseJoinStream(joinStream);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.WITHIN_TIME_RANGE:
-      {
-        WithinTimeRange withinTimeRange = (WithinTimeRange)theEObject;
-        T result = caseWithinTimeRange(withinTimeRange);
-        if (result == null) result = caseWITHIN(withinTimeRange);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.PER1:
-      {
-        Per1 per1 = (Per1)theEObject;
-        T result = casePer1(per1);
-        if (result == null) result = casePER(per1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.JOIN_SOURCE:
-      {
-        JoinSource joinSource = (JoinSource)theEObject;
-        T result = caseJoinSource(joinSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.STREAM_ALIAS:
-      {
-        StreamAlias streamAlias = (StreamAlias)theEObject;
-        T result = caseStreamAlias(streamAlias);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.JOINS:
-      {
-        joins joins = (joins)theEObject;
-        T result = casejoins(joins);
-        if (result == null) result = caseLEFT(joins);
-        if (result == null) result = caseOUTER(joins);
-        if (result == null) result = caseJOIN(joins);
-        if (result == null) result = caseRIGHT(joins);
-        if (result == null) result = caseFULL(joins);
-        if (result == null) result = caseINNER(joins);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.STANDARD_STREAM:
-      {
-        StandardStream standardStream = (StandardStream)theEObject;
-        T result = caseStandardStream(standardStream);
-        if (result == null) result = caseJoinStream(standardStream);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.MAIN_SOURCE:
-      {
-        MainSource mainSource = (MainSource)theEObject;
-        T result = caseMainSource(mainSource);
-        if (result == null) result = caseJoinSource(mainSource);
-        if (result == null) result = caseStandardStream(mainSource);
-        if (result == null) result = caseJoinStream(mainSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.PATTERN_STREAM:
-      {
-        PatternStream patternStream = (PatternStream)theEObject;
-        T result = casePatternStream(patternStream);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.EVERY_PATTERN_SOURCE_CHAIN:
-      {
-        EveryPatternSourceChain everyPatternSourceChain = (EveryPatternSourceChain)theEObject;
-        T result = caseEveryPatternSourceChain(everyPatternSourceChain);
-        if (result == null) result = casePatternStream(everyPatternSourceChain);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.PATTERN_SOURCE_CHAIN:
-      {
-        PatternSourceChain patternSourceChain = (PatternSourceChain)theEObject;
-        T result = casePatternSourceChain(patternSourceChain);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.PATTERN_SOURCE:
-      {
-        PatternSource patternSource = (PatternSource)theEObject;
-        T result = casePatternSource(patternSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.LOGICAL_STATEFUL_SOURCE:
-      {
-        LogicalStatefulSource logicalStatefulSource = (LogicalStatefulSource)theEObject;
-        T result = caseLogicalStatefulSource(logicalStatefulSource);
-        if (result == null) result = caseSequenceSource(logicalStatefulSource);
-        if (result == null) result = caseSequenceSourceChain(logicalStatefulSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.PATTERN_COLLECTION_STATEFUL_SOURCE:
-      {
-        PatternCollectionStatefulSource patternCollectionStatefulSource = (PatternCollectionStatefulSource)theEObject;
-        T result = casePatternCollectionStatefulSource(patternCollectionStatefulSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.COLLECT:
-      {
-        Collect collect = (Collect)theEObject;
-        T result = caseCollect(collect);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.WITHIN_TIME:
-      {
-        WithinTime withinTime = (WithinTime)theEObject;
-        T result = caseWithinTime(withinTime);
-        if (result == null) result = caseWITHIN(withinTime);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.LOGICAL_ABSENT_STATEFUL_SOURCE:
-      {
-        LogicalAbsentStatefulSource logicalAbsentStatefulSource = (LogicalAbsentStatefulSource)theEObject;
-        T result = caseLogicalAbsentStatefulSource(logicalAbsentStatefulSource);
-        if (result == null) result = caseSequenceSource(logicalAbsentStatefulSource);
-        if (result == null) result = caseSequenceSourceChain(logicalAbsentStatefulSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN:
-      {
-        AbsentPatternSourceChain absentPatternSourceChain = (AbsentPatternSourceChain)theEObject;
-        T result = caseAbsentPatternSourceChain(absentPatternSourceChain);
-        if (result == null) result = casePatternStream(absentPatternSourceChain);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.EVERY_ABSENT_PATTERN_SOURCE:
-      {
-        EveryAbsentPatternSource everyAbsentPatternSource = (EveryAbsentPatternSource)theEObject;
-        T result = caseEveryAbsentPatternSource(everyAbsentPatternSource);
-        if (result == null) result = caseAbsentPatternSourceChain(everyAbsentPatternSource);
-        if (result == null) result = casePatternStream(everyAbsentPatternSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.BASIC_ABSENT_PATTERN_SOURCE:
-      {
-        BasicAbsentPatternSource basicAbsentPatternSource = (BasicAbsentPatternSource)theEObject;
-        T result = caseBasicAbsentPatternSource(basicAbsentPatternSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.FOR_TIME:
-      {
-        ForTime forTime = (ForTime)theEObject;
-        T result = caseForTime(forTime);
-        if (result == null) result = caseFOR(forTime);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE:
-      {
-        LeftAbsentPatternSource leftAbsentPatternSource = (LeftAbsentPatternSource)theEObject;
-        T result = caseLeftAbsentPatternSource(leftAbsentPatternSource);
-        if (result == null) result = caseAbsentPatternSourceChain(leftAbsentPatternSource);
-        if (result == null) result = casePatternStream(leftAbsentPatternSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE:
-      {
-        RightAbsentPatternSource rightAbsentPatternSource = (RightAbsentPatternSource)theEObject;
-        T result = caseRightAbsentPatternSource(rightAbsentPatternSource);
-        if (result == null) result = caseAbsentPatternSourceChain(rightAbsentPatternSource);
-        if (result == null) result = casePatternStream(rightAbsentPatternSource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -594,63 +535,191 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.OUTPUT_RATE:
+      case SiddhiPackage.PATTERN_STREAM:
       {
-        OutputRate outputRate = (OutputRate)theEObject;
-        T result = caseOutputRate(outputRate);
-        if (result == null) result = caseOUTPUT(outputRate);
-        if (result == null) result = caseEVENTS(outputRate);
-        if (result == null) result = caseSNAPSHOT(outputRate);
+        PatternStream patternStream = (PatternStream)theEObject;
+        T result = casePatternStream(patternStream);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.OUTPUT_RATE_TYPE:
+      case SiddhiPackage.EVERY_PATTERN_SOURCE_CHAIN:
       {
-        OutputRateType outputRateType = (OutputRateType)theEObject;
-        T result = caseOutputRateType(outputRateType);
-        if (result == null) result = caseALL(outputRateType);
-        if (result == null) result = caseLAST(outputRateType);
-        if (result == null) result = caseFIRST(outputRateType);
+        EveryPatternSourceChain everyPatternSourceChain = (EveryPatternSourceChain)theEObject;
+        T result = caseEveryPatternSourceChain(everyPatternSourceChain);
+        if (result == null) result = casePatternStream(everyPatternSourceChain);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.QUERY_OUTPUT:
+      case SiddhiPackage.PATTERN_SOURCE_CHAIN:
       {
-        QueryOutput queryOutput = (QueryOutput)theEObject;
-        T result = caseQueryOutput(queryOutput);
-        if (result == null) result = caseINSERT(queryOutput);
-        if (result == null) result = caseINTO(queryOutput);
-        if (result == null) result = caseDELETE(queryOutput);
-        if (result == null) result = caseFOR(queryOutput);
-        if (result == null) result = caseUPDATE(queryOutput);
-        if (result == null) result = caseRETURN(queryOutput);
+        PatternSourceChain patternSourceChain = (PatternSourceChain)theEObject;
+        T result = casePatternSourceChain(patternSourceChain);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.SET_CLAUSE:
+      case SiddhiPackage.PATTERN_SOURCE:
       {
-        SetClause setClause = (SetClause)theEObject;
-        T result = caseSetClause(setClause);
-        if (result == null) result = caseSET(setClause);
+        PatternSource patternSource = (PatternSource)theEObject;
+        T result = casePatternSource(patternSource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.SET_ASSIGNMENT:
+      case SiddhiPackage.LOGICAL_STATEFUL_SOURCE:
       {
-        SetAssignment setAssignment = (SetAssignment)theEObject;
-        T result = caseSetAssignment(setAssignment);
+        LogicalStatefulSource logicalStatefulSource = (LogicalStatefulSource)theEObject;
+        T result = caseLogicalStatefulSource(logicalStatefulSource);
+        if (result == null) result = caseSequenceSource(logicalStatefulSource);
+        if (result == null) result = caseSequenceSourceChain(logicalStatefulSource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.OUTPUT_EVENT_TYPE:
+      case SiddhiPackage.PATTERN_COLLECTION_STATEFUL_SOURCE:
       {
-        OutputEventType outputEventType = (OutputEventType)theEObject;
-        T result = caseOutputEventType(outputEventType);
-        if (result == null) result = caseALL(outputEventType);
-        if (result == null) result = caseEVENTS(outputEventType);
-        if (result == null) result = caseRAW(outputEventType);
-        if (result == null) result = caseEXPIRED(outputEventType);
-        if (result == null) result = caseCURRENT(outputEventType);
+        PatternCollectionStatefulSource patternCollectionStatefulSource = (PatternCollectionStatefulSource)theEObject;
+        T result = casePatternCollectionStatefulSource(patternCollectionStatefulSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.COLLECT:
+      {
+        Collect collect = (Collect)theEObject;
+        T result = caseCollect(collect);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.LOGICAL_ABSENT_STATEFUL_SOURCE:
+      {
+        LogicalAbsentStatefulSource logicalAbsentStatefulSource = (LogicalAbsentStatefulSource)theEObject;
+        T result = caseLogicalAbsentStatefulSource(logicalAbsentStatefulSource);
+        if (result == null) result = caseSequenceSource(logicalAbsentStatefulSource);
+        if (result == null) result = caseSequenceSourceChain(logicalAbsentStatefulSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.ABSENT_PATTERN_SOURCE_CHAIN:
+      {
+        AbsentPatternSourceChain absentPatternSourceChain = (AbsentPatternSourceChain)theEObject;
+        T result = caseAbsentPatternSourceChain(absentPatternSourceChain);
+        if (result == null) result = casePatternStream(absentPatternSourceChain);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.EVERY_ABSENT_PATTERN_SOURCE:
+      {
+        EveryAbsentPatternSource everyAbsentPatternSource = (EveryAbsentPatternSource)theEObject;
+        T result = caseEveryAbsentPatternSource(everyAbsentPatternSource);
+        if (result == null) result = caseAbsentPatternSourceChain(everyAbsentPatternSource);
+        if (result == null) result = casePatternStream(everyAbsentPatternSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.BASIC_ABSENT_PATTERN_SOURCE:
+      {
+        BasicAbsentPatternSource basicAbsentPatternSource = (BasicAbsentPatternSource)theEObject;
+        T result = caseBasicAbsentPatternSource(basicAbsentPatternSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.FOR_TIME:
+      {
+        ForTime forTime = (ForTime)theEObject;
+        T result = caseForTime(forTime);
+        if (result == null) result = caseFOR(forTime);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE:
+      {
+        LeftAbsentPatternSource leftAbsentPatternSource = (LeftAbsentPatternSource)theEObject;
+        T result = caseLeftAbsentPatternSource(leftAbsentPatternSource);
+        if (result == null) result = caseAbsentPatternSourceChain(leftAbsentPatternSource);
+        if (result == null) result = casePatternStream(leftAbsentPatternSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.RIGHT_ABSENT_PATTERN_SOURCE:
+      {
+        RightAbsentPatternSource rightAbsentPatternSource = (RightAbsentPatternSource)theEObject;
+        T result = caseRightAbsentPatternSource(rightAbsentPatternSource);
+        if (result == null) result = caseAbsentPatternSourceChain(rightAbsentPatternSource);
+        if (result == null) result = casePatternStream(rightAbsentPatternSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.JOIN_STREAM:
+      {
+        JoinStream joinStream = (JoinStream)theEObject;
+        T result = caseJoinStream(joinStream);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.WITHIN_TIME_RANGE:
+      {
+        WithinTimeRange withinTimeRange = (WithinTimeRange)theEObject;
+        T result = caseWithinTimeRange(withinTimeRange);
+        if (result == null) result = caseWITHIN(withinTimeRange);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.PER1:
+      {
+        Per1 per1 = (Per1)theEObject;
+        T result = casePer1(per1);
+        if (result == null) result = casePER(per1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.JOIN_SOURCE:
+      {
+        JoinSource joinSource = (JoinSource)theEObject;
+        T result = caseJoinSource(joinSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.STREAM_ALIAS:
+      {
+        StreamAlias streamAlias = (StreamAlias)theEObject;
+        T result = caseStreamAlias(streamAlias);
+        if (result == null) result = caseSource1OrStandardStatefulSource(streamAlias);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.WITHIN_TIME:
+      {
+        WithinTime withinTime = (WithinTime)theEObject;
+        T result = caseWithinTime(withinTime);
+        if (result == null) result = caseWITHIN(withinTime);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.JOINS:
+      {
+        joins joins = (joins)theEObject;
+        T result = casejoins(joins);
+        if (result == null) result = caseLEFT(joins);
+        if (result == null) result = caseOUTER(joins);
+        if (result == null) result = caseJOIN(joins);
+        if (result == null) result = caseRIGHT(joins);
+        if (result == null) result = caseFULL(joins);
+        if (result == null) result = caseINNER(joins);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.STANDARD_STREAM:
+      {
+        StandardStream standardStream = (StandardStream)theEObject;
+        T result = caseStandardStream(standardStream);
+        if (result == null) result = caseJoinStream(standardStream);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.MAIN_SOURCE:
+      {
+        MainSource mainSource = (MainSource)theEObject;
+        T result = caseMainSource(mainSource);
+        if (result == null) result = caseJoinSource(mainSource);
+        if (result == null) result = caseStandardStream(mainSource);
+        if (result == null) result = caseJoinStream(mainSource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -705,6 +774,149 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SiddhiPackage.MATH_OPERATION:
+      {
+        MathOperation mathOperation = (MathOperation)theEObject;
+        T result = caseMathOperation(mathOperation);
+        if (result == null) result = caseExpression(mathOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.MATH_ADDSUB_OPERATION:
+      {
+        MathAddsubOperation mathAddsubOperation = (MathAddsubOperation)theEObject;
+        T result = caseMathAddsubOperation(mathAddsubOperation);
+        if (result == null) result = caseMathOperation(mathAddsubOperation);
+        if (result == null) result = caseExpression(mathAddsubOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.MATH_DIVMUL_OPERATION:
+      {
+        MathDivmulOperation mathDivmulOperation = (MathDivmulOperation)theEObject;
+        T result = caseMathDivmulOperation(mathDivmulOperation);
+        if (result == null) result = caseMathAddsubOperation(mathDivmulOperation);
+        if (result == null) result = caseMathOperation(mathDivmulOperation);
+        if (result == null) result = caseExpression(mathDivmulOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.MATH_OTHER_OPERATIONS:
+      {
+        MathOtherOperations mathOtherOperations = (MathOtherOperations)theEObject;
+        T result = caseMathOtherOperations(mathOtherOperations);
+        if (result == null) result = caseMathDivmulOperation(mathOtherOperations);
+        if (result == null) result = caseMathAddsubOperation(mathOtherOperations);
+        if (result == null) result = caseMathOperation(mathOtherOperations);
+        if (result == null) result = caseExpression(mathOtherOperations);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.NULL_CHECK:
+      {
+        NullCheck nullCheck = (NullCheck)theEObject;
+        T result = caseNullCheck(nullCheck);
+        if (result == null) result = caseMathOtherOperations(nullCheck);
+        if (result == null) result = caseIS(nullCheck);
+        if (result == null) result = caseNULL(nullCheck);
+        if (result == null) result = caseMathDivmulOperation(nullCheck);
+        if (result == null) result = caseMathAddsubOperation(nullCheck);
+        if (result == null) result = caseMathOperation(nullCheck);
+        if (result == null) result = caseExpression(nullCheck);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.STREAM_REFERENCE:
+      {
+        StreamReference streamReference = (StreamReference)theEObject;
+        T result = caseStreamReference(streamReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.LITERAL:
+      {
+        Literal literal = (Literal)theEObject;
+        T result = caseLiteral(literal);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.ATTRIBUTE_REFERENCE:
+      {
+        AttributeReference attributeReference = (AttributeReference)theEObject;
+        T result = caseAttributeReference(attributeReference);
+        if (result == null) result = caseSetAssignment(attributeReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.FEATURES_OR_OUT_ATTR:
+      {
+        FeaturesOrOutAttr featuresOrOutAttr = (FeaturesOrOutAttr)theEObject;
+        T result = caseFeaturesOrOutAttr(featuresOrOutAttr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.FEATURES_OR_OUT_ATTR_REFERENCE:
+      {
+        FeaturesOrOutAttrReference featuresOrOutAttrReference = (FeaturesOrOutAttrReference)theEObject;
+        T result = caseFeaturesOrOutAttrReference(featuresOrOutAttrReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE:
+      {
+        StandardStatefulSource standardStatefulSource = (StandardStatefulSource)theEObject;
+        T result = caseStandardStatefulSource(standardStatefulSource);
+        if (result == null) result = caseSequenceCollectionStatefulSource(standardStatefulSource);
+        if (result == null) result = casePatternCollectionStatefulSource(standardStatefulSource);
+        if (result == null) result = caseSource1OrStandardStatefulSource(standardStatefulSource);
+        if (result == null) result = caseSequenceSource(standardStatefulSource);
+        if (result == null) result = caseSequenceSourceChain(standardStatefulSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.BASIC_SOURCE:
+      {
+        BasicSource basicSource = (BasicSource)theEObject;
+        T result = caseBasicSource(basicSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.SOURCE1_OR_STANDARD_STATEFUL_SOURCE:
+      {
+        Source1OrStandardStatefulSource source1OrStandardStatefulSource = (Source1OrStandardStatefulSource)theEObject;
+        T result = caseSource1OrStandardStatefulSource(source1OrStandardStatefulSource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.SOURCE_OR_EVENT_REFERENCE:
+      {
+        SourceOrEventReference sourceOrEventReference = (SourceOrEventReference)theEObject;
+        T result = caseSourceOrEventReference(sourceOrEventReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.ATTRIBUTE_NAME_REFERENCE:
+      {
+        AttributeNameReference attributeNameReference = (AttributeNameReference)theEObject;
+        T result = caseAttributeNameReference(attributeNameReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.ATTRIBUTE_INDEX:
+      {
+        AttributeIndex attributeIndex = (AttributeIndex)theEObject;
+        T result = caseAttributeIndex(attributeIndex);
+        if (result == null) result = caseLAST(attributeIndex);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.CONSTANT_VALUE:
+      {
+        ConstantValue constantValue = (ConstantValue)theEObject;
+        T result = caseConstantValue(constantValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SiddhiPackage.FUNCTION_OPERATION:
       {
         FunctionOperation functionOperation = (FunctionOperation)theEObject;
@@ -740,182 +952,10 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.GROUP_BY_QUERY_SELECTION:
-      {
-        GroupByQuerySelection groupByQuerySelection = (GroupByQuerySelection)theEObject;
-        T result = caseGroupByQuerySelection(groupByQuerySelection);
-        if (result == null) result = caseSELECT(groupByQuerySelection);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.QUERY_SECTION:
-      {
-        QuerySection querySection = (QuerySection)theEObject;
-        T result = caseQuerySection(querySection);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.OUTPUT_ATTRIBUTE:
-      {
-        OutputAttribute outputAttribute = (OutputAttribute)theEObject;
-        T result = caseOutputAttribute(outputAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.OUT_ATTR:
-      {
-        OutAttr outAttr = (OutAttr)theEObject;
-        T result = caseOutAttr(outAttr);
-        if (result == null) result = caseFeaturesOrOutAttr(outAttr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.GROUP_BY:
-      {
-        GroupBy groupBy = (GroupBy)theEObject;
-        T result = caseGroupBy(groupBy);
-        if (result == null) result = caseGROUP(groupBy);
-        if (result == null) result = caseBY(groupBy);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.HAVING_EXPR:
-      {
-        HavingExpr havingExpr = (HavingExpr)theEObject;
-        T result = caseHavingExpr(havingExpr);
-        if (result == null) result = caseHAVING(havingExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.MATH_OPERATION:
-      {
-        MathOperation mathOperation = (MathOperation)theEObject;
-        T result = caseMathOperation(mathOperation);
-        if (result == null) result = caseExpression(mathOperation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.NULL_CHECK:
-      {
-        NullCheck nullCheck = (NullCheck)theEObject;
-        T result = caseNullCheck(nullCheck);
-        if (result == null) result = caseMathOperation(nullCheck);
-        if (result == null) result = caseIS(nullCheck);
-        if (result == null) result = caseNULL(nullCheck);
-        if (result == null) result = caseExpression(nullCheck);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.STREAM_REFERENCE:
-      {
-        StreamReference streamReference = (StreamReference)theEObject;
-        T result = caseStreamReference(streamReference);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.MATH_OTHER_OPERATIONS1:
-      {
-        MathOtherOperations1 mathOtherOperations1 = (MathOtherOperations1)theEObject;
-        T result = caseMathOtherOperations1(mathOtherOperations1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.ATTRIBUTE_REFERENCE:
-      {
-        AttributeReference attributeReference = (AttributeReference)theEObject;
-        T result = caseAttributeReference(attributeReference);
-        if (result == null) result = caseSetAssignment(attributeReference);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.ATTRIBUTE_NAME_REFERENCE:
-      {
-        AttributeNameReference attributeNameReference = (AttributeNameReference)theEObject;
-        T result = caseAttributeNameReference(attributeNameReference);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.ATTRIBUTE_INDEX:
-      {
-        AttributeIndex attributeIndex = (AttributeIndex)theEObject;
-        T result = caseAttributeIndex(attributeIndex);
-        if (result == null) result = caseLAST(attributeIndex);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE:
-      {
-        StandardStatefulSource standardStatefulSource = (StandardStatefulSource)theEObject;
-        T result = caseStandardStatefulSource(standardStatefulSource);
-        if (result == null) result = casePatternCollectionStatefulSource(standardStatefulSource);
-        if (result == null) result = caseSequenceCollectionStatefulSource(standardStatefulSource);
-        if (result == null) result = caseSource1OrStandardStatefulSource(standardStatefulSource);
-        if (result == null) result = caseSequenceSource(standardStatefulSource);
-        if (result == null) result = caseSequenceSourceChain(standardStatefulSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.SOURCE1_OR_STANDARD_STATEFUL_SOURCE:
-      {
-        Source1OrStandardStatefulSource source1OrStandardStatefulSource = (Source1OrStandardStatefulSource)theEObject;
-        T result = caseSource1OrStandardStatefulSource(source1OrStandardStatefulSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.SOURCE_OR_EVENT_REFERENCE:
-      {
-        SourceOrEventReference sourceOrEventReference = (SourceOrEventReference)theEObject;
-        T result = caseSourceOrEventReference(sourceOrEventReference);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.BASIC_SOURCE:
-      {
-        BasicSource basicSource = (BasicSource)theEObject;
-        T result = caseBasicSource(basicSource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.FEATURES_OR_OUT_ATTR:
-      {
-        FeaturesOrOutAttr featuresOrOutAttr = (FeaturesOrOutAttr)theEObject;
-        T result = caseFeaturesOrOutAttr(featuresOrOutAttr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.FEATURES_OR_OUT_ATTR_REFERENCE:
-      {
-        FeaturesOrOutAttrReference featuresOrOutAttrReference = (FeaturesOrOutAttrReference)theEObject;
-        T result = caseFeaturesOrOutAttrReference(featuresOrOutAttrReference);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.CONSTANT_VALUE:
-      {
-        ConstantValue constantValue = (ConstantValue)theEObject;
-        T result = caseConstantValue(constantValue);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case SiddhiPackage.NAME:
       {
         Name name = (Name)theEObject;
         T result = caseName(name);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.SOURCE:
-      {
-        Source source = (Source)theEObject;
-        T result = caseSource(source);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.SOURCE1:
-      {
-        Source1 source1 = (Source1)theEObject;
-        T result = caseSource1(source1);
-        if (result == null) result = caseSource1OrStandardStatefulSource(source1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1055,6 +1095,7 @@ public class SiddhiSwitch<T> extends Switch<T>
       {
         Keyword keyword = (Keyword)theEObject;
         T result = caseKeyword(keyword);
+        if (result == null) result = caseName(keyword);
         if (result == null) result = caseSTREAM(keyword);
         if (result == null) result = caseDEFINE(keyword);
         if (result == null) result = caseFROM(keyword);
@@ -1148,11 +1189,11 @@ public class SiddhiSwitch<T> extends Switch<T>
       {
         EVERY every = (EVERY)theEObject;
         T result = caseEVERY(every);
+        if (result == null) result = caseEverySequenceSourceChain(every);
+        if (result == null) result = caseEveryAbsentSequenceSourceChain(every);
         if (result == null) result = caseEveryAbsentPatternSource(every);
         if (result == null) result = caseLeftAbsentPatternSource(every);
         if (result == null) result = caseRightAbsentPatternSource(every);
-        if (result == null) result = caseEverySequenceSourceChain(every);
-        if (result == null) result = caseEveryAbsentSequenceSourceChain(every);
         if (result == null) result = caseAbsentPatternSourceChain(every);
         if (result == null) result = casePatternStream(every);
         if (result == null) result = defaultCase(theEObject);
@@ -1656,6 +1697,22 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SiddhiPackage.LEFT_ABSENT_SEQUENCE_SOURCE1:
+      {
+        LeftAbsentSequenceSource1 leftAbsentSequenceSource1 = (LeftAbsentSequenceSource1)theEObject;
+        T result = caseLeftAbsentSequenceSource1(leftAbsentSequenceSource1);
+        if (result == null) result = caseLeftAbsentSequenceSource(leftAbsentSequenceSource1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SiddhiPackage.RIGHT_ABSENT_SEQUENCE_SOURCE1:
+      {
+        RightAbsentSequenceSource1 rightAbsentSequenceSource1 = (RightAbsentSequenceSource1)theEObject;
+        T result = caseRightAbsentSequenceSource1(rightAbsentSequenceSource1);
+        if (result == null) result = caseRightAbsentSequenceSource(rightAbsentSequenceSource1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SiddhiPackage.LEFT_ABSENT_PATTERN_SOURCE1:
       {
         LeftAbsentPatternSource1 leftAbsentPatternSource1 = (LeftAbsentPatternSource1)theEObject;
@@ -1673,22 +1730,6 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = caseRightAbsentPatternSource(rightAbsentPatternSource1);
         if (result == null) result = caseAbsentPatternSourceChain(rightAbsentPatternSource1);
         if (result == null) result = casePatternStream(rightAbsentPatternSource1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.LEFT_ABSENT_SEQUENCE_SOURCE1:
-      {
-        LeftAbsentSequenceSource1 leftAbsentSequenceSource1 = (LeftAbsentSequenceSource1)theEObject;
-        T result = caseLeftAbsentSequenceSource1(leftAbsentSequenceSource1);
-        if (result == null) result = caseLeftAbsentSequenceSource(leftAbsentSequenceSource1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.RIGHT_ABSENT_SEQUENCE_SOURCE1:
-      {
-        RightAbsentSequenceSource1 rightAbsentSequenceSource1 = (RightAbsentSequenceSource1)theEObject;
-        T result = caseRightAbsentSequenceSource1(rightAbsentSequenceSource1);
-        if (result == null) result = caseRightAbsentSequenceSource(rightAbsentSequenceSource1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1728,28 +1769,13 @@ public class SiddhiSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SiddhiPackage.MATH_ADDSUB_OPERATION:
-      {
-        MathAddsubOperation mathAddsubOperation = (MathAddsubOperation)theEObject;
-        T result = caseMathAddsubOperation(mathAddsubOperation);
-        if (result == null) result = caseMathOperation(mathAddsubOperation);
-        if (result == null) result = caseExpression(mathAddsubOperation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SiddhiPackage.MATH_DIVMUL_OPERATION:
-      {
-        MathDivmulOperation mathDivmulOperation = (MathDivmulOperation)theEObject;
-        T result = caseMathDivmulOperation(mathDivmulOperation);
-        if (result == null) result = caseMathOperation(mathDivmulOperation);
-        if (result == null) result = caseExpression(mathDivmulOperation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case SiddhiPackage.NOT_OPERATION:
       {
         NotOperation notOperation = (NotOperation)theEObject;
         T result = caseNotOperation(notOperation);
+        if (result == null) result = caseMathOtherOperations(notOperation);
+        if (result == null) result = caseMathDivmulOperation(notOperation);
+        if (result == null) result = caseMathAddsubOperation(notOperation);
         if (result == null) result = caseMathOperation(notOperation);
         if (result == null) result = caseExpression(notOperation);
         if (result == null) result = defaultCase(theEObject);
@@ -1920,17 +1946,17 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>aggregation time interval</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Aggregation Time Interval</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>aggregation time interval</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Aggregation Time Interval</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseaggregation_time_interval(aggregation_time_interval object)
+  public T caseAggregationTimeInterval(AggregationTimeInterval object)
   {
     return null;
   }
@@ -2160,6 +2186,38 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSource(Source object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Source1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Source1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSource1(Source1 object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Exec Partition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -2240,6 +2298,214 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Query Output</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Query Output</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQueryOutput(QueryOutput object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Target</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Target</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTarget(Target object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Set Clause</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Set Clause</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSetClause(SetClause object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Set Assignment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Set Assignment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSetAssignment(SetAssignment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Output Event Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Output Event Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutputEventType(OutputEventType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Output Rate</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Output Rate</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutputRate(OutputRate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Output Rate Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Output Rate Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutputRateType(OutputRateType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Group By Query Selection</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Group By Query Selection</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroupByQuerySelection(GroupByQuerySelection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Query Section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Query Section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQuerySection(QuerySection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Group By</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Group By</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroupBy(GroupBy object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Having Expr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Having Expr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHavingExpr(HavingExpr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Output Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Output Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutputAttribute(OutputAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Out Attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Out Attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutAttr(OutAttr object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Query Input</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -2251,374 +2517,6 @@ public class SiddhiSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQueryInput(QueryInput object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Join Stream</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Join Stream</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseJoinStream(JoinStream object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Within Time Range</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Within Time Range</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseWithinTimeRange(WithinTimeRange object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Per1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Per1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePer1(Per1 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Join Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Join Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseJoinSource(JoinSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Stream Alias</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Stream Alias</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStreamAlias(StreamAlias object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>joins</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>joins</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casejoins(joins object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Standard Stream</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Standard Stream</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStandardStream(StandardStream object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Main Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Main Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMainSource(MainSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Pattern Stream</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pattern Stream</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatternStream(PatternStream object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Every Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Every Pattern Source Chain</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEveryPatternSourceChain(EveryPatternSourceChain object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pattern Source Chain</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatternSourceChain(PatternSourceChain object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pattern Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatternSource(PatternSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Logical Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Logical Stateful Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLogicalStatefulSource(LogicalStatefulSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Pattern Collection Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pattern Collection Stateful Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatternCollectionStatefulSource(PatternCollectionStatefulSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Collect</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Collect</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCollect(Collect object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Within Time</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Within Time</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseWithinTime(WithinTime object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Logical Absent Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Logical Absent Stateful Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLogicalAbsentStatefulSource(LogicalAbsentStatefulSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Absent Pattern Source Chain</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Absent Pattern Source Chain</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAbsentPatternSourceChain(AbsentPatternSourceChain object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Every Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Every Absent Pattern Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEveryAbsentPatternSource(EveryAbsentPatternSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Basic Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Basic Absent Pattern Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBasicAbsentPatternSource(BasicAbsentPatternSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>For Time</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>For Time</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseForTime(ForTime object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Left Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Left Absent Pattern Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLeftAbsentPatternSource(LeftAbsentPatternSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Right Absent Pattern Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Right Absent Pattern Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRightAbsentPatternSource(RightAbsentPatternSource object)
   {
     return null;
   }
@@ -2784,97 +2682,369 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Output Rate</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pattern Stream</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Output Rate</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pattern Stream</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOutputRate(OutputRate object)
+  public T casePatternStream(PatternStream object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Output Rate Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Every Pattern Source Chain</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Output Rate Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Every Pattern Source Chain</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOutputRateType(OutputRateType object)
+  public T caseEveryPatternSourceChain(EveryPatternSourceChain object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Query Output</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pattern Source Chain</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Query Output</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pattern Source Chain</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseQueryOutput(QueryOutput object)
+  public T casePatternSourceChain(PatternSourceChain object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Set Clause</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pattern Source</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Set Clause</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pattern Source</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSetClause(SetClause object)
+  public T casePatternSource(PatternSource object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Set Assignment</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Logical Stateful Source</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Set Assignment</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Logical Stateful Source</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSetAssignment(SetAssignment object)
+  public T caseLogicalStatefulSource(LogicalStatefulSource object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Output Event Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pattern Collection Stateful Source</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Output Event Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pattern Collection Stateful Source</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOutputEventType(OutputEventType object)
+  public T casePatternCollectionStatefulSource(PatternCollectionStatefulSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Collect</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Collect</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCollect(Collect object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Absent Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Absent Stateful Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalAbsentStatefulSource(LogicalAbsentStatefulSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Absent Pattern Source Chain</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Absent Pattern Source Chain</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAbsentPatternSourceChain(AbsentPatternSourceChain object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Every Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Every Absent Pattern Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEveryAbsentPatternSource(EveryAbsentPatternSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Basic Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Basic Absent Pattern Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBasicAbsentPatternSource(BasicAbsentPatternSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>For Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>For Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForTime(ForTime object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Left Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Left Absent Pattern Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLeftAbsentPatternSource(LeftAbsentPatternSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Right Absent Pattern Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Right Absent Pattern Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRightAbsentPatternSource(RightAbsentPatternSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Join Stream</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Join Stream</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseJoinStream(JoinStream object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Within Time Range</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Within Time Range</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWithinTimeRange(WithinTimeRange object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Per1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Per1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePer1(Per1 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Join Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Join Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseJoinSource(JoinSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Stream Alias</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Stream Alias</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStreamAlias(StreamAlias object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Within Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Within Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWithinTime(WithinTime object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>joins</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>joins</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casejoins(joins object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Standard Stream</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Standard Stream</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStandardStream(StandardStream object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Main Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Main Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMainSource(MainSource object)
   {
     return null;
   }
@@ -2992,6 +3162,278 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Math Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Math Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMathOperation(MathOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Math Addsub Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Math Addsub Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMathAddsubOperation(MathAddsubOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Math Divmul Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Math Divmul Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMathDivmulOperation(MathDivmulOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Math Other Operations</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Math Other Operations</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMathOtherOperations(MathOtherOperations object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Null Check</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Null Check</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNullCheck(NullCheck object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Stream Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Stream Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStreamReference(StreamReference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLiteral(Literal object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAttributeReference(AttributeReference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Features Or Out Attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Features Or Out Attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFeaturesOrOutAttr(FeaturesOrOutAttr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Features Or Out Attr Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Features Or Out Attr Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFeaturesOrOutAttrReference(FeaturesOrOutAttrReference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Standard Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Standard Stateful Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStandardStatefulSource(StandardStatefulSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Basic Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Basic Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBasicSource(BasicSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Source1 Or Standard Stateful Source</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Source1 Or Standard Stateful Source</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSource1OrStandardStatefulSource(Source1OrStandardStatefulSource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Source Or Event Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Source Or Event Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSourceOrEventReference(SourceOrEventReference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Attribute Name Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Attribute Name Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAttributeNameReference(AttributeNameReference object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Attribute Index</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Attribute Index</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAttributeIndex(AttributeIndex object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Constant Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Constant Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConstantValue(ConstantValue object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Function Operation</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3072,326 +3514,6 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Group By Query Selection</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Group By Query Selection</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGroupByQuerySelection(GroupByQuerySelection object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Query Section</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Query Section</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseQuerySection(QuerySection object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Output Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Output Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseOutputAttribute(OutputAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Out Attr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Out Attr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseOutAttr(OutAttr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Group By</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Group By</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGroupBy(GroupBy object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Having Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Having Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseHavingExpr(HavingExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Math Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Math Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMathOperation(MathOperation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Null Check</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Null Check</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNullCheck(NullCheck object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Stream Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Stream Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStreamReference(StreamReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Math Other Operations1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Math Other Operations1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMathOtherOperations1(MathOtherOperations1 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAttributeReference(AttributeReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute Name Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute Name Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAttributeNameReference(AttributeNameReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute Index</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute Index</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAttributeIndex(AttributeIndex object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Standard Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Standard Stateful Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStandardStatefulSource(StandardStatefulSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Source1 Or Standard Stateful Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Source1 Or Standard Stateful Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSource1OrStandardStatefulSource(Source1OrStandardStatefulSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Source Or Event Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Source Or Event Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSourceOrEventReference(SourceOrEventReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Basic Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Basic Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBasicSource(BasicSource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Features Or Out Attr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Features Or Out Attr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFeaturesOrOutAttr(FeaturesOrOutAttr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Features Or Out Attr Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Features Or Out Attr Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFeaturesOrOutAttrReference(FeaturesOrOutAttrReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Constant Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Constant Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseConstantValue(ConstantValue object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Name</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3403,38 +3525,6 @@ public class SiddhiSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseName(Name object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Source</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Source</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSource(Source object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Source1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Source1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSource1(Source1 object)
   {
     return null;
   }
@@ -4944,38 +5034,6 @@ public class SiddhiSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Left Absent Pattern Source1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Left Absent Pattern Source1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLeftAbsentPatternSource1(LeftAbsentPatternSource1 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Right Absent Pattern Source1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Right Absent Pattern Source1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRightAbsentPatternSource1(RightAbsentPatternSource1 object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Left Absent Sequence Source1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -5003,6 +5061,38 @@ public class SiddhiSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRightAbsentSequenceSource1(RightAbsentSequenceSource1 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Left Absent Pattern Source1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Left Absent Pattern Source1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLeftAbsentPatternSource1(LeftAbsentPatternSource1 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Right Absent Pattern Source1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Right Absent Pattern Source1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRightAbsentPatternSource1(RightAbsentPatternSource1 object)
   {
     return null;
   }
@@ -5067,38 +5157,6 @@ public class SiddhiSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMathEqualOperation(MathEqualOperation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Math Addsub Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Math Addsub Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMathAddsubOperation(MathAddsubOperation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Math Divmul Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Math Divmul Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMathDivmulOperation(MathDivmulOperation object)
   {
     return null;
   }

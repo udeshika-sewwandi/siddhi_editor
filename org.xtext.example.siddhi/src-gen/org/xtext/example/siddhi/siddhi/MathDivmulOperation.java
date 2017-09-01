@@ -13,45 +13,17 @@ package org.xtext.example.siddhi.siddhi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMultiply <em>Multiply</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getDevide <em>Devide</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMod <em>Mod</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getRight <em>Right</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathDivmulOperation()
  * @model
  * @generated
  */
-public interface MathDivmulOperation extends MathOperation
+public interface MathDivmulOperation extends MathAddsubOperation
 {
-  /**
-   * Returns the value of the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Left</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathDivmulOperation_Left()
-   * @model containment="true"
-   * @generated
-   */
-  MathOperation getLeft();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getLeft <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left</em>' containment reference.
-   * @see #getLeft()
-   * @generated
-   */
-  void setLeft(MathOperation value);
-
   /**
    * Returns the value of the '<em><b>Multiply</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -129,31 +101,5 @@ public interface MathDivmulOperation extends MathOperation
    * @generated
    */
   void setMod(String value);
-
-  /**
-   * Returns the value of the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Right</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(MathOperation)
-   * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getMathDivmulOperation_Right()
-   * @model containment="true"
-   * @generated
-   */
-  MathOperation getRight();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getRight <em>Right</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Right</em>' containment reference.
-   * @see #getRight()
-   * @generated
-   */
-  void setRight(MathOperation value);
 
 } // MathDivmulOperation

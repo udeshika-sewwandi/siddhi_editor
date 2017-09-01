@@ -16,9 +16,10 @@ import org.xtext.example.siddhi.siddhi.Expression;
 import org.xtext.example.siddhi.siddhi.JoinSource;
 import org.xtext.example.siddhi.siddhi.JoinStream;
 import org.xtext.example.siddhi.siddhi.ON;
+import org.xtext.example.siddhi.siddhi.Per1;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 import org.xtext.example.siddhi.siddhi.UNIDIRECTIONAL;
-import org.xtext.example.siddhi.siddhi.WithinTime;
+import org.xtext.example.siddhi.siddhi.WithinTimeRange;
 import org.xtext.example.siddhi.siddhi.joins;
 
 /**
@@ -34,7 +35,8 @@ import org.xtext.example.siddhi.siddhi.joins;
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getRight_uni <em>Right uni</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getOn <em>On</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getExpr <em>Expr</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getWt <em>Wt</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getWtr <em>Wtr</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getP <em>P</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getJoin <em>Join</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl#getLeft_uni <em>Left uni</em>}</li>
  * </ul>
@@ -94,14 +96,24 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
   protected Expression expr;
 
   /**
-   * The cached value of the '{@link #getWt() <em>Wt</em>}' containment reference.
+   * The cached value of the '{@link #getWtr() <em>Wtr</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getWt()
+   * @see #getWtr()
    * @generated
    * @ordered
    */
-  protected WithinTime wt;
+  protected WithinTimeRange wtr;
+
+  /**
+   * The cached value of the '{@link #getP() <em>P</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getP()
+   * @generated
+   * @ordered
+   */
+  protected Per1 p;
 
   /**
    * The cached value of the '{@link #getJoin() <em>Join</em>}' containment reference.
@@ -389,9 +401,9 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
    * <!-- end-user-doc -->
    * @generated
    */
-  public WithinTime getWt()
+  public WithinTimeRange getWtr()
   {
-    return wt;
+    return wtr;
   }
 
   /**
@@ -399,13 +411,13 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetWt(WithinTime newWt, NotificationChain msgs)
+  public NotificationChain basicSetWtr(WithinTimeRange newWtr, NotificationChain msgs)
   {
-    WithinTime oldWt = wt;
-    wt = newWt;
+    WithinTimeRange oldWtr = wtr;
+    wtr = newWtr;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__WT, oldWt, newWt);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__WTR, oldWtr, newWtr);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -416,20 +428,68 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setWt(WithinTime newWt)
+  public void setWtr(WithinTimeRange newWtr)
   {
-    if (newWt != wt)
+    if (newWtr != wtr)
     {
       NotificationChain msgs = null;
-      if (wt != null)
-        msgs = ((InternalEObject)wt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__WT, null, msgs);
-      if (newWt != null)
-        msgs = ((InternalEObject)newWt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__WT, null, msgs);
-      msgs = basicSetWt(newWt, msgs);
+      if (wtr != null)
+        msgs = ((InternalEObject)wtr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__WTR, null, msgs);
+      if (newWtr != null)
+        msgs = ((InternalEObject)newWtr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__WTR, null, msgs);
+      msgs = basicSetWtr(newWtr, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__WT, newWt, newWt));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__WTR, newWtr, newWtr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Per1 getP()
+  {
+    return p;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetP(Per1 newP, NotificationChain msgs)
+  {
+    Per1 oldP = p;
+    p = newP;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__P, oldP, newP);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setP(Per1 newP)
+  {
+    if (newP != p)
+    {
+      NotificationChain msgs = null;
+      if (p != null)
+        msgs = ((InternalEObject)p).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__P, null, msgs);
+      if (newP != null)
+        msgs = ((InternalEObject)newP).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.JOIN_STREAM__P, null, msgs);
+      msgs = basicSetP(newP, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.JOIN_STREAM__P, newP, newP));
   }
 
   /**
@@ -548,8 +608,10 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
         return basicSetOn(null, msgs);
       case SiddhiPackage.JOIN_STREAM__EXPR:
         return basicSetExpr(null, msgs);
-      case SiddhiPackage.JOIN_STREAM__WT:
-        return basicSetWt(null, msgs);
+      case SiddhiPackage.JOIN_STREAM__WTR:
+        return basicSetWtr(null, msgs);
+      case SiddhiPackage.JOIN_STREAM__P:
+        return basicSetP(null, msgs);
       case SiddhiPackage.JOIN_STREAM__JOIN:
         return basicSetJoin(null, msgs);
       case SiddhiPackage.JOIN_STREAM__LEFT_UNI:
@@ -578,8 +640,10 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
         return getOn();
       case SiddhiPackage.JOIN_STREAM__EXPR:
         return getExpr();
-      case SiddhiPackage.JOIN_STREAM__WT:
-        return getWt();
+      case SiddhiPackage.JOIN_STREAM__WTR:
+        return getWtr();
+      case SiddhiPackage.JOIN_STREAM__P:
+        return getP();
       case SiddhiPackage.JOIN_STREAM__JOIN:
         return getJoin();
       case SiddhiPackage.JOIN_STREAM__LEFT_UNI:
@@ -613,8 +677,11 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
       case SiddhiPackage.JOIN_STREAM__EXPR:
         setExpr((Expression)newValue);
         return;
-      case SiddhiPackage.JOIN_STREAM__WT:
-        setWt((WithinTime)newValue);
+      case SiddhiPackage.JOIN_STREAM__WTR:
+        setWtr((WithinTimeRange)newValue);
+        return;
+      case SiddhiPackage.JOIN_STREAM__P:
+        setP((Per1)newValue);
         return;
       case SiddhiPackage.JOIN_STREAM__JOIN:
         setJoin((joins)newValue);
@@ -651,8 +718,11 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
       case SiddhiPackage.JOIN_STREAM__EXPR:
         setExpr((Expression)null);
         return;
-      case SiddhiPackage.JOIN_STREAM__WT:
-        setWt((WithinTime)null);
+      case SiddhiPackage.JOIN_STREAM__WTR:
+        setWtr((WithinTimeRange)null);
+        return;
+      case SiddhiPackage.JOIN_STREAM__P:
+        setP((Per1)null);
         return;
       case SiddhiPackage.JOIN_STREAM__JOIN:
         setJoin((joins)null);
@@ -684,8 +754,10 @@ public class JoinStreamImpl extends MinimalEObjectImpl.Container implements Join
         return on != null;
       case SiddhiPackage.JOIN_STREAM__EXPR:
         return expr != null;
-      case SiddhiPackage.JOIN_STREAM__WT:
-        return wt != null;
+      case SiddhiPackage.JOIN_STREAM__WTR:
+        return wtr != null;
+      case SiddhiPackage.JOIN_STREAM__P:
+        return p != null;
       case SiddhiPackage.JOIN_STREAM__JOIN:
         return join != null;
       case SiddhiPackage.JOIN_STREAM__LEFT_UNI:

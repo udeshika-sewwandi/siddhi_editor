@@ -36,7 +36,7 @@ import org.xtext.example.siddhi.siddhi.StreamReference;
  *
  * @generated
  */
-public class NullCheckImpl extends MathOperationImpl implements NullCheck
+public class NullCheckImpl extends MathOtherOperationsImpl implements NullCheck
 {
   /**
    * The default value of the '{@link #getIs() <em>Is</em>}' attribute.

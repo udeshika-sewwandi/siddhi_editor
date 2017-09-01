@@ -1,9 +1,0 @@
-grammar org.xtext.example.siddhi.Siddhi with org.eclipse.xtext.common.Terminals
-
-generate siddhi "http://www.xtext.org/example/siddhi/Siddhi"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

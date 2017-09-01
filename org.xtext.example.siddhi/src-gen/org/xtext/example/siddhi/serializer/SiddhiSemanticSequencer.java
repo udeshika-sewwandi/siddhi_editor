@@ -21,6 +21,7 @@ import org.xtext.example.siddhi.siddhi.AS;
 import org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain;
 import org.xtext.example.siddhi.siddhi.AbsentSequenceSourceChain;
 import org.xtext.example.siddhi.siddhi.AggregationTimeDuration;
+import org.xtext.example.siddhi.siddhi.AggregationTimeInterval;
 import org.xtext.example.siddhi.siddhi.AggregationTimeRange;
 import org.xtext.example.siddhi.siddhi.Annotation;
 import org.xtext.example.siddhi.siddhi.AnnotationElement;
@@ -83,6 +84,7 @@ import org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource;
 import org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1;
 import org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource;
 import org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1;
+import org.xtext.example.siddhi.siddhi.Literal;
 import org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource;
 import org.xtext.example.siddhi.siddhi.LogicalStatefulSource;
 import org.xtext.example.siddhi.siddhi.MainSource;
@@ -93,7 +95,7 @@ import org.xtext.example.siddhi.siddhi.MathGtLtOperation;
 import org.xtext.example.siddhi.siddhi.MathInOperation;
 import org.xtext.example.siddhi.siddhi.MathLogicalOperation;
 import org.xtext.example.siddhi.siddhi.MathOperation;
-import org.xtext.example.siddhi.siddhi.MathOtherOperations1;
+import org.xtext.example.siddhi.siddhi.MathOtherOperations;
 import org.xtext.example.siddhi.siddhi.MillisecondValue;
 import org.xtext.example.siddhi.siddhi.MinuteValue;
 import org.xtext.example.siddhi.siddhi.MonthValue;
@@ -137,6 +139,7 @@ import org.xtext.example.siddhi.siddhi.StreamAlias;
 import org.xtext.example.siddhi.siddhi.StreamFunction;
 import org.xtext.example.siddhi.siddhi.StreamReference;
 import org.xtext.example.siddhi.siddhi.StringValue;
+import org.xtext.example.siddhi.siddhi.Target;
 import org.xtext.example.siddhi.siddhi.TimeValue;
 import org.xtext.example.siddhi.siddhi.TriggerName;
 import org.xtext.example.siddhi.siddhi.UNIDIRECTIONAL;
@@ -145,7 +148,6 @@ import org.xtext.example.siddhi.siddhi.Win;
 import org.xtext.example.siddhi.siddhi.WithinTime;
 import org.xtext.example.siddhi.siddhi.WithinTimeRange;
 import org.xtext.example.siddhi.siddhi.YearValue;
-import org.xtext.example.siddhi.siddhi.aggregation_time_interval;
 import org.xtext.example.siddhi.siddhi.joins;
 
 @SuppressWarnings("all")
@@ -186,6 +188,9 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case SiddhiPackage.AGGREGATION_TIME_DURATION:
 				sequence_DAYS_HOURS_MINUTES_MONTHS_SECONDS_WEEKS_YEARS(context, (AggregationTimeDuration) semanticObject); 
+				return; 
+			case SiddhiPackage.AGGREGATION_TIME_INTERVAL:
+				sequence_AggregationTimeInterval(context, (AggregationTimeInterval) semanticObject); 
 				return; 
 			case SiddhiPackage.AGGREGATION_TIME_RANGE:
 				sequence_AggregationTimeRange(context, (AggregationTimeRange) semanticObject); 
@@ -274,7 +279,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				sequence_DEFINE_DefinitionFunction_FUNCTION_RETURN(context, (DefinitionFunction) semanticObject); 
 				return; 
 			case SiddhiPackage.DEFINITION_STREAM:
-				sequence_DEFINE_DefinitionStream_STREAM_TABLE(context, (DefinitionStream) semanticObject); 
+				sequence_DEFINE_DefinitionStream_STREAM(context, (DefinitionStream) semanticObject); 
 				return; 
 			case SiddhiPackage.DEFINITION_TABLE:
 				sequence_DEFINE_DefinitionTable_TABLE(context, (DefinitionTable) semanticObject); 
@@ -454,9 +459,12 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case SiddhiPackage.LEFT_ABSENT_SEQUENCE_SOURCE1:
 				sequence_LeftAbsentSequenceSource1(context, (LeftAbsentSequenceSource1) semanticObject); 
 				return; 
+			case SiddhiPackage.LITERAL:
+				sequence_Literal(context, (Literal) semanticObject); 
+				return; 
 			case SiddhiPackage.LOGICAL_ABSENT_STATEFUL_SOURCE:
-				if (rule == grammarAccess.getLogicalAbsentStatefulSourceRule()
-						|| rule == grammarAccess.getSequenceSourceRule()) {
+				if (rule == grammarAccess.getSequenceSourceRule()
+						|| rule == grammarAccess.getLogicalAbsentStatefulSourceRule()) {
 					sequence_LogicalAbsentStatefulSource(context, (LogicalAbsentStatefulSource) semanticObject); 
 					return; 
 				}
@@ -468,8 +476,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				}
 				else break;
 			case SiddhiPackage.LOGICAL_STATEFUL_SOURCE:
-				if (rule == grammarAccess.getLogicalStatefulSourceRule()
-						|| rule == grammarAccess.getSequenceSourceRule()) {
+				if (rule == grammarAccess.getSequenceSourceRule()
+						|| rule == grammarAccess.getLogicalStatefulSourceRule()) {
 					sequence_LogicalStatefulSource(context, (LogicalStatefulSource) semanticObject); 
 					return; 
 				}
@@ -514,30 +522,10 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				sequence_MathLogicalOperation(context, (MathLogicalOperation) semanticObject); 
 				return; 
 			case SiddhiPackage.MATH_OPERATION:
-				if (rule == grammarAccess.getExpressionRule()
-						|| rule == grammarAccess.getMathOperationRule()) {
-					sequence_MathOperation(context, (MathOperation) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getMathLogicalOperationRule()
-						|| action == grammarAccess.getMathLogicalOperationAccess().getMathLogicalOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathInOperationRule()
-						|| action == grammarAccess.getMathInOperationAccess().getMathInOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathGtLtOperationRule()
-						|| action == grammarAccess.getMathGtLtOperationAccess().getMathGtLtOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathEqualOperationRule()
-						|| action == grammarAccess.getMathEqualOperationAccess().getMathEqualOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathAddsubOperationRule()
-						|| action == grammarAccess.getMathAddsubOperationAccess().getMathAddsubOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathDivmulOperationRule()
-						|| action == grammarAccess.getMathDivmulOperationAccess().getMathDivmulOperationLeftAction_1_0_0()
-						|| rule == grammarAccess.getMathOtherOperationsRule()) {
-					sequence_MathOtherOperations(context, (MathOperation) semanticObject); 
-					return; 
-				}
-				else break;
-			case SiddhiPackage.MATH_OTHER_OPERATIONS1:
-				sequence_MathOtherOperations1(context, (MathOtherOperations1) semanticObject); 
+				sequence_MathOperation(context, (MathOperation) semanticObject); 
+				return; 
+			case SiddhiPackage.MATH_OTHER_OPERATIONS:
+				sequence_MathOtherOperations(context, (MathOtherOperations) semanticObject); 
 				return; 
 			case SiddhiPackage.MILLISECOND_VALUE:
 				sequence_MILLISECONDS(context, (MillisecondValue) semanticObject); 
@@ -553,8 +541,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 					sequence_BasicAbsentPatternSource_NOT(context, (NOT) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getLogicalAbsentStatefulSourceRule()
-						|| rule == grammarAccess.getSequenceSourceRule()) {
+				else if (rule == grammarAccess.getSequenceSourceRule()
+						|| rule == grammarAccess.getLogicalAbsentStatefulSourceRule()) {
 					sequence_LogicalAbsentStatefulSource_NOT(context, (NOT) semanticObject); 
 					return; 
 				}
@@ -735,6 +723,9 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case SiddhiPackage.STRING_VALUE:
 				sequence_StringValue(context, (StringValue) semanticObject); 
 				return; 
+			case SiddhiPackage.TARGET:
+				sequence_Target(context, (Target) semanticObject); 
+				return; 
 			case SiddhiPackage.TIME_VALUE:
 				sequence_TimeValue(context, (TimeValue) semanticObject); 
 				return; 
@@ -758,9 +749,6 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case SiddhiPackage.YEAR_VALUE:
 				sequence_YEARS(context, (YearValue) semanticObject); 
-				return; 
-			case SiddhiPackage.AGGREGATION_TIME_INTERVAL:
-				sequence_aggregation_time_interval(context, (aggregation_time_interval) semanticObject); 
 				return; 
 			case SiddhiPackage.JOINS:
 				sequence_FULL_INNER_JOIN_LEFT_OUTER_RIGHT_joins(context, (joins) semanticObject); 
@@ -796,6 +784,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Name returns Keyword
 	 *     Keyword returns Keyword
 	 *
 	 * Constraint:
@@ -945,7 +934,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     AppAnnotation returns APP
 	 *
 	 * Constraint:
-	 *     (ap='app' na=Name (ann5+=AnnotationElement ann5+=AnnotationElement*)?)
+	 *     (ap='app' name=Name (ann5+=AnnotationElement ann5+=AnnotationElement*)?)
 	 */
 	protected void sequence_APP_AppAnnotation(ISerializationContext context, APP semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1002,7 +991,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         every='every' 
+	 *         every1='every' 
 	 *         (
 	 *             (absentPatternSrcChain=AbsentPatternSourceChain wt1=WithinTime?) | 
 	 *             basicAbsentPS=BasicAbsentPatternSource | 
@@ -1029,6 +1018,19 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     )
 	 */
 	protected void sequence_AbsentSequenceSourceChain(ISerializationContext context, AbsentSequenceSourceChain semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AggregationTime returns AggregationTimeInterval
+	 *     AggregationTimeInterval returns AggregationTimeInterval
+	 *
+	 * Constraint:
+	 *     (aggrtimeDur+=AggregationTimeDuration aggrtimeDur+=AggregationTimeDuration*)
+	 */
+	protected void sequence_AggregationTimeInterval(ISerializationContext context, AggregationTimeInterval semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1063,7 +1065,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Annotation returns Annotation
 	 *
 	 * Constraint:
-	 *     (na=Name (annElement+=AnnotationElement | ann+=Annotation) annElement+=AnnotationElement? (ann+=Annotation? annElement+=AnnotationElement?)*)
+	 *     (name=Name (annElement+=AnnotationElement | ann+=Annotation) annElement+=AnnotationElement? (ann+=Annotation? annElement+=AnnotationElement?)*)
 	 */
 	protected void sequence_Annotation(ISerializationContext context, Annotation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1137,12 +1139,13 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
+	 *         name=IdNew | 
 	 *         (
 	 *             hash1='#'? 
 	 *             name1=SourceOrEventReference 
-	 *             attribute_index1=AttributeIndex? 
-	 *             (hash2='#' name2=SourceOrEventReference attribute_index2=AttributeIndex?)? 
-	 *             attr_name=AttributeNameReference
+	 *             OPEN_SQARE_BRACKETSattribute_index1=AttributeIndex? 
+	 *             (hash2='#' name2=SourceOrEventReference OPEN_SQARE_BRACKETSattribute_index2=AttributeIndex?)? 
+	 *             featuresOrAttrRef=FeaturesOrOutAttrReference
 	 *         ) | 
 	 *         featuresOrAttrRef=FeaturesOrOutAttrReference
 	 *     )
@@ -1159,12 +1162,13 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         (
+	 *             name=IdNew | 
 	 *             (
 	 *                 hash1='#'? 
 	 *                 name1=SourceOrEventReference 
-	 *                 attribute_index1=AttributeIndex? 
-	 *                 (hash2='#' name2=SourceOrEventReference attribute_index2=AttributeIndex?)? 
-	 *                 attr_name=AttributeNameReference
+	 *                 OPEN_SQARE_BRACKETSattribute_index1=AttributeIndex? 
+	 *                 (hash2='#' name2=SourceOrEventReference OPEN_SQARE_BRACKETSattribute_index2=AttributeIndex?)? 
+	 *                 featuresOrAttrRef=FeaturesOrOutAttrReference
 	 *             ) | 
 	 *             featuresOrAttrRef=FeaturesOrOutAttrReference
 	 *         ) 
@@ -1481,13 +1485,13 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         ann+=Annotation* 
 	 *         define='define' 
-	 *         (str='stream' | table='table') 
+	 *         str='stream' 
 	 *         src=Source1 
 	 *         feature+=Features 
 	 *         feature+=Features*
 	 *     )
 	 */
-	protected void sequence_DEFINE_DefinitionStream_STREAM_TABLE(ISerializationContext context, DefinitionStream semanticObject) {
+	protected void sequence_DEFINE_DefinitionStream_STREAM(ISerializationContext context, DefinitionStream semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1539,9 +1543,9 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         (return='return' outEventType=OutputEventType?) | 
-	 *         (delete='delete' tar=Source1 (for='for' outEventType=OutputEventType)? on=ON expr=Expression) | 
+	 *         (delete='delete' tar=Target (for='for' outEventType=OutputEventType)? on=ON expr=Expression) | 
 	 *         (
-	 *             ((delete='delete' tar=Source1 for='for' outEventType=OutputEventType) | (update='update' tar=Source1 (for='for' outEventType=OutputEventType)?)) 
+	 *             ((delete='delete' tar=Target for='for' outEventType=OutputEventType) | (update='update' tar=Target (for='for' outEventType=OutputEventType)?)) 
 	 *             setClause=SetClause? 
 	 *             on=ON 
 	 *             expr=Expression
@@ -1552,14 +1556,14 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *             outEventType=OutputEventType? 
 	 *             into='into' 
 	 *             (
-	 *                 tar=Source1 | 
-	 *                 (tar=Source1 for='for' outEventType=OutputEventType on=ON expr=Expression) | 
-	 *                 (tar=Source1 (for='for' outEventType=OutputEventType)? setClause=SetClause? on=ON expr=Expression)
+	 *                 tar=Target | 
+	 *                 (tar=Target for='for' outEventType=OutputEventType on=ON expr=Expression) | 
+	 *                 (tar=Target (for='for' outEventType=OutputEventType)? setClause=SetClause? on=ON expr=Expression)
 	 *             )
 	 *         ) | 
 	 *         (
 	 *             update='update' 
-	 *             tar=Source1 
+	 *             tar=Target 
 	 *             for='for' 
 	 *             outEventType=OutputEventType 
 	 *             on=ON 
@@ -1623,15 +1627,15 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     EVERY returns EVERY
 	 *
 	 * Constraint:
-	 *     every='every'
+	 *     every1='every'
 	 */
 	protected void sequence_EVERY(ISerializationContext context, EVERY semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEVERYAccess().getEveryEveryKeyword_0(), semanticObject.getEvery());
+		feeder.accept(grammarAccess.getEVERYAccess().getEvery1EveryKeyword_0(), semanticObject.getEvery1());
 		feeder.finish();
 	}
 	
@@ -1641,17 +1645,17 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     EveryAbsentPatternSource returns EVERY
 	 *
 	 * Constraint:
-	 *     (every='every' basicAbsentPS=BasicAbsentPatternSource)
+	 *     (every1='every' basicAbsentPS=BasicAbsentPatternSource)
 	 */
 	protected void sequence_EVERY_EveryAbsentPatternSource(ISerializationContext context, EVERY semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()));
 			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentPatternSource_BasicAbsentPS()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentPatternSource_BasicAbsentPS()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEVERYAccess().getEveryEveryKeyword_0(), semanticObject.getEvery());
+		feeder.accept(grammarAccess.getEVERYAccess().getEvery1EveryKeyword_0(), semanticObject.getEvery1());
 		feeder.accept(grammarAccess.getEveryAbsentPatternSourceAccess().getBasicAbsentPSBasicAbsentPatternSourceParserRuleCall_0_1_0(), semanticObject.getBasicAbsentPS());
 		feeder.finish();
 	}
@@ -1662,19 +1666,19 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     EveryAbsentSequenceSourceChain returns EVERY
 	 *
 	 * Constraint:
-	 *     (every='every' absSeqSrcChain=AbsentSequenceSourceChain seqSrcChain=SequenceSourceChain)
+	 *     (every1='every' absSeqSrcChain=AbsentSequenceSourceChain seqSrcChain=SequenceSourceChain)
 	 */
 	protected void sequence_EVERY_EveryAbsentSequenceSourceChain(ISerializationContext context, EVERY semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEVERY_Every1()));
 			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentSequenceSourceChain_AbsSeqSrcChain()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentSequenceSourceChain_AbsSeqSrcChain()));
 			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentSequenceSourceChain_SeqSrcChain()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getEveryAbsentSequenceSourceChain_SeqSrcChain()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEVERYAccess().getEveryEveryKeyword_0(), semanticObject.getEvery());
+		feeder.accept(grammarAccess.getEVERYAccess().getEvery1EveryKeyword_0(), semanticObject.getEvery1());
 		feeder.accept(grammarAccess.getEveryAbsentSequenceSourceChainAccess().getAbsSeqSrcChainAbsentSequenceSourceChainParserRuleCall_0_1_0(), semanticObject.getAbsSeqSrcChain());
 		feeder.accept(grammarAccess.getEveryAbsentSequenceSourceChainAccess().getSeqSrcChainSequenceSourceChainParserRuleCall_0_3_0(), semanticObject.getSeqSrcChain());
 		feeder.finish();
@@ -1686,7 +1690,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     EverySequenceSourceChain returns EVERY
 	 *
 	 * Constraint:
-	 *     (every='every' seqSource=SequenceSource wt=WithinTime? ssc=SequenceSourceChain)
+	 *     (every1='every' seqSource=SequenceSource wt=WithinTime? ssc=SequenceSourceChain)
 	 */
 	protected void sequence_EVERY_EverySequenceSourceChain(ISerializationContext context, EVERY semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1702,7 +1706,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     LeftAbsentPatternSource2 returns EVERY
 	 *
 	 * Constraint:
-	 *     (every='every' leftAbsPS=LeftAbsentPatternSource wt2+=WithinTime?)
+	 *     (every1='every' leftAbsPS=LeftAbsentPatternSource wt2+=WithinTime?)
 	 */
 	protected void sequence_EVERY_LeftAbsentPatternSource2(ISerializationContext context, EVERY semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1718,7 +1722,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     RightAbsentPatternSource2 returns EVERY
 	 *
 	 * Constraint:
-	 *     (every='every' rightAbsPS=RightAbsentPatternSource wt3+=WithinTime?)
+	 *     (every1='every' rightAbsPS=RightAbsentPatternSource wt3+=WithinTime?)
 	 */
 	protected void sequence_EVERY_RightAbsentPatternSource2(ISerializationContext context, EVERY semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1852,7 +1856,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *             def_window+=DefinitionWindow | 
 	 *             defTrigger+=DefinitionTrigger | 
 	 *             defFunction+=DefinitionFunction | 
-	 *             defAgrregation+=DefinitionAggregation
+	 *             defAggregation+=DefinitionAggregation
 	 *         ) 
 	 *         defStream+=DefinitionStream? 
 	 *         (
@@ -1861,7 +1865,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *                 def_window+=DefinitionWindow | 
 	 *                 defTrigger+=DefinitionTrigger | 
 	 *                 defFunction+=DefinitionFunction | 
-	 *                 defAgrregation+=DefinitionAggregation
+	 *                 defAggregation+=DefinitionAggregation
 	 *             )? 
 	 *             defStream+=DefinitionStream?
 	 *         )* 
@@ -1930,7 +1934,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         qInp=QueryInput 
 	 *         querySec=QuerySection? 
 	 *         outRate=OutputRate? 
-	 *         qOutput=QueryOutput?
+	 *         qOutput=QueryOutput
 	 *     )
 	 */
 	protected void sequence_FROM_Query(ISerializationContext context, Query semanticObject) {
@@ -1992,19 +1996,10 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     FeaturesOrOutAttr returns Features
 	 *
 	 * Constraint:
-	 *     (name=IdNew type=AttributeType)
+	 *     ((name=IdNew | nam=Name) type=AttributeType)
 	 */
 	protected void sequence_Features(ISerializationContext context, Features semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFeaturesOrOutAttr_Name()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFeaturesOrOutAttr_Name()));
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFeatures_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFeatures_Type()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFeaturesAccess().getNameIdNewParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getFeaturesAccess().getTypeAttributeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2049,15 +2044,15 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     FunctionId returns FunctionId
 	 *
 	 * Constraint:
-	 *     na=Name
+	 *     name=Name
 	 */
 	protected void sequence_FunctionId(ISerializationContext context, FunctionId semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFunctionId_Na()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFunctionId_Na()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFunctionId_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFunctionId_Name()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFunctionIdAccess().getNaNameParserRuleCall_0(), semanticObject.getNa());
+		feeder.accept(grammarAccess.getFunctionIdAccess().getNameNameParserRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -2085,15 +2080,15 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     FunctionNamespace returns FunctionNamespace
 	 *
 	 * Constraint:
-	 *     na=IdNew
+	 *     name=Name
 	 */
 	protected void sequence_FunctionNamespace(ISerializationContext context, FunctionNamespace semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFunctionNamespace_Na()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFunctionNamespace_Na()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getFunctionNamespace_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getFunctionNamespace_Name()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFunctionNamespaceAccess().getNaIdNewParserRuleCall_0(), semanticObject.getNa());
+		feeder.accept(grammarAccess.getFunctionNamespaceAccess().getNameNameParserRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -2203,7 +2198,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     JoinSource returns MainSource
 	 *
 	 * Constraint:
-	 *     (src=Source basicSSh=BasicSourceStreamHandlers1 (a=AS strAlias=StreamAlias)?)
+	 *     (src=Source basicSSh=BasicSourceStreamHandlers1 window=Win? (a=AS strAlias=StreamAlias)?)
 	 */
 	protected void sequence_JoinSource_MainSource(ISerializationContext context, MainSource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2216,15 +2211,15 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         (left_source=JoinSource right_source=JoinSource right_uni=UNIDIRECTIONAL (on=ON expr=Expression)? wt=WithinTime?) | 
-	 *         (left_source=JoinSource join=joins right_source=JoinSource (on=ON expr=Expression)? wt=WithinTime?) | 
+	 *         (left_source=JoinSource right_source=JoinSource right_uni=UNIDIRECTIONAL (on=ON expr=Expression)? (wtr=WithinTimeRange p=Per1)?) | 
+	 *         (left_source=JoinSource join=joins right_source=JoinSource (on=ON expr=Expression)? (wtr=WithinTimeRange p=Per1)?) | 
 	 *         (
 	 *             left_source=JoinSource 
 	 *             left_uni=UNIDIRECTIONAL 
 	 *             join=joins 
 	 *             right_source=JoinSource 
 	 *             (on=ON expr=Expression)? 
-	 *             wt=WithinTime?
+	 *             (wtr=WithinTimeRange p=Per1)?
 	 *         )
 	 *     )
 	 */
@@ -2420,8 +2415,20 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     LogicalAbsentStatefulSource returns LogicalAbsentStatefulSource
+	 *     Literal returns Literal
+	 *
+	 * Constraint:
+	 *     (const_val=ConstantValue | fo=FunctionOperation | attrRef=AttributeReference)
+	 */
+	protected void sequence_Literal(ISerializationContext context, Literal semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     SequenceSource returns LogicalAbsentStatefulSource
+	 *     LogicalAbsentStatefulSource returns LogicalAbsentStatefulSource
 	 *
 	 * Constraint:
 	 *     (
@@ -2442,8 +2449,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     LogicalAbsentStatefulSource returns NOT
 	 *     SequenceSource returns NOT
+	 *     LogicalAbsentStatefulSource returns NOT
 	 *
 	 * Constraint:
 	 *     (not1='not' bs=BasicSource and=AND stdSource=StandardStatefulSource)
@@ -2518,8 +2525,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     LogicalStatefulSource returns LogicalStatefulSource
 	 *     SequenceSource returns LogicalStatefulSource
+	 *     LogicalStatefulSource returns LogicalStatefulSource
 	 *
 	 * Constraint:
 	 *     (
@@ -2696,7 +2703,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     MathGtLtOperation.MathGtLtOperation_1_0_0 returns MathGtLtOperation
 	 *
 	 * Constraint:
-	 *     (left=MathGtLtOperation_MathGtLtOperation_1_0_0 (symbol='>=' | symbol='<=' | symbol='>' | symbol='<') right=MathGtLtOperation)
+	 *     (left=MathGtLtOperation_MathGtLtOperation_1_0_0 (gt_eq='>=' | lt_eq='<=' | gt='>' | lt='<') right=MathGtLtOperation)
 	 */
 	protected void sequence_MathGtLtOperation(ISerializationContext context, MathGtLtOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2711,21 +2718,21 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     MathInOperation.MathInOperation_1_0_0 returns MathInOperation
 	 *
 	 * Constraint:
-	 *     (left=MathInOperation_MathInOperation_1_0_0 in=IN right=Name)
+	 *     (left=MathInOperation_MathInOperation_1_0_0 in=IN name=Name)
 	 */
 	protected void sequence_MathInOperation(ISerializationContext context, MathInOperation semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Left()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Left()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathOperation_Left()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathOperation_Left()));
 			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_In()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_In()));
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Right()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Right()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathInOperation_Name()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMathInOperationAccess().getMathInOperationLeftAction_1_0_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getMathInOperationAccess().getInINParserRuleCall_1_0_1_0(), semanticObject.getIn());
-		feeder.accept(grammarAccess.getMathInOperationAccess().getRightNameParserRuleCall_1_0_2_0(), semanticObject.getRight());
+		feeder.accept(grammarAccess.getMathInOperationAccess().getNameNameParserRuleCall_1_0_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -2764,36 +2771,24 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     MathOtherOperations1 returns MathOtherOperations1
+	 *     MathLogicalOperation returns MathOtherOperations
+	 *     MathLogicalOperation.MathLogicalOperation_1_0_0 returns MathOtherOperations
+	 *     MathInOperation returns MathOtherOperations
+	 *     MathInOperation.MathInOperation_1_0_0 returns MathOtherOperations
+	 *     MathGtLtOperation returns MathOtherOperations
+	 *     MathGtLtOperation.MathGtLtOperation_1_0_0 returns MathOtherOperations
+	 *     MathEqualOperation returns MathOtherOperations
+	 *     MathEqualOperation.MathEqualOperation_1_0_0 returns MathOtherOperations
+	 *     MathAddsubOperation returns MathOtherOperations
+	 *     MathAddsubOperation.MathAddsubOperation_1_0_0 returns MathOtherOperations
+	 *     MathDivmulOperation returns MathOtherOperations
+	 *     MathDivmulOperation.MathDivmulOperation_1_0_0 returns MathOtherOperations
+	 *     MathOtherOperations returns MathOtherOperations
 	 *
 	 * Constraint:
-	 *     (const_val=ConstantValue | fo=FunctionOperation | attrRef=AttributeReference)
+	 *     (op=MathOperation | lit=Literal)
 	 */
-	protected void sequence_MathOtherOperations1(ISerializationContext context, MathOtherOperations1 semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MathLogicalOperation returns MathOperation
-	 *     MathLogicalOperation.MathLogicalOperation_1_0_0 returns MathOperation
-	 *     MathInOperation returns MathOperation
-	 *     MathInOperation.MathInOperation_1_0_0 returns MathOperation
-	 *     MathGtLtOperation returns MathOperation
-	 *     MathGtLtOperation.MathGtLtOperation_1_0_0 returns MathOperation
-	 *     MathEqualOperation returns MathOperation
-	 *     MathEqualOperation.MathEqualOperation_1_0_0 returns MathOperation
-	 *     MathAddsubOperation returns MathOperation
-	 *     MathAddsubOperation.MathAddsubOperation_1_0_0 returns MathOperation
-	 *     MathDivmulOperation returns MathOperation
-	 *     MathDivmulOperation.MathDivmulOperation_1_0_0 returns MathOperation
-	 *     MathOtherOperations returns MathOperation
-	 *
-	 * Constraint:
-	 *     (op=MathOperation | mathOtherOperations1=MathOtherOperations1)
-	 */
-	protected void sequence_MathOtherOperations(ISerializationContext context, MathOperation semanticObject) {
+	protected void sequence_MathOtherOperations(ISerializationContext context, MathOtherOperations semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -2821,8 +2816,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getNotOperation_Not()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getNotOperation_Not()));
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathOperation_Op()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathOperation_Op()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getMathOtherOperations_Op()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getMathOtherOperations_Op()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMathOtherOperationsAccess().getNotNOTParserRuleCall_0_0_1_0(), semanticObject.getNot());
@@ -2854,15 +2849,15 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Name returns Name
 	 *
 	 * Constraint:
-	 *     name=IdNew
+	 *     na=IdNew
 	 */
 	protected void sequence_Name(ISerializationContext context, Name semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getName_Name()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getName_Name()));
+			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getName_Na()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getName_Na()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNameAccess().getNameIdNewParserRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNameAccess().getNaIdNewParserRuleCall_0_0(), semanticObject.getNa());
 		feeder.finish();
 	}
 	
@@ -2978,7 +2973,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     PatternCollectionStatefulSource returns StandardStatefulSource
 	 *
 	 * Constraint:
-	 *     (name=IdNew? bs=BasicSource coll=Collect)
+	 *     (name=IdNew? src=Source basic_ss_handlers=BasicSourceStreamHandlers? coll=Collect)
 	 */
 	protected void sequence_PatternCollectionStatefulSource_StandardStatefulSource(ISerializationContext context, StandardStatefulSource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3031,7 +3026,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     PropertyName returns PropertyName
 	 *
 	 * Constraint:
-	 *     (na+=Name (ps+=PropertySeparator na+=Name)*)
+	 *     (name+=Name (ps+=PropertySeparator name+=Name)*)
 	 */
 	protected void sequence_PropertyName(ISerializationContext context, PropertyName semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3253,7 +3248,14 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     SequenceSourceChain1 returns StandardStatefulSource
 	 *
 	 * Constraint:
-	 *     (name=IdNew? bs=BasicSource (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+')? wt=WithinTime? wt1+=WithinTime*)
+	 *     (
+	 *         name=IdNew? 
+	 *         src=Source 
+	 *         basic_ss_handlers=BasicSourceStreamHandlers? 
+	 *         (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+')? 
+	 *         wt=WithinTime? 
+	 *         wt1+=WithinTime*
+	 *     )
 	 */
 	protected void sequence_SequenceCollectionStatefulSource_SequenceSourceChain1_StandardStatefulSource(ISerializationContext context, StandardStatefulSource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3265,7 +3267,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     SequenceSource returns StandardStatefulSource
 	 *
 	 * Constraint:
-	 *     (name=IdNew? bs=BasicSource (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+')?)
+	 *     (name=IdNew? src=Source basic_ss_handlers=BasicSourceStreamHandlers? (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+')?)
 	 */
 	protected void sequence_SequenceCollectionStatefulSource_StandardStatefulSource(ISerializationContext context, StandardStatefulSource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3280,7 +3282,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	//     SequenceCollectionStatefulSource returns StandardStatefulSource
 	//
 	// Constraint:
-	//     (name=IdNew? bs=BasicSource (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+'))
+	//     (name=IdNew? src=Source basic_ss_handlers=BasicSourceStreamHandlers? (coll=Collect | zero_or_more='*' | zero_or_one='?' | one_or_more='+'))
 	//
 	// protected void sequence_SequenceCollectionStatefulSource_StandardStatefulSource(ISerializationContext context, StandardStatefulSource semanticObject) { }
 	
@@ -3324,8 +3326,8 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     Source1OrStandardStatefulSource returns Source1
 	 *     Source1 returns Source1
+	 *     Source1OrStandardStatefulSource returns Source1
 	 *
 	 * Constraint:
 	 *     (inner='#'? name=IdNew)
@@ -3377,7 +3379,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Source1OrStandardStatefulSource returns StandardStatefulSource
 	 *
 	 * Constraint:
-	 *     (name=IdNew? bs=BasicSource)
+	 *     (name=IdNew? src=Source basic_ss_handlers=BasicSourceStreamHandlers?)
 	 */
 	protected void sequence_StandardStatefulSource(ISerializationContext context, StandardStatefulSource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3387,18 +3389,13 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	/**
 	 * Contexts:
 	 *     StreamAlias returns StreamAlias
+	 *     Source1OrStandardStatefulSource returns StreamAlias
 	 *
 	 * Constraint:
-	 *     na=Name
+	 *     (name=IdNew | nam=Name)
 	 */
 	protected void sequence_StreamAlias(ISerializationContext context, StreamAlias semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SiddhiPackage.eINSTANCE.getStreamAlias_Na()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SiddhiPackage.eINSTANCE.getStreamAlias_Na()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getStreamAliasAccess().getNaNameParserRuleCall_0(), semanticObject.getNa());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3425,7 +3422,7 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     StreamReference returns StreamReference
 	 *
 	 * Constraint:
-	 *     (hash='#'? na=Name aatr_index=AttributeIndex?)
+	 *     (hash='#'? name=Name aatr_index=AttributeIndex?)
 	 */
 	protected void sequence_StreamReference(ISerializationContext context, StreamReference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3447,6 +3444,18 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getStringValueAccess().getSlSTRING_LITERALParserRuleCall_0(), semanticObject.getSl());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Target returns Target
+	 *
+	 * Constraint:
+	 *     (na=Source1 | src=Source)
+	 */
+	protected void sequence_Target(ISerializationContext context, Target semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3605,19 +3614,6 @@ public class SiddhiSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (year='year' | years='years')
 	 */
 	protected void sequence_YEARS(ISerializationContext context, YearValue semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     AggregationTime returns aggregation_time_interval
-	 *     aggregation_time_interval returns aggregation_time_interval
-	 *
-	 * Constraint:
-	 *     (aggrtimeDur+=AggregationTimeDuration aggrtimeDur+=AggregationTimeDuration*)
-	 */
-	protected void sequence_aggregation_time_interval(ISerializationContext context, aggregation_time_interval semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

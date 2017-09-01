@@ -31,7 +31,7 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.APPImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.APPImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.APPImpl#getAnn5 <em>Ann5</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.APPImpl#getAp <em>Ap</em>}</li>
  * </ul>
@@ -41,14 +41,14 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 public class APPImpl extends AppAnnotationImpl implements APP
 {
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Name na;
+  protected Name name;
 
   /**
    * The cached value of the '{@link #getAnn5() <em>Ann5</em>}' containment reference list.
@@ -106,9 +106,9 @@ public class APPImpl extends AppAnnotationImpl implements APP
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getNa()
+  public Name getName()
   {
-    return na;
+    return name;
   }
 
   /**
@@ -116,13 +116,13 @@ public class APPImpl extends AppAnnotationImpl implements APP
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNa(Name newNa, NotificationChain msgs)
+  public NotificationChain basicSetName(Name newName, NotificationChain msgs)
   {
-    Name oldNa = na;
-    na = newNa;
+    Name oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.APP__NA, oldNa, newNa);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.APP__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -133,20 +133,20 @@ public class APPImpl extends AppAnnotationImpl implements APP
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(Name newNa)
+  public void setName(Name newName)
   {
-    if (newNa != na)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (na != null)
-        msgs = ((InternalEObject)na).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.APP__NA, null, msgs);
-      if (newNa != null)
-        msgs = ((InternalEObject)newNa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.APP__NA, null, msgs);
-      msgs = basicSetNa(newNa, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.APP__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.APP__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.APP__NA, newNa, newNa));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.APP__NAME, newName, newName));
   }
 
   /**
@@ -196,8 +196,8 @@ public class APPImpl extends AppAnnotationImpl implements APP
   {
     switch (featureID)
     {
-      case SiddhiPackage.APP__NA:
-        return basicSetNa(null, msgs);
+      case SiddhiPackage.APP__NAME:
+        return basicSetName(null, msgs);
       case SiddhiPackage.APP__ANN5:
         return ((InternalEList<?>)getAnn5()).basicRemove(otherEnd, msgs);
     }
@@ -214,8 +214,8 @@ public class APPImpl extends AppAnnotationImpl implements APP
   {
     switch (featureID)
     {
-      case SiddhiPackage.APP__NA:
-        return getNa();
+      case SiddhiPackage.APP__NAME:
+        return getName();
       case SiddhiPackage.APP__ANN5:
         return getAnn5();
       case SiddhiPackage.APP__AP:
@@ -235,8 +235,8 @@ public class APPImpl extends AppAnnotationImpl implements APP
   {
     switch (featureID)
     {
-      case SiddhiPackage.APP__NA:
-        setNa((Name)newValue);
+      case SiddhiPackage.APP__NAME:
+        setName((Name)newValue);
         return;
       case SiddhiPackage.APP__ANN5:
         getAnn5().clear();
@@ -259,8 +259,8 @@ public class APPImpl extends AppAnnotationImpl implements APP
   {
     switch (featureID)
     {
-      case SiddhiPackage.APP__NA:
-        setNa((Name)null);
+      case SiddhiPackage.APP__NAME:
+        setName((Name)null);
         return;
       case SiddhiPackage.APP__ANN5:
         getAnn5().clear();
@@ -282,8 +282,8 @@ public class APPImpl extends AppAnnotationImpl implements APP
   {
     switch (featureID)
     {
-      case SiddhiPackage.APP__NA:
-        return na != null;
+      case SiddhiPackage.APP__NAME:
+        return name != null;
       case SiddhiPackage.APP__ANN5:
         return ann5 != null && !ann5.isEmpty();
       case SiddhiPackage.APP__AP:

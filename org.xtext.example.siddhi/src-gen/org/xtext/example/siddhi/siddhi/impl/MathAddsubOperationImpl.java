@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.siddhi.siddhi.MathAddsubOperation;
-import org.xtext.example.siddhi.siddhi.MathOperation;
+import org.xtext.example.siddhi.siddhi.MathDivmulOperation;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
 
 /**
@@ -23,7 +23,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl#getAdd <em>Add</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl#getSubstract <em>Substract</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl#getRight <em>Right</em>}</li>
@@ -33,16 +32,6 @@ import org.xtext.example.siddhi.siddhi.SiddhiPackage;
  */
 public class MathAddsubOperationImpl extends MathOperationImpl implements MathAddsubOperation
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected MathOperation left;
-
   /**
    * The default value of the '{@link #getAdd() <em>Add</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -91,7 +80,7 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
    * @generated
    * @ordered
    */
-  protected MathOperation right;
+  protected MathDivmulOperation right;
 
   /**
    * <!-- begin-user-doc -->
@@ -112,54 +101,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getMathAddsubOperation();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MathOperation getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(MathOperation newLeft, NotificationChain msgs)
-  {
-    MathOperation oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(MathOperation newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -213,7 +154,7 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
    * <!-- end-user-doc -->
    * @generated
    */
-  public MathOperation getRight()
+  public MathDivmulOperation getRight()
   {
     return right;
   }
@@ -223,9 +164,9 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(MathOperation newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(MathDivmulOperation newRight, NotificationChain msgs)
   {
-    MathOperation oldRight = right;
+    MathDivmulOperation oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -240,7 +181,7 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(MathOperation newRight)
+  public void setRight(MathDivmulOperation newRight)
   {
     if (newRight != right)
     {
@@ -266,8 +207,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT:
-        return basicSetLeft(null, msgs);
       case SiddhiPackage.MATH_ADDSUB_OPERATION__RIGHT:
         return basicSetRight(null, msgs);
     }
@@ -284,8 +223,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT:
-        return getLeft();
       case SiddhiPackage.MATH_ADDSUB_OPERATION__ADD:
         return getAdd();
       case SiddhiPackage.MATH_ADDSUB_OPERATION__SUBSTRACT:
@@ -306,9 +243,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT:
-        setLeft((MathOperation)newValue);
-        return;
       case SiddhiPackage.MATH_ADDSUB_OPERATION__ADD:
         setAdd((String)newValue);
         return;
@@ -316,7 +250,7 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
         setSubstract((String)newValue);
         return;
       case SiddhiPackage.MATH_ADDSUB_OPERATION__RIGHT:
-        setRight((MathOperation)newValue);
+        setRight((MathDivmulOperation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -332,9 +266,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT:
-        setLeft((MathOperation)null);
-        return;
       case SiddhiPackage.MATH_ADDSUB_OPERATION__ADD:
         setAdd(ADD_EDEFAULT);
         return;
@@ -342,7 +273,7 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
         setSubstract(SUBSTRACT_EDEFAULT);
         return;
       case SiddhiPackage.MATH_ADDSUB_OPERATION__RIGHT:
-        setRight((MathOperation)null);
+        setRight((MathDivmulOperation)null);
         return;
     }
     super.eUnset(featureID);
@@ -358,8 +289,6 @@ public class MathAddsubOperationImpl extends MathOperationImpl implements MathAd
   {
     switch (featureID)
     {
-      case SiddhiPackage.MATH_ADDSUB_OPERATION__LEFT:
-        return left != null;
       case SiddhiPackage.MATH_ADDSUB_OPERATION__ADD:
         return ADD_EDEFAULT == null ? add != null : !ADD_EDEFAULT.equals(add);
       case SiddhiPackage.MATH_ADDSUB_OPERATION__SUBSTRACT:

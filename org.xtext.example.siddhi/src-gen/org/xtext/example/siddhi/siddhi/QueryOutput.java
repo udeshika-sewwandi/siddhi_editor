@@ -62,12 +62,12 @@ public interface QueryOutput extends INSERT, INTO, DELETE, FOR, UPDATE, RETURN
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Tar</em>' containment reference.
-   * @see #setTar(Source1)
+   * @see #setTar(Target)
    * @see org.xtext.example.siddhi.siddhi.SiddhiPackage#getQueryOutput_Tar()
    * @model containment="true"
    * @generated
    */
-  Source1 getTar();
+  Target getTar();
 
   /**
    * Sets the value of the '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getTar <em>Tar</em>}' containment reference.
@@ -77,7 +77,7 @@ public interface QueryOutput extends INSERT, INTO, DELETE, FOR, UPDATE, RETURN
    * @see #getTar()
    * @generated
    */
-  void setTar(Source1 value);
+  void setTar(Target value);
 
   /**
    * Returns the value of the '<em><b>On</b></em>' containment reference.

@@ -150,13 +150,13 @@ public interface SiddhiPackage extends EPackage
   int EXECUTION_PLAN__DEF_FUNCTION = 5;
 
   /**
-   * The feature id for the '<em><b>Def Agrregation</b></em>' containment reference list.
+   * The feature id for the '<em><b>Def Aggregation</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXECUTION_PLAN__DEF_AGRREGATION = 6;
+  int EXECUTION_PLAN__DEF_AGGREGATION = 6;
 
   /**
    * The feature id for the '<em><b>Ex Element</b></em>' containment reference list.
@@ -221,7 +221,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDEFINE()
    * @generated
    */
-  int DEFINE = 138;
+  int DEFINE = 142;
 
   /**
    * The feature id for the '<em><b>Define</b></em>' attribute.
@@ -270,22 +270,13 @@ public interface SiddhiPackage extends EPackage
   int DEFINITION_STREAM__STR = DEFINE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEFINITION_STREAM__TABLE = DEFINE_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Ann</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEFINITION_STREAM__ANN = DEFINE_FEATURE_COUNT + 2;
+  int DEFINITION_STREAM__ANN = DEFINE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Src</b></em>' containment reference.
@@ -294,7 +285,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION_STREAM__SRC = DEFINE_FEATURE_COUNT + 3;
+  int DEFINITION_STREAM__SRC = DEFINE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference list.
@@ -303,7 +294,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION_STREAM__FEATURE = DEFINE_FEATURE_COUNT + 4;
+  int DEFINITION_STREAM__FEATURE = DEFINE_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Definition Stream</em>' class.
@@ -312,7 +303,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION_STREAM_FEATURE_COUNT = DEFINE_FEATURE_COUNT + 5;
+  int DEFINITION_STREAM_FEATURE_COUNT = DEFINE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.DefinitionTableImpl <em>Definition Table</em>}' class.
@@ -789,11 +780,11 @@ public interface SiddhiPackage extends EPackage
   int AGGREGATION_TIME_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.aggregation_time_intervalImpl <em>aggregation time interval</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AggregationTimeIntervalImpl <em>Aggregation Time Interval</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.aggregation_time_intervalImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getaggregation_time_interval()
+   * @see org.xtext.example.siddhi.siddhi.impl.AggregationTimeIntervalImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAggregationTimeInterval()
    * @generated
    */
   int AGGREGATION_TIME_INTERVAL = 10;
@@ -808,7 +799,7 @@ public interface SiddhiPackage extends EPackage
   int AGGREGATION_TIME_INTERVAL__AGGRTIME_DUR = AGGREGATION_TIME__AGGRTIME_DUR;
 
   /**
-   * The number of structural features of the '<em>aggregation time interval</em>' class.
+   * The number of structural features of the '<em>Aggregation Time Interval</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -824,7 +815,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSECONDS()
    * @generated
    */
-  int SECONDS = 195;
+  int SECONDS = 199;
 
   /**
    * The feature id for the '<em><b>Second</b></em>' attribute.
@@ -1195,13 +1186,13 @@ public interface SiddhiPackage extends EPackage
   int ANNOTATION = 18;
 
   /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANNOTATION__NA = 0;
+  int ANNOTATION__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Ann Element</b></em>' containment reference list.
@@ -1306,13 +1297,13 @@ public interface SiddhiPackage extends EPackage
   int PROPERTY_NAME = 21;
 
   /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference list.
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROPERTY_NAME__NA = 0;
+  int PROPERTY_NAME__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Ps</b></em>' containment reference list.
@@ -1359,7 +1350,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFeaturesOrOutAttr()
    * @generated
    */
-  int FEATURES_OR_OUT_ATTR = 99;
+  int FEATURES_OR_OUT_ATTR = 94;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1399,13 +1390,22 @@ public interface SiddhiPackage extends EPackage
   int FEATURES__NAME = FEATURES_OR_OUT_ATTR__NAME;
 
   /**
+   * The feature id for the '<em><b>Nam</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURES__NAM = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURES__TYPE = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 0;
+  int FEATURES__TYPE = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Features</em>' class.
@@ -1414,7 +1414,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURES_FEATURE_COUNT = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 1;
+  int FEATURES_FEATURE_COUNT = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.STRINGSImpl <em>STRINGS</em>}' class.
@@ -1424,7 +1424,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSTRINGS()
    * @generated
    */
-  int STRINGS = 142;
+  int STRINGS = 146;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1527,6 +1527,99 @@ public interface SiddhiPackage extends EPackage
   int ATTRIBUTE_TYPE_FEATURE_COUNT = STRINGS_FEATURE_COUNT + 6;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SourceImpl <em>Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource()
+   * @generated
+   */
+  int SOURCE = 25;
+
+  /**
+   * The feature id for the '<em><b>Str Id</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE__STR_ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Source1OrStandardStatefulSourceImpl <em>Source1 Or Standard Stateful Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.Source1OrStandardStatefulSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource1OrStandardStatefulSource()
+   * @generated
+   */
+  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE = 98;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Source1 Or Standard Stateful Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Source1Impl <em>Source1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.Source1Impl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource1()
+   * @generated
+   */
+  int SOURCE1 = 26;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE1__NAME = SOURCE1_OR_STANDARD_STATEFUL_SOURCE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE1__INNER = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Source1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE1_FEATURE_COUNT = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.PARTITIONImpl <em>PARTITION</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1534,7 +1627,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPARTITION()
    * @generated
    */
-  int PARTITION = 183;
+  int PARTITION = 187;
 
   /**
    * The feature id for the '<em><b>Partition</b></em>' attribute.
@@ -1562,7 +1655,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getExecPartition()
    * @generated
    */
-  int EXEC_PARTITION = 25;
+  int EXEC_PARTITION = 27;
 
   /**
    * The feature id for the '<em><b>Partition</b></em>' attribute.
@@ -1644,7 +1737,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPartitionWithStream()
    * @generated
    */
-  int PARTITION_WITH_STREAM = 26;
+  int PARTITION_WITH_STREAM = 28;
 
   /**
    * The number of structural features of the '<em>Partition With Stream</em>' class.
@@ -1663,7 +1756,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getConditionRanges()
    * @generated
    */
-  int CONDITION_RANGES = 27;
+  int CONDITION_RANGES = 29;
 
   /**
    * The feature id for the '<em><b>Of</b></em>' containment reference.
@@ -1718,7 +1811,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getConditionRange()
    * @generated
    */
-  int CONDITION_RANGE = 28;
+  int CONDITION_RANGE = 30;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -1764,7 +1857,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFROM()
    * @generated
    */
-  int FROM = 161;
+  int FROM = 165;
 
   /**
    * The feature id for the '<em><b>From</b></em>' attribute.
@@ -1792,7 +1885,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQuery()
    * @generated
    */
-  int QUERY = 29;
+  int QUERY = 31;
 
   /**
    * The feature id for the '<em><b>From</b></em>' attribute.
@@ -1858,6 +1951,854 @@ public interface SiddhiPackage extends EPackage
   int QUERY_FEATURE_COUNT = FROM_FEATURE_COUNT + 5;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.INSERTImpl <em>INSERT</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.INSERTImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getINSERT()
+   * @generated
+   */
+  int INSERT = 179;
+
+  /**
+   * The feature id for the '<em><b>Insert</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSERT__INSERT = 0;
+
+  /**
+   * The number of structural features of the '<em>INSERT</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSERT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.QueryOutputImpl <em>Query Output</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.QueryOutputImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQueryOutput()
+   * @generated
+   */
+  int QUERY_OUTPUT = 32;
+
+  /**
+   * The feature id for the '<em><b>Insert</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__INSERT = INSERT__INSERT;
+
+  /**
+   * The feature id for the '<em><b>Into</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__INTO = INSERT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Delete</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__DELETE = INSERT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>For</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__FOR = INSERT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Update</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__UPDATE = INSERT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Return</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__RETURN = INSERT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Out Event Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__OUT_EVENT_TYPE = INSERT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Tar</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__TAR = INSERT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>On</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__ON = INSERT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__EXPR = INSERT_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__OR = INSERT_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>Set Clause</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT__SET_CLAUSE = INSERT_FEATURE_COUNT + 10;
+
+  /**
+   * The number of structural features of the '<em>Query Output</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_OUTPUT_FEATURE_COUNT = INSERT_FEATURE_COUNT + 11;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.TargetImpl <em>Target</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.TargetImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getTarget()
+   * @generated
+   */
+  int TARGET = 33;
+
+  /**
+   * The feature id for the '<em><b>Na</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET__NA = 0;
+
+  /**
+   * The feature id for the '<em><b>Src</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET__SRC = 1;
+
+  /**
+   * The number of structural features of the '<em>Target</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SETImpl <em>SET</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SETImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSET()
+   * @generated
+   */
+  int SET = 191;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__SET = 0;
+
+  /**
+   * The number of structural features of the '<em>SET</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SetClauseImpl <em>Set Clause</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SetClauseImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSetClause()
+   * @generated
+   */
+  int SET_CLAUSE = 34;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_CLAUSE__SET = SET__SET;
+
+  /**
+   * The feature id for the '<em><b>Set Assignment</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_CLAUSE__SET_ASSIGNMENT = SET_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Set Clause</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_CLAUSE_FEATURE_COUNT = SET_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SetAssignmentImpl <em>Set Assignment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SetAssignmentImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSetAssignment()
+   * @generated
+   */
+  int SET_ASSIGNMENT = 35;
+
+  /**
+   * The number of structural features of the '<em>Set Assignment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_ASSIGNMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.ALLImpl <em>ALL</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.ALLImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getALL()
+   * @generated
+   */
+  int ALL = 153;
+
+  /**
+   * The feature id for the '<em><b>All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALL__ALL = 0;
+
+  /**
+   * The number of structural features of the '<em>ALL</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALL_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputEventTypeImpl <em>Output Event Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OutputEventTypeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputEventType()
+   * @generated
+   */
+  int OUTPUT_EVENT_TYPE = 36;
+
+  /**
+   * The feature id for the '<em><b>All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE__ALL = ALL__ALL;
+
+  /**
+   * The feature id for the '<em><b>Events</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE__EVENTS = ALL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Raw</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE__RAW = ALL_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Expired</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE__EXPIRED = ALL_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Currt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE__CURRT = ALL_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Output Event Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_EVENT_TYPE_FEATURE_COUNT = ALL_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OUTPUTImpl <em>OUTPUT</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OUTPUTImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOUTPUT()
+   * @generated
+   */
+  int OUTPUT = 145;
+
+  /**
+   * The feature id for the '<em><b>Output</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT__OUTPUT = 0;
+
+  /**
+   * The number of structural features of the '<em>OUTPUT</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputRateImpl <em>Output Rate</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OutputRateImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputRate()
+   * @generated
+   */
+  int OUTPUT_RATE = 37;
+
+  /**
+   * The feature id for the '<em><b>Output</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__OUTPUT = OUTPUT__OUTPUT;
+
+  /**
+   * The feature id for the '<em><b>Events</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__EVENTS = OUTPUT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Snapshot</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__SNAPSHOT = OUTPUT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Op rate type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__OP_RATE_TYPE = OUTPUT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Every</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__EVERY = OUTPUT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Tv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE__TV = OUTPUT_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Output Rate</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE_FEATURE_COUNT = OUTPUT_FEATURE_COUNT + 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputRateTypeImpl <em>Output Rate Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OutputRateTypeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputRateType()
+   * @generated
+   */
+  int OUTPUT_RATE_TYPE = 38;
+
+  /**
+   * The feature id for the '<em><b>All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE_TYPE__ALL = ALL__ALL;
+
+  /**
+   * The feature id for the '<em><b>Last</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE_TYPE__LAST = ALL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>First</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE_TYPE__FIRST = ALL_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Output Rate Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_RATE_TYPE_FEATURE_COUNT = ALL_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SELECTImpl <em>SELECT</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SELECTImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSELECT()
+   * @generated
+   */
+  int SELECT = 173;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT__SELECT = 0;
+
+  /**
+   * The number of structural features of the '<em>SELECT</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GroupByQuerySelectionImpl <em>Group By Query Selection</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.GroupByQuerySelectionImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGroupByQuerySelection()
+   * @generated
+   */
+  int GROUP_BY_QUERY_SELECTION = 39;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY_QUERY_SELECTION__SELECT = SELECT__SELECT;
+
+  /**
+   * The feature id for the '<em><b>Out att</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY_QUERY_SELECTION__OUT_ATT = SELECT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Grp by</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY_QUERY_SELECTION__GRP_BY = SELECT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Group By Query Selection</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY_QUERY_SELECTION_FEATURE_COUNT = SELECT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.QuerySectionImpl <em>Query Section</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.QuerySectionImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQuerySection()
+   * @generated
+   */
+  int QUERY_SECTION = 40;
+
+  /**
+   * The feature id for the '<em><b>Grp By Query Sel</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_SECTION__GRP_BY_QUERY_SEL = 0;
+
+  /**
+   * The feature id for the '<em><b>Having</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_SECTION__HAVING = 1;
+
+  /**
+   * The number of structural features of the '<em>Query Section</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_SECTION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GROUPImpl <em>GROUP</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.GROUPImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGROUP()
+   * @generated
+   */
+  int GROUP = 174;
+
+  /**
+   * The feature id for the '<em><b>Group</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP__GROUP = 0;
+
+  /**
+   * The number of structural features of the '<em>GROUP</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GroupByImpl <em>Group By</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.GroupByImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGroupBy()
+   * @generated
+   */
+  int GROUP_BY = 41;
+
+  /**
+   * The feature id for the '<em><b>Group</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY__GROUP = GROUP__GROUP;
+
+  /**
+   * The feature id for the '<em><b>By</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY__BY = GROUP_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Attr ref</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY__ATTR_REF = GROUP_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Group By</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP_BY_FEATURE_COUNT = GROUP_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.HAVINGImpl <em>HAVING</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.HAVINGImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHAVING()
+   * @generated
+   */
+  int HAVING = 176;
+
+  /**
+   * The feature id for the '<em><b>Having</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAVING__HAVING = 0;
+
+  /**
+   * The number of structural features of the '<em>HAVING</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAVING_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.HavingExprImpl <em>Having Expr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.HavingExprImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHavingExpr()
+   * @generated
+   */
+  int HAVING_EXPR = 42;
+
+  /**
+   * The feature id for the '<em><b>Having</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAVING_EXPR__HAVING = HAVING__HAVING;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAVING_EXPR__EXPR = HAVING_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Having Expr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAVING_EXPR_FEATURE_COUNT = HAVING_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputAttributeImpl <em>Output Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OutputAttributeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputAttribute()
+   * @generated
+   */
+  int OUTPUT_ATTRIBUTE = 43;
+
+  /**
+   * The feature id for the '<em><b>Out Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_ATTRIBUTE__OUT_ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Attr ref</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_ATTRIBUTE__ATTR_REF = 1;
+
+  /**
+   * The number of structural features of the '<em>Output Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_ATTRIBUTE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutAttrImpl <em>Out Attr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.OutAttrImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutAttr()
+   * @generated
+   */
+  int OUT_ATTR = 44;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUT_ATTR__NAME = FEATURES_OR_OUT_ATTR__NAME;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUT_ATTR__ATTR = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUT_ATTR__A = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Out Attr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUT_ATTR_FEATURE_COUNT = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.QueryInputImpl <em>Query Input</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1865,7 +2806,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQueryInput()
    * @generated
    */
-  int QUERY_INPUT = 30;
+  int QUERY_INPUT = 45;
 
   /**
    * The feature id for the '<em><b>Js</b></em>' containment reference.
@@ -1913,59 +2854,60 @@ public interface SiddhiPackage extends EPackage
   int QUERY_INPUT_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl <em>Join Stream</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceStreamImpl <em>Sequence Stream</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getJoinStream()
+   * @see org.xtext.example.siddhi.siddhi.impl.SequenceStreamImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceStream()
    * @generated
    */
-  int JOIN_STREAM = 31;
+  int SEQUENCE_STREAM = 46;
 
   /**
-   * The feature id for the '<em><b>Left source</b></em>' containment reference.
+   * The feature id for the '<em><b>Every Sequence Source Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__LEFT_SOURCE = 0;
+  int SEQUENCE_STREAM__EVERY_SEQUENCE_SOURCE_CHAIN = 0;
 
   /**
-   * The feature id for the '<em><b>Right source</b></em>' containment reference.
+   * The feature id for the '<em><b>Every Absent Sequence Source Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__RIGHT_SOURCE = 1;
+  int SEQUENCE_STREAM__EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN = 1;
 
   /**
-   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
+   * The number of structural features of the '<em>Sequence Stream</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__RIGHT_UNI = 2;
+  int SEQUENCE_STREAM_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>On</b></em>' containment reference.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.EverySequenceSourceChainImpl <em>Every Sequence Source Chain</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.EverySequenceSourceChainImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEverySequenceSourceChain()
+   * @generated
+   */
+  int EVERY_SEQUENCE_SOURCE_CHAIN = 47;
+
+  /**
+   * The feature id for the '<em><b>Seq Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__ON = 3;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int JOIN_STREAM__EXPR = 4;
+  int EVERY_SEQUENCE_SOURCE_CHAIN__SEQ_SOURCE = 0;
 
   /**
    * The feature id for the '<em><b>Wt</b></em>' containment reference.
@@ -1974,376 +2916,445 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__WT = 5;
+  int EVERY_SEQUENCE_SOURCE_CHAIN__WT = 1;
 
   /**
-   * The feature id for the '<em><b>Join</b></em>' containment reference.
+   * The feature id for the '<em><b>Ssc</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__JOIN = 6;
+  int EVERY_SEQUENCE_SOURCE_CHAIN__SSC = 2;
 
   /**
-   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
+   * The number of structural features of the '<em>Every Sequence Source Chain</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM__LEFT_UNI = 7;
+  int EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 3;
 
   /**
-   * The number of structural features of the '<em>Join Stream</em>' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.EveryAbsentSequenceSourceChainImpl <em>Every Absent Sequence Source Chain</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.EveryAbsentSequenceSourceChainImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEveryAbsentSequenceSourceChain()
+   * @generated
+   */
+  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN = 48;
+
+  /**
+   * The feature id for the '<em><b>Abs Seq Src Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_STREAM_FEATURE_COUNT = 8;
+  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WITHINImpl <em>WITHIN</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.WITHINImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWITHIN()
-   * @generated
-   */
-  int WITHIN = 162;
-
-  /**
-   * The feature id for the '<em><b>Within</b></em>' attribute.
+   * The feature id for the '<em><b>Seq Src Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WITHIN__WITHIN = 0;
+  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN = 1;
 
   /**
-   * The number of structural features of the '<em>WITHIN</em>' class.
+   * The number of structural features of the '<em>Every Absent Sequence Source Chain</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WITHIN_FEATURE_COUNT = 1;
+  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WithinTimeRangeImpl <em>Within Time Range</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AbsentSequenceSourceChainImpl <em>Absent Sequence Source Chain</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.WithinTimeRangeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWithinTimeRange()
+   * @see org.xtext.example.siddhi.siddhi.impl.AbsentSequenceSourceChainImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAbsentSequenceSourceChain()
    * @generated
    */
-  int WITHIN_TIME_RANGE = 32;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN = 49;
 
   /**
-   * The feature id for the '<em><b>Within</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WITHIN_TIME_RANGE__WITHIN = WITHIN__WITHIN;
-
-  /**
-   * The feature id for the '<em><b>Start Pattern</b></em>' containment reference.
+   * The feature id for the '<em><b>Absent Sequence Source Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WITHIN_TIME_RANGE__START_PATTERN = WITHIN_FEATURE_COUNT + 0;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN__ABSENT_SEQUENCE_SOURCE_CHAIN = 0;
 
   /**
-   * The feature id for the '<em><b>End Pattern</b></em>' containment reference.
+   * The feature id for the '<em><b>Wt5</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WITHIN_TIME_RANGE__END_PATTERN = WITHIN_FEATURE_COUNT + 1;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN__WT5 = 1;
 
   /**
-   * The number of structural features of the '<em>Within Time Range</em>' class.
+   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WITHIN_TIME_RANGE_FEATURE_COUNT = WITHIN_FEATURE_COUNT + 2;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN__BASIC_ABSENT_PATTERN_SOURCE = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.PERImpl <em>PER</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.PERImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPER()
-   * @generated
-   */
-  int PER = 188;
-
-  /**
-   * The feature id for the '<em><b>Per</b></em>' attribute.
+   * The feature id for the '<em><b>Left Absent Sequence Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PER__PER = 0;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN__LEFT_ABSENT_SEQUENCE_SOURCE = 3;
 
   /**
-   * The number of structural features of the '<em>PER</em>' class.
+   * The feature id for the '<em><b>Right Absent Sequence Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PER_FEATURE_COUNT = 1;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN__RIGHT_ABSENT_SEQUENCE_SOURCE = 4;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Per1Impl <em>Per1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.Per1Impl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPer1()
-   * @generated
-   */
-  int PER1 = 33;
-
-  /**
-   * The feature id for the '<em><b>Per</b></em>' attribute.
+   * The number of structural features of the '<em>Absent Sequence Source Chain</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PER1__PER = PER__PER;
+  int ABSENT_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 5;
 
   /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LeftAbsentSequenceSourceImpl <em>Left Absent Sequence Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.LeftAbsentSequenceSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentSequenceSource()
+   * @generated
+   */
+  int LEFT_ABSENT_SEQUENCE_SOURCE = 50;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PER1__EXP = PER_FEATURE_COUNT + 0;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__LEFT = 0;
 
   /**
-   * The number of structural features of the '<em>Per1</em>' class.
+   * The feature id for the '<em><b>Comm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PER1_FEATURE_COUNT = PER_FEATURE_COUNT + 1;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__COMM = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.JoinSourceImpl <em>Join Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.JoinSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getJoinSource()
-   * @generated
-   */
-  int JOIN_SOURCE = 34;
-
-  /**
-   * The number of structural features of the '<em>Join Source</em>' class.
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOIN_SOURCE_FEATURE_COUNT = 0;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__RIGHT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl <em>Stream Alias</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStreamAlias()
-   * @generated
-   */
-  int STREAM_ALIAS = 35;
-
-  /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference.
+   * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STREAM_ALIAS__NA = 0;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__OP = 3;
 
   /**
-   * The number of structural features of the '<em>Stream Alias</em>' class.
+   * The feature id for the '<em><b>Left Absent Sequence Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STREAM_ALIAS_FEATURE_COUNT = 1;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__LEFT_ABSENT_SEQUENCE_SOURCE = 4;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LEFTImpl <em>LEFT</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.LEFTImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLEFT()
-   * @generated
-   */
-  int LEFT = 163;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * The feature id for the '<em><b>Cp</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LEFT__LEFT = 0;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__CP = 5;
 
   /**
-   * The number of structural features of the '<em>LEFT</em>' class.
+   * The feature id for the '<em><b>Wt6</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LEFT_FEATURE_COUNT = 1;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__WT6 = 6;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.joinsImpl <em>joins</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.joinsImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getjoins()
-   * @generated
-   */
-  int JOINS = 36;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__LEFT = LEFT__LEFT;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__BASIC_ABSENT_PATTERN_SOURCE = 7;
 
   /**
-   * The feature id for the '<em><b>Outer</b></em>' attribute.
+   * The feature id for the '<em><b>Comma</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__OUTER = LEFT_FEATURE_COUNT + 0;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__COMMA = 8;
 
   /**
-   * The feature id for the '<em><b>Join</b></em>' attribute.
+   * The feature id for the '<em><b>Sequence Source Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__JOIN = LEFT_FEATURE_COUNT + 1;
+  int LEFT_ABSENT_SEQUENCE_SOURCE__SEQUENCE_SOURCE_CHAIN = 9;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * The number of structural features of the '<em>Left Absent Sequence Source</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__RIGHT = LEFT_FEATURE_COUNT + 2;
+  int LEFT_ABSENT_SEQUENCE_SOURCE_FEATURE_COUNT = 10;
 
   /**
-   * The feature id for the '<em><b>Full</b></em>' attribute.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.RightAbsentSequenceSourceImpl <em>Right Absent Sequence Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.RightAbsentSequenceSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentSequenceSource()
+   * @generated
+   */
+  int RIGHT_ABSENT_SEQUENCE_SOURCE = 51;
+
+  /**
+   * The feature id for the '<em><b>Left1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__FULL = LEFT_FEATURE_COUNT + 3;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__LEFT1 = 0;
 
   /**
-   * The feature id for the '<em><b>Inner</b></em>' attribute.
+   * The feature id for the '<em><b>Comm</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS__INNER = LEFT_FEATURE_COUNT + 4;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__COMM = 1;
 
   /**
-   * The number of structural features of the '<em>joins</em>' class.
+   * The feature id for the '<em><b>Right1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JOINS_FEATURE_COUNT = LEFT_FEATURE_COUNT + 5;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__RIGHT1 = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StandardStreamImpl <em>Standard Stream</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.StandardStreamImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStandardStream()
-   * @generated
-   */
-  int STANDARD_STREAM = 37;
-
-  /**
-   * The feature id for the '<em><b>Left source</b></em>' containment reference.
+   * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__LEFT_SOURCE = JOIN_STREAM__LEFT_SOURCE;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__OP = 3;
 
   /**
-   * The feature id for the '<em><b>Right source</b></em>' containment reference.
+   * The feature id for the '<em><b>Right Absent Sequence Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__RIGHT_SOURCE = JOIN_STREAM__RIGHT_SOURCE;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__RIGHT_ABSENT_SEQUENCE_SOURCE = 4;
 
   /**
-   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
+   * The feature id for the '<em><b>Cp</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__RIGHT_UNI = JOIN_STREAM__RIGHT_UNI;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__CP = 5;
 
   /**
-   * The feature id for the '<em><b>On</b></em>' containment reference.
+   * The feature id for the '<em><b>Wt7</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__ON = JOIN_STREAM__ON;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__WT7 = 6;
 
   /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Sequence Source Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__EXPR = JOIN_STREAM__EXPR;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__SEQUENCE_SOURCE_CHAIN = 7;
+
+  /**
+   * The feature id for the '<em><b>Comma</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__COMMA = 8;
+
+  /**
+   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_SEQUENCE_SOURCE__BASIC_ABSENT_PATTERN_SOURCE = 9;
+
+  /**
+   * The number of structural features of the '<em>Right Absent Sequence Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_SEQUENCE_SOURCE_FEATURE_COUNT = 10;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceSourceChainImpl <em>Sequence Source Chain</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SequenceSourceChainImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceSourceChain()
+   * @generated
+   */
+  int SEQUENCE_SOURCE_CHAIN = 52;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE_CHAIN__LEFT = 0;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE_CHAIN__OP = 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE_CHAIN__RIGHT = 2;
+
+  /**
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE_CHAIN__WT1 = 3;
+
+  /**
+   * The number of structural features of the '<em>Sequence Source Chain</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceSourceImpl <em>Sequence Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SequenceSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceSource()
+   * @generated
+   */
+  int SEQUENCE_SOURCE = 53;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE__LEFT = SEQUENCE_SOURCE_CHAIN__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE__OP = SEQUENCE_SOURCE_CHAIN__OP;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE__RIGHT = SEQUENCE_SOURCE_CHAIN__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_SOURCE__WT1 = SEQUENCE_SOURCE_CHAIN__WT1;
 
   /**
    * The feature id for the '<em><b>Wt</b></em>' containment reference.
@@ -2352,89 +3363,62 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__WT = JOIN_STREAM__WT;
+  int SEQUENCE_SOURCE__WT = SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Join</b></em>' containment reference.
+   * The number of structural features of the '<em>Sequence Source</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__JOIN = JOIN_STREAM__JOIN;
+  int SEQUENCE_SOURCE_FEATURE_COUNT = SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceCollectionStatefulSourceImpl <em>Sequence Collection Stateful Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.SequenceCollectionStatefulSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceCollectionStatefulSource()
+   * @generated
+   */
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE = 54;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM__LEFT_UNI = JOIN_STREAM__LEFT_UNI;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__LEFT = SEQUENCE_SOURCE__LEFT;
 
   /**
-   * The number of structural features of the '<em>Standard Stream</em>' class.
+   * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STREAM_FEATURE_COUNT = JOIN_STREAM_FEATURE_COUNT + 0;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__OP = SEQUENCE_SOURCE__OP;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl <em>Main Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.MainSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMainSource()
-   * @generated
-   */
-  int MAIN_SOURCE = 38;
-
-  /**
-   * The feature id for the '<em><b>Left source</b></em>' containment reference.
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__LEFT_SOURCE = JOIN_SOURCE_FEATURE_COUNT + 0;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__RIGHT = SEQUENCE_SOURCE__RIGHT;
 
   /**
-   * The feature id for the '<em><b>Right source</b></em>' containment reference.
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__RIGHT_SOURCE = JOIN_SOURCE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN_SOURCE__RIGHT_UNI = JOIN_SOURCE_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>On</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN_SOURCE__ON = JOIN_SOURCE_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN_SOURCE__EXPR = JOIN_SOURCE_FEATURE_COUNT + 4;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__WT1 = SEQUENCE_SOURCE__WT1;
 
   /**
    * The feature id for the '<em><b>Wt</b></em>' containment reference.
@@ -2443,79 +3427,89 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__WT = JOIN_SOURCE_FEATURE_COUNT + 5;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__WT = SEQUENCE_SOURCE__WT;
 
   /**
-   * The feature id for the '<em><b>Join</b></em>' containment reference.
+   * The number of structural features of the '<em>Sequence Collection Stateful Source</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__JOIN = JOIN_SOURCE_FEATURE_COUNT + 6;
+  int SEQUENCE_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT = SEQUENCE_SOURCE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AnonymousStreamImpl <em>Anonymous Stream</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.AnonymousStreamImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAnonymousStream()
+   * @generated
+   */
+  int ANONYMOUS_STREAM = 55;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__LEFT_UNI = JOIN_SOURCE_FEATURE_COUNT + 7;
+  int ANONYMOUS_STREAM__FROM = FROM__FROM;
 
   /**
-   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * The feature id for the '<em><b>Return</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__A = JOIN_SOURCE_FEATURE_COUNT + 8;
+  int ANONYMOUS_STREAM__RETURN = FROM_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Str Alias</b></em>' containment reference.
+   * The feature id for the '<em><b>Qi</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__STR_ALIAS = JOIN_SOURCE_FEATURE_COUNT + 9;
+  int ANONYMOUS_STREAM__QI = FROM_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Post Window Handlers</b></em>' containment reference.
+   * The feature id for the '<em><b>Qs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__POST_WINDOW_HANDLERS = JOIN_SOURCE_FEATURE_COUNT + 10;
+  int ANONYMOUS_STREAM__QS = FROM_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Src</b></em>' containment reference.
+   * The feature id for the '<em><b>Out rate</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__SRC = JOIN_SOURCE_FEATURE_COUNT + 11;
+  int ANONYMOUS_STREAM__OUT_RATE = FROM_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Basic SSh</b></em>' containment reference.
+   * The feature id for the '<em><b>Op event type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE__BASIC_SSH = JOIN_SOURCE_FEATURE_COUNT + 12;
+  int ANONYMOUS_STREAM__OP_EVENT_TYPE = FROM_FEATURE_COUNT + 4;
 
   /**
-   * The number of structural features of the '<em>Main Source</em>' class.
+   * The number of structural features of the '<em>Anonymous Stream</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_SOURCE_FEATURE_COUNT = JOIN_SOURCE_FEATURE_COUNT + 13;
+  int ANONYMOUS_STREAM_FEATURE_COUNT = FROM_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.PatternStreamImpl <em>Pattern Stream</em>}' class.
@@ -2525,7 +3519,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPatternStream()
    * @generated
    */
-  int PATTERN_STREAM = 39;
+  int PATTERN_STREAM = 56;
 
   /**
    * The number of structural features of the '<em>Pattern Stream</em>' class.
@@ -2544,7 +3538,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEveryPatternSourceChain()
    * @generated
    */
-  int EVERY_PATTERN_SOURCE_CHAIN = 40;
+  int EVERY_PATTERN_SOURCE_CHAIN = 57;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2626,7 +3620,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPatternSourceChain()
    * @generated
    */
-  int PATTERN_SOURCE_CHAIN = 41;
+  int PATTERN_SOURCE_CHAIN = 58;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2699,7 +3693,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPatternSource()
    * @generated
    */
-  int PATTERN_SOURCE = 42;
+  int PATTERN_SOURCE = 59;
 
   /**
    * The feature id for the '<em><b>Lss</b></em>' containment reference.
@@ -2747,125 +3741,6 @@ public interface SiddhiPackage extends EPackage
   int PATTERN_SOURCE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceSourceChainImpl <em>Sequence Source Chain</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SequenceSourceChainImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceSourceChain()
-   * @generated
-   */
-  int SEQUENCE_SOURCE_CHAIN = 60;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_CHAIN__LEFT = 0;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_CHAIN__OP = 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_CHAIN__RIGHT = 2;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_CHAIN__WT1 = 3;
-
-  /**
-   * The number of structural features of the '<em>Sequence Source Chain</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceSourceImpl <em>Sequence Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SequenceSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceSource()
-   * @generated
-   */
-  int SEQUENCE_SOURCE = 61;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE__LEFT = SEQUENCE_SOURCE_CHAIN__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE__OP = SEQUENCE_SOURCE_CHAIN__OP;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE__RIGHT = SEQUENCE_SOURCE_CHAIN__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE__WT1 = SEQUENCE_SOURCE_CHAIN__WT1;
-
-  /**
-   * The feature id for the '<em><b>Wt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE__WT = SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Sequence Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_SOURCE_FEATURE_COUNT = SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LogicalStatefulSourceImpl <em>Logical Stateful Source</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2873,7 +3748,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLogicalStatefulSource()
    * @generated
    */
-  int LOGICAL_STATEFUL_SOURCE = 43;
+  int LOGICAL_STATEFUL_SOURCE = 60;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2964,7 +3839,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPatternCollectionStatefulSource()
    * @generated
    */
-  int PATTERN_COLLECTION_STATEFUL_SOURCE = 44;
+  int PATTERN_COLLECTION_STATEFUL_SOURCE = 61;
 
   /**
    * The number of structural features of the '<em>Pattern Collection Stateful Source</em>' class.
@@ -2983,7 +3858,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getCollect()
    * @generated
    */
-  int COLLECT = 45;
+  int COLLECT = 62;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -3013,43 +3888,6 @@ public interface SiddhiPackage extends EPackage
   int COLLECT_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WithinTimeImpl <em>Within Time</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.WithinTimeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWithinTime()
-   * @generated
-   */
-  int WITHIN_TIME = 46;
-
-  /**
-   * The feature id for the '<em><b>Within</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WITHIN_TIME__WITHIN = WITHIN__WITHIN;
-
-  /**
-   * The feature id for the '<em><b>Tv</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WITHIN_TIME__TV = WITHIN_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Within Time</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WITHIN_TIME_FEATURE_COUNT = WITHIN_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LogicalAbsentStatefulSourceImpl <em>Logical Absent Stateful Source</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3057,7 +3895,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLogicalAbsentStatefulSource()
    * @generated
    */
-  int LOGICAL_ABSENT_STATEFUL_SOURCE = 47;
+  int LOGICAL_ABSENT_STATEFUL_SOURCE = 63;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -3202,7 +4040,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAbsentPatternSourceChain()
    * @generated
    */
-  int ABSENT_PATTERN_SOURCE_CHAIN = 48;
+  int ABSENT_PATTERN_SOURCE_CHAIN = 64;
 
   /**
    * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
@@ -3239,7 +4077,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEveryAbsentPatternSource()
    * @generated
    */
-  int EVERY_ABSENT_PATTERN_SOURCE = 49;
+  int EVERY_ABSENT_PATTERN_SOURCE = 65;
 
   /**
    * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
@@ -3285,7 +4123,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBasicAbsentPatternSource()
    * @generated
    */
-  int BASIC_ABSENT_PATTERN_SOURCE = 50;
+  int BASIC_ABSENT_PATTERN_SOURCE = 66;
 
   /**
    * The number of structural features of the '<em>Basic Absent Pattern Source</em>' class.
@@ -3304,7 +4142,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFOR()
    * @generated
    */
-  int FOR = 180;
+  int FOR = 184;
 
   /**
    * The feature id for the '<em><b>For</b></em>' attribute.
@@ -3332,7 +4170,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getForTime()
    * @generated
    */
-  int FOR_TIME = 51;
+  int FOR_TIME = 67;
 
   /**
    * The feature id for the '<em><b>For</b></em>' attribute.
@@ -3369,7 +4207,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentPatternSource()
    * @generated
    */
-  int LEFT_ABSENT_PATTERN_SOURCE = 52;
+  int LEFT_ABSENT_PATTERN_SOURCE = 68;
 
   /**
    * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
@@ -3478,7 +4316,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentPatternSource()
    * @generated
    */
-  int RIGHT_ABSENT_PATTERN_SOURCE = 53;
+  int RIGHT_ABSENT_PATTERN_SOURCE = 69;
 
   /**
    * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
@@ -3571,828 +4409,41 @@ public interface SiddhiPackage extends EPackage
   int RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 7;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceStreamImpl <em>Sequence Stream</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl <em>Join Stream</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SequenceStreamImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceStream()
+   * @see org.xtext.example.siddhi.siddhi.impl.JoinStreamImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getJoinStream()
    * @generated
    */
-  int SEQUENCE_STREAM = 54;
+  int JOIN_STREAM = 70;
 
   /**
-   * The feature id for the '<em><b>Every Sequence Source Chain</b></em>' containment reference.
+   * The feature id for the '<em><b>Left source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SEQUENCE_STREAM__EVERY_SEQUENCE_SOURCE_CHAIN = 0;
+  int JOIN_STREAM__LEFT_SOURCE = 0;
 
   /**
-   * The feature id for the '<em><b>Every Absent Sequence Source Chain</b></em>' containment reference.
+   * The feature id for the '<em><b>Right source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SEQUENCE_STREAM__EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN = 1;
+  int JOIN_STREAM__RIGHT_SOURCE = 1;
 
   /**
-   * The number of structural features of the '<em>Sequence Stream</em>' class.
+   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SEQUENCE_STREAM_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.EverySequenceSourceChainImpl <em>Every Sequence Source Chain</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.EverySequenceSourceChainImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEverySequenceSourceChain()
-   * @generated
-   */
-  int EVERY_SEQUENCE_SOURCE_CHAIN = 55;
-
-  /**
-   * The feature id for the '<em><b>Seq Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_SEQUENCE_SOURCE_CHAIN__SEQ_SOURCE = 0;
-
-  /**
-   * The feature id for the '<em><b>Wt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_SEQUENCE_SOURCE_CHAIN__WT = 1;
-
-  /**
-   * The feature id for the '<em><b>Ssc</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_SEQUENCE_SOURCE_CHAIN__SSC = 2;
-
-  /**
-   * The number of structural features of the '<em>Every Sequence Source Chain</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.EveryAbsentSequenceSourceChainImpl <em>Every Absent Sequence Source Chain</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.EveryAbsentSequenceSourceChainImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEveryAbsentSequenceSourceChain()
-   * @generated
-   */
-  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN = 56;
-
-  /**
-   * The feature id for the '<em><b>Abs Seq Src Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__ABS_SEQ_SRC_CHAIN = 0;
-
-  /**
-   * The feature id for the '<em><b>Seq Src Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN__SEQ_SRC_CHAIN = 1;
-
-  /**
-   * The number of structural features of the '<em>Every Absent Sequence Source Chain</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY_ABSENT_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AbsentSequenceSourceChainImpl <em>Absent Sequence Source Chain</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AbsentSequenceSourceChainImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAbsentSequenceSourceChain()
-   * @generated
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN = 57;
-
-  /**
-   * The feature id for the '<em><b>Absent Sequence Source Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN__ABSENT_SEQUENCE_SOURCE_CHAIN = 0;
-
-  /**
-   * The feature id for the '<em><b>Wt5</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN__WT5 = 1;
-
-  /**
-   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN__BASIC_ABSENT_PATTERN_SOURCE = 2;
-
-  /**
-   * The feature id for the '<em><b>Left Absent Sequence Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN__LEFT_ABSENT_SEQUENCE_SOURCE = 3;
-
-  /**
-   * The feature id for the '<em><b>Right Absent Sequence Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN__RIGHT_ABSENT_SEQUENCE_SOURCE = 4;
-
-  /**
-   * The number of structural features of the '<em>Absent Sequence Source Chain</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSENT_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT = 5;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LeftAbsentSequenceSourceImpl <em>Left Absent Sequence Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.LeftAbsentSequenceSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentSequenceSource()
-   * @generated
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE = 58;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__LEFT = 0;
-
-  /**
-   * The feature id for the '<em><b>Comm</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__COMM = 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__RIGHT = 2;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__OP = 3;
-
-  /**
-   * The feature id for the '<em><b>Left Absent Sequence Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__LEFT_ABSENT_SEQUENCE_SOURCE = 4;
-
-  /**
-   * The feature id for the '<em><b>Cp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__CP = 5;
-
-  /**
-   * The feature id for the '<em><b>Wt6</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__WT6 = 6;
-
-  /**
-   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__BASIC_ABSENT_PATTERN_SOURCE = 7;
-
-  /**
-   * The feature id for the '<em><b>Comma</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__COMMA = 8;
-
-  /**
-   * The feature id for the '<em><b>Sequence Source Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE__SEQUENCE_SOURCE_CHAIN = 9;
-
-  /**
-   * The number of structural features of the '<em>Left Absent Sequence Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_SEQUENCE_SOURCE_FEATURE_COUNT = 10;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.RightAbsentSequenceSourceImpl <em>Right Absent Sequence Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.RightAbsentSequenceSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentSequenceSource()
-   * @generated
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE = 59;
-
-  /**
-   * The feature id for the '<em><b>Left1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__LEFT1 = 0;
-
-  /**
-   * The feature id for the '<em><b>Comm</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__COMM = 1;
-
-  /**
-   * The feature id for the '<em><b>Right1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__RIGHT1 = 2;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__OP = 3;
-
-  /**
-   * The feature id for the '<em><b>Right Absent Sequence Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__RIGHT_ABSENT_SEQUENCE_SOURCE = 4;
-
-  /**
-   * The feature id for the '<em><b>Cp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__CP = 5;
-
-  /**
-   * The feature id for the '<em><b>Wt7</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__WT7 = 6;
-
-  /**
-   * The feature id for the '<em><b>Sequence Source Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__SEQUENCE_SOURCE_CHAIN = 7;
-
-  /**
-   * The feature id for the '<em><b>Comma</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__COMMA = 8;
-
-  /**
-   * The feature id for the '<em><b>Basic Absent Pattern Source</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE__BASIC_ABSENT_PATTERN_SOURCE = 9;
-
-  /**
-   * The number of structural features of the '<em>Right Absent Sequence Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE_FEATURE_COUNT = 10;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SequenceCollectionStatefulSourceImpl <em>Sequence Collection Stateful Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SequenceCollectionStatefulSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSequenceCollectionStatefulSource()
-   * @generated
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE = 62;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__LEFT = SEQUENCE_SOURCE__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__OP = SEQUENCE_SOURCE__OP;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__RIGHT = SEQUENCE_SOURCE__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__WT1 = SEQUENCE_SOURCE__WT1;
-
-  /**
-   * The feature id for the '<em><b>Wt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE__WT = SEQUENCE_SOURCE__WT;
-
-  /**
-   * The number of structural features of the '<em>Sequence Collection Stateful Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SEQUENCE_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT = SEQUENCE_SOURCE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AnonymousStreamImpl <em>Anonymous Stream</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AnonymousStreamImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAnonymousStream()
-   * @generated
-   */
-  int ANONYMOUS_STREAM = 63;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__FROM = FROM__FROM;
-
-  /**
-   * The feature id for the '<em><b>Return</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__RETURN = FROM_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Qi</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__QI = FROM_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Qs</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__QS = FROM_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Out rate</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__OUT_RATE = FROM_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Op event type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM__OP_EVENT_TYPE = FROM_FEATURE_COUNT + 4;
-
-  /**
-   * The number of structural features of the '<em>Anonymous Stream</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANONYMOUS_STREAM_FEATURE_COUNT = FROM_FEATURE_COUNT + 5;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OUTPUTImpl <em>OUTPUT</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OUTPUTImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOUTPUT()
-   * @generated
-   */
-  int OUTPUT = 141;
-
-  /**
-   * The feature id for the '<em><b>Output</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT__OUTPUT = 0;
-
-  /**
-   * The number of structural features of the '<em>OUTPUT</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputRateImpl <em>Output Rate</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OutputRateImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputRate()
-   * @generated
-   */
-  int OUTPUT_RATE = 64;
-
-  /**
-   * The feature id for the '<em><b>Output</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__OUTPUT = OUTPUT__OUTPUT;
-
-  /**
-   * The feature id for the '<em><b>Events</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__EVENTS = OUTPUT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Snapshot</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__SNAPSHOT = OUTPUT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Op rate type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__OP_RATE_TYPE = OUTPUT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Every</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__EVERY = OUTPUT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Tv</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE__TV = OUTPUT_FEATURE_COUNT + 4;
-
-  /**
-   * The number of structural features of the '<em>Output Rate</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE_FEATURE_COUNT = OUTPUT_FEATURE_COUNT + 5;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.ALLImpl <em>ALL</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.ALLImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getALL()
-   * @generated
-   */
-  int ALL = 149;
-
-  /**
-   * The feature id for the '<em><b>All</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALL__ALL = 0;
-
-  /**
-   * The number of structural features of the '<em>ALL</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALL_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputRateTypeImpl <em>Output Rate Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OutputRateTypeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputRateType()
-   * @generated
-   */
-  int OUTPUT_RATE_TYPE = 65;
-
-  /**
-   * The feature id for the '<em><b>All</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE_TYPE__ALL = ALL__ALL;
-
-  /**
-   * The feature id for the '<em><b>Last</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE_TYPE__LAST = ALL_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>First</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE_TYPE__FIRST = ALL_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Output Rate Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_RATE_TYPE_FEATURE_COUNT = ALL_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.INSERTImpl <em>INSERT</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.INSERTImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getINSERT()
-   * @generated
-   */
-  int INSERT = 175;
-
-  /**
-   * The feature id for the '<em><b>Insert</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSERT__INSERT = 0;
-
-  /**
-   * The number of structural features of the '<em>INSERT</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSERT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.QueryOutputImpl <em>Query Output</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.QueryOutputImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQueryOutput()
-   * @generated
-   */
-  int QUERY_OUTPUT = 66;
-
-  /**
-   * The feature id for the '<em><b>Insert</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__INSERT = INSERT__INSERT;
-
-  /**
-   * The feature id for the '<em><b>Into</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__INTO = INSERT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Delete</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__DELETE = INSERT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>For</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__FOR = INSERT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Update</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__UPDATE = INSERT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Return</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__RETURN = INSERT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Out Event Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__OUT_EVENT_TYPE = INSERT_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Tar</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_OUTPUT__TAR = INSERT_FEATURE_COUNT + 6;
+  int JOIN_STREAM__RIGHT_UNI = 2;
 
   /**
    * The feature id for the '<em><b>On</b></em>' containment reference.
@@ -4401,7 +4452,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUERY_OUTPUT__ON = INSERT_FEATURE_COUNT + 7;
+  int JOIN_STREAM__ON = 3;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -4410,182 +4461,639 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUERY_OUTPUT__EXPR = INSERT_FEATURE_COUNT + 8;
+  int JOIN_STREAM__EXPR = 4;
 
   /**
-   * The feature id for the '<em><b>Or</b></em>' containment reference.
+   * The feature id for the '<em><b>Wtr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUERY_OUTPUT__OR = INSERT_FEATURE_COUNT + 9;
+  int JOIN_STREAM__WTR = 5;
 
   /**
-   * The feature id for the '<em><b>Set Clause</b></em>' containment reference.
+   * The feature id for the '<em><b>P</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUERY_OUTPUT__SET_CLAUSE = INSERT_FEATURE_COUNT + 10;
+  int JOIN_STREAM__P = 6;
 
   /**
-   * The number of structural features of the '<em>Query Output</em>' class.
+   * The feature id for the '<em><b>Join</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUERY_OUTPUT_FEATURE_COUNT = INSERT_FEATURE_COUNT + 11;
+  int JOIN_STREAM__JOIN = 7;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SETImpl <em>SET</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SETImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSET()
-   * @generated
-   */
-  int SET = 187;
-
-  /**
-   * The feature id for the '<em><b>Set</b></em>' attribute.
+   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET__SET = 0;
+  int JOIN_STREAM__LEFT_UNI = 8;
 
   /**
-   * The number of structural features of the '<em>SET</em>' class.
+   * The number of structural features of the '<em>Join Stream</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_FEATURE_COUNT = 1;
+  int JOIN_STREAM_FEATURE_COUNT = 9;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SetClauseImpl <em>Set Clause</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WITHINImpl <em>WITHIN</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SetClauseImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSetClause()
+   * @see org.xtext.example.siddhi.siddhi.impl.WITHINImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWITHIN()
    * @generated
    */
-  int SET_CLAUSE = 67;
+  int WITHIN = 166;
 
   /**
-   * The feature id for the '<em><b>Set</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET_CLAUSE__SET = SET__SET;
-
-  /**
-   * The feature id for the '<em><b>Set Assignment</b></em>' containment reference list.
+   * The feature id for the '<em><b>Within</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_CLAUSE__SET_ASSIGNMENT = SET_FEATURE_COUNT + 0;
+  int WITHIN__WITHIN = 0;
 
   /**
-   * The number of structural features of the '<em>Set Clause</em>' class.
+   * The number of structural features of the '<em>WITHIN</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_CLAUSE_FEATURE_COUNT = SET_FEATURE_COUNT + 1;
+  int WITHIN_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SetAssignmentImpl <em>Set Assignment</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WithinTimeRangeImpl <em>Within Time Range</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SetAssignmentImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSetAssignment()
+   * @see org.xtext.example.siddhi.siddhi.impl.WithinTimeRangeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWithinTimeRange()
    * @generated
    */
-  int SET_ASSIGNMENT = 68;
+  int WITHIN_TIME_RANGE = 71;
 
   /**
-   * The number of structural features of the '<em>Set Assignment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET_ASSIGNMENT_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputEventTypeImpl <em>Output Event Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OutputEventTypeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputEventType()
-   * @generated
-   */
-  int OUTPUT_EVENT_TYPE = 69;
-
-  /**
-   * The feature id for the '<em><b>All</b></em>' attribute.
+   * The feature id for the '<em><b>Within</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE__ALL = ALL__ALL;
+  int WITHIN_TIME_RANGE__WITHIN = WITHIN__WITHIN;
 
   /**
-   * The feature id for the '<em><b>Events</b></em>' attribute.
+   * The feature id for the '<em><b>Start Pattern</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE__EVENTS = ALL_FEATURE_COUNT + 0;
+  int WITHIN_TIME_RANGE__START_PATTERN = WITHIN_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Raw</b></em>' attribute.
+   * The feature id for the '<em><b>End Pattern</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE__RAW = ALL_FEATURE_COUNT + 1;
+  int WITHIN_TIME_RANGE__END_PATTERN = WITHIN_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Expired</b></em>' attribute.
+   * The number of structural features of the '<em>Within Time Range</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE__EXPIRED = ALL_FEATURE_COUNT + 2;
+  int WITHIN_TIME_RANGE_FEATURE_COUNT = WITHIN_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Currt</b></em>' attribute.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.PERImpl <em>PER</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.PERImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPER()
+   * @generated
+   */
+  int PER = 192;
+
+  /**
+   * The feature id for the '<em><b>Per</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE__CURRT = ALL_FEATURE_COUNT + 3;
+  int PER__PER = 0;
 
   /**
-   * The number of structural features of the '<em>Output Event Type</em>' class.
+   * The number of structural features of the '<em>PER</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_EVENT_TYPE_FEATURE_COUNT = ALL_FEATURE_COUNT + 4;
+  int PER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Per1Impl <em>Per1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.Per1Impl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPer1()
+   * @generated
+   */
+  int PER1 = 72;
+
+  /**
+   * The feature id for the '<em><b>Per</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PER1__PER = PER__PER;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PER1__EXP = PER_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Per1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PER1_FEATURE_COUNT = PER_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.JoinSourceImpl <em>Join Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.JoinSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getJoinSource()
+   * @generated
+   */
+  int JOIN_SOURCE = 73;
+
+  /**
+   * The number of structural features of the '<em>Join Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOIN_SOURCE_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl <em>Stream Alias</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStreamAlias()
+   * @generated
+   */
+  int STREAM_ALIAS = 74;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STREAM_ALIAS__NAME = SOURCE1_OR_STANDARD_STATEFUL_SOURCE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Nam</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STREAM_ALIAS__NAM = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Stream Alias</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STREAM_ALIAS_FEATURE_COUNT = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.WithinTimeImpl <em>Within Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.WithinTimeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWithinTime()
+   * @generated
+   */
+  int WITHIN_TIME = 75;
+
+  /**
+   * The feature id for the '<em><b>Within</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WITHIN_TIME__WITHIN = WITHIN__WITHIN;
+
+  /**
+   * The feature id for the '<em><b>Tv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WITHIN_TIME__TV = WITHIN_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Within Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WITHIN_TIME_FEATURE_COUNT = WITHIN_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LEFTImpl <em>LEFT</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.LEFTImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLEFT()
+   * @generated
+   */
+  int LEFT = 167;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT__LEFT = 0;
+
+  /**
+   * The number of structural features of the '<em>LEFT</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.joinsImpl <em>joins</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.joinsImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getjoins()
+   * @generated
+   */
+  int JOINS = 76;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__LEFT = LEFT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Outer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__OUTER = LEFT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Join</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__JOIN = LEFT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__RIGHT = LEFT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Full</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__FULL = LEFT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS__INNER = LEFT_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>joins</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JOINS_FEATURE_COUNT = LEFT_FEATURE_COUNT + 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StandardStreamImpl <em>Standard Stream</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.StandardStreamImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStandardStream()
+   * @generated
+   */
+  int STANDARD_STREAM = 77;
+
+  /**
+   * The feature id for the '<em><b>Left source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__LEFT_SOURCE = JOIN_STREAM__LEFT_SOURCE;
+
+  /**
+   * The feature id for the '<em><b>Right source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__RIGHT_SOURCE = JOIN_STREAM__RIGHT_SOURCE;
+
+  /**
+   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__RIGHT_UNI = JOIN_STREAM__RIGHT_UNI;
+
+  /**
+   * The feature id for the '<em><b>On</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__ON = JOIN_STREAM__ON;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__EXPR = JOIN_STREAM__EXPR;
+
+  /**
+   * The feature id for the '<em><b>Wtr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__WTR = JOIN_STREAM__WTR;
+
+  /**
+   * The feature id for the '<em><b>P</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__P = JOIN_STREAM__P;
+
+  /**
+   * The feature id for the '<em><b>Join</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__JOIN = JOIN_STREAM__JOIN;
+
+  /**
+   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM__LEFT_UNI = JOIN_STREAM__LEFT_UNI;
+
+  /**
+   * The number of structural features of the '<em>Standard Stream</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STREAM_FEATURE_COUNT = JOIN_STREAM_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MainSourceImpl <em>Main Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.MainSourceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMainSource()
+   * @generated
+   */
+  int MAIN_SOURCE = 78;
+
+  /**
+   * The feature id for the '<em><b>Left source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__LEFT_SOURCE = JOIN_SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__RIGHT_SOURCE = JOIN_SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right uni</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__RIGHT_UNI = JOIN_SOURCE_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>On</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__ON = JOIN_SOURCE_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__EXPR = JOIN_SOURCE_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Wtr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__WTR = JOIN_SOURCE_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>P</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__P = JOIN_SOURCE_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Join</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__JOIN = JOIN_SOURCE_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Left uni</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__LEFT_UNI = JOIN_SOURCE_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Window</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__WINDOW = JOIN_SOURCE_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__A = JOIN_SOURCE_FEATURE_COUNT + 10;
+
+  /**
+   * The feature id for the '<em><b>Str Alias</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__STR_ALIAS = JOIN_SOURCE_FEATURE_COUNT + 11;
+
+  /**
+   * The feature id for the '<em><b>Post Window Handlers</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__POST_WINDOW_HANDLERS = JOIN_SOURCE_FEATURE_COUNT + 12;
+
+  /**
+   * The feature id for the '<em><b>Src</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__SRC = JOIN_SOURCE_FEATURE_COUNT + 13;
+
+  /**
+   * The feature id for the '<em><b>Basic SSh</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE__BASIC_SSH = JOIN_SOURCE_FEATURE_COUNT + 14;
+
+  /**
+   * The number of structural features of the '<em>Main Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_SOURCE_FEATURE_COUNT = JOIN_SOURCE_FEATURE_COUNT + 15;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.BasicSourceStreamHandlersImpl <em>Basic Source Stream Handlers</em>}' class.
@@ -4595,7 +5103,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBasicSourceStreamHandlers()
    * @generated
    */
-  int BASIC_SOURCE_STREAM_HANDLERS = 70;
+  int BASIC_SOURCE_STREAM_HANDLERS = 79;
 
   /**
    * The feature id for the '<em><b>Basic Ss Handler</b></em>' containment reference list.
@@ -4623,7 +5131,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWINDOW()
    * @generated
    */
-  int WINDOW = 140;
+  int WINDOW = 144;
 
   /**
    * The feature id for the '<em><b>Window</b></em>' attribute.
@@ -4651,7 +5159,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBasicSourceStreamHandlers1()
    * @generated
    */
-  int BASIC_SOURCE_STREAM_HANDLERS1 = 71;
+  int BASIC_SOURCE_STREAM_HANDLERS1 = 80;
 
   /**
    * The feature id for the '<em><b>Window</b></em>' attribute.
@@ -4706,7 +5214,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBasicSourceStreamHandler()
    * @generated
    */
-  int BASIC_SOURCE_STREAM_HANDLER = 72;
+  int BASIC_SOURCE_STREAM_HANDLER = 81;
 
   /**
    * The feature id for the '<em><b>Fil</b></em>' containment reference.
@@ -4743,7 +5251,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFilter()
    * @generated
    */
-  int FILTER = 73;
+  int FILTER = 82;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -4771,7 +5279,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStreamFunction()
    * @generated
    */
-  int STREAM_FUNCTION = 74;
+  int STREAM_FUNCTION = 83;
 
   /**
    * The feature id for the '<em><b>Fo</b></em>' containment reference.
@@ -4799,7 +5307,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWin()
    * @generated
    */
-  int WIN = 75;
+  int WIN = 84;
 
   /**
    * The feature id for the '<em><b>Window</b></em>' attribute.
@@ -4836,7 +5344,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 76;
+  int EXPRESSION = 85;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -4848,497 +5356,6 @@ public interface SiddhiPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionOperationImpl <em>Function Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.FunctionOperationImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionOperation()
-   * @generated
-   */
-  int FUNCTION_OPERATION = 77;
-
-  /**
-   * The feature id for the '<em><b>Func Namespace</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_OPERATION__FUNC_NAMESPACE = 0;
-
-  /**
-   * The feature id for the '<em><b>Func Id</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_OPERATION__FUNC_ID = 1;
-
-  /**
-   * The feature id for the '<em><b>Attr List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_OPERATION__ATTR_LIST = 2;
-
-  /**
-   * The number of structural features of the '<em>Function Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_OPERATION_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl <em>Function Namespace</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionNamespace()
-   * @generated
-   */
-  int FUNCTION_NAMESPACE = 78;
-
-  /**
-   * The feature id for the '<em><b>Na</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_NAMESPACE__NA = 0;
-
-  /**
-   * The number of structural features of the '<em>Function Namespace</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_NAMESPACE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl <em>Function Id</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionId()
-   * @generated
-   */
-  int FUNCTION_ID = 79;
-
-  /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ID__NA = 0;
-
-  /**
-   * The number of structural features of the '<em>Function Id</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ID_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeListImpl <em>Attribute List</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AttributeListImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeList()
-   * @generated
-   */
-  int ATTRIBUTE_LIST = 80;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_LIST__ATTR = 0;
-
-  /**
-   * The number of structural features of the '<em>Attribute List</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_LIST_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeImpl <em>Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AttributeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttribute()
-   * @generated
-   */
-  int ATTRIBUTE = 81;
-
-  /**
-   * The feature id for the '<em><b>Math Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE__MATH_OP = 0;
-
-  /**
-   * The number of structural features of the '<em>Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SELECTImpl <em>SELECT</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SELECTImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSELECT()
-   * @generated
-   */
-  int SELECT = 169;
-
-  /**
-   * The feature id for the '<em><b>Select</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELECT__SELECT = 0;
-
-  /**
-   * The number of structural features of the '<em>SELECT</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELECT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GroupByQuerySelectionImpl <em>Group By Query Selection</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.GroupByQuerySelectionImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGroupByQuerySelection()
-   * @generated
-   */
-  int GROUP_BY_QUERY_SELECTION = 82;
-
-  /**
-   * The feature id for the '<em><b>Select</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY_QUERY_SELECTION__SELECT = SELECT__SELECT;
-
-  /**
-   * The feature id for the '<em><b>Out att</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY_QUERY_SELECTION__OUT_ATT = SELECT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Grp by</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY_QUERY_SELECTION__GRP_BY = SELECT_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Group By Query Selection</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY_QUERY_SELECTION_FEATURE_COUNT = SELECT_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.QuerySectionImpl <em>Query Section</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.QuerySectionImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getQuerySection()
-   * @generated
-   */
-  int QUERY_SECTION = 83;
-
-  /**
-   * The feature id for the '<em><b>Grp By Query Sel</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_SECTION__GRP_BY_QUERY_SEL = 0;
-
-  /**
-   * The feature id for the '<em><b>Having</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_SECTION__HAVING = 1;
-
-  /**
-   * The number of structural features of the '<em>Query Section</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_SECTION_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutputAttributeImpl <em>Output Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OutputAttributeImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutputAttribute()
-   * @generated
-   */
-  int OUTPUT_ATTRIBUTE = 84;
-
-  /**
-   * The feature id for the '<em><b>Out Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_ATTRIBUTE__OUT_ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Attr ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_ATTRIBUTE__ATTR_REF = 1;
-
-  /**
-   * The number of structural features of the '<em>Output Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_ATTRIBUTE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.OutAttrImpl <em>Out Attr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.OutAttrImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOutAttr()
-   * @generated
-   */
-  int OUT_ATTR = 85;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUT_ATTR__NAME = FEATURES_OR_OUT_ATTR__NAME;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUT_ATTR__ATTR = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>A</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUT_ATTR__A = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Out Attr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUT_ATTR_FEATURE_COUNT = FEATURES_OR_OUT_ATTR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GROUPImpl <em>GROUP</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.GROUPImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGROUP()
-   * @generated
-   */
-  int GROUP = 170;
-
-  /**
-   * The feature id for the '<em><b>Group</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP__GROUP = 0;
-
-  /**
-   * The number of structural features of the '<em>GROUP</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.GroupByImpl <em>Group By</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.GroupByImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getGroupBy()
-   * @generated
-   */
-  int GROUP_BY = 86;
-
-  /**
-   * The feature id for the '<em><b>Group</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY__GROUP = GROUP__GROUP;
-
-  /**
-   * The feature id for the '<em><b>By</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY__BY = GROUP_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Attr ref</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY__ATTR_REF = GROUP_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Group By</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP_BY_FEATURE_COUNT = GROUP_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.HAVINGImpl <em>HAVING</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.HAVINGImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHAVING()
-   * @generated
-   */
-  int HAVING = 172;
-
-  /**
-   * The feature id for the '<em><b>Having</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAVING__HAVING = 0;
-
-  /**
-   * The number of structural features of the '<em>HAVING</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAVING_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.HavingExprImpl <em>Having Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.HavingExprImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHavingExpr()
-   * @generated
-   */
-  int HAVING_EXPR = 87;
-
-  /**
-   * The feature id for the '<em><b>Having</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAVING_EXPR__HAVING = HAVING__HAVING;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAVING_EXPR__EXPR = HAVING_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Having Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAVING_EXPR_FEATURE_COUNT = HAVING_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathOperationImpl <em>Math Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5346,7 +5363,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathOperation()
    * @generated
    */
-  int MATH_OPERATION = 88;
+  int MATH_OPERATION = 86;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -5358,22 +5375,13 @@ public interface SiddhiPackage extends EPackage
   int MATH_OPERATION__MLO = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_OPERATION__OP = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_OPERATION__MATH_OTHER_OPERATIONS1 = EXPRESSION_FEATURE_COUNT + 2;
+  int MATH_OPERATION__LEFT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Math Operation</em>' class.
@@ -5382,7 +5390,271 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int MATH_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl <em>Math Addsub Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathAddsubOperation()
+   * @generated
+   */
+  int MATH_ADDSUB_OPERATION = 87;
+
+  /**
+   * The feature id for the '<em><b>Mlo</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION__MLO = MATH_OPERATION__MLO;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION__LEFT = MATH_OPERATION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Add</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION__ADD = MATH_OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Substract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION__SUBSTRACT = MATH_OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Math Addsub Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_ADDSUB_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathDivmulOperationImpl <em>Math Divmul Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.MathDivmulOperationImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathDivmulOperation()
+   * @generated
+   */
+  int MATH_DIVMUL_OPERATION = 88;
+
+  /**
+   * The feature id for the '<em><b>Mlo</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__MLO = MATH_ADDSUB_OPERATION__MLO;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__LEFT = MATH_ADDSUB_OPERATION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Add</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__ADD = MATH_ADDSUB_OPERATION__ADD;
+
+  /**
+   * The feature id for the '<em><b>Substract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__SUBSTRACT = MATH_ADDSUB_OPERATION__SUBSTRACT;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__RIGHT = MATH_ADDSUB_OPERATION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__MULTIPLY = MATH_ADDSUB_OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Devide</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__DEVIDE = MATH_ADDSUB_OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Mod</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION__MOD = MATH_ADDSUB_OPERATION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Math Divmul Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_DIVMUL_OPERATION_FEATURE_COUNT = MATH_ADDSUB_OPERATION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathOtherOperationsImpl <em>Math Other Operations</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.MathOtherOperationsImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathOtherOperations()
+   * @generated
+   */
+  int MATH_OTHER_OPERATIONS = 89;
+
+  /**
+   * The feature id for the '<em><b>Mlo</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__MLO = MATH_DIVMUL_OPERATION__MLO;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__LEFT = MATH_DIVMUL_OPERATION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Add</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__ADD = MATH_DIVMUL_OPERATION__ADD;
+
+  /**
+   * The feature id for the '<em><b>Substract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__SUBSTRACT = MATH_DIVMUL_OPERATION__SUBSTRACT;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__RIGHT = MATH_DIVMUL_OPERATION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__MULTIPLY = MATH_DIVMUL_OPERATION__MULTIPLY;
+
+  /**
+   * The feature id for the '<em><b>Devide</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__DEVIDE = MATH_DIVMUL_OPERATION__DEVIDE;
+
+  /**
+   * The feature id for the '<em><b>Mod</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__MOD = MATH_DIVMUL_OPERATION__MOD;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__OP = MATH_DIVMUL_OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Lit</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS__LIT = MATH_DIVMUL_OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Math Other Operations</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_OTHER_OPERATIONS_FEATURE_COUNT = MATH_DIVMUL_OPERATION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.NullCheckImpl <em>Null Check</em>}' class.
@@ -5392,7 +5664,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getNullCheck()
    * @generated
    */
-  int NULL_CHECK = 89;
+  int NULL_CHECK = 90;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -5401,7 +5673,70 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__MLO = MATH_OPERATION__MLO;
+  int NULL_CHECK__MLO = MATH_OTHER_OPERATIONS__MLO;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__LEFT = MATH_OTHER_OPERATIONS__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Add</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__ADD = MATH_OTHER_OPERATIONS__ADD;
+
+  /**
+   * The feature id for the '<em><b>Substract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__SUBSTRACT = MATH_OTHER_OPERATIONS__SUBSTRACT;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__RIGHT = MATH_OTHER_OPERATIONS__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__MULTIPLY = MATH_OTHER_OPERATIONS__MULTIPLY;
+
+  /**
+   * The feature id for the '<em><b>Devide</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__DEVIDE = MATH_OTHER_OPERATIONS__DEVIDE;
+
+  /**
+   * The feature id for the '<em><b>Mod</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_CHECK__MOD = MATH_OTHER_OPERATIONS__MOD;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' containment reference.
@@ -5410,16 +5745,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__OP = MATH_OPERATION__OP;
+  int NULL_CHECK__OP = MATH_OTHER_OPERATIONS__OP;
 
   /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
+   * The feature id for the '<em><b>Lit</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NULL_CHECK__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
+  int NULL_CHECK__LIT = MATH_OTHER_OPERATIONS__LIT;
 
   /**
    * The feature id for the '<em><b>Is</b></em>' attribute.
@@ -5428,7 +5763,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__IS = MATH_OPERATION_FEATURE_COUNT + 0;
+  int NULL_CHECK__IS = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -5437,7 +5772,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__NULL = MATH_OPERATION_FEATURE_COUNT + 1;
+  int NULL_CHECK__NULL = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Stream ref</b></em>' containment reference.
@@ -5446,7 +5781,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__STREAM_REF = MATH_OPERATION_FEATURE_COUNT + 2;
+  int NULL_CHECK__STREAM_REF = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Attr ref</b></em>' containment reference.
@@ -5455,7 +5790,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__ATTR_REF = MATH_OPERATION_FEATURE_COUNT + 3;
+  int NULL_CHECK__ATTR_REF = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Fo</b></em>' containment reference.
@@ -5464,7 +5799,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK__FO = MATH_OPERATION_FEATURE_COUNT + 4;
+  int NULL_CHECK__FO = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Null Check</em>' class.
@@ -5473,7 +5808,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NULL_CHECK_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 5;
+  int NULL_CHECK_FEATURE_COUNT = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StreamReferenceImpl <em>Stream Reference</em>}' class.
@@ -5483,7 +5818,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStreamReference()
    * @generated
    */
-  int STREAM_REFERENCE = 90;
+  int STREAM_REFERENCE = 91;
 
   /**
    * The feature id for the '<em><b>Hash</b></em>' attribute.
@@ -5495,13 +5830,13 @@ public interface SiddhiPackage extends EPackage
   int STREAM_REFERENCE__HASH = 0;
 
   /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STREAM_REFERENCE__NA = 1;
+  int STREAM_REFERENCE__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Aatr index</b></em>' containment reference.
@@ -5522,14 +5857,14 @@ public interface SiddhiPackage extends EPackage
   int STREAM_REFERENCE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathOtherOperations1Impl <em>Math Other Operations1</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LiteralImpl <em>Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.MathOtherOperations1Impl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathOtherOperations1()
+   * @see org.xtext.example.siddhi.siddhi.impl.LiteralImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLiteral()
    * @generated
    */
-  int MATH_OTHER_OPERATIONS1 = 91;
+  int LITERAL = 92;
 
   /**
    * The feature id for the '<em><b>Const val</b></em>' containment reference.
@@ -5538,7 +5873,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_OTHER_OPERATIONS1__CONST_VAL = 0;
+  int LITERAL__CONST_VAL = 0;
 
   /**
    * The feature id for the '<em><b>Fo</b></em>' containment reference.
@@ -5547,7 +5882,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_OTHER_OPERATIONS1__FO = 1;
+  int LITERAL__FO = 1;
 
   /**
    * The feature id for the '<em><b>Attr Ref</b></em>' containment reference.
@@ -5556,16 +5891,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_OTHER_OPERATIONS1__ATTR_REF = 2;
+  int LITERAL__ATTR_REF = 2;
 
   /**
-   * The number of structural features of the '<em>Math Other Operations1</em>' class.
+   * The number of structural features of the '<em>Literal</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_OTHER_OPERATIONS1_FEATURE_COUNT = 3;
+  int LITERAL_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeReferenceImpl <em>Attribute Reference</em>}' class.
@@ -5575,7 +5910,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeReference()
    * @generated
    */
-  int ATTRIBUTE_REFERENCE = 92;
+  int ATTRIBUTE_REFERENCE = 93;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -5587,13 +5922,22 @@ public interface SiddhiPackage extends EPackage
   int ATTRIBUTE_REFERENCE__EXPRESSION = SET_ASSIGNMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_REFERENCE__NAME = SET_ASSIGNMENT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Hash1</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__HASH1 = SET_ASSIGNMENT_FEATURE_COUNT + 1;
+  int ATTRIBUTE_REFERENCE__HASH1 = SET_ASSIGNMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Name1</b></em>' containment reference.
@@ -5602,16 +5946,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__NAME1 = SET_ASSIGNMENT_FEATURE_COUNT + 2;
+  int ATTRIBUTE_REFERENCE__NAME1 = SET_ASSIGNMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Attribute index1</b></em>' containment reference.
+   * The feature id for the '<em><b>OPEN SQARE BRACKET Sattribute index1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX1 = SET_ASSIGNMENT_FEATURE_COUNT + 3;
+  int ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX1 = SET_ASSIGNMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Hash2</b></em>' attribute.
@@ -5620,7 +5964,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__HASH2 = SET_ASSIGNMENT_FEATURE_COUNT + 4;
+  int ATTRIBUTE_REFERENCE__HASH2 = SET_ASSIGNMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Name2</b></em>' containment reference.
@@ -5629,25 +5973,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__NAME2 = SET_ASSIGNMENT_FEATURE_COUNT + 5;
+  int ATTRIBUTE_REFERENCE__NAME2 = SET_ASSIGNMENT_FEATURE_COUNT + 6;
 
   /**
-   * The feature id for the '<em><b>Attribute index2</b></em>' containment reference.
+   * The feature id for the '<em><b>OPEN SQARE BRACKET Sattribute index2</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_REFERENCE__ATTRIBUTE_INDEX2 = SET_ASSIGNMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Attr name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_REFERENCE__ATTR_NAME = SET_ASSIGNMENT_FEATURE_COUNT + 7;
+  int ATTRIBUTE_REFERENCE__OPEN_SQARE_BRACKET_SATTRIBUTE_INDEX2 = SET_ASSIGNMENT_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Features Or Attr Ref</b></em>' containment reference.
@@ -5668,88 +6003,32 @@ public interface SiddhiPackage extends EPackage
   int ATTRIBUTE_REFERENCE_FEATURE_COUNT = SET_ASSIGNMENT_FEATURE_COUNT + 9;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeNameReferenceImpl <em>Attribute Name Reference</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FeaturesOrOutAttrReferenceImpl <em>Features Or Out Attr Reference</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AttributeNameReferenceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeNameReference()
+   * @see org.xtext.example.siddhi.siddhi.impl.FeaturesOrOutAttrReferenceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFeaturesOrOutAttrReference()
    * @generated
    */
-  int ATTRIBUTE_NAME_REFERENCE = 93;
+  int FEATURES_OR_OUT_ATTR_REFERENCE = 95;
 
   /**
-   * The feature id for the '<em><b>Attr Name1</b></em>' reference.
+   * The feature id for the '<em><b>Srcout Attrref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_NAME_REFERENCE__ATTR_NAME1 = 0;
+  int FEATURES_OR_OUT_ATTR_REFERENCE__SRCOUT_ATTRREF = 0;
 
   /**
-   * The number of structural features of the '<em>Attribute Name Reference</em>' class.
+   * The number of structural features of the '<em>Features Or Out Attr Reference</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_NAME_REFERENCE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LASTImpl <em>LAST</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.LASTImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLAST()
-   * @generated
-   */
-  int LAST = 154;
-
-  /**
-   * The feature id for the '<em><b>Last</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAST__LAST = 0;
-
-  /**
-   * The number of structural features of the '<em>LAST</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAST_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeIndexImpl <em>Attribute Index</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.AttributeIndexImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeIndex()
-   * @generated
-   */
-  int ATTRIBUTE_INDEX = 94;
-
-  /**
-   * The feature id for the '<em><b>Last</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_INDEX__LAST = LAST__LAST;
-
-  /**
-   * The number of structural features of the '<em>Attribute Index</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATTRIBUTE_INDEX_FEATURE_COUNT = LAST_FEATURE_COUNT + 0;
+  int FEATURES_OR_OUT_ATTR_REFERENCE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl <em>Standard Stateful Source</em>}' class.
@@ -5759,7 +6038,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStandardStatefulSource()
    * @generated
    */
-  int STANDARD_STATEFUL_SOURCE = 95;
+  int STANDARD_STATEFUL_SOURCE = 96;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -5768,7 +6047,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__LEFT = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 0;
+  int STANDARD_STATEFUL_SOURCE__LEFT = SEQUENCE_SOURCE__LEFT;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -5777,7 +6056,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__OP = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 1;
+  int STANDARD_STATEFUL_SOURCE__OP = SEQUENCE_SOURCE__OP;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -5786,7 +6065,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__RIGHT = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 2;
+  int STANDARD_STATEFUL_SOURCE__RIGHT = SEQUENCE_SOURCE__RIGHT;
 
   /**
    * The feature id for the '<em><b>Wt1</b></em>' containment reference list.
@@ -5795,7 +6074,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__WT1 = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 3;
+  int STANDARD_STATEFUL_SOURCE__WT1 = SEQUENCE_SOURCE__WT1;
 
   /**
    * The feature id for the '<em><b>Wt</b></em>' containment reference.
@@ -5804,7 +6083,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__WT = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 4;
+  int STANDARD_STATEFUL_SOURCE__WT = SEQUENCE_SOURCE__WT;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5813,7 +6092,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__NAME = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 5;
+  int STANDARD_STATEFUL_SOURCE__NAME = SEQUENCE_SOURCE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Coll</b></em>' containment reference.
@@ -5822,7 +6101,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__COLL = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 6;
+  int STANDARD_STATEFUL_SOURCE__COLL = SEQUENCE_SOURCE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Zero or more</b></em>' attribute.
@@ -5831,7 +6110,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__ZERO_OR_MORE = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 7;
+  int STANDARD_STATEFUL_SOURCE__ZERO_OR_MORE = SEQUENCE_SOURCE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Zero or one</b></em>' attribute.
@@ -5840,7 +6119,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__ZERO_OR_ONE = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 8;
+  int STANDARD_STATEFUL_SOURCE__ZERO_OR_ONE = SEQUENCE_SOURCE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>One or more</b></em>' attribute.
@@ -5849,16 +6128,25 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__ONE_OR_MORE = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 9;
+  int STANDARD_STATEFUL_SOURCE__ONE_OR_MORE = SEQUENCE_SOURCE_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Bs</b></em>' containment reference.
+   * The feature id for the '<em><b>Src</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE__BS = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 10;
+  int STANDARD_STATEFUL_SOURCE__SRC = SEQUENCE_SOURCE_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Basic ss handlers</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS = SEQUENCE_SOURCE_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Standard Stateful Source</em>' class.
@@ -5867,63 +6155,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STANDARD_STATEFUL_SOURCE_FEATURE_COUNT = PATTERN_COLLECTION_STATEFUL_SOURCE_FEATURE_COUNT + 11;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Source1OrStandardStatefulSourceImpl <em>Source1 Or Standard Stateful Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.Source1OrStandardStatefulSourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource1OrStandardStatefulSource()
-   * @generated
-   */
-  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE = 96;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Source1 Or Standard Stateful Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SourceOrEventReferenceImpl <em>Source Or Event Reference</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SourceOrEventReferenceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSourceOrEventReference()
-   * @generated
-   */
-  int SOURCE_OR_EVENT_REFERENCE = 97;
-
-  /**
-   * The feature id for the '<em><b>Na</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE_OR_EVENT_REFERENCE__NA = 0;
-
-  /**
-   * The number of structural features of the '<em>Source Or Event Reference</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE_OR_EVENT_REFERENCE_FEATURE_COUNT = 1;
+  int STANDARD_STATEFUL_SOURCE_FEATURE_COUNT = SEQUENCE_SOURCE_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.BasicSourceImpl <em>Basic Source</em>}' class.
@@ -5933,7 +6165,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBasicSource()
    * @generated
    */
-  int BASIC_SOURCE = 98;
+  int BASIC_SOURCE = 97;
 
   /**
    * The feature id for the '<em><b>Src</b></em>' containment reference.
@@ -5963,32 +6195,116 @@ public interface SiddhiPackage extends EPackage
   int BASIC_SOURCE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FeaturesOrOutAttrReferenceImpl <em>Features Or Out Attr Reference</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SourceOrEventReferenceImpl <em>Source Or Event Reference</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.FeaturesOrOutAttrReferenceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFeaturesOrOutAttrReference()
+   * @see org.xtext.example.siddhi.siddhi.impl.SourceOrEventReferenceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSourceOrEventReference()
    * @generated
    */
-  int FEATURES_OR_OUT_ATTR_REFERENCE = 100;
+  int SOURCE_OR_EVENT_REFERENCE = 99;
 
   /**
-   * The feature id for the '<em><b>Srcout Attrref</b></em>' reference.
+   * The feature id for the '<em><b>Na</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURES_OR_OUT_ATTR_REFERENCE__SRCOUT_ATTRREF = 0;
+  int SOURCE_OR_EVENT_REFERENCE__NA = 0;
 
   /**
-   * The number of structural features of the '<em>Features Or Out Attr Reference</em>' class.
+   * The number of structural features of the '<em>Source Or Event Reference</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURES_OR_OUT_ATTR_REFERENCE_FEATURE_COUNT = 1;
+  int SOURCE_OR_EVENT_REFERENCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeNameReferenceImpl <em>Attribute Name Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.AttributeNameReferenceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeNameReference()
+   * @generated
+   */
+  int ATTRIBUTE_NAME_REFERENCE = 100;
+
+  /**
+   * The feature id for the '<em><b>Attr Name1</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_NAME_REFERENCE__ATTR_NAME1 = 0;
+
+  /**
+   * The number of structural features of the '<em>Attribute Name Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_NAME_REFERENCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LASTImpl <em>LAST</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.LASTImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLAST()
+   * @generated
+   */
+  int LAST = 158;
+
+  /**
+   * The feature id for the '<em><b>Last</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LAST__LAST = 0;
+
+  /**
+   * The number of structural features of the '<em>LAST</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LAST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeIndexImpl <em>Attribute Index</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.AttributeIndexImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeIndex()
+   * @generated
+   */
+  int ATTRIBUTE_INDEX = 101;
+
+  /**
+   * The feature id for the '<em><b>Last</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_INDEX__LAST = LAST__LAST;
+
+  /**
+   * The number of structural features of the '<em>Attribute Index</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_INDEX_FEATURE_COUNT = LAST_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.ConstantValueImpl <em>Constant Value</em>}' class.
@@ -5998,7 +6314,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getConstantValue()
    * @generated
    */
-  int CONSTANT_VALUE = 101;
+  int CONSTANT_VALUE = 102;
 
   /**
    * The feature id for the '<em><b>Bv</b></em>' containment reference.
@@ -6073,6 +6389,164 @@ public interface SiddhiPackage extends EPackage
   int CONSTANT_VALUE_FEATURE_COUNT = 7;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionOperationImpl <em>Function Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.FunctionOperationImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionOperation()
+   * @generated
+   */
+  int FUNCTION_OPERATION = 103;
+
+  /**
+   * The feature id for the '<em><b>Func Namespace</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_OPERATION__FUNC_NAMESPACE = 0;
+
+  /**
+   * The feature id for the '<em><b>Func Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_OPERATION__FUNC_ID = 1;
+
+  /**
+   * The feature id for the '<em><b>Attr List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_OPERATION__ATTR_LIST = 2;
+
+  /**
+   * The number of structural features of the '<em>Function Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_OPERATION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl <em>Function Namespace</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.FunctionNamespaceImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionNamespace()
+   * @generated
+   */
+  int FUNCTION_NAMESPACE = 104;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_NAMESPACE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Function Namespace</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_NAMESPACE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl <em>Function Id</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.FunctionIdImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFunctionId()
+   * @generated
+   */
+  int FUNCTION_ID = 105;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_ID__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Function Id</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_ID_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeListImpl <em>Attribute List</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.AttributeListImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttributeList()
+   * @generated
+   */
+  int ATTRIBUTE_LIST = 106;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_LIST__ATTR = 0;
+
+  /**
+   * The number of structural features of the '<em>Attribute List</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.AttributeImpl <em>Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.AttributeImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAttribute()
+   * @generated
+   */
+  int ATTRIBUTE = 107;
+
+  /**
+   * The feature id for the '<em><b>Math Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__MATH_OP = 0;
+
+  /**
+   * The number of structural features of the '<em>Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.NameImpl <em>Name</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6080,16 +6554,16 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getName_()
    * @generated
    */
-  int NAME = 102;
+  int NAME = 108;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Na</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NAME__NAME = 0;
+  int NAME__NA = 0;
 
   /**
    * The number of structural features of the '<em>Name</em>' class.
@@ -6101,71 +6575,6 @@ public interface SiddhiPackage extends EPackage
   int NAME_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.SourceImpl <em>Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.SourceImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource()
-   * @generated
-   */
-  int SOURCE = 103;
-
-  /**
-   * The feature id for the '<em><b>Str Id</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE__STR_ID = 0;
-
-  /**
-   * The number of structural features of the '<em>Source</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.Source1Impl <em>Source1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.Source1Impl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSource1()
-   * @generated
-   */
-  int SOURCE1 = 104;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE1__NAME = SOURCE1_OR_STANDARD_STATEFUL_SOURCE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Inner</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE1__INNER = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Source1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOURCE1_FEATURE_COUNT = SOURCE1_OR_STANDARD_STATEFUL_SOURCE_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.TRUEImpl <em>TRUE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6173,7 +6582,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getTRUE()
    * @generated
    */
-  int TRUE = 198;
+  int TRUE = 202;
 
   /**
    * The feature id for the '<em><b>Tr</b></em>' attribute.
@@ -6201,7 +6610,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBoolValue()
    * @generated
    */
-  int BOOL_VALUE = 105;
+  int BOOL_VALUE = 109;
 
   /**
    * The feature id for the '<em><b>Tr</b></em>' attribute.
@@ -6238,7 +6647,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSignedDoubleValue()
    * @generated
    */
-  int SIGNED_DOUBLE_VALUE = 106;
+  int SIGNED_DOUBLE_VALUE = 110;
 
   /**
    * The number of structural features of the '<em>Signed Double Value</em>' class.
@@ -6257,7 +6666,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSignedFloatValue()
    * @generated
    */
-  int SIGNED_FLOAT_VALUE = 107;
+  int SIGNED_FLOAT_VALUE = 111;
 
   /**
    * The number of structural features of the '<em>Signed Float Value</em>' class.
@@ -6276,7 +6685,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSignedLongValue()
    * @generated
    */
-  int SIGNED_LONG_VALUE = 108;
+  int SIGNED_LONG_VALUE = 112;
 
   /**
    * The number of structural features of the '<em>Signed Long Value</em>' class.
@@ -6295,7 +6704,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getStringValue()
    * @generated
    */
-  int STRING_VALUE = 109;
+  int STRING_VALUE = 113;
 
   /**
    * The feature id for the '<em><b>Sl</b></em>' attribute.
@@ -6323,7 +6732,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getTimeValue()
    * @generated
    */
-  int TIME_VALUE = 110;
+  int TIME_VALUE = 114;
 
   /**
    * The feature id for the '<em><b>Yv</b></em>' containment reference.
@@ -6423,7 +6832,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getYEARS()
    * @generated
    */
-  int YEARS = 189;
+  int YEARS = 193;
 
   /**
    * The feature id for the '<em><b>Year</b></em>' attribute.
@@ -6460,7 +6869,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getYearValue()
    * @generated
    */
-  int YEAR_VALUE = 111;
+  int YEAR_VALUE = 115;
 
   /**
    * The feature id for the '<em><b>Year</b></em>' attribute.
@@ -6497,7 +6906,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMONTHS()
    * @generated
    */
-  int MONTHS = 190;
+  int MONTHS = 194;
 
   /**
    * The feature id for the '<em><b>Month</b></em>' attribute.
@@ -6534,7 +6943,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMonthValue()
    * @generated
    */
-  int MONTH_VALUE = 112;
+  int MONTH_VALUE = 116;
 
   /**
    * The feature id for the '<em><b>Month</b></em>' attribute.
@@ -6571,7 +6980,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWEEKS()
    * @generated
    */
-  int WEEKS = 191;
+  int WEEKS = 195;
 
   /**
    * The feature id for the '<em><b>Week</b></em>' attribute.
@@ -6608,7 +7017,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWeekValue()
    * @generated
    */
-  int WEEK_VALUE = 113;
+  int WEEK_VALUE = 117;
 
   /**
    * The feature id for the '<em><b>Week</b></em>' attribute.
@@ -6645,7 +7054,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDAYS()
    * @generated
    */
-  int DAYS = 192;
+  int DAYS = 196;
 
   /**
    * The feature id for the '<em><b>Day</b></em>' attribute.
@@ -6682,7 +7091,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDayValue()
    * @generated
    */
-  int DAY_VALUE = 114;
+  int DAY_VALUE = 118;
 
   /**
    * The feature id for the '<em><b>Day</b></em>' attribute.
@@ -6719,7 +7128,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHOURS()
    * @generated
    */
-  int HOURS = 193;
+  int HOURS = 197;
 
   /**
    * The feature id for the '<em><b>Hour</b></em>' attribute.
@@ -6756,7 +7165,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getHourValue()
    * @generated
    */
-  int HOUR_VALUE = 115;
+  int HOUR_VALUE = 119;
 
   /**
    * The feature id for the '<em><b>Hour</b></em>' attribute.
@@ -6793,7 +7202,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMINUTES()
    * @generated
    */
-  int MINUTES = 194;
+  int MINUTES = 198;
 
   /**
    * The feature id for the '<em><b>Minute</b></em>' attribute.
@@ -6839,7 +7248,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMinuteValue()
    * @generated
    */
-  int MINUTE_VALUE = 116;
+  int MINUTE_VALUE = 120;
 
   /**
    * The feature id for the '<em><b>Minute</b></em>' attribute.
@@ -6885,7 +7294,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSecondValue()
    * @generated
    */
-  int SECOND_VALUE = 117;
+  int SECOND_VALUE = 121;
 
   /**
    * The feature id for the '<em><b>Second</b></em>' attribute.
@@ -6931,7 +7340,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMILLISECONDS()
    * @generated
    */
-  int MILLISECONDS = 196;
+  int MILLISECONDS = 200;
 
   /**
    * The feature id for the '<em><b>Millisecond</b></em>' attribute.
@@ -6977,7 +7386,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMillisecondValue()
    * @generated
    */
-  int MILLISECOND_VALUE = 118;
+  int MILLISECOND_VALUE = 122;
 
   /**
    * The feature id for the '<em><b>Millisecond</b></em>' attribute.
@@ -7023,7 +7432,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDOUBLE_LITERAL()
    * @generated
    */
-  int DOUBLE_LITERAL = 119;
+  int DOUBLE_LITERAL = 123;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -7060,7 +7469,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFLOAT_LITERAL()
    * @generated
    */
-  int FLOAT_LITERAL = 120;
+  int FLOAT_LITERAL = 124;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -7097,7 +7506,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLONG_LITERAL()
    * @generated
    */
-  int LONG_LITERAL = 121;
+  int LONG_LITERAL = 125;
 
   /**
    * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -7118,34 +7527,6 @@ public interface SiddhiPackage extends EPackage
   int LONG_LITERAL_FEATURE_COUNT = SIGNED_LONG_VALUE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.STREAMImpl <em>STREAM</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.STREAMImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSTREAM()
-   * @generated
-   */
-  int STREAM = 137;
-
-  /**
-   * The feature id for the '<em><b>Str</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STREAM__STR = 0;
-
-  /**
-   * The number of structural features of the '<em>STREAM</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STREAM_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.KeywordImpl <em>Keyword</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7153,7 +7534,16 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getKeyword()
    * @generated
    */
-  int KEYWORD = 122;
+  int KEYWORD = 126;
+
+  /**
+   * The feature id for the '<em><b>Na</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KEYWORD__NA = NAME__NA;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' attribute.
@@ -7162,7 +7552,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__STR = STREAM__STR;
+  int KEYWORD__STR = NAME_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Define</b></em>' attribute.
@@ -7171,7 +7561,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__DEFINE = STREAM_FEATURE_COUNT + 0;
+  int KEYWORD__DEFINE = NAME_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>From</b></em>' attribute.
@@ -7180,7 +7570,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FROM = STREAM_FEATURE_COUNT + 1;
+  int KEYWORD__FROM = NAME_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' attribute.
@@ -7189,7 +7579,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__SELECT = STREAM_FEATURE_COUNT + 2;
+  int KEYWORD__SELECT = NAME_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Insert</b></em>' attribute.
@@ -7198,7 +7588,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__INSERT = STREAM_FEATURE_COUNT + 3;
+  int KEYWORD__INSERT = NAME_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Into</b></em>' attribute.
@@ -7207,7 +7597,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__INTO = STREAM_FEATURE_COUNT + 4;
+  int KEYWORD__INTO = NAME_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -7216,7 +7606,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__ALL = STREAM_FEATURE_COUNT + 5;
+  int KEYWORD__ALL = NAME_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Events</b></em>' attribute.
@@ -7225,7 +7615,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__EVENTS = STREAM_FEATURE_COUNT + 6;
+  int KEYWORD__EVENTS = NAME_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -7234,7 +7624,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__TABLE = STREAM_FEATURE_COUNT + 7;
+  int KEYWORD__TABLE = NAME_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Window</b></em>' attribute.
@@ -7243,7 +7633,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__WINDOW = STREAM_FEATURE_COUNT + 8;
+  int KEYWORD__WINDOW = NAME_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -7252,7 +7642,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__OUTPUT = STREAM_FEATURE_COUNT + 9;
+  int KEYWORD__OUTPUT = NAME_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Raw</b></em>' attribute.
@@ -7261,7 +7651,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__RAW = STREAM_FEATURE_COUNT + 10;
+  int KEYWORD__RAW = NAME_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Expired</b></em>' attribute.
@@ -7270,7 +7660,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__EXPIRED = STREAM_FEATURE_COUNT + 11;
+  int KEYWORD__EXPIRED = NAME_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>Currt</b></em>' attribute.
@@ -7279,7 +7669,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__CURRT = STREAM_FEATURE_COUNT + 12;
+  int KEYWORD__CURRT = NAME_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7288,7 +7678,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__RETURN = STREAM_FEATURE_COUNT + 13;
+  int KEYWORD__RETURN = NAME_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Partition</b></em>' attribute.
@@ -7297,7 +7687,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__PARTITION = STREAM_FEATURE_COUNT + 14;
+  int KEYWORD__PARTITION = NAME_FEATURE_COUNT + 15;
 
   /**
    * The feature id for the '<em><b>Within</b></em>' attribute.
@@ -7306,7 +7696,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__WITHIN = STREAM_FEATURE_COUNT + 15;
+  int KEYWORD__WITHIN = NAME_FEATURE_COUNT + 16;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' attribute.
@@ -7315,7 +7705,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__LEFT = STREAM_FEATURE_COUNT + 16;
+  int KEYWORD__LEFT = NAME_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' attribute.
@@ -7324,7 +7714,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__RIGHT = STREAM_FEATURE_COUNT + 17;
+  int KEYWORD__RIGHT = NAME_FEATURE_COUNT + 18;
 
   /**
    * The feature id for the '<em><b>Full</b></em>' attribute.
@@ -7333,7 +7723,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FULL = STREAM_FEATURE_COUNT + 18;
+  int KEYWORD__FULL = NAME_FEATURE_COUNT + 19;
 
   /**
    * The feature id for the '<em><b>Join</b></em>' attribute.
@@ -7342,7 +7732,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__JOIN = STREAM_FEATURE_COUNT + 19;
+  int KEYWORD__JOIN = NAME_FEATURE_COUNT + 20;
 
   /**
    * The feature id for the '<em><b>Outer</b></em>' attribute.
@@ -7351,7 +7741,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__OUTER = STREAM_FEATURE_COUNT + 20;
+  int KEYWORD__OUTER = NAME_FEATURE_COUNT + 21;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' attribute.
@@ -7360,7 +7750,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__INNER = STREAM_FEATURE_COUNT + 21;
+  int KEYWORD__INNER = NAME_FEATURE_COUNT + 22;
 
   /**
    * The feature id for the '<em><b>Year</b></em>' attribute.
@@ -7369,7 +7759,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__YEAR = STREAM_FEATURE_COUNT + 22;
+  int KEYWORD__YEAR = NAME_FEATURE_COUNT + 23;
 
   /**
    * The feature id for the '<em><b>Years</b></em>' attribute.
@@ -7378,7 +7768,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__YEARS = STREAM_FEATURE_COUNT + 23;
+  int KEYWORD__YEARS = NAME_FEATURE_COUNT + 24;
 
   /**
    * The feature id for the '<em><b>Month</b></em>' attribute.
@@ -7387,7 +7777,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MONTH = STREAM_FEATURE_COUNT + 24;
+  int KEYWORD__MONTH = NAME_FEATURE_COUNT + 25;
 
   /**
    * The feature id for the '<em><b>Months</b></em>' attribute.
@@ -7396,7 +7786,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MONTHS = STREAM_FEATURE_COUNT + 25;
+  int KEYWORD__MONTHS = NAME_FEATURE_COUNT + 26;
 
   /**
    * The feature id for the '<em><b>Week</b></em>' attribute.
@@ -7405,7 +7795,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__WEEK = STREAM_FEATURE_COUNT + 26;
+  int KEYWORD__WEEK = NAME_FEATURE_COUNT + 27;
 
   /**
    * The feature id for the '<em><b>Weeks</b></em>' attribute.
@@ -7414,7 +7804,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__WEEKS = STREAM_FEATURE_COUNT + 27;
+  int KEYWORD__WEEKS = NAME_FEATURE_COUNT + 28;
 
   /**
    * The feature id for the '<em><b>Day</b></em>' attribute.
@@ -7423,7 +7813,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__DAY = STREAM_FEATURE_COUNT + 28;
+  int KEYWORD__DAY = NAME_FEATURE_COUNT + 29;
 
   /**
    * The feature id for the '<em><b>Days</b></em>' attribute.
@@ -7432,7 +7822,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__DAYS = STREAM_FEATURE_COUNT + 29;
+  int KEYWORD__DAYS = NAME_FEATURE_COUNT + 30;
 
   /**
    * The feature id for the '<em><b>Hour</b></em>' attribute.
@@ -7441,7 +7831,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__HOUR = STREAM_FEATURE_COUNT + 30;
+  int KEYWORD__HOUR = NAME_FEATURE_COUNT + 31;
 
   /**
    * The feature id for the '<em><b>Hours</b></em>' attribute.
@@ -7450,7 +7840,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__HOURS = STREAM_FEATURE_COUNT + 31;
+  int KEYWORD__HOURS = NAME_FEATURE_COUNT + 32;
 
   /**
    * The feature id for the '<em><b>Minute</b></em>' attribute.
@@ -7459,7 +7849,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MINUTE = STREAM_FEATURE_COUNT + 32;
+  int KEYWORD__MINUTE = NAME_FEATURE_COUNT + 33;
 
   /**
    * The feature id for the '<em><b>Minutes</b></em>' attribute.
@@ -7468,7 +7858,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MINUTES = STREAM_FEATURE_COUNT + 33;
+  int KEYWORD__MINUTES = NAME_FEATURE_COUNT + 34;
 
   /**
    * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -7477,7 +7867,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MIN = STREAM_FEATURE_COUNT + 34;
+  int KEYWORD__MIN = NAME_FEATURE_COUNT + 35;
 
   /**
    * The feature id for the '<em><b>Second</b></em>' attribute.
@@ -7486,7 +7876,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__SECOND = STREAM_FEATURE_COUNT + 35;
+  int KEYWORD__SECOND = NAME_FEATURE_COUNT + 36;
 
   /**
    * The feature id for the '<em><b>Seconds</b></em>' attribute.
@@ -7495,7 +7885,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__SECONDS = STREAM_FEATURE_COUNT + 36;
+  int KEYWORD__SECONDS = NAME_FEATURE_COUNT + 37;
 
   /**
    * The feature id for the '<em><b>Sec</b></em>' attribute.
@@ -7504,7 +7894,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__SEC = STREAM_FEATURE_COUNT + 37;
+  int KEYWORD__SEC = NAME_FEATURE_COUNT + 38;
 
   /**
    * The feature id for the '<em><b>Millisecond</b></em>' attribute.
@@ -7513,7 +7903,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MILLISECOND = STREAM_FEATURE_COUNT + 38;
+  int KEYWORD__MILLISECOND = NAME_FEATURE_COUNT + 39;
 
   /**
    * The feature id for the '<em><b>Milliseconds</b></em>' attribute.
@@ -7522,7 +7912,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MILLISECONDS = STREAM_FEATURE_COUNT + 39;
+  int KEYWORD__MILLISECONDS = NAME_FEATURE_COUNT + 40;
 
   /**
    * The feature id for the '<em><b>Millisec</b></em>' attribute.
@@ -7531,7 +7921,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__MILLISEC = STREAM_FEATURE_COUNT + 40;
+  int KEYWORD__MILLISEC = NAME_FEATURE_COUNT + 41;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -7540,7 +7930,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__STRING = STREAM_FEATURE_COUNT + 41;
+  int KEYWORD__STRING = NAME_FEATURE_COUNT + 42;
 
   /**
    * The feature id for the '<em><b>Int</b></em>' attribute.
@@ -7549,7 +7939,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__INT = STREAM_FEATURE_COUNT + 42;
+  int KEYWORD__INT = NAME_FEATURE_COUNT + 43;
 
   /**
    * The feature id for the '<em><b>Long</b></em>' attribute.
@@ -7558,7 +7948,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__LONG = STREAM_FEATURE_COUNT + 43;
+  int KEYWORD__LONG = NAME_FEATURE_COUNT + 44;
 
   /**
    * The feature id for the '<em><b>Float</b></em>' attribute.
@@ -7567,7 +7957,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FLOAT = STREAM_FEATURE_COUNT + 44;
+  int KEYWORD__FLOAT = NAME_FEATURE_COUNT + 45;
 
   /**
    * The feature id for the '<em><b>Double</b></em>' attribute.
@@ -7576,7 +7966,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__DOUBLE = STREAM_FEATURE_COUNT + 45;
+  int KEYWORD__DOUBLE = NAME_FEATURE_COUNT + 46;
 
   /**
    * The feature id for the '<em><b>Bool</b></em>' attribute.
@@ -7585,7 +7975,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__BOOL = STREAM_FEATURE_COUNT + 46;
+  int KEYWORD__BOOL = NAME_FEATURE_COUNT + 47;
 
   /**
    * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -7594,7 +7984,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__OBJECT = STREAM_FEATURE_COUNT + 47;
+  int KEYWORD__OBJECT = NAME_FEATURE_COUNT + 48;
 
   /**
    * The feature id for the '<em><b>Is</b></em>' attribute.
@@ -7603,7 +7993,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__IS = STREAM_FEATURE_COUNT + 48;
+  int KEYWORD__IS = NAME_FEATURE_COUNT + 49;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -7612,7 +8002,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__NULL = STREAM_FEATURE_COUNT + 49;
+  int KEYWORD__NULL = NAME_FEATURE_COUNT + 50;
 
   /**
    * The feature id for the '<em><b>Snapshot</b></em>' attribute.
@@ -7621,7 +8011,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__SNAPSHOT = STREAM_FEATURE_COUNT + 50;
+  int KEYWORD__SNAPSHOT = NAME_FEATURE_COUNT + 51;
 
   /**
    * The feature id for the '<em><b>Last</b></em>' attribute.
@@ -7630,7 +8020,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__LAST = STREAM_FEATURE_COUNT + 51;
+  int KEYWORD__LAST = NAME_FEATURE_COUNT + 52;
 
   /**
    * The feature id for the '<em><b>First</b></em>' attribute.
@@ -7639,7 +8029,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FIRST = STREAM_FEATURE_COUNT + 52;
+  int KEYWORD__FIRST = NAME_FEATURE_COUNT + 53;
 
   /**
    * The feature id for the '<em><b>Group</b></em>' attribute.
@@ -7648,7 +8038,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__GROUP = STREAM_FEATURE_COUNT + 53;
+  int KEYWORD__GROUP = NAME_FEATURE_COUNT + 54;
 
   /**
    * The feature id for the '<em><b>By</b></em>' attribute.
@@ -7657,7 +8047,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__BY = STREAM_FEATURE_COUNT + 54;
+  int KEYWORD__BY = NAME_FEATURE_COUNT + 55;
 
   /**
    * The feature id for the '<em><b>Having</b></em>' attribute.
@@ -7666,7 +8056,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__HAVING = STREAM_FEATURE_COUNT + 55;
+  int KEYWORD__HAVING = NAME_FEATURE_COUNT + 56;
 
   /**
    * The feature id for the '<em><b>Wi</b></em>' attribute.
@@ -7675,7 +8065,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__WI = STREAM_FEATURE_COUNT + 56;
+  int KEYWORD__WI = NAME_FEATURE_COUNT + 57;
 
   /**
    * The feature id for the '<em><b>Begin</b></em>' attribute.
@@ -7684,7 +8074,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__BEGIN = STREAM_FEATURE_COUNT + 57;
+  int KEYWORD__BEGIN = NAME_FEATURE_COUNT + 58;
 
   /**
    * The feature id for the '<em><b>End</b></em>' attribute.
@@ -7693,7 +8083,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__END = STREAM_FEATURE_COUNT + 58;
+  int KEYWORD__END = NAME_FEATURE_COUNT + 59;
 
   /**
    * The feature id for the '<em><b>Delete</b></em>' attribute.
@@ -7702,7 +8092,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__DELETE = STREAM_FEATURE_COUNT + 59;
+  int KEYWORD__DELETE = NAME_FEATURE_COUNT + 60;
 
   /**
    * The feature id for the '<em><b>For</b></em>' attribute.
@@ -7711,7 +8101,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FOR = STREAM_FEATURE_COUNT + 60;
+  int KEYWORD__FOR = NAME_FEATURE_COUNT + 61;
 
   /**
    * The feature id for the '<em><b>Tr</b></em>' attribute.
@@ -7720,7 +8110,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__TR = STREAM_FEATURE_COUNT + 61;
+  int KEYWORD__TR = NAME_FEATURE_COUNT + 62;
 
   /**
    * The feature id for the '<em><b>Fals</b></em>' attribute.
@@ -7729,7 +8119,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__FALS = STREAM_FEATURE_COUNT + 62;
+  int KEYWORD__FALS = NAME_FEATURE_COUNT + 63;
 
   /**
    * The feature id for the '<em><b>Update</b></em>' attribute.
@@ -7738,7 +8128,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__UPDATE = STREAM_FEATURE_COUNT + 63;
+  int KEYWORD__UPDATE = NAME_FEATURE_COUNT + 64;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -7747,7 +8137,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__A = STREAM_FEATURE_COUNT + 64;
+  int KEYWORD__A = NAME_FEATURE_COUNT + 65;
 
   /**
    * The feature id for the '<em><b>Every</b></em>' containment reference.
@@ -7756,7 +8146,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__EVERY = STREAM_FEATURE_COUNT + 65;
+  int KEYWORD__EVERY = NAME_FEATURE_COUNT + 66;
 
   /**
    * The feature id for the '<em><b>Uni</b></em>' containment reference.
@@ -7765,7 +8155,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__UNI = STREAM_FEATURE_COUNT + 66;
+  int KEYWORD__UNI = NAME_FEATURE_COUNT + 67;
 
   /**
    * The feature id for the '<em><b>On</b></em>' containment reference.
@@ -7774,7 +8164,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__ON = STREAM_FEATURE_COUNT + 67;
+  int KEYWORD__ON = NAME_FEATURE_COUNT + 68;
 
   /**
    * The feature id for the '<em><b>And</b></em>' containment reference.
@@ -7783,7 +8173,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__AND = STREAM_FEATURE_COUNT + 68;
+  int KEYWORD__AND = NAME_FEATURE_COUNT + 69;
 
   /**
    * The feature id for the '<em><b>Or</b></em>' containment reference.
@@ -7792,7 +8182,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__OR = STREAM_FEATURE_COUNT + 69;
+  int KEYWORD__OR = NAME_FEATURE_COUNT + 70;
 
   /**
    * The feature id for the '<em><b>Not</b></em>' containment reference.
@@ -7801,7 +8191,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__NOT = STREAM_FEATURE_COUNT + 70;
+  int KEYWORD__NOT = NAME_FEATURE_COUNT + 71;
 
   /**
    * The feature id for the '<em><b>Of</b></em>' containment reference.
@@ -7810,7 +8200,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD__OF = STREAM_FEATURE_COUNT + 71;
+  int KEYWORD__OF = NAME_FEATURE_COUNT + 72;
 
   /**
    * The number of structural features of the '<em>Keyword</em>' class.
@@ -7819,7 +8209,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int KEYWORD_FEATURE_COUNT = STREAM_FEATURE_COUNT + 72;
+  int KEYWORD_FEATURE_COUNT = NAME_FEATURE_COUNT + 73;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.ASImpl <em>AS</em>}' class.
@@ -7829,7 +8219,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAS()
    * @generated
    */
-  int AS = 123;
+  int AS = 127;
 
   /**
    * The feature id for the '<em><b>A</b></em>' attribute.
@@ -7857,7 +8247,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getON()
    * @generated
    */
-  int ON = 124;
+  int ON = 128;
 
   /**
    * The feature id for the '<em><b>On</b></em>' attribute.
@@ -7885,7 +8275,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getUNIDIRECTIONAL()
    * @generated
    */
-  int UNIDIRECTIONAL = 125;
+  int UNIDIRECTIONAL = 129;
 
   /**
    * The feature id for the '<em><b>Unidirectional</b></em>' attribute.
@@ -7913,7 +8303,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getNOT()
    * @generated
    */
-  int NOT = 126;
+  int NOT = 130;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -8085,169 +8475,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEVERY()
    * @generated
    */
-  int EVERY = 127;
-
-  /**
-   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__ABSENT_PATTERN_SRC_CHAIN = ABSENT_PATTERN_SOURCE_CHAIN__ABSENT_PATTERN_SRC_CHAIN;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__WT1 = ABSENT_PATTERN_SOURCE_CHAIN__WT1;
-
-  /**
-   * The feature id for the '<em><b>Basic Absent PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__BASIC_ABSENT_PS = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__LEFT = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Fb1</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__FB1 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__RIGHT = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Left Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__LEFT_ABS_PS = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Wt2</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__WT2 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Every Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__EVERY_ABS_PS = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Every PSC</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__EVERY_PSC = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>Left Abs Pattern Src</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__LEFT_ABS_PATTERN_SRC = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>Left1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__LEFT1 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 9;
-
-  /**
-   * The feature id for the '<em><b>Fb2</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__FB2 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 10;
-
-  /**
-   * The feature id for the '<em><b>Right1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__RIGHT1 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 11;
-
-  /**
-   * The feature id for the '<em><b>Right Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__RIGHT_ABS_PS = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 12;
-
-  /**
-   * The feature id for the '<em><b>Wt3</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__WT3 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 13;
-
-  /**
-   * The feature id for the '<em><b>Every PSC1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__EVERY_PSC1 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 14;
-
-  /**
-   * The feature id for the '<em><b>Every Abs PS1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVERY__EVERY_ABS_PS1 = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 15;
+  int EVERY = 131;
 
   /**
    * The feature id for the '<em><b>Seq Source</b></em>' containment reference.
@@ -8256,7 +8484,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY__SEQ_SOURCE = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 16;
+  int EVERY__SEQ_SOURCE = EVERY_SEQUENCE_SOURCE_CHAIN__SEQ_SOURCE;
 
   /**
    * The feature id for the '<em><b>Wt</b></em>' containment reference.
@@ -8265,7 +8493,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY__WT = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 17;
+  int EVERY__WT = EVERY_SEQUENCE_SOURCE_CHAIN__WT;
 
   /**
    * The feature id for the '<em><b>Ssc</b></em>' containment reference.
@@ -8274,7 +8502,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY__SSC = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 18;
+  int EVERY__SSC = EVERY_SEQUENCE_SOURCE_CHAIN__SSC;
 
   /**
    * The feature id for the '<em><b>Abs Seq Src Chain</b></em>' containment reference.
@@ -8283,7 +8511,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY__ABS_SEQ_SRC_CHAIN = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 19;
+  int EVERY__ABS_SEQ_SRC_CHAIN = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Seq Src Chain</b></em>' containment reference.
@@ -8292,16 +8520,178 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY__SEQ_SRC_CHAIN = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 20;
+  int EVERY__SEQ_SRC_CHAIN = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Every</b></em>' attribute.
+   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVERY__EVERY = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 21;
+  int EVERY__ABSENT_PATTERN_SRC_CHAIN = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__WT1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Basic Absent PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__BASIC_ABSENT_PS = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__LEFT = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Fb1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__FB1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__RIGHT = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Left Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__LEFT_ABS_PS = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Wt2</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__WT2 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>Every Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__EVERY_ABS_PS = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 10;
+
+  /**
+   * The feature id for the '<em><b>Every PSC</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__EVERY_PSC = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 11;
+
+  /**
+   * The feature id for the '<em><b>Left Abs Pattern Src</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__LEFT_ABS_PATTERN_SRC = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 12;
+
+  /**
+   * The feature id for the '<em><b>Left1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__LEFT1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 13;
+
+  /**
+   * The feature id for the '<em><b>Fb2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__FB2 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 14;
+
+  /**
+   * The feature id for the '<em><b>Right1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__RIGHT1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 15;
+
+  /**
+   * The feature id for the '<em><b>Right Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__RIGHT_ABS_PS = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 16;
+
+  /**
+   * The feature id for the '<em><b>Wt3</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__WT3 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 17;
+
+  /**
+   * The feature id for the '<em><b>Every PSC1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__EVERY_PSC1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 18;
+
+  /**
+   * The feature id for the '<em><b>Every Abs PS1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__EVERY_ABS_PS1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 19;
+
+  /**
+   * The feature id for the '<em><b>Every1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVERY__EVERY1 = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 20;
 
   /**
    * The number of structural features of the '<em>EVERY</em>' class.
@@ -8310,7 +8700,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVERY_FEATURE_COUNT = ABSENT_PATTERN_SOURCE_CHAIN_FEATURE_COUNT + 22;
+  int EVERY_FEATURE_COUNT = EVERY_SEQUENCE_SOURCE_CHAIN_FEATURE_COUNT + 21;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.ANDImpl <em>AND</em>}' class.
@@ -8320,7 +8710,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAND()
    * @generated
    */
-  int AND = 128;
+  int AND = 132;
 
   /**
    * The feature id for the '<em><b>And</b></em>' attribute.
@@ -8348,7 +8738,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOR()
    * @generated
    */
-  int OR = 129;
+  int OR = 133;
 
   /**
    * The feature id for the '<em><b>Or</b></em>' attribute list.
@@ -8376,7 +8766,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getIN()
    * @generated
    */
-  int IN = 130;
+  int IN = 134;
 
   /**
    * The feature id for the '<em><b>In</b></em>' attribute.
@@ -8404,7 +8794,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOF()
    * @generated
    */
-  int OF = 131;
+  int OF = 135;
 
   /**
    * The feature id for the '<em><b>Of</b></em>' attribute.
@@ -8432,7 +8822,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getE()
    * @generated
    */
-  int E = 132;
+  int E = 136;
 
   /**
    * The feature id for the '<em><b>E</b></em>' attribute.
@@ -8460,7 +8850,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getD()
    * @generated
    */
-  int D = 133;
+  int D = 137;
 
   /**
    * The feature id for the '<em><b>D</b></em>' attribute.
@@ -8488,7 +8878,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getF()
    * @generated
    */
-  int F = 134;
+  int F = 138;
 
   /**
    * The feature id for the '<em><b>F</b></em>' attribute.
@@ -8516,7 +8906,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getL()
    * @generated
    */
-  int L = 135;
+  int L = 139;
 
   /**
    * The feature id for the '<em><b>L</b></em>' attribute.
@@ -8544,16 +8934,16 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAPP()
    * @generated
    */
-  int APP = 136;
+  int APP = 140;
 
   /**
-   * The feature id for the '<em><b>Na</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int APP__NA = APP_ANNOTATION_FEATURE_COUNT + 0;
+  int APP__NAME = APP_ANNOTATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Ann5</b></em>' containment reference list.
@@ -8583,6 +8973,34 @@ public interface SiddhiPackage extends EPackage
   int APP_FEATURE_COUNT = APP_ANNOTATION_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.STREAMImpl <em>STREAM</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.STREAMImpl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSTREAM()
+   * @generated
+   */
+  int STREAM = 141;
+
+  /**
+   * The feature id for the '<em><b>Str</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STREAM__STR = 0;
+
+  /**
+   * The number of structural features of the '<em>STREAM</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STREAM_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.TABLEImpl <em>TABLE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8590,7 +9008,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getTABLE()
    * @generated
    */
-  int TABLE = 139;
+  int TABLE = 143;
 
   /**
    * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -8618,7 +9036,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getINTS()
    * @generated
    */
-  int INTS = 143;
+  int INTS = 147;
 
   /**
    * The feature id for the '<em><b>Int</b></em>' attribute.
@@ -8646,7 +9064,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLONG()
    * @generated
    */
-  int LONG = 144;
+  int LONG = 148;
 
   /**
    * The feature id for the '<em><b>Long</b></em>' attribute.
@@ -8674,7 +9092,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDOUBLE()
    * @generated
    */
-  int DOUBLE = 145;
+  int DOUBLE = 149;
 
   /**
    * The feature id for the '<em><b>Double</b></em>' attribute.
@@ -8702,7 +9120,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFLOAT()
    * @generated
    */
-  int FLOAT = 146;
+  int FLOAT = 150;
 
   /**
    * The feature id for the '<em><b>Float</b></em>' attribute.
@@ -8730,7 +9148,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBOOL()
    * @generated
    */
-  int BOOL = 147;
+  int BOOL = 151;
 
   /**
    * The feature id for the '<em><b>Bool</b></em>' attribute.
@@ -8758,7 +9176,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOBJECT()
    * @generated
    */
-  int OBJECT = 148;
+  int OBJECT = 152;
 
   /**
    * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -8786,7 +9204,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEVENTS()
    * @generated
    */
-  int EVENTS = 150;
+  int EVENTS = 154;
 
   /**
    * The feature id for the '<em><b>Events</b></em>' attribute.
@@ -8814,7 +9232,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRAW()
    * @generated
    */
-  int RAW = 151;
+  int RAW = 155;
 
   /**
    * The feature id for the '<em><b>Raw</b></em>' attribute.
@@ -8842,7 +9260,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEXPIRED()
    * @generated
    */
-  int EXPIRED = 152;
+  int EXPIRED = 156;
 
   /**
    * The feature id for the '<em><b>Expired</b></em>' attribute.
@@ -8870,7 +9288,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getCURRENT()
    * @generated
    */
-  int CURRENT = 153;
+  int CURRENT = 157;
 
   /**
    * The feature id for the '<em><b>Currt</b></em>' attribute.
@@ -8898,7 +9316,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getIS()
    * @generated
    */
-  int IS = 155;
+  int IS = 159;
 
   /**
    * The feature id for the '<em><b>Is</b></em>' attribute.
@@ -8926,7 +9344,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getNULL()
    * @generated
    */
-  int NULL = 156;
+  int NULL = 160;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -8954,7 +9372,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getTRIGGER()
    * @generated
    */
-  int TRIGGER = 157;
+  int TRIGGER = 161;
 
   /**
    * The feature id for the '<em><b>Trigger</b></em>' attribute.
@@ -8982,7 +9400,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAT()
    * @generated
    */
-  int AT = 158;
+  int AT = 162;
 
   /**
    * The feature id for the '<em><b>At</b></em>' attribute.
@@ -9010,7 +9428,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFUNCTION()
    * @generated
    */
-  int FUNCTION = 159;
+  int FUNCTION = 163;
 
   /**
    * The feature id for the '<em><b>Function</b></em>' attribute.
@@ -9038,7 +9456,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRETURN()
    * @generated
    */
-  int RETURN = 160;
+  int RETURN = 164;
 
   /**
    * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -9066,7 +9484,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRIGHT()
    * @generated
    */
-  int RIGHT = 164;
+  int RIGHT = 168;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' attribute.
@@ -9094,7 +9512,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFULL()
    * @generated
    */
-  int FULL = 165;
+  int FULL = 169;
 
   /**
    * The feature id for the '<em><b>Full</b></em>' attribute.
@@ -9122,7 +9540,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getJOIN()
    * @generated
    */
-  int JOIN = 166;
+  int JOIN = 170;
 
   /**
    * The feature id for the '<em><b>Join</b></em>' attribute.
@@ -9150,7 +9568,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getINNER()
    * @generated
    */
-  int INNER = 167;
+  int INNER = 171;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' attribute.
@@ -9178,7 +9596,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getOUTER()
    * @generated
    */
-  int OUTER = 168;
+  int OUTER = 172;
 
   /**
    * The feature id for the '<em><b>Outer</b></em>' attribute.
@@ -9206,7 +9624,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBY()
    * @generated
    */
-  int BY = 171;
+  int BY = 175;
 
   /**
    * The feature id for the '<em><b>By</b></em>' attribute.
@@ -9234,7 +9652,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getSNAPSHOT()
    * @generated
    */
-  int SNAPSHOT = 173;
+  int SNAPSHOT = 177;
 
   /**
    * The feature id for the '<em><b>Snapshot</b></em>' attribute.
@@ -9262,7 +9680,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFIRST()
    * @generated
    */
-  int FIRST = 174;
+  int FIRST = 178;
 
   /**
    * The feature id for the '<em><b>First</b></em>' attribute.
@@ -9290,7 +9708,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getINTO()
    * @generated
    */
-  int INTO = 176;
+  int INTO = 180;
 
   /**
    * The feature id for the '<em><b>Into</b></em>' attribute.
@@ -9318,7 +9736,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getBEGIN()
    * @generated
    */
-  int BEGIN = 177;
+  int BEGIN = 181;
 
   /**
    * The feature id for the '<em><b>Begin</b></em>' attribute.
@@ -9346,7 +9764,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getPLAN()
    * @generated
    */
-  int PLAN = 178;
+  int PLAN = 182;
 
   /**
    * The feature id for the '<em><b>Plan</b></em>' attribute.
@@ -9374,7 +9792,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getDELETE()
    * @generated
    */
-  int DELETE = 179;
+  int DELETE = 183;
 
   /**
    * The feature id for the '<em><b>Delete</b></em>' attribute.
@@ -9402,7 +9820,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getUPDATE()
    * @generated
    */
-  int UPDATE = 181;
+  int UPDATE = 185;
 
   /**
    * The feature id for the '<em><b>Update</b></em>' attribute.
@@ -9430,7 +9848,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getEND()
    * @generated
    */
-  int END = 182;
+  int END = 186;
 
   /**
    * The feature id for the '<em><b>End</b></em>' attribute.
@@ -9458,7 +9876,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getWITH()
    * @generated
    */
-  int WITH = 184;
+  int WITH = 188;
 
   /**
    * The feature id for the '<em><b>Wi</b></em>' attribute.
@@ -9486,7 +9904,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAGGREGATION()
    * @generated
    */
-  int AGGREGATION = 185;
+  int AGGREGATION = 189;
 
   /**
    * The feature id for the '<em><b>Aggre</b></em>' attribute.
@@ -9514,7 +9932,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getAGGREGATE()
    * @generated
    */
-  int AGGREGATE = 186;
+  int AGGREGATE = 190;
 
   /**
    * The feature id for the '<em><b>Agrregate</b></em>' attribute.
@@ -9542,7 +9960,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getFALSE()
    * @generated
    */
-  int FALSE = 197;
+  int FALSE = 201;
 
   /**
    * The feature id for the '<em><b>Fals</b></em>' attribute.
@@ -9563,251 +9981,6 @@ public interface SiddhiPackage extends EPackage
   int FALSE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LeftAbsentPatternSource1Impl <em>Left Absent Pattern Source1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.LeftAbsentPatternSource1Impl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentPatternSource1()
-   * @generated
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1 = 199;
-
-  /**
-   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__ABSENT_PATTERN_SRC_CHAIN = LEFT_ABSENT_PATTERN_SOURCE__ABSENT_PATTERN_SRC_CHAIN;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__WT1 = LEFT_ABSENT_PATTERN_SOURCE__WT1;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT = LEFT_ABSENT_PATTERN_SOURCE__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Fb1</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__FB1 = LEFT_ABSENT_PATTERN_SOURCE__FB1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__RIGHT = LEFT_ABSENT_PATTERN_SOURCE__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT_ABS_PS = LEFT_ABSENT_PATTERN_SOURCE__LEFT_ABS_PS;
-
-  /**
-   * The feature id for the '<em><b>Wt2</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__WT2 = LEFT_ABSENT_PATTERN_SOURCE__WT2;
-
-  /**
-   * The feature id for the '<em><b>Every Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__EVERY_ABS_PS = LEFT_ABSENT_PATTERN_SOURCE__EVERY_ABS_PS;
-
-  /**
-   * The feature id for the '<em><b>Every PSC</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__EVERY_PSC = LEFT_ABSENT_PATTERN_SOURCE__EVERY_PSC;
-
-  /**
-   * The feature id for the '<em><b>Left Abs Pattern Src</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT_ABS_PATTERN_SRC = LEFT_ABSENT_PATTERN_SOURCE__LEFT_ABS_PATTERN_SRC;
-
-  /**
-   * The feature id for the '<em><b>Fb</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1__FB = LEFT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Left Absent Pattern Source1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LEFT_ABSENT_PATTERN_SOURCE1_FEATURE_COUNT = LEFT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.RightAbsentPatternSource1Impl <em>Right Absent Pattern Source1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.RightAbsentPatternSource1Impl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentPatternSource1()
-   * @generated
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1 = 200;
-
-  /**
-   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__ABSENT_PATTERN_SRC_CHAIN = RIGHT_ABSENT_PATTERN_SOURCE__ABSENT_PATTERN_SRC_CHAIN;
-
-  /**
-   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__WT1 = RIGHT_ABSENT_PATTERN_SOURCE__WT1;
-
-  /**
-   * The feature id for the '<em><b>Left1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__LEFT1 = RIGHT_ABSENT_PATTERN_SOURCE__LEFT1;
-
-  /**
-   * The feature id for the '<em><b>Fb2</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__FB2 = RIGHT_ABSENT_PATTERN_SOURCE__FB2;
-
-  /**
-   * The feature id for the '<em><b>Right1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT1 = RIGHT_ABSENT_PATTERN_SOURCE__RIGHT1;
-
-  /**
-   * The feature id for the '<em><b>Right Abs PS</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT_ABS_PS = RIGHT_ABSENT_PATTERN_SOURCE__RIGHT_ABS_PS;
-
-  /**
-   * The feature id for the '<em><b>Wt3</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__WT3 = RIGHT_ABSENT_PATTERN_SOURCE__WT3;
-
-  /**
-   * The feature id for the '<em><b>Every PSC1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__EVERY_PSC1 = RIGHT_ABSENT_PATTERN_SOURCE__EVERY_PSC1;
-
-  /**
-   * The feature id for the '<em><b>Every Abs PS1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__EVERY_ABS_PS1 = RIGHT_ABSENT_PATTERN_SOURCE__EVERY_ABS_PS1;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__LEFT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Fb</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__FB = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Right Absent Pattern Source1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT_ABSENT_PATTERN_SOURCE1_FEATURE_COUNT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 3;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LeftAbsentSequenceSource1Impl <em>Left Absent Sequence Source1</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9815,7 +9988,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentSequenceSource1()
    * @generated
    */
-  int LEFT_ABSENT_SEQUENCE_SOURCE1 = 201;
+  int LEFT_ABSENT_SEQUENCE_SOURCE1 = 203;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -9924,7 +10097,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentSequenceSource1()
    * @generated
    */
-  int RIGHT_ABSENT_SEQUENCE_SOURCE1 = 202;
+  int RIGHT_ABSENT_SEQUENCE_SOURCE1 = 204;
 
   /**
    * The feature id for the '<em><b>Left1</b></em>' containment reference.
@@ -10044,6 +10217,251 @@ public interface SiddhiPackage extends EPackage
   int RIGHT_ABSENT_SEQUENCE_SOURCE1_FEATURE_COUNT = RIGHT_ABSENT_SEQUENCE_SOURCE_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.LeftAbsentPatternSource1Impl <em>Left Absent Pattern Source1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.LeftAbsentPatternSource1Impl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getLeftAbsentPatternSource1()
+   * @generated
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1 = 205;
+
+  /**
+   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__ABSENT_PATTERN_SRC_CHAIN = LEFT_ABSENT_PATTERN_SOURCE__ABSENT_PATTERN_SRC_CHAIN;
+
+  /**
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__WT1 = LEFT_ABSENT_PATTERN_SOURCE__WT1;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT = LEFT_ABSENT_PATTERN_SOURCE__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Fb1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__FB1 = LEFT_ABSENT_PATTERN_SOURCE__FB1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__RIGHT = LEFT_ABSENT_PATTERN_SOURCE__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Left Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT_ABS_PS = LEFT_ABSENT_PATTERN_SOURCE__LEFT_ABS_PS;
+
+  /**
+   * The feature id for the '<em><b>Wt2</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__WT2 = LEFT_ABSENT_PATTERN_SOURCE__WT2;
+
+  /**
+   * The feature id for the '<em><b>Every Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__EVERY_ABS_PS = LEFT_ABSENT_PATTERN_SOURCE__EVERY_ABS_PS;
+
+  /**
+   * The feature id for the '<em><b>Every PSC</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__EVERY_PSC = LEFT_ABSENT_PATTERN_SOURCE__EVERY_PSC;
+
+  /**
+   * The feature id for the '<em><b>Left Abs Pattern Src</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__LEFT_ABS_PATTERN_SRC = LEFT_ABSENT_PATTERN_SOURCE__LEFT_ABS_PATTERN_SRC;
+
+  /**
+   * The feature id for the '<em><b>Fb</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1__FB = LEFT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Left Absent Pattern Source1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEFT_ABSENT_PATTERN_SOURCE1_FEATURE_COUNT = LEFT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.RightAbsentPatternSource1Impl <em>Right Absent Pattern Source1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.siddhi.siddhi.impl.RightAbsentPatternSource1Impl
+   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getRightAbsentPatternSource1()
+   * @generated
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1 = 206;
+
+  /**
+   * The feature id for the '<em><b>Absent Pattern Src Chain</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__ABSENT_PATTERN_SRC_CHAIN = RIGHT_ABSENT_PATTERN_SOURCE__ABSENT_PATTERN_SRC_CHAIN;
+
+  /**
+   * The feature id for the '<em><b>Wt1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__WT1 = RIGHT_ABSENT_PATTERN_SOURCE__WT1;
+
+  /**
+   * The feature id for the '<em><b>Left1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__LEFT1 = RIGHT_ABSENT_PATTERN_SOURCE__LEFT1;
+
+  /**
+   * The feature id for the '<em><b>Fb2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__FB2 = RIGHT_ABSENT_PATTERN_SOURCE__FB2;
+
+  /**
+   * The feature id for the '<em><b>Right1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT1 = RIGHT_ABSENT_PATTERN_SOURCE__RIGHT1;
+
+  /**
+   * The feature id for the '<em><b>Right Abs PS</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT_ABS_PS = RIGHT_ABSENT_PATTERN_SOURCE__RIGHT_ABS_PS;
+
+  /**
+   * The feature id for the '<em><b>Wt3</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__WT3 = RIGHT_ABSENT_PATTERN_SOURCE__WT3;
+
+  /**
+   * The feature id for the '<em><b>Every PSC1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__EVERY_PSC1 = RIGHT_ABSENT_PATTERN_SOURCE__EVERY_PSC1;
+
+  /**
+   * The feature id for the '<em><b>Every Abs PS1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__EVERY_ABS_PS1 = RIGHT_ABSENT_PATTERN_SOURCE__EVERY_ABS_PS1;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__LEFT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Fb</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__FB = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1__RIGHT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Right Absent Pattern Source1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_ABSENT_PATTERN_SOURCE1_FEATURE_COUNT = RIGHT_ABSENT_PATTERN_SOURCE_FEATURE_COUNT + 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathLogicalOperationImpl <em>Math Logical Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10051,7 +10469,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathLogicalOperation()
    * @generated
    */
-  int MATH_LOGICAL_OPERATION = 203;
+  int MATH_LOGICAL_OPERATION = 207;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -10063,31 +10481,13 @@ public interface SiddhiPackage extends EPackage
   int MATH_LOGICAL_OPERATION__MLO = MATH_OPERATION__MLO;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_LOGICAL_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_LOGICAL_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_LOGICAL_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
+  int MATH_LOGICAL_OPERATION__LEFT = MATH_OPERATION__LEFT;
 
   /**
    * The feature id for the '<em><b>And</b></em>' containment reference.
@@ -10096,7 +10496,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_LOGICAL_OPERATION__AND = MATH_OPERATION_FEATURE_COUNT + 1;
+  int MATH_LOGICAL_OPERATION__AND = MATH_OPERATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Or</b></em>' containment reference.
@@ -10105,7 +10505,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_LOGICAL_OPERATION__OR = MATH_OPERATION_FEATURE_COUNT + 2;
+  int MATH_LOGICAL_OPERATION__OR = MATH_OPERATION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -10114,7 +10514,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_LOGICAL_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 3;
+  int MATH_LOGICAL_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Math Logical Operation</em>' class.
@@ -10123,7 +10523,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_LOGICAL_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 4;
+  int MATH_LOGICAL_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathInOperationImpl <em>Math In Operation</em>}' class.
@@ -10133,7 +10533,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathInOperation()
    * @generated
    */
-  int MATH_IN_OPERATION = 204;
+  int MATH_IN_OPERATION = 208;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -10145,31 +10545,13 @@ public interface SiddhiPackage extends EPackage
   int MATH_IN_OPERATION__MLO = MATH_OPERATION__MLO;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_IN_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_IN_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_IN_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
+  int MATH_IN_OPERATION__LEFT = MATH_OPERATION__LEFT;
 
   /**
    * The feature id for the '<em><b>In</b></em>' containment reference.
@@ -10178,16 +10560,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_IN_OPERATION__IN = MATH_OPERATION_FEATURE_COUNT + 1;
+  int MATH_IN_OPERATION__IN = MATH_OPERATION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_IN_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 2;
+  int MATH_IN_OPERATION__NAME = MATH_OPERATION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Math In Operation</em>' class.
@@ -10196,7 +10578,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_IN_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 3;
+  int MATH_IN_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathGtLtOperationImpl <em>Math Gt Lt Operation</em>}' class.
@@ -10206,7 +10588,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathGtLtOperation()
    * @generated
    */
-  int MATH_GT_LT_OPERATION = 205;
+  int MATH_GT_LT_OPERATION = 209;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -10218,40 +10600,49 @@ public interface SiddhiPackage extends EPackage
   int MATH_GT_LT_OPERATION__MLO = MATH_OPERATION__MLO;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_GT_LT_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_GT_LT_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_GT_LT_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
+  int MATH_GT_LT_OPERATION__LEFT = MATH_OPERATION__LEFT;
 
   /**
-   * The feature id for the '<em><b>Symbol</b></em>' attribute.
+   * The feature id for the '<em><b>Gt eq</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_GT_LT_OPERATION__SYMBOL = MATH_OPERATION_FEATURE_COUNT + 1;
+  int MATH_GT_LT_OPERATION__GT_EQ = MATH_OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Lt eq</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_GT_LT_OPERATION__LT_EQ = MATH_OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Gt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_GT_LT_OPERATION__GT = MATH_OPERATION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Lt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_GT_LT_OPERATION__LT = MATH_OPERATION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -10260,7 +10651,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_GT_LT_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 2;
+  int MATH_GT_LT_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Math Gt Lt Operation</em>' class.
@@ -10269,7 +10660,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_GT_LT_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 3;
+  int MATH_GT_LT_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathEqualOperationImpl <em>Math Equal Operation</em>}' class.
@@ -10279,7 +10670,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathEqualOperation()
    * @generated
    */
-  int MATH_EQUAL_OPERATION = 206;
+  int MATH_EQUAL_OPERATION = 210;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -10291,31 +10682,13 @@ public interface SiddhiPackage extends EPackage
   int MATH_EQUAL_OPERATION__MLO = MATH_OPERATION__MLO;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_EQUAL_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_EQUAL_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_EQUAL_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
+  int MATH_EQUAL_OPERATION__LEFT = MATH_OPERATION__LEFT;
 
   /**
    * The feature id for the '<em><b>Eq</b></em>' attribute.
@@ -10324,7 +10697,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_EQUAL_OPERATION__EQ = MATH_OPERATION_FEATURE_COUNT + 1;
+  int MATH_EQUAL_OPERATION__EQ = MATH_OPERATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Not eq</b></em>' attribute.
@@ -10333,7 +10706,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_EQUAL_OPERATION__NOT_EQ = MATH_OPERATION_FEATURE_COUNT + 2;
+  int MATH_EQUAL_OPERATION__NOT_EQ = MATH_OPERATION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -10342,7 +10715,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_EQUAL_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 3;
+  int MATH_EQUAL_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Math Equal Operation</em>' class.
@@ -10351,180 +10724,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_EQUAL_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 4;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl <em>Math Addsub Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.MathAddsubOperationImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathAddsubOperation()
-   * @generated
-   */
-  int MATH_ADDSUB_OPERATION = 207;
-
-  /**
-   * The feature id for the '<em><b>Mlo</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__MLO = MATH_OPERATION__MLO;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Add</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__ADD = MATH_OPERATION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Substract</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__SUBSTRACT = MATH_OPERATION_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 3;
-
-  /**
-   * The number of structural features of the '<em>Math Addsub Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_ADDSUB_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 4;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.MathDivmulOperationImpl <em>Math Divmul Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.siddhi.siddhi.impl.MathDivmulOperationImpl
-   * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getMathDivmulOperation()
-   * @generated
-   */
-  int MATH_DIVMUL_OPERATION = 208;
-
-  /**
-   * The feature id for the '<em><b>Mlo</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__MLO = MATH_OPERATION__MLO;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__OP = MATH_OPERATION__OP;
-
-  /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__LEFT = MATH_OPERATION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Multiply</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__MULTIPLY = MATH_OPERATION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Devide</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__DEVIDE = MATH_OPERATION_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Mod</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__MOD = MATH_OPERATION_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION__RIGHT = MATH_OPERATION_FEATURE_COUNT + 4;
-
-  /**
-   * The number of structural features of the '<em>Math Divmul Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MATH_DIVMUL_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 5;
+  int MATH_EQUAL_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.siddhi.siddhi.impl.NotOperationImpl <em>Not Operation</em>}' class.
@@ -10534,7 +10734,7 @@ public interface SiddhiPackage extends EPackage
    * @see org.xtext.example.siddhi.siddhi.impl.SiddhiPackageImpl#getNotOperation()
    * @generated
    */
-  int NOT_OPERATION = 209;
+  int NOT_OPERATION = 211;
 
   /**
    * The feature id for the '<em><b>Mlo</b></em>' containment reference.
@@ -10543,7 +10743,70 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NOT_OPERATION__MLO = MATH_OPERATION__MLO;
+  int NOT_OPERATION__MLO = MATH_OTHER_OPERATIONS__MLO;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__LEFT = MATH_OTHER_OPERATIONS__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Add</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__ADD = MATH_OTHER_OPERATIONS__ADD;
+
+  /**
+   * The feature id for the '<em><b>Substract</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__SUBSTRACT = MATH_OTHER_OPERATIONS__SUBSTRACT;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__RIGHT = MATH_OTHER_OPERATIONS__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__MULTIPLY = MATH_OTHER_OPERATIONS__MULTIPLY;
+
+  /**
+   * The feature id for the '<em><b>Devide</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__DEVIDE = MATH_OTHER_OPERATIONS__DEVIDE;
+
+  /**
+   * The feature id for the '<em><b>Mod</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_OPERATION__MOD = MATH_OTHER_OPERATIONS__MOD;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' containment reference.
@@ -10552,16 +10815,16 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NOT_OPERATION__OP = MATH_OPERATION__OP;
+  int NOT_OPERATION__OP = MATH_OTHER_OPERATIONS__OP;
 
   /**
-   * The feature id for the '<em><b>Math Other Operations1</b></em>' containment reference.
+   * The feature id for the '<em><b>Lit</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NOT_OPERATION__MATH_OTHER_OPERATIONS1 = MATH_OPERATION__MATH_OTHER_OPERATIONS1;
+  int NOT_OPERATION__LIT = MATH_OTHER_OPERATIONS__LIT;
 
   /**
    * The feature id for the '<em><b>Not</b></em>' containment reference.
@@ -10570,7 +10833,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NOT_OPERATION__NOT = MATH_OPERATION_FEATURE_COUNT + 0;
+  int NOT_OPERATION__NOT = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Not Operation</em>' class.
@@ -10579,7 +10842,7 @@ public interface SiddhiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NOT_OPERATION_FEATURE_COUNT = MATH_OPERATION_FEATURE_COUNT + 1;
+  int NOT_OPERATION_FEATURE_COUNT = MATH_OTHER_OPERATIONS_FEATURE_COUNT + 1;
 
 
   /**
@@ -10680,15 +10943,15 @@ public interface SiddhiPackage extends EPackage
   EReference getExecutionPlan_DefFunction();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAgrregation <em>Def Agrregation</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAggregation <em>Def Aggregation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Def Agrregation</em>'.
-   * @see org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAgrregation()
+   * @return the meta object for the containment reference list '<em>Def Aggregation</em>'.
+   * @see org.xtext.example.siddhi.siddhi.ExecutionPlan#getDefAggregation()
    * @see #getExecutionPlan()
    * @generated
    */
-  EReference getExecutionPlan_DefAgrregation();
+  EReference getExecutionPlan_DefAggregation();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.ExecutionPlan#getExElement <em>Ex Element</em>}'.
@@ -11101,14 +11364,14 @@ public interface SiddhiPackage extends EPackage
   EReference getAggregationTime_AggrtimeDur();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.aggregation_time_interval <em>aggregation time interval</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AggregationTimeInterval <em>Aggregation Time Interval</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>aggregation time interval</em>'.
-   * @see org.xtext.example.siddhi.siddhi.aggregation_time_interval
+   * @return the meta object for class '<em>Aggregation Time Interval</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AggregationTimeInterval
    * @generated
    */
-  EClass getaggregation_time_interval();
+  EClass getAggregationTimeInterval();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AggregationTimeDuration <em>Aggregation Time Duration</em>}'.
@@ -11235,15 +11498,15 @@ public interface SiddhiPackage extends EPackage
   EClass getAnnotation();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Annotation#getNa <em>Na</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Annotation#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Annotation#getNa()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Annotation#getName()
    * @see #getAnnotation()
    * @generated
    */
-  EReference getAnnotation_Na();
+  EReference getAnnotation_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.Annotation#getAnnElement <em>Ann Element</em>}'.
@@ -11331,15 +11594,15 @@ public interface SiddhiPackage extends EPackage
   EClass getPropertyName();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.PropertyName#getNa <em>Na</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.PropertyName#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PropertyName#getNa()
+   * @return the meta object for the containment reference list '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PropertyName#getName()
    * @see #getPropertyName()
    * @generated
    */
-  EReference getPropertyName_Na();
+  EReference getPropertyName_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.PropertyName#getPs <em>Ps</em>}'.
@@ -11373,6 +11636,17 @@ public interface SiddhiPackage extends EPackage
   EClass getFeatures();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Features#getNam <em>Nam</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nam</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Features#getNam()
+   * @see #getFeatures()
+   * @generated
+   */
+  EReference getFeatures_Nam();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Features#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11392,6 +11666,48 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EClass getAttributeType();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Source
+   * @generated
+   */
+  EClass getSource();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.Source#getStrId <em>Str Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Str Id</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Source#getStrId()
+   * @see #getSource()
+   * @generated
+   */
+  EReference getSource_StrId();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Source1 <em>Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Source1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Source1
+   * @generated
+   */
+  EClass getSource1();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Source1#getInner <em>Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Inner</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Source1#getInner()
+   * @see #getSource1()
+   * @generated
+   */
+  EAttribute getSource1_Inner();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.ExecPartition <em>Exec Partition</em>}'.
@@ -11609,6 +11925,378 @@ public interface SiddhiPackage extends EPackage
   EReference getQuery_QOutput();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.QueryOutput <em>Query Output</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Query Output</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput
+   * @generated
+   */
+  EClass getQueryOutput();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOutEventType <em>Out Event Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Out Event Type</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOutEventType()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_OutEventType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getTar <em>Tar</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tar</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getTar()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_Tar();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOn <em>On</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>On</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOn()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_On();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getExpr()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_Expr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOr <em>Or</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Or</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOr()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_Or();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getSetClause <em>Set Clause</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set Clause</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getSetClause()
+   * @see #getQueryOutput()
+   * @generated
+   */
+  EReference getQueryOutput_SetClause();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Target <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Target</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Target
+   * @generated
+   */
+  EClass getTarget();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Target#getNa <em>Na</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Na</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Target#getNa()
+   * @see #getTarget()
+   * @generated
+   */
+  EReference getTarget_Na();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Target#getSrc <em>Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Target#getSrc()
+   * @see #getTarget()
+   * @generated
+   */
+  EReference getTarget_Src();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.SetClause <em>Set Clause</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Set Clause</em>'.
+   * @see org.xtext.example.siddhi.siddhi.SetClause
+   * @generated
+   */
+  EClass getSetClause();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.SetClause#getSetAssignment <em>Set Assignment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Set Assignment</em>'.
+   * @see org.xtext.example.siddhi.siddhi.SetClause#getSetAssignment()
+   * @see #getSetClause()
+   * @generated
+   */
+  EReference getSetClause_SetAssignment();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.SetAssignment <em>Set Assignment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Set Assignment</em>'.
+   * @see org.xtext.example.siddhi.siddhi.SetAssignment
+   * @generated
+   */
+  EClass getSetAssignment();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputEventType <em>Output Event Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Output Event Type</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputEventType
+   * @generated
+   */
+  EClass getOutputEventType();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputRate <em>Output Rate</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Output Rate</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputRate
+   * @generated
+   */
+  EClass getOutputRate();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getOp_rate_type <em>Op rate type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Op rate type</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputRate#getOp_rate_type()
+   * @see #getOutputRate()
+   * @generated
+   */
+  EReference getOutputRate_Op_rate_type();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getEvery <em>Every</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Every</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputRate#getEvery()
+   * @see #getOutputRate()
+   * @generated
+   */
+  EReference getOutputRate_Every();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getTv <em>Tv</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tv</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputRate#getTv()
+   * @see #getOutputRate()
+   * @generated
+   */
+  EReference getOutputRate_Tv();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputRateType <em>Output Rate Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Output Rate Type</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputRateType
+   * @generated
+   */
+  EClass getOutputRateType();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection <em>Group By Query Selection</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Group By Query Selection</em>'.
+   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection
+   * @generated
+   */
+  EClass getGroupByQuerySelection();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getOut_att <em>Out att</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Out att</em>'.
+   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getOut_att()
+   * @see #getGroupByQuerySelection()
+   * @generated
+   */
+  EReference getGroupByQuerySelection_Out_att();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getGrp_by <em>Grp by</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Grp by</em>'.
+   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getGrp_by()
+   * @see #getGroupByQuerySelection()
+   * @generated
+   */
+  EReference getGroupByQuerySelection_Grp_by();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.QuerySection <em>Query Section</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Query Section</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QuerySection
+   * @generated
+   */
+  EClass getQuerySection();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QuerySection#getGrpByQuerySel <em>Grp By Query Sel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Grp By Query Sel</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QuerySection#getGrpByQuerySel()
+   * @see #getQuerySection()
+   * @generated
+   */
+  EReference getQuerySection_GrpByQuerySel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QuerySection#getHaving <em>Having</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Having</em>'.
+   * @see org.xtext.example.siddhi.siddhi.QuerySection#getHaving()
+   * @see #getQuerySection()
+   * @generated
+   */
+  EReference getQuerySection_Having();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.GroupBy <em>Group By</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Group By</em>'.
+   * @see org.xtext.example.siddhi.siddhi.GroupBy
+   * @generated
+   */
+  EClass getGroupBy();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.GroupBy#getAttr_ref <em>Attr ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Attr ref</em>'.
+   * @see org.xtext.example.siddhi.siddhi.GroupBy#getAttr_ref()
+   * @see #getGroupBy()
+   * @generated
+   */
+  EReference getGroupBy_Attr_ref();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.HavingExpr <em>Having Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Having Expr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.HavingExpr
+   * @generated
+   */
+  EClass getHavingExpr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.HavingExpr#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.HavingExpr#getExpr()
+   * @see #getHavingExpr()
+   * @generated
+   */
+  EReference getHavingExpr_Expr();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputAttribute <em>Output Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Output Attribute</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputAttribute
+   * @generated
+   */
+  EClass getOutputAttribute();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputAttribute#getOutAttr <em>Out Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Out Attr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputAttribute#getOutAttr()
+   * @see #getOutputAttribute()
+   * @generated
+   */
+  EReference getOutputAttribute_OutAttr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputAttribute#getAttr_ref <em>Attr ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr ref</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutputAttribute#getAttr_ref()
+   * @see #getOutputAttribute()
+   * @generated
+   */
+  EReference getOutputAttribute_Attr_ref();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutAttr <em>Out Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Out Attr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutAttr
+   * @generated
+   */
+  EClass getOutAttr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutAttr#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutAttr#getAttr()
+   * @see #getOutAttr()
+   * @generated
+   */
+  EReference getOutAttr_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutAttr#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.siddhi.siddhi.OutAttr#getA()
+   * @see #getOutAttr()
+   * @generated
+   */
+  EReference getOutAttr_A();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.QueryInput <em>Query Input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11661,984 +12349,6 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EReference getQueryInput_AnonStream();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.JoinStream <em>Join Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Join Stream</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream
-   * @generated
-   */
-  EClass getJoinStream();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getLeft_source <em>Left source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getLeft_source()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Left_source();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getRight_source <em>Right source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getRight_source()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Right_source();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getRight_uni <em>Right uni</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right uni</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getRight_uni()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Right_uni();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getOn <em>On</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>On</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getOn()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_On();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getExpr <em>Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getExpr()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Expr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getWt <em>Wt</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Wt</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getWt()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Wt();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getJoin <em>Join</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Join</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getJoin()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Join();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getLeft_uni <em>Left uni</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left uni</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinStream#getLeft_uni()
-   * @see #getJoinStream()
-   * @generated
-   */
-  EReference getJoinStream_Left_uni();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange <em>Within Time Range</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Within Time Range</em>'.
-   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange
-   * @generated
-   */
-  EClass getWithinTimeRange();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange#getStartPattern <em>Start Pattern</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Start Pattern</em>'.
-   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange#getStartPattern()
-   * @see #getWithinTimeRange()
-   * @generated
-   */
-  EReference getWithinTimeRange_StartPattern();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange#getEndPattern <em>End Pattern</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>End Pattern</em>'.
-   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange#getEndPattern()
-   * @see #getWithinTimeRange()
-   * @generated
-   */
-  EReference getWithinTimeRange_EndPattern();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Per1 <em>Per1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Per1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Per1
-   * @generated
-   */
-  EClass getPer1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Per1#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Per1#getExp()
-   * @see #getPer1()
-   * @generated
-   */
-  EReference getPer1_Exp();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.JoinSource <em>Join Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Join Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.JoinSource
-   * @generated
-   */
-  EClass getJoinSource();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.StreamAlias <em>Stream Alias</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Stream Alias</em>'.
-   * @see org.xtext.example.siddhi.siddhi.StreamAlias
-   * @generated
-   */
-  EClass getStreamAlias();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNa <em>Na</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.StreamAlias#getNa()
-   * @see #getStreamAlias()
-   * @generated
-   */
-  EReference getStreamAlias_Na();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.joins <em>joins</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>joins</em>'.
-   * @see org.xtext.example.siddhi.siddhi.joins
-   * @generated
-   */
-  EClass getjoins();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.StandardStream <em>Standard Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Standard Stream</em>'.
-   * @see org.xtext.example.siddhi.siddhi.StandardStream
-   * @generated
-   */
-  EClass getStandardStream();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MainSource <em>Main Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Main Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource
-   * @generated
-   */
-  EClass getMainSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource#getA()
-   * @see #getMainSource()
-   * @generated
-   */
-  EReference getMainSource_A();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getStrAlias <em>Str Alias</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Str Alias</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource#getStrAlias()
-   * @see #getMainSource()
-   * @generated
-   */
-  EReference getMainSource_StrAlias();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getPostWindowHandlers <em>Post Window Handlers</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Post Window Handlers</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource#getPostWindowHandlers()
-   * @see #getMainSource()
-   * @generated
-   */
-  EReference getMainSource_PostWindowHandlers();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getSrc <em>Src</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Src</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource#getSrc()
-   * @see #getMainSource()
-   * @generated
-   */
-  EReference getMainSource_Src();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getBasicSSh <em>Basic SSh</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic SSh</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MainSource#getBasicSSh()
-   * @see #getMainSource()
-   * @generated
-   */
-  EReference getMainSource_BasicSSh();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternStream <em>Pattern Stream</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Pattern Stream</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternStream
-   * @generated
-   */
-  EClass getPatternStream();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain <em>Every Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Every Pattern Source Chain</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain
-   * @generated
-   */
-  EClass getEveryPatternSourceChain();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getLeft()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getOp()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EAttribute getEveryPatternSourceChain_Op();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getRight()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Right();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEps <em>Eps</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Eps</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEps()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Eps();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getWt <em>Wt</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Wt</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getWt()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Wt();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getPsc <em>Psc</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Psc</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getPsc()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Psc();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEvery <em>Every</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Every</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEvery()
-   * @see #getEveryPatternSourceChain()
-   * @generated
-   */
-  EReference getEveryPatternSourceChain_Every();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain <em>Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Pattern Source Chain</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain
-   * @generated
-   */
-  EClass getPatternSourceChain();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getLeft()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EReference getPatternSourceChain_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getOp()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EAttribute getPatternSourceChain_Op();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getRight()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EReference getPatternSourceChain_Right();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getPsc_2 <em>Psc 2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Psc 2</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getPsc_2()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EReference getPatternSourceChain_Psc_2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getWt <em>Wt</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Wt</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getWt()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EReference getPatternSourceChain_Wt();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getPs <em>Ps</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ps</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getPs()
-   * @see #getPatternSourceChain()
-   * @generated
-   */
-  EReference getPatternSourceChain_Ps();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternSource <em>Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource
-   * @generated
-   */
-  EClass getPatternSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getLss <em>Lss</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Lss</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource#getLss()
-   * @see #getPatternSource()
-   * @generated
-   */
-  EReference getPatternSource_Lss();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getPss <em>Pss</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Pss</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource#getPss()
-   * @see #getPatternSource()
-   * @generated
-   */
-  EReference getPatternSource_Pss();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getStdss <em>Stdss</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Stdss</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource#getStdss()
-   * @see #getPatternSource()
-   * @generated
-   */
-  EReference getPatternSource_Stdss();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getLogicalAbsStatefulSrc <em>Logical Abs Stateful Src</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Logical Abs Stateful Src</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternSource#getLogicalAbsStatefulSrc()
-   * @see #getPatternSource()
-   * @generated
-   */
-  EReference getPatternSource_LogicalAbsStatefulSrc();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource <em>Logical Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Logical Stateful Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource
-   * @generated
-   */
-  EClass getLogicalStatefulSource();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getStdSource <em>Std Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Std Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getStdSource()
-   * @see #getLogicalStatefulSource()
-   * @generated
-   */
-  EReference getLogicalStatefulSource_StdSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getAnd <em>And</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>And</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getAnd()
-   * @see #getLogicalStatefulSource()
-   * @generated
-   */
-  EReference getLogicalStatefulSource_And();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getOr <em>Or</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Or</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getOr()
-   * @see #getLogicalStatefulSource()
-   * @generated
-   */
-  EReference getLogicalStatefulSource_Or();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource <em>Pattern Collection Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Pattern Collection Stateful Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource
-   * @generated
-   */
-  EClass getPatternCollectionStatefulSource();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Collect <em>Collect</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Collect</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Collect
-   * @generated
-   */
-  EClass getCollect();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Collect#getStart <em>Start</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Start</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Collect#getStart()
-   * @see #getCollect()
-   * @generated
-   */
-  EAttribute getCollect_Start();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Collect#getEnd <em>End</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>End</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Collect#getEnd()
-   * @see #getCollect()
-   * @generated
-   */
-  EAttribute getCollect_End();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.WithinTime <em>Within Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Within Time</em>'.
-   * @see org.xtext.example.siddhi.siddhi.WithinTime
-   * @generated
-   */
-  EClass getWithinTime();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTime#getTv <em>Tv</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tv</em>'.
-   * @see org.xtext.example.siddhi.siddhi.WithinTime#getTv()
-   * @see #getWithinTime()
-   * @generated
-   */
-  EReference getWithinTime_Tv();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource <em>Logical Absent Stateful Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Logical Absent Stateful Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource
-   * @generated
-   */
-  EClass getLogicalAbsentStatefulSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getLogicalAbsStatefulSrc <em>Logical Abs Stateful Src</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Logical Abs Stateful Src</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getLogicalAbsStatefulSrc()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_LogicalAbsStatefulSrc();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getStdSource <em>Std Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Std Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getStdSource()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_StdSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getAnd <em>And</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>And</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getAnd()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_And();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getNot <em>Not</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Not</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getNot()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_Not();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBs <em>Bs</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bs</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBs()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_Bs();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource1 <em>Basic Absent Pattern Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource1()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource2 <em>Basic Absent Pattern Source2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source2</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource2()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getO <em>O</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>O</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getO()
-   * @see #getLogicalAbsentStatefulSource()
-   * @generated
-   */
-  EReference getLogicalAbsentStatefulSource_O();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain <em>Absent Pattern Source Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Absent Pattern Source Chain</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain
-   * @generated
-   */
-  EClass getAbsentPatternSourceChain();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getAbsentPatternSrcChain <em>Absent Pattern Src Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Absent Pattern Src Chain</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getAbsentPatternSrcChain()
-   * @see #getAbsentPatternSourceChain()
-   * @generated
-   */
-  EReference getAbsentPatternSourceChain_AbsentPatternSrcChain();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getWt1 <em>Wt1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Wt1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getWt1()
-   * @see #getAbsentPatternSourceChain()
-   * @generated
-   */
-  EReference getAbsentPatternSourceChain_Wt1();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource <em>Every Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Every Absent Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource
-   * @generated
-   */
-  EClass getEveryAbsentPatternSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource#getBasicAbsentPS <em>Basic Absent PS</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic Absent PS</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource#getBasicAbsentPS()
-   * @see #getEveryAbsentPatternSource()
-   * @generated
-   */
-  EReference getEveryAbsentPatternSource_BasicAbsentPS();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Basic Absent Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource
-   * @generated
-   */
-  EClass getBasicAbsentPatternSource();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.ForTime <em>For Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>For Time</em>'.
-   * @see org.xtext.example.siddhi.siddhi.ForTime
-   * @generated
-   */
-  EClass getForTime();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.ForTime#getTv <em>Tv</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tv</em>'.
-   * @see org.xtext.example.siddhi.siddhi.ForTime#getTv()
-   * @see #getForTime()
-   * @generated
-   */
-  EReference getForTime_Tv();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource <em>Left Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Left Absent Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource
-   * @generated
-   */
-  EClass getLeftAbsentPatternSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeft()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getFb1 <em>Fb1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fb1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getFb1()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EAttribute getLeftAbsentPatternSource_Fb1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getRight()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_Right();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPS <em>Left Abs PS</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left Abs PS</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPS()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_LeftAbsPS();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getWt2 <em>Wt2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Wt2</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getWt2()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_Wt2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryAbsPS <em>Every Abs PS</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Every Abs PS</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryAbsPS()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_EveryAbsPS();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryPSC <em>Every PSC</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Every PSC</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryPSC()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_EveryPSC();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPatternSrc <em>Left Abs Pattern Src</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left Abs Pattern Src</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPatternSrc()
-   * @see #getLeftAbsentPatternSource()
-   * @generated
-   */
-  EReference getLeftAbsentPatternSource_LeftAbsPatternSrc();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource <em>Right Absent Pattern Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Right Absent Pattern Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource
-   * @generated
-   */
-  EClass getRightAbsentPatternSource();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getLeft1 <em>Left1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getLeft1()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_Left1();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getFb2 <em>Fb2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fb2</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getFb2()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EAttribute getRightAbsentPatternSource_Fb2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRight1 <em>Right1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRight1()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_Right1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRightAbsPS <em>Right Abs PS</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right Abs PS</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRightAbsPS()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_RightAbsPS();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getWt3 <em>Wt3</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Wt3</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getWt3()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_Wt3();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryPSC1 <em>Every PSC1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Every PSC1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryPSC1()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_EveryPSC1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryAbsPS1 <em>Every Abs PS1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Every Abs PS1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryAbsPS1()
-   * @see #getRightAbsentPatternSource()
-   * @generated
-   */
-  EReference getRightAbsentPatternSource_EveryAbsPS1();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.SequenceStream <em>Sequence Stream</em>}'.
@@ -13192,174 +12902,1004 @@ public interface SiddhiPackage extends EPackage
   EReference getAnonymousStream_Op_event_type();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputRate <em>Output Rate</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternStream <em>Pattern Stream</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Output Rate</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputRate
+   * @return the meta object for class '<em>Pattern Stream</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternStream
    * @generated
    */
-  EClass getOutputRate();
+  EClass getPatternStream();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getOp_rate_type <em>Op rate type</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain <em>Every Pattern Source Chain</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Op rate type</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputRate#getOp_rate_type()
-   * @see #getOutputRate()
+   * @return the meta object for class '<em>Every Pattern Source Chain</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain
    * @generated
    */
-  EReference getOutputRate_Op_rate_type();
+  EClass getEveryPatternSourceChain();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getEvery <em>Every</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getLeft()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EReference getEveryPatternSourceChain_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getOp()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EAttribute getEveryPatternSourceChain_Op();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getRight()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EReference getEveryPatternSourceChain_Right();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEps <em>Eps</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Eps</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEps()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EReference getEveryPatternSourceChain_Eps();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getWt <em>Wt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Wt</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getWt()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EReference getEveryPatternSourceChain_Wt();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getPsc <em>Psc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Psc</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getPsc()
+   * @see #getEveryPatternSourceChain()
+   * @generated
+   */
+  EReference getEveryPatternSourceChain_Psc();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEvery <em>Every</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Every</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputRate#getEvery()
-   * @see #getOutputRate()
+   * @see org.xtext.example.siddhi.siddhi.EveryPatternSourceChain#getEvery()
+   * @see #getEveryPatternSourceChain()
    * @generated
    */
-  EReference getOutputRate_Every();
+  EReference getEveryPatternSourceChain_Every();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputRate#getTv <em>Tv</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain <em>Pattern Source Chain</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tv</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputRate#getTv()
-   * @see #getOutputRate()
+   * @return the meta object for class '<em>Pattern Source Chain</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain
    * @generated
    */
-  EReference getOutputRate_Tv();
+  EClass getPatternSourceChain();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputRateType <em>Output Rate Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Output Rate Type</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputRateType
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getLeft()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EClass getOutputRateType();
+  EReference getPatternSourceChain_Left();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.QueryOutput <em>Query Output</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Query Output</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getOp()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EClass getQueryOutput();
+  EAttribute getPatternSourceChain_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOutEventType <em>Out Event Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Out Event Type</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOutEventType()
-   * @see #getQueryOutput()
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getRight()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EReference getQueryOutput_OutEventType();
+  EReference getPatternSourceChain_Right();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getTar <em>Tar</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getPsc_2 <em>Psc 2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tar</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getTar()
-   * @see #getQueryOutput()
+   * @return the meta object for the containment reference '<em>Psc 2</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getPsc_2()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EReference getQueryOutput_Tar();
+  EReference getPatternSourceChain_Psc_2();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOn <em>On</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getWt <em>Wt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>On</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOn()
-   * @see #getQueryOutput()
+   * @return the meta object for the containment reference '<em>Wt</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getWt()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EReference getQueryOutput_On();
+  EReference getPatternSourceChain_Wt();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getExpr <em>Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSourceChain#getPs <em>Ps</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getExpr()
-   * @see #getQueryOutput()
+   * @return the meta object for the containment reference '<em>Ps</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSourceChain#getPs()
+   * @see #getPatternSourceChain()
    * @generated
    */
-  EReference getQueryOutput_Expr();
+  EReference getPatternSourceChain_Ps();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getOr <em>Or</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternSource <em>Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSource
+   * @generated
+   */
+  EClass getPatternSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getLss <em>Lss</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Lss</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSource#getLss()
+   * @see #getPatternSource()
+   * @generated
+   */
+  EReference getPatternSource_Lss();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getPss <em>Pss</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pss</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSource#getPss()
+   * @see #getPatternSource()
+   * @generated
+   */
+  EReference getPatternSource_Pss();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getStdss <em>Stdss</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Stdss</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSource#getStdss()
+   * @see #getPatternSource()
+   * @generated
+   */
+  EReference getPatternSource_Stdss();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.PatternSource#getLogicalAbsStatefulSrc <em>Logical Abs Stateful Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical Abs Stateful Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternSource#getLogicalAbsStatefulSrc()
+   * @see #getPatternSource()
+   * @generated
+   */
+  EReference getPatternSource_LogicalAbsStatefulSrc();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource <em>Logical Stateful Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Logical Stateful Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource
+   * @generated
+   */
+  EClass getLogicalStatefulSource();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getStdSource <em>Std Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Std Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getStdSource()
+   * @see #getLogicalStatefulSource()
+   * @generated
+   */
+  EReference getLogicalStatefulSource_StdSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getAnd <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getAnd()
+   * @see #getLogicalStatefulSource()
+   * @generated
+   */
+  EReference getLogicalStatefulSource_And();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getOr <em>Or</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Or</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getOr()
-   * @see #getQueryOutput()
+   * @see org.xtext.example.siddhi.siddhi.LogicalStatefulSource#getOr()
+   * @see #getLogicalStatefulSource()
    * @generated
    */
-  EReference getQueryOutput_Or();
+  EReference getLogicalStatefulSource_Or();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QueryOutput#getSetClause <em>Set Clause</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource <em>Pattern Collection Stateful Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Set Clause</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QueryOutput#getSetClause()
-   * @see #getQueryOutput()
+   * @return the meta object for class '<em>Pattern Collection Stateful Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource
    * @generated
    */
-  EReference getQueryOutput_SetClause();
+  EClass getPatternCollectionStatefulSource();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.SetClause <em>Set Clause</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Collect <em>Collect</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Set Clause</em>'.
-   * @see org.xtext.example.siddhi.siddhi.SetClause
+   * @return the meta object for class '<em>Collect</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Collect
    * @generated
    */
-  EClass getSetClause();
+  EClass getCollect();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.SetClause#getSetAssignment <em>Set Assignment</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Collect#getStart <em>Start</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Set Assignment</em>'.
-   * @see org.xtext.example.siddhi.siddhi.SetClause#getSetAssignment()
-   * @see #getSetClause()
+   * @return the meta object for the attribute '<em>Start</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Collect#getStart()
+   * @see #getCollect()
    * @generated
    */
-  EReference getSetClause_SetAssignment();
+  EAttribute getCollect_Start();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.SetAssignment <em>Set Assignment</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Collect#getEnd <em>End</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Set Assignment</em>'.
-   * @see org.xtext.example.siddhi.siddhi.SetAssignment
+   * @return the meta object for the attribute '<em>End</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Collect#getEnd()
+   * @see #getCollect()
    * @generated
    */
-  EClass getSetAssignment();
+  EAttribute getCollect_End();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputEventType <em>Output Event Type</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource <em>Logical Absent Stateful Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Output Event Type</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputEventType
+   * @return the meta object for class '<em>Logical Absent Stateful Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource
    * @generated
    */
-  EClass getOutputEventType();
+  EClass getLogicalAbsentStatefulSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getLogicalAbsStatefulSrc <em>Logical Abs Stateful Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical Abs Stateful Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getLogicalAbsStatefulSrc()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_LogicalAbsStatefulSrc();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getStdSource <em>Std Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Std Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getStdSource()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_StdSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getAnd <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getAnd()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_And();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getNot <em>Not</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Not</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getNot()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_Not();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBs <em>Bs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bs</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBs()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_Bs();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource1 <em>Basic Absent Pattern Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource1()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource2 <em>Basic Absent Pattern Source2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source2</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource2()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic Absent Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getBasicAbsentPatternSource()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_BasicAbsentPatternSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getO <em>O</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>O</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LogicalAbsentStatefulSource#getO()
+   * @see #getLogicalAbsentStatefulSource()
+   * @generated
+   */
+  EReference getLogicalAbsentStatefulSource_O();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain <em>Absent Pattern Source Chain</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Absent Pattern Source Chain</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain
+   * @generated
+   */
+  EClass getAbsentPatternSourceChain();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getAbsentPatternSrcChain <em>Absent Pattern Src Chain</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Absent Pattern Src Chain</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getAbsentPatternSrcChain()
+   * @see #getAbsentPatternSourceChain()
+   * @generated
+   */
+  EReference getAbsentPatternSourceChain_AbsentPatternSrcChain();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getWt1 <em>Wt1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Wt1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AbsentPatternSourceChain#getWt1()
+   * @see #getAbsentPatternSourceChain()
+   * @generated
+   */
+  EReference getAbsentPatternSourceChain_Wt1();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource <em>Every Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Every Absent Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource
+   * @generated
+   */
+  EClass getEveryAbsentPatternSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource#getBasicAbsentPS <em>Basic Absent PS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic Absent PS</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EveryAbsentPatternSource#getBasicAbsentPS()
+   * @see #getEveryAbsentPatternSource()
+   * @generated
+   */
+  EReference getEveryAbsentPatternSource_BasicAbsentPS();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource <em>Basic Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Basic Absent Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.BasicAbsentPatternSource
+   * @generated
+   */
+  EClass getBasicAbsentPatternSource();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.ForTime <em>For Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>For Time</em>'.
+   * @see org.xtext.example.siddhi.siddhi.ForTime
+   * @generated
+   */
+  EClass getForTime();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.ForTime#getTv <em>Tv</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tv</em>'.
+   * @see org.xtext.example.siddhi.siddhi.ForTime#getTv()
+   * @see #getForTime()
+   * @generated
+   */
+  EReference getForTime_Tv();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource <em>Left Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Left Absent Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource
+   * @generated
+   */
+  EClass getLeftAbsentPatternSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeft()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getFb1 <em>Fb1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fb1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getFb1()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EAttribute getLeftAbsentPatternSource_Fb1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getRight()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_Right();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPS <em>Left Abs PS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left Abs PS</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPS()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_LeftAbsPS();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getWt2 <em>Wt2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Wt2</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getWt2()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_Wt2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryAbsPS <em>Every Abs PS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Every Abs PS</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryAbsPS()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_EveryAbsPS();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryPSC <em>Every PSC</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Every PSC</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getEveryPSC()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_EveryPSC();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPatternSrc <em>Left Abs Pattern Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left Abs Pattern Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource#getLeftAbsPatternSrc()
+   * @see #getLeftAbsentPatternSource()
+   * @generated
+   */
+  EReference getLeftAbsentPatternSource_LeftAbsPatternSrc();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource <em>Right Absent Pattern Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Right Absent Pattern Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource
+   * @generated
+   */
+  EClass getRightAbsentPatternSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getLeft1 <em>Left1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getLeft1()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_Left1();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getFb2 <em>Fb2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fb2</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getFb2()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EAttribute getRightAbsentPatternSource_Fb2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRight1 <em>Right1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRight1()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_Right1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRightAbsPS <em>Right Abs PS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right Abs PS</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getRightAbsPS()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_RightAbsPS();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getWt3 <em>Wt3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Wt3</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getWt3()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_Wt3();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryPSC1 <em>Every PSC1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Every PSC1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryPSC1()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_EveryPSC1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryAbsPS1 <em>Every Abs PS1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Every Abs PS1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentPatternSource#getEveryAbsPS1()
+   * @see #getRightAbsentPatternSource()
+   * @generated
+   */
+  EReference getRightAbsentPatternSource_EveryAbsPS1();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.JoinStream <em>Join Stream</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Join Stream</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream
+   * @generated
+   */
+  EClass getJoinStream();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getLeft_source <em>Left source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getLeft_source()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Left_source();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getRight_source <em>Right source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getRight_source()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Right_source();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getRight_uni <em>Right uni</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right uni</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getRight_uni()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Right_uni();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getOn <em>On</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>On</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getOn()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_On();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getExpr()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Expr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getWtr <em>Wtr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Wtr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getWtr()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Wtr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getP <em>P</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>P</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getP()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_P();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getJoin <em>Join</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Join</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getJoin()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Join();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.JoinStream#getLeft_uni <em>Left uni</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left uni</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinStream#getLeft_uni()
+   * @see #getJoinStream()
+   * @generated
+   */
+  EReference getJoinStream_Left_uni();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange <em>Within Time Range</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Within Time Range</em>'.
+   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange
+   * @generated
+   */
+  EClass getWithinTimeRange();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange#getStartPattern <em>Start Pattern</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Start Pattern</em>'.
+   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange#getStartPattern()
+   * @see #getWithinTimeRange()
+   * @generated
+   */
+  EReference getWithinTimeRange_StartPattern();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTimeRange#getEndPattern <em>End Pattern</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>End Pattern</em>'.
+   * @see org.xtext.example.siddhi.siddhi.WithinTimeRange#getEndPattern()
+   * @see #getWithinTimeRange()
+   * @generated
+   */
+  EReference getWithinTimeRange_EndPattern();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Per1 <em>Per1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Per1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Per1
+   * @generated
+   */
+  EClass getPer1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Per1#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Per1#getExp()
+   * @see #getPer1()
+   * @generated
+   */
+  EReference getPer1_Exp();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.JoinSource <em>Join Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Join Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.JoinSource
+   * @generated
+   */
+  EClass getJoinSource();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.StreamAlias <em>Stream Alias</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Stream Alias</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StreamAlias
+   * @generated
+   */
+  EClass getStreamAlias();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StreamAlias#getNam <em>Nam</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nam</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StreamAlias#getNam()
+   * @see #getStreamAlias()
+   * @generated
+   */
+  EReference getStreamAlias_Nam();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.WithinTime <em>Within Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Within Time</em>'.
+   * @see org.xtext.example.siddhi.siddhi.WithinTime
+   * @generated
+   */
+  EClass getWithinTime();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.WithinTime#getTv <em>Tv</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tv</em>'.
+   * @see org.xtext.example.siddhi.siddhi.WithinTime#getTv()
+   * @see #getWithinTime()
+   * @generated
+   */
+  EReference getWithinTime_Tv();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.joins <em>joins</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>joins</em>'.
+   * @see org.xtext.example.siddhi.siddhi.joins
+   * @generated
+   */
+  EClass getjoins();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.StandardStream <em>Standard Stream</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Standard Stream</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StandardStream
+   * @generated
+   */
+  EClass getStandardStream();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MainSource <em>Main Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Main Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource
+   * @generated
+   */
+  EClass getMainSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getWindow <em>Window</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Window</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getWindow()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_Window();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getA()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getStrAlias <em>Str Alias</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Str Alias</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getStrAlias()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_StrAlias();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getPostWindowHandlers <em>Post Window Handlers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Post Window Handlers</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getPostWindowHandlers()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_PostWindowHandlers();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getSrc <em>Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getSrc()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_Src();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MainSource#getBasicSSh <em>Basic SSh</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic SSh</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MainSource#getBasicSSh()
+   * @see #getMainSource()
+   * @generated
+   */
+  EReference getMainSource_BasicSSh();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BasicSourceStreamHandlers <em>Basic Source Stream Handlers</em>}'.
@@ -13531,303 +14071,6 @@ public interface SiddhiPackage extends EPackage
   EClass getExpression();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionOperation <em>Function Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Operation</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionOperation
-   * @generated
-   */
-  EClass getFunctionOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncNamespace <em>Func Namespace</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Func Namespace</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncNamespace()
-   * @see #getFunctionOperation()
-   * @generated
-   */
-  EReference getFunctionOperation_FuncNamespace();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncId <em>Func Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Func Id</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncId()
-   * @see #getFunctionOperation()
-   * @generated
-   */
-  EReference getFunctionOperation_FuncId();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getAttrList <em>Attr List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr List</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getAttrList()
-   * @see #getFunctionOperation()
-   * @generated
-   */
-  EReference getFunctionOperation_AttrList();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace <em>Function Namespace</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Namespace</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionNamespace
-   * @generated
-   */
-  EClass getFunctionNamespace();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getNa <em>Na</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionNamespace#getNa()
-   * @see #getFunctionNamespace()
-   * @generated
-   */
-  EAttribute getFunctionNamespace_Na();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionId <em>Function Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Id</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionId
-   * @generated
-   */
-  EClass getFunctionId();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionId#getNa <em>Na</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FunctionId#getNa()
-   * @see #getFunctionId()
-   * @generated
-   */
-  EReference getFunctionId_Na();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeList <em>Attribute List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute List</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeList
-   * @generated
-   */
-  EClass getAttributeList();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.AttributeList#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Attr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeList#getAttr()
-   * @see #getAttributeList()
-   * @generated
-   */
-  EReference getAttributeList_Attr();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Attribute <em>Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Attribute
-   * @generated
-   */
-  EClass getAttribute();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Attribute#getMathOp <em>Math Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Math Op</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Attribute#getMathOp()
-   * @see #getAttribute()
-   * @generated
-   */
-  EReference getAttribute_MathOp();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection <em>Group By Query Selection</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Group By Query Selection</em>'.
-   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection
-   * @generated
-   */
-  EClass getGroupByQuerySelection();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getOut_att <em>Out att</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Out att</em>'.
-   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getOut_att()
-   * @see #getGroupByQuerySelection()
-   * @generated
-   */
-  EReference getGroupByQuerySelection_Out_att();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getGrp_by <em>Grp by</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Grp by</em>'.
-   * @see org.xtext.example.siddhi.siddhi.GroupByQuerySelection#getGrp_by()
-   * @see #getGroupByQuerySelection()
-   * @generated
-   */
-  EReference getGroupByQuerySelection_Grp_by();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.QuerySection <em>Query Section</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Query Section</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QuerySection
-   * @generated
-   */
-  EClass getQuerySection();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QuerySection#getGrpByQuerySel <em>Grp By Query Sel</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Grp By Query Sel</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QuerySection#getGrpByQuerySel()
-   * @see #getQuerySection()
-   * @generated
-   */
-  EReference getQuerySection_GrpByQuerySel();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.QuerySection#getHaving <em>Having</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Having</em>'.
-   * @see org.xtext.example.siddhi.siddhi.QuerySection#getHaving()
-   * @see #getQuerySection()
-   * @generated
-   */
-  EReference getQuerySection_Having();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutputAttribute <em>Output Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Output Attribute</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputAttribute
-   * @generated
-   */
-  EClass getOutputAttribute();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputAttribute#getOutAttr <em>Out Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Out Attr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputAttribute#getOutAttr()
-   * @see #getOutputAttribute()
-   * @generated
-   */
-  EReference getOutputAttribute_OutAttr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutputAttribute#getAttr_ref <em>Attr ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr ref</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutputAttribute#getAttr_ref()
-   * @see #getOutputAttribute()
-   * @generated
-   */
-  EReference getOutputAttribute_Attr_ref();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.OutAttr <em>Out Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Out Attr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutAttr
-   * @generated
-   */
-  EClass getOutAttr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutAttr#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutAttr#getAttr()
-   * @see #getOutAttr()
-   * @generated
-   */
-  EReference getOutAttr_Attr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.OutAttr#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see org.xtext.example.siddhi.siddhi.OutAttr#getA()
-   * @see #getOutAttr()
-   * @generated
-   */
-  EReference getOutAttr_A();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.GroupBy <em>Group By</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Group By</em>'.
-   * @see org.xtext.example.siddhi.siddhi.GroupBy
-   * @generated
-   */
-  EClass getGroupBy();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.GroupBy#getAttr_ref <em>Attr ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Attr ref</em>'.
-   * @see org.xtext.example.siddhi.siddhi.GroupBy#getAttr_ref()
-   * @see #getGroupBy()
-   * @generated
-   */
-  EReference getGroupBy_Attr_ref();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.HavingExpr <em>Having Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Having Expr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.HavingExpr
-   * @generated
-   */
-  EClass getHavingExpr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.HavingExpr#getExpr <em>Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.HavingExpr#getExpr()
-   * @see #getHavingExpr()
-   * @generated
-   */
-  EReference getHavingExpr_Expr();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathOperation <em>Math Operation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -13849,26 +14092,133 @@ public interface SiddhiPackage extends EPackage
   EReference getMathOperation_Mlo();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOperation#getOp <em>Op</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOperation#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathOperation#getLeft()
+   * @see #getMathOperation()
+   * @generated
+   */
+  EReference getMathOperation_Left();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation <em>Math Addsub Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Math Addsub Operation</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation
+   * @generated
+   */
+  EClass getMathAddsubOperation();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getAdd <em>Add</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Add</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getAdd()
+   * @see #getMathAddsubOperation()
+   * @generated
+   */
+  EAttribute getMathAddsubOperation_Add();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getSubstract <em>Substract</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Substract</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getSubstract()
+   * @see #getMathAddsubOperation()
+   * @generated
+   */
+  EAttribute getMathAddsubOperation_Substract();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getRight()
+   * @see #getMathAddsubOperation()
+   * @generated
+   */
+  EReference getMathAddsubOperation_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation <em>Math Divmul Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Math Divmul Operation</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation
+   * @generated
+   */
+  EClass getMathDivmulOperation();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMultiply <em>Multiply</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Multiply</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMultiply()
+   * @see #getMathDivmulOperation()
+   * @generated
+   */
+  EAttribute getMathDivmulOperation_Multiply();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getDevide <em>Devide</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Devide</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getDevide()
+   * @see #getMathDivmulOperation()
+   * @generated
+   */
+  EAttribute getMathDivmulOperation_Devide();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMod <em>Mod</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Mod</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMod()
+   * @see #getMathDivmulOperation()
+   * @generated
+   */
+  EAttribute getMathDivmulOperation_Mod();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations <em>Math Other Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Math Other Operations</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations
+   * @generated
+   */
+  EClass getMathOtherOperations();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Op</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOperation#getOp()
-   * @see #getMathOperation()
+   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations#getOp()
+   * @see #getMathOtherOperations()
    * @generated
    */
-  EReference getMathOperation_Op();
+  EReference getMathOtherOperations_Op();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOperation#getMathOtherOperations1 <em>Math Other Operations1</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations#getLit <em>Lit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Math Other Operations1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOperation#getMathOtherOperations1()
-   * @see #getMathOperation()
+   * @return the meta object for the containment reference '<em>Lit</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations#getLit()
+   * @see #getMathOtherOperations()
    * @generated
    */
-  EReference getMathOperation_MathOtherOperations1();
+  EReference getMathOtherOperations_Lit();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.NullCheck <em>Null Check</em>}'.
@@ -13935,15 +14285,15 @@ public interface SiddhiPackage extends EPackage
   EAttribute getStreamReference_Hash();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StreamReference#getNa <em>Na</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StreamReference#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.StreamReference#getNa()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StreamReference#getName()
    * @see #getStreamReference()
    * @generated
    */
-  EReference getStreamReference_Na();
+  EReference getStreamReference_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StreamReference#getAatr_index <em>Aatr index</em>}'.
@@ -13957,47 +14307,47 @@ public interface SiddhiPackage extends EPackage
   EReference getStreamReference_Aatr_index();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations1 <em>Math Other Operations1</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Literal <em>Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Math Other Operations1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations1
+   * @return the meta object for class '<em>Literal</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Literal
    * @generated
    */
-  EClass getMathOtherOperations1();
+  EClass getLiteral();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations1#getConst_val <em>Const val</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Literal#getConst_val <em>Const val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Const val</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations1#getConst_val()
-   * @see #getMathOtherOperations1()
+   * @see org.xtext.example.siddhi.siddhi.Literal#getConst_val()
+   * @see #getLiteral()
    * @generated
    */
-  EReference getMathOtherOperations1_Const_val();
+  EReference getLiteral_Const_val();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations1#getFo <em>Fo</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Literal#getFo <em>Fo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Fo</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations1#getFo()
-   * @see #getMathOtherOperations1()
+   * @see org.xtext.example.siddhi.siddhi.Literal#getFo()
+   * @see #getLiteral()
    * @generated
    */
-  EReference getMathOtherOperations1_Fo();
+  EReference getLiteral_Fo();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathOtherOperations1#getAttrRef <em>Attr Ref</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Literal#getAttrRef <em>Attr Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr Ref</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathOtherOperations1#getAttrRef()
-   * @see #getMathOtherOperations1()
+   * @see org.xtext.example.siddhi.siddhi.Literal#getAttrRef()
+   * @see #getLiteral()
    * @generated
    */
-  EReference getMathOtherOperations1_AttrRef();
+  EReference getLiteral_AttrRef();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeReference <em>Attribute Reference</em>}'.
@@ -14019,6 +14369,17 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EReference getAttributeReference_Expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getName()
+   * @see #getAttributeReference()
+   * @generated
+   */
+  EAttribute getAttributeReference_Name();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getHash1 <em>Hash1</em>}'.
@@ -14043,15 +14404,15 @@ public interface SiddhiPackage extends EPackage
   EReference getAttributeReference_Name1();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index1 <em>Attribute index1</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index1 <em>OPEN SQARE BRACKET Sattribute index1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attribute index1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index1()
+   * @return the meta object for the containment reference '<em>OPEN SQARE BRACKET Sattribute index1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index1()
    * @see #getAttributeReference()
    * @generated
    */
-  EReference getAttributeReference_Attribute_index1();
+  EReference getAttributeReference_OPEN_SQARE_BRACKETSattribute_index1();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getHash2 <em>Hash2</em>}'.
@@ -14076,26 +14437,15 @@ public interface SiddhiPackage extends EPackage
   EReference getAttributeReference_Name2();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index2 <em>Attribute index2</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index2 <em>OPEN SQARE BRACKET Sattribute index2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attribute index2</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getAttribute_index2()
+   * @return the meta object for the containment reference '<em>OPEN SQARE BRACKET Sattribute index2</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getOPEN_SQARE_BRACKETSattribute_index2()
    * @see #getAttributeReference()
    * @generated
    */
-  EReference getAttributeReference_Attribute_index2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getAttr_name <em>Attr name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr name</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeReference#getAttr_name()
-   * @see #getAttributeReference()
-   * @generated
-   */
-  EReference getAttributeReference_Attr_name();
+  EReference getAttributeReference_OPEN_SQARE_BRACKETSattribute_index2();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.AttributeReference#getFeaturesOrAttrRef <em>Features Or Attr Ref</em>}'.
@@ -14109,35 +14459,46 @@ public interface SiddhiPackage extends EPackage
   EReference getAttributeReference_FeaturesOrAttrRef();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference <em>Attribute Name Reference</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr <em>Features Or Out Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute Name Reference</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference
+   * @return the meta object for class '<em>Features Or Out Attr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr
    * @generated
    */
-  EClass getAttributeNameReference();
+  EClass getFeaturesOrOutAttr();
 
   /**
-   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference#getAttrName1 <em>Attr Name1</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Attr Name1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference#getAttrName1()
-   * @see #getAttributeNameReference()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr#getName()
+   * @see #getFeaturesOrOutAttr()
    * @generated
    */
-  EReference getAttributeNameReference_AttrName1();
+  EAttribute getFeaturesOrOutAttr_Name();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeIndex <em>Attribute Index</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference <em>Features Or Out Attr Reference</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute Index</em>'.
-   * @see org.xtext.example.siddhi.siddhi.AttributeIndex
+   * @return the meta object for class '<em>Features Or Out Attr Reference</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference
    * @generated
    */
-  EClass getAttributeIndex();
+  EClass getFeaturesOrOutAttrReference();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference#getSrcoutAttrref <em>Srcout Attrref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Srcout Attrref</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference#getSrcoutAttrref()
+   * @see #getFeaturesOrOutAttrReference()
+   * @generated
+   */
+  EReference getFeaturesOrOutAttrReference_SrcoutAttrref();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource <em>Standard Stateful Source</em>}'.
@@ -14194,15 +14555,58 @@ public interface SiddhiPackage extends EPackage
   EAttribute getStandardStatefulSource_One_or_more();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource#getBs <em>Bs</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource#getSrc <em>Src</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bs</em>'.
-   * @see org.xtext.example.siddhi.siddhi.StandardStatefulSource#getBs()
+   * @return the meta object for the containment reference '<em>Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StandardStatefulSource#getSrc()
    * @see #getStandardStatefulSource()
    * @generated
    */
-  EReference getStandardStatefulSource_Bs();
+  EReference getStandardStatefulSource_Src();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.StandardStatefulSource#getBasic_ss_handlers <em>Basic ss handlers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic ss handlers</em>'.
+   * @see org.xtext.example.siddhi.siddhi.StandardStatefulSource#getBasic_ss_handlers()
+   * @see #getStandardStatefulSource()
+   * @generated
+   */
+  EReference getStandardStatefulSource_Basic_ss_handlers();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BasicSource <em>Basic Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Basic Source</em>'.
+   * @see org.xtext.example.siddhi.siddhi.BasicSource
+   * @generated
+   */
+  EClass getBasicSource();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.BasicSource#getSrc <em>Src</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Src</em>'.
+   * @see org.xtext.example.siddhi.siddhi.BasicSource#getSrc()
+   * @see #getBasicSource()
+   * @generated
+   */
+  EReference getBasicSource_Src();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.BasicSource#getBasic_ss_handlers <em>Basic ss handlers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Basic ss handlers</em>'.
+   * @see org.xtext.example.siddhi.siddhi.BasicSource#getBasic_ss_handlers()
+   * @see #getBasicSource()
+   * @generated
+   */
+  EReference getBasicSource_Basic_ss_handlers();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource <em>Source1 Or Standard Stateful Source</em>}'.
@@ -14247,78 +14651,35 @@ public interface SiddhiPackage extends EPackage
   EReference getSourceOrEventReference_Na();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BasicSource <em>Basic Source</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference <em>Attribute Name Reference</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Basic Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.BasicSource
+   * @return the meta object for class '<em>Attribute Name Reference</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference
    * @generated
    */
-  EClass getBasicSource();
+  EClass getAttributeNameReference();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.BasicSource#getSrc <em>Src</em>}'.
+   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.AttributeNameReference#getAttrName1 <em>Attr Name1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Src</em>'.
-   * @see org.xtext.example.siddhi.siddhi.BasicSource#getSrc()
-   * @see #getBasicSource()
+   * @return the meta object for the reference '<em>Attr Name1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeNameReference#getAttrName1()
+   * @see #getAttributeNameReference()
    * @generated
    */
-  EReference getBasicSource_Src();
+  EReference getAttributeNameReference_AttrName1();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.BasicSource#getBasic_ss_handlers <em>Basic ss handlers</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeIndex <em>Attribute Index</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Basic ss handlers</em>'.
-   * @see org.xtext.example.siddhi.siddhi.BasicSource#getBasic_ss_handlers()
-   * @see #getBasicSource()
+   * @return the meta object for class '<em>Attribute Index</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeIndex
    * @generated
    */
-  EReference getBasicSource_Basic_ss_handlers();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr <em>Features Or Out Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Features Or Out Attr</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr
-   * @generated
-   */
-  EClass getFeaturesOrOutAttr();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttr#getName()
-   * @see #getFeaturesOrOutAttr()
-   * @generated
-   */
-  EAttribute getFeaturesOrOutAttr_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference <em>Features Or Out Attr Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Features Or Out Attr Reference</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference
-   * @generated
-   */
-  EClass getFeaturesOrOutAttrReference();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference#getSrcoutAttrref <em>Srcout Attrref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Srcout Attrref</em>'.
-   * @see org.xtext.example.siddhi.siddhi.FeaturesOrOutAttrReference#getSrcoutAttrref()
-   * @see #getFeaturesOrOutAttrReference()
-   * @generated
-   */
-  EReference getFeaturesOrOutAttrReference_SrcoutAttrref();
+  EClass getAttributeIndex();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.ConstantValue <em>Constant Value</em>}'.
@@ -14408,6 +14769,133 @@ public interface SiddhiPackage extends EPackage
   EReference getConstantValue_Sv();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionOperation <em>Function Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Operation</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionOperation
+   * @generated
+   */
+  EClass getFunctionOperation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncNamespace <em>Func Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Func Namespace</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncNamespace()
+   * @see #getFunctionOperation()
+   * @generated
+   */
+  EReference getFunctionOperation_FuncNamespace();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncId <em>Func Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Func Id</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getFuncId()
+   * @see #getFunctionOperation()
+   * @generated
+   */
+  EReference getFunctionOperation_FuncId();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionOperation#getAttrList <em>Attr List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr List</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionOperation#getAttrList()
+   * @see #getFunctionOperation()
+   * @generated
+   */
+  EReference getFunctionOperation_AttrList();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace <em>Function Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Namespace</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionNamespace
+   * @generated
+   */
+  EClass getFunctionNamespace();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionNamespace#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionNamespace#getName()
+   * @see #getFunctionNamespace()
+   * @generated
+   */
+  EReference getFunctionNamespace_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.FunctionId <em>Function Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Id</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionId
+   * @generated
+   */
+  EClass getFunctionId();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.FunctionId#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.FunctionId#getName()
+   * @see #getFunctionId()
+   * @generated
+   */
+  EReference getFunctionId_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AttributeList <em>Attribute List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Attribute List</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeList
+   * @generated
+   */
+  EClass getAttributeList();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.AttributeList#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Attr</em>'.
+   * @see org.xtext.example.siddhi.siddhi.AttributeList#getAttr()
+   * @see #getAttributeList()
+   * @generated
+   */
+  EReference getAttributeList_Attr();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Attribute <em>Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Attribute</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Attribute
+   * @generated
+   */
+  EClass getAttribute();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.Attribute#getMathOp <em>Math Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Math Op</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Attribute#getMathOp()
+   * @see #getAttribute()
+   * @generated
+   */
+  EReference getAttribute_MathOp();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Name <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -14418,57 +14906,15 @@ public interface SiddhiPackage extends EPackage
   EClass getName_();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Name#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Name#getNa <em>Na</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Name#getName()
+   * @return the meta object for the attribute '<em>Na</em>'.
+   * @see org.xtext.example.siddhi.siddhi.Name#getNa()
    * @see #getName_()
    * @generated
    */
-  EAttribute getName_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Source <em>Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Source</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Source
-   * @generated
-   */
-  EClass getSource();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.example.siddhi.siddhi.Source#getStrId <em>Str Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Str Id</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Source#getStrId()
-   * @see #getSource()
-   * @generated
-   */
-  EReference getSource_StrId();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.Source1 <em>Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Source1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Source1
-   * @generated
-   */
-  EClass getSource1();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.Source1#getInner <em>Inner</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Inner</em>'.
-   * @see org.xtext.example.siddhi.siddhi.Source1#getInner()
-   * @see #getSource1()
-   * @generated
-   */
-  EAttribute getSource1_Inner();
+  EAttribute getName_Na();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.BoolValue <em>Bool Value</em>}'.
@@ -15020,15 +15466,15 @@ public interface SiddhiPackage extends EPackage
   EClass getEVERY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery <em>Every</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.EVERY#getEvery1 <em>Every1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Every</em>'.
-   * @see org.xtext.example.siddhi.siddhi.EVERY#getEvery()
+   * @return the meta object for the attribute '<em>Every1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.EVERY#getEvery1()
    * @see #getEVERY()
    * @generated
    */
-  EAttribute getEVERY_Every();
+  EAttribute getEVERY_Every1();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.AND <em>AND</em>}'.
@@ -15209,15 +15655,15 @@ public interface SiddhiPackage extends EPackage
   EClass getAPP();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.APP#getNa <em>Na</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.APP#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Na</em>'.
-   * @see org.xtext.example.siddhi.siddhi.APP#getNa()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.APP#getName()
    * @see #getAPP()
    * @generated
    */
-  EReference getAPP_Na();
+  EReference getAPP_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.siddhi.siddhi.APP#getAnn5 <em>Ann5</em>}'.
@@ -16665,6 +17111,48 @@ public interface SiddhiPackage extends EPackage
   EAttribute getTRUE_Tr();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1 <em>Left Absent Sequence Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Left Absent Sequence Source1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1
+   * @generated
+   */
+  EClass getLeftAbsentSequenceSource1();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1 <em>Right Absent Sequence Source1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Right Absent Sequence Source1</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1
+   * @generated
+   */
+  EClass getRightAbsentSequenceSource1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getLeft()
+   * @see #getRightAbsentSequenceSource1()
+   * @generated
+   */
+  EReference getRightAbsentSequenceSource1_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getRight()
+   * @see #getRightAbsentSequenceSource1()
+   * @generated
+   */
+  EReference getRightAbsentSequenceSource1_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentPatternSource1 <em>Left Absent Pattern Source1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -16729,48 +17217,6 @@ public interface SiddhiPackage extends EPackage
   EReference getRightAbsentPatternSource1_Right();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1 <em>Left Absent Sequence Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Left Absent Sequence Source1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.LeftAbsentSequenceSource1
-   * @generated
-   */
-  EClass getLeftAbsentSequenceSource1();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1 <em>Right Absent Sequence Source1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Right Absent Sequence Source1</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1
-   * @generated
-   */
-  EClass getRightAbsentSequenceSource1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getLeft()
-   * @see #getRightAbsentSequenceSource1()
-   * @generated
-   */
-  EReference getRightAbsentSequenceSource1_Left();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.RightAbsentSequenceSource1#getRight()
-   * @see #getRightAbsentSequenceSource1()
-   * @generated
-   */
-  EReference getRightAbsentSequenceSource1_Right();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation <em>Math Logical Operation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -16779,17 +17225,6 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EClass getMathLogicalOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathLogicalOperation#getLeft()
-   * @see #getMathLogicalOperation()
-   * @generated
-   */
-  EReference getMathLogicalOperation_Left();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathLogicalOperation#getAnd <em>And</em>}'.
@@ -16835,17 +17270,6 @@ public interface SiddhiPackage extends EPackage
   EClass getMathInOperation();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathInOperation#getLeft()
-   * @see #getMathInOperation()
-   * @generated
-   */
-  EReference getMathInOperation_Left();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getIn <em>In</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -16857,15 +17281,15 @@ public interface SiddhiPackage extends EPackage
   EReference getMathInOperation_In();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathInOperation#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathInOperation#getRight()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathInOperation#getName()
    * @see #getMathInOperation()
    * @generated
    */
-  EReference getMathInOperation_Right();
+  EReference getMathInOperation_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation <em>Math Gt Lt Operation</em>}'.
@@ -16878,26 +17302,48 @@ public interface SiddhiPackage extends EPackage
   EClass getMathGtLtOperation();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLeft <em>Left</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt_eq <em>Gt eq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLeft()
+   * @return the meta object for the attribute '<em>Gt eq</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt_eq()
    * @see #getMathGtLtOperation()
    * @generated
    */
-  EReference getMathGtLtOperation_Left();
+  EAttribute getMathGtLtOperation_Gt_eq();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getSymbol <em>Symbol</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt_eq <em>Lt eq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Symbol</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getSymbol()
+   * @return the meta object for the attribute '<em>Lt eq</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt_eq()
    * @see #getMathGtLtOperation()
    * @generated
    */
-  EAttribute getMathGtLtOperation_Symbol();
+  EAttribute getMathGtLtOperation_Lt_eq();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt <em>Gt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Gt</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getGt()
+   * @see #getMathGtLtOperation()
+   * @generated
+   */
+  EAttribute getMathGtLtOperation_Gt();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt <em>Lt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Lt</em>'.
+   * @see org.xtext.example.siddhi.siddhi.MathGtLtOperation#getLt()
+   * @see #getMathGtLtOperation()
+   * @generated
+   */
+  EAttribute getMathGtLtOperation_Lt();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathGtLtOperation#getRight <em>Right</em>}'.
@@ -16919,17 +17365,6 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EClass getMathEqualOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathEqualOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathEqualOperation#getLeft()
-   * @see #getMathEqualOperation()
-   * @generated
-   */
-  EReference getMathEqualOperation_Left();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathEqualOperation#getEq <em>Eq</em>}'.
@@ -16963,125 +17398,6 @@ public interface SiddhiPackage extends EPackage
    * @generated
    */
   EReference getMathEqualOperation_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation <em>Math Addsub Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Math Addsub Operation</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation
-   * @generated
-   */
-  EClass getMathAddsubOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getLeft()
-   * @see #getMathAddsubOperation()
-   * @generated
-   */
-  EReference getMathAddsubOperation_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getAdd <em>Add</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Add</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getAdd()
-   * @see #getMathAddsubOperation()
-   * @generated
-   */
-  EAttribute getMathAddsubOperation_Add();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getSubstract <em>Substract</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Substract</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getSubstract()
-   * @see #getMathAddsubOperation()
-   * @generated
-   */
-  EAttribute getMathAddsubOperation_Substract();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathAddsubOperation#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathAddsubOperation#getRight()
-   * @see #getMathAddsubOperation()
-   * @generated
-   */
-  EReference getMathAddsubOperation_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation <em>Math Divmul Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Math Divmul Operation</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation
-   * @generated
-   */
-  EClass getMathDivmulOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getLeft()
-   * @see #getMathDivmulOperation()
-   * @generated
-   */
-  EReference getMathDivmulOperation_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMultiply <em>Multiply</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Multiply</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMultiply()
-   * @see #getMathDivmulOperation()
-   * @generated
-   */
-  EAttribute getMathDivmulOperation_Multiply();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getDevide <em>Devide</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Devide</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getDevide()
-   * @see #getMathDivmulOperation()
-   * @generated
-   */
-  EAttribute getMathDivmulOperation_Devide();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMod <em>Mod</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Mod</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getMod()
-   * @see #getMathDivmulOperation()
-   * @generated
-   */
-  EAttribute getMathDivmulOperation_Mod();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.siddhi.siddhi.MathDivmulOperation#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.example.siddhi.siddhi.MathDivmulOperation#getRight()
-   * @see #getMathDivmulOperation()
-   * @generated
-   */
-  EReference getMathDivmulOperation_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.siddhi.siddhi.NotOperation <em>Not Operation</em>}'.

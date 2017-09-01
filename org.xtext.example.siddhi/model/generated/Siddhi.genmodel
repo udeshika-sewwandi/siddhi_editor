@@ -17,7 +17,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/def_window"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/defTrigger"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/defFunction"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/defAgrregation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/defAggregation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecutionPlan/exElement"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//ExecutionElement">
@@ -65,7 +65,7 @@
     <genClasses ecoreClass="Siddhi.ecore#//AggregationTime">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AggregationTime/aggrtimeDur"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//aggregation_time_interval"/>
+    <genClasses ecoreClass="Siddhi.ecore#//AggregationTimeInterval"/>
     <genClasses ecoreClass="Siddhi.ecore#//AggregationTimeDuration"/>
     <genClasses ecoreClass="Siddhi.ecore#//AggregationTimeRange"/>
     <genClasses ecoreClass="Siddhi.ecore#//FunctionName">
@@ -82,7 +82,7 @@
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//AppAnnotation"/>
     <genClasses ecoreClass="Siddhi.ecore#//Annotation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Annotation/na"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Annotation/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Annotation/annElement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Annotation/ann"/>
     </genClasses>
@@ -94,14 +94,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PropertyValue/sv"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//PropertyName">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PropertyName/na"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PropertyName/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PropertyName/ps"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//PropertySeparator"/>
     <genClasses ecoreClass="Siddhi.ecore#//Features">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Features/nam"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Features/type"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//AttributeType"/>
+    <genClasses ecoreClass="Siddhi.ecore#//Source">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Source/strId"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//Source1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Source1/inner"/>
+    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//ExecPartition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecPartition/ann4"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ExecPartition/partWithStream"/>
@@ -126,119 +133,56 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Query/outRate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Query/qOutput"/>
     </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//QueryOutput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/outEventType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/tar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/on"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/or"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/setClause"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//Target">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Target/na"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Target/src"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//SetClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//SetClause/setAssignment"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//SetAssignment"/>
+    <genClasses ecoreClass="Siddhi.ecore#//OutputEventType"/>
+    <genClasses ecoreClass="Siddhi.ecore#//OutputRate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/op_rate_type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/every"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/tv"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//OutputRateType"/>
+    <genClasses ecoreClass="Siddhi.ecore#//GroupByQuerySelection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupByQuerySelection/out_att"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupByQuerySelection/grp_by"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//QuerySection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QuerySection/grpByQuerySel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QuerySection/having"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//GroupBy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupBy/attr_ref"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//HavingExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//HavingExpr/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//OutputAttribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputAttribute/outAttr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputAttribute/attr_ref"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//OutAttr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutAttr/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutAttr/a"/>
+    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//QueryInput">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryInput/js"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryInput/seqSrcChanin"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryInput/ps"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryInput/anonStream"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//JoinStream">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/left_source"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/right_source"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/right_uni"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/on"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/expr"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/wt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/join"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/left_uni"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//WithinTimeRange">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTimeRange/startPattern"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTimeRange/endPattern"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//Per1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Per1/exp"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//JoinSource"/>
-    <genClasses ecoreClass="Siddhi.ecore#//StreamAlias">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StreamAlias/na"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//joins"/>
-    <genClasses ecoreClass="Siddhi.ecore#//StandardStream"/>
-    <genClasses ecoreClass="Siddhi.ecore#//MainSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/a"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/strAlias"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/postWindowHandlers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/src"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/basicSSh"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//PatternStream"/>
-    <genClasses ecoreClass="Siddhi.ecore#//EveryPatternSourceChain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//EveryPatternSourceChain/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/right"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/eps"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/wt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/psc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/every"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//PatternSourceChain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//PatternSourceChain/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/right"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/psc_2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/wt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/ps"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//PatternSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/lss"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/pss"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/stdss"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/logicalAbsStatefulSrc"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//LogicalStatefulSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/stdSource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/and"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/or"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//PatternCollectionStatefulSource"/>
-    <genClasses ecoreClass="Siddhi.ecore#//Collect">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Collect/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Collect/end"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//WithinTime">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTime/tv"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//LogicalAbsentStatefulSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/logicalAbsStatefulSrc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/stdSource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/and"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/not"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/bs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/o"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//AbsentPatternSourceChain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AbsentPatternSourceChain/absentPatternSrcChain"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AbsentPatternSourceChain/wt1"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//EveryAbsentPatternSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryAbsentPatternSource/basicAbsentPS"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//BasicAbsentPatternSource"/>
-    <genClasses ecoreClass="Siddhi.ecore#//ForTime">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ForTime/tv"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//LeftAbsentPatternSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//LeftAbsentPatternSource/fb1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/right"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/leftAbsPS"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/wt2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/everyAbsPS"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/everyPSC"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/leftAbsPatternSrc"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//RightAbsentPatternSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/left1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//RightAbsentPatternSource/fb2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/right1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/rightAbsPS"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/wt3"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/everyPSC1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/everyAbsPS1"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//SequenceStream">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//SequenceStream/everySequenceSourceChain"/>
@@ -300,25 +244,116 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AnonymousStream/out_rate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AnonymousStream/op_event_type"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//OutputRate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/op_rate_type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/every"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputRate/tv"/>
+    <genClasses ecoreClass="Siddhi.ecore#//PatternStream"/>
+    <genClasses ecoreClass="Siddhi.ecore#//EveryPatternSourceChain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//EveryPatternSourceChain/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/eps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/wt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/psc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryPatternSourceChain/every"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//OutputRateType"/>
-    <genClasses ecoreClass="Siddhi.ecore#//QueryOutput">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/outEventType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/tar"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/on"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/expr"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/or"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QueryOutput/setClause"/>
+    <genClasses ecoreClass="Siddhi.ecore#//PatternSourceChain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//PatternSourceChain/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/psc_2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/wt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSourceChain/ps"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//SetClause">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//SetClause/setAssignment"/>
+    <genClasses ecoreClass="Siddhi.ecore#//PatternSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/lss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/pss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/stdss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//PatternSource/logicalAbsStatefulSrc"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//SetAssignment"/>
-    <genClasses ecoreClass="Siddhi.ecore#//OutputEventType"/>
+    <genClasses ecoreClass="Siddhi.ecore#//LogicalStatefulSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/stdSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/and"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalStatefulSource/or"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//PatternCollectionStatefulSource"/>
+    <genClasses ecoreClass="Siddhi.ecore#//Collect">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Collect/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Collect/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//LogicalAbsentStatefulSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/logicalAbsStatefulSrc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/stdSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/and"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/not"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/bs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/basicAbsentPatternSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LogicalAbsentStatefulSource/o"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//AbsentPatternSourceChain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AbsentPatternSourceChain/absentPatternSrcChain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AbsentPatternSourceChain/wt1"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//EveryAbsentPatternSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//EveryAbsentPatternSource/basicAbsentPS"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//BasicAbsentPatternSource"/>
+    <genClasses ecoreClass="Siddhi.ecore#//ForTime">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ForTime/tv"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//LeftAbsentPatternSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//LeftAbsentPatternSource/fb1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/leftAbsPS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/wt2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/everyAbsPS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/everyPSC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//LeftAbsentPatternSource/leftAbsPatternSrc"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//RightAbsentPatternSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/left1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//RightAbsentPatternSource/fb2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/right1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/rightAbsPS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/wt3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/everyPSC1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource/everyAbsPS1"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//JoinStream">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/left_source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/right_source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/right_uni"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/on"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/wtr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/p"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/join"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//JoinStream/left_uni"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//WithinTimeRange">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTimeRange/startPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTimeRange/endPattern"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//Per1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Per1/exp"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//JoinSource"/>
+    <genClasses ecoreClass="Siddhi.ecore#//StreamAlias">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StreamAlias/nam"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//WithinTime">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//WithinTime/tv"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//joins"/>
+    <genClasses ecoreClass="Siddhi.ecore#//StandardStream"/>
+    <genClasses ecoreClass="Siddhi.ecore#//MainSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/window"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/strAlias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/postWindowHandlers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MainSource/basicSSh"/>
+    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//BasicSourceStreamHandlers">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//BasicSourceStreamHandlers/basicSsHandler"/>
     </genClasses>
@@ -341,49 +376,23 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Win/func_op"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//Expression"/>
-    <genClasses ecoreClass="Siddhi.ecore#//FunctionOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/funcNamespace"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/funcId"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/attrList"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//FunctionNamespace">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//FunctionNamespace/na"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//FunctionId">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionId/na"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//AttributeList">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeList/attr"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//Attribute">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Attribute/mathOp"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//GroupByQuerySelection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupByQuerySelection/out_att"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupByQuerySelection/grp_by"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//QuerySection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QuerySection/grpByQuerySel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//QuerySection/having"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//OutputAttribute">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputAttribute/outAttr"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutputAttribute/attr_ref"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//OutAttr">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutAttr/attr"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//OutAttr/a"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//GroupBy">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//GroupBy/attr_ref"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//HavingExpr">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//HavingExpr/expr"/>
-    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//MathOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOperation/mlo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOperation/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOperation/mathOtherOperations1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOperation/left"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//MathAddsubOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathAddsubOperation/add"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathAddsubOperation/substract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathAddsubOperation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//MathDivmulOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/multiply"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/devide"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/mod"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//MathOtherOperations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOtherOperations/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOtherOperations/lit"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//NullCheck">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//NullCheck/stream_ref"/>
@@ -392,45 +401,24 @@
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//StreamReference">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StreamReference/hash"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StreamReference/na"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StreamReference/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StreamReference/aatr_index"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//MathOtherOperations1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOtherOperations1/const_val"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOtherOperations1/fo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathOtherOperations1/attrRef"/>
+    <genClasses ecoreClass="Siddhi.ecore#//Literal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Literal/const_val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Literal/fo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Literal/attrRef"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//AttributeReference">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//AttributeReference/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//AttributeReference/hash1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/name1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/attribute_index1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/OPEN_SQARE_BRACKETSattribute_index1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//AttributeReference/hash2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/name2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/attribute_index2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/attr_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/OPEN_SQARE_BRACKETSattribute_index2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeReference/featuresOrAttrRef"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//AttributeNameReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeNameReference/attrName1"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//AttributeIndex"/>
-    <genClasses ecoreClass="Siddhi.ecore#//StandardStatefulSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StandardStatefulSource/coll"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/zero_or_more"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/zero_or_one"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/one_or_more"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StandardStatefulSource/bs"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//Source1OrStandardStatefulSource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Source1OrStandardStatefulSource/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//SourceOrEventReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//SourceOrEventReference/na"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//BasicSource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//BasicSource/src"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//BasicSource/basic_ss_handlers"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//FeaturesOrOutAttr">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//FeaturesOrOutAttr/name"/>
@@ -438,6 +426,28 @@
     <genClasses ecoreClass="Siddhi.ecore#//FeaturesOrOutAttrReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FeaturesOrOutAttrReference/srcoutAttrref"/>
     </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//StandardStatefulSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StandardStatefulSource/coll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/zero_or_more"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/zero_or_one"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//StandardStatefulSource/one_or_more"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StandardStatefulSource/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//StandardStatefulSource/basic_ss_handlers"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//BasicSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//BasicSource/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//BasicSource/basic_ss_handlers"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//Source1OrStandardStatefulSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Source1OrStandardStatefulSource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//SourceOrEventReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//SourceOrEventReference/na"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//AttributeNameReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeNameReference/attrName1"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//AttributeIndex"/>
     <genClasses ecoreClass="Siddhi.ecore#//ConstantValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ConstantValue/bv"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ConstantValue/sdv"/>
@@ -447,14 +457,25 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ConstantValue/tv"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//ConstantValue/sv"/>
     </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//FunctionOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/funcNamespace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/funcId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionOperation/attrList"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//FunctionNamespace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionNamespace/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//FunctionId">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//FunctionId/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//AttributeList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//AttributeList/attr"/>
+    </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Attribute/mathOp"/>
+    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//Name">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Name/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//Source">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Siddhi.ecore#//Source/strId"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//Source1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Source1/inner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//Name/na"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//BoolValue"/>
     <genClasses ecoreClass="Siddhi.ecore#//SignedDoubleValue"/>
@@ -518,7 +539,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//NOT/not1"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//EVERY">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//EVERY/every"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//EVERY/every1"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//AND">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//AND/and"/>
@@ -545,7 +566,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//L/l"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//APP">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//APP/na"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//APP/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//APP/ann5"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//APP/ap"/>
     </genClasses>
@@ -746,6 +767,11 @@
     <genClasses ecoreClass="Siddhi.ecore#//TRUE">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//TRUE/tr"/>
     </genClasses>
+    <genClasses ecoreClass="Siddhi.ecore#//LeftAbsentSequenceSource1"/>
+    <genClasses ecoreClass="Siddhi.ecore#//RightAbsentSequenceSource1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentSequenceSource1/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentSequenceSource1/right"/>
+    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//LeftAbsentPatternSource1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//LeftAbsentPatternSource1/fb"/>
     </genClasses>
@@ -754,45 +780,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//RightAbsentPatternSource1/fb"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentPatternSource1/right"/>
     </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//LeftAbsentSequenceSource1"/>
-    <genClasses ecoreClass="Siddhi.ecore#//RightAbsentSequenceSource1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentSequenceSource1/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//RightAbsentSequenceSource1/right"/>
-    </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//MathLogicalOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathLogicalOperation/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathLogicalOperation/and"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathLogicalOperation/or"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathLogicalOperation/right"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//MathInOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathInOperation/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathInOperation/in"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathInOperation/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathInOperation/name"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//MathGtLtOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathGtLtOperation/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathGtLtOperation/symbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathGtLtOperation/gt_eq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathGtLtOperation/lt_eq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathGtLtOperation/gt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathGtLtOperation/lt"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathGtLtOperation/right"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//MathEqualOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathEqualOperation/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathEqualOperation/eq"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathEqualOperation/not_eq"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathEqualOperation/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//MathAddsubOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathAddsubOperation/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathAddsubOperation/add"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathAddsubOperation/substract"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathAddsubOperation/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Siddhi.ecore#//MathDivmulOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathDivmulOperation/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/multiply"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/devide"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Siddhi.ecore#//MathDivmulOperation/mod"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//MathDivmulOperation/right"/>
     </genClasses>
     <genClasses ecoreClass="Siddhi.ecore#//NotOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Siddhi.ecore#//NotOperation/not"/>

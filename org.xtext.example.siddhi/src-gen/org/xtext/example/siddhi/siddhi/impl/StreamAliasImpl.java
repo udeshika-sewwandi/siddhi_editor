@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.siddhi.siddhi.Name;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
@@ -24,22 +23,22 @@ import org.xtext.example.siddhi.siddhi.StreamAlias;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl#getNa <em>Na</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StreamAliasImpl#getNam <em>Nam</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StreamAliasImpl extends MinimalEObjectImpl.Container implements StreamAlias
+public class StreamAliasImpl extends Source1OrStandardStatefulSourceImpl implements StreamAlias
 {
   /**
-   * The cached value of the '{@link #getNa() <em>Na</em>}' containment reference.
+   * The cached value of the '{@link #getNam() <em>Nam</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNa()
+   * @see #getNam()
    * @generated
    * @ordered
    */
-  protected Name na;
+  protected Name nam;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,9 +66,9 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
    * <!-- end-user-doc -->
    * @generated
    */
-  public Name getNa()
+  public Name getNam()
   {
-    return na;
+    return nam;
   }
 
   /**
@@ -77,13 +76,13 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNa(Name newNa, NotificationChain msgs)
+  public NotificationChain basicSetNam(Name newNam, NotificationChain msgs)
   {
-    Name oldNa = na;
-    na = newNa;
+    Name oldNam = nam;
+    nam = newNam;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_ALIAS__NA, oldNa, newNa);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_ALIAS__NAM, oldNam, newNam);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -94,20 +93,20 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNa(Name newNa)
+  public void setNam(Name newNam)
   {
-    if (newNa != na)
+    if (newNam != nam)
     {
       NotificationChain msgs = null;
-      if (na != null)
-        msgs = ((InternalEObject)na).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_ALIAS__NA, null, msgs);
-      if (newNa != null)
-        msgs = ((InternalEObject)newNa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_ALIAS__NA, null, msgs);
-      msgs = basicSetNa(newNa, msgs);
+      if (nam != null)
+        msgs = ((InternalEObject)nam).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_ALIAS__NAM, null, msgs);
+      if (newNam != null)
+        msgs = ((InternalEObject)newNam).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STREAM_ALIAS__NAM, null, msgs);
+      msgs = basicSetNam(newNam, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_ALIAS__NA, newNa, newNa));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STREAM_ALIAS__NAM, newNam, newNam));
   }
 
   /**
@@ -120,8 +119,8 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_ALIAS__NA:
-        return basicSetNa(null, msgs);
+      case SiddhiPackage.STREAM_ALIAS__NAM:
+        return basicSetNam(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -136,8 +135,8 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_ALIAS__NA:
-        return getNa();
+      case SiddhiPackage.STREAM_ALIAS__NAM:
+        return getNam();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,8 +151,8 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_ALIAS__NA:
-        setNa((Name)newValue);
+      case SiddhiPackage.STREAM_ALIAS__NAM:
+        setNam((Name)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,8 +168,8 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_ALIAS__NA:
-        setNa((Name)null);
+      case SiddhiPackage.STREAM_ALIAS__NAM:
+        setNam((Name)null);
         return;
     }
     super.eUnset(featureID);
@@ -186,8 +185,8 @@ public class StreamAliasImpl extends MinimalEObjectImpl.Container implements Str
   {
     switch (featureID)
     {
-      case SiddhiPackage.STREAM_ALIAS__NA:
-        return na != null;
+      case SiddhiPackage.STREAM_ALIAS__NAM:
+        return nam != null;
     }
     return super.eIsSet(featureID);
   }

@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='file:/C:/Users/Udeshika/workspace/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1503980355469'/>
+    <property name='p2.timestamp' value='1504245159854'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
@@ -11,28 +11,28 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
   <artifacts size='4'>
-    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi.ide' version='1.0.0.201708290948'>
+    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi.ui' version='1.0.0.201709011122'>
       <properties size='2'>
         <property name='artifact.size' value='4096'/>
-        <property name='download.size' value='694246'/>
+        <property name='download.size' value='61783'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi' version='1.0.0.201708290948'>
-      <properties size='2'>
-        <property name='artifact.size' value='4096'/>
-        <property name='download.size' value='1410381'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi.ui' version='1.0.0.201708290948'>
-      <properties size='2'>
-        <property name='artifact.size' value='4096'/>
-        <property name='download.size' value='50738'/>
-      </properties>
-    </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='org.xtext.example.siddhi.feature' version='1.0.0.201708290948'>
+    <artifact classifier='org.eclipse.update.feature' id='org.xtext.example.siddhi.feature' version='1.0.0.201709011122'>
       <properties size='2'>
         <property name='download.contentType' value='application/zip'/>
-        <property name='download.size' value='327'/>
+        <property name='download.size' value='326'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi.ide' version='1.0.0.201709011122'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='762601'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.xtext.example.siddhi' version='1.0.0.201709011122'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='1452382'/>
       </properties>
     </artifact>
   </artifacts>

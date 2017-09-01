@@ -22,7 +22,7 @@ package org.xtext.example.siddhi.siddhi;
  * @model
  * @generated
  */
-public interface NullCheck extends MathOperation, IS, NULL
+public interface NullCheck extends MathOtherOperations, IS, NULL
 {
   /**
    * Returns the value of the '<em><b>Stream ref</b></em>' containment reference.

@@ -3,30 +3,22 @@
  */
 package org.xtext.example.siddhi.siddhi.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.example.siddhi.siddhi.BasicSource;
+import org.xtext.example.siddhi.siddhi.BasicSourceStreamHandlers;
 import org.xtext.example.siddhi.siddhi.Collect;
+import org.xtext.example.siddhi.siddhi.PatternCollectionStatefulSource;
 import org.xtext.example.siddhi.siddhi.SequenceCollectionStatefulSource;
-import org.xtext.example.siddhi.siddhi.SequenceSource;
-import org.xtext.example.siddhi.siddhi.SequenceSourceChain;
 import org.xtext.example.siddhi.siddhi.SiddhiPackage;
+import org.xtext.example.siddhi.siddhi.Source;
 import org.xtext.example.siddhi.siddhi.Source1OrStandardStatefulSource;
 import org.xtext.example.siddhi.siddhi.StandardStatefulSource;
-import org.xtext.example.siddhi.siddhi.WithinTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,83 +28,19 @@ import org.xtext.example.siddhi.siddhi.WithinTime;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getOp <em>Op</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getRight <em>Right</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getWt1 <em>Wt1</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getWt <em>Wt</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getColl <em>Coll</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getZero_or_more <em>Zero or more</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getZero_or_one <em>Zero or one</em>}</li>
  *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getOne_or_more <em>One or more</em>}</li>
- *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getBs <em>Bs</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link org.xtext.example.siddhi.siddhi.impl.StandardStatefulSourceImpl#getBasic_ss_handlers <em>Basic ss handlers</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceImpl implements StandardStatefulSource
+public class StandardStatefulSourceImpl extends SequenceSourceImpl implements StandardStatefulSource
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected SequenceSourceChain left;
-
-  /**
-   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected static final String OP_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected String op = OP_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRight()
-   * @generated
-   * @ordered
-   */
-  protected SequenceSourceChain right;
-
-  /**
-   * The cached value of the '{@link #getWt1() <em>Wt1</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getWt1()
-   * @generated
-   * @ordered
-   */
-  protected EList<WithinTime> wt1;
-
-  /**
-   * The cached value of the '{@link #getWt() <em>Wt</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getWt()
-   * @generated
-   * @ordered
-   */
-  protected WithinTime wt;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -204,14 +132,24 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   protected String one_or_more = ONE_OR_MORE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getBs() <em>Bs</em>}' containment reference.
+   * The cached value of the '{@link #getSrc() <em>Src</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBs()
+   * @see #getSrc()
    * @generated
    * @ordered
    */
-  protected BasicSource bs;
+  protected Source src;
+
+  /**
+   * The cached value of the '{@link #getBasic_ss_handlers() <em>Basic ss handlers</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBasic_ss_handlers()
+   * @generated
+   * @ordered
+   */
+  protected BasicSourceStreamHandlers basic_ss_handlers;
 
   /**
    * <!-- begin-user-doc -->
@@ -232,187 +170,6 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   protected EClass eStaticClass()
   {
     return SiddhiPackage.eINSTANCE.getStandardStatefulSource();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SequenceSourceChain getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(SequenceSourceChain newLeft, NotificationChain msgs)
-  {
-    SequenceSourceChain oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(SequenceSourceChain newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT, newLeft, newLeft));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getOp()
-  {
-    return op;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOp(String newOp)
-  {
-    String oldOp = op;
-    op = newOp;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP, oldOp, op));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SequenceSourceChain getRight()
-  {
-    return right;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRight(SequenceSourceChain newRight, NotificationChain msgs)
-  {
-    SequenceSourceChain oldRight = right;
-    right = newRight;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT, oldRight, newRight);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRight(SequenceSourceChain newRight)
-  {
-    if (newRight != right)
-    {
-      NotificationChain msgs = null;
-      if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT, null, msgs);
-      if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT, null, msgs);
-      msgs = basicSetRight(newRight, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT, newRight, newRight));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<WithinTime> getWt1()
-  {
-    if (wt1 == null)
-    {
-      wt1 = new EObjectContainmentEList<WithinTime>(WithinTime.class, this, SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1);
-    }
-    return wt1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public WithinTime getWt()
-  {
-    return wt;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetWt(WithinTime newWt, NotificationChain msgs)
-  {
-    WithinTime oldWt = wt;
-    wt = newWt;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT, oldWt, newWt);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setWt(WithinTime newWt)
-  {
-    if (newWt != wt)
-    {
-      NotificationChain msgs = null;
-      if (wt != null)
-        msgs = ((InternalEObject)wt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT, null, msgs);
-      if (newWt != null)
-        msgs = ((InternalEObject)newWt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT, null, msgs);
-      msgs = basicSetWt(newWt, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT, newWt, newWt));
   }
 
   /**
@@ -560,9 +317,9 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
    * <!-- end-user-doc -->
    * @generated
    */
-  public BasicSource getBs()
+  public Source getSrc()
   {
-    return bs;
+    return src;
   }
 
   /**
@@ -570,13 +327,13 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBs(BasicSource newBs, NotificationChain msgs)
+  public NotificationChain basicSetSrc(Source newSrc, NotificationChain msgs)
   {
-    BasicSource oldBs = bs;
-    bs = newBs;
+    Source oldSrc = src;
+    src = newSrc;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS, oldBs, newBs);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC, oldSrc, newSrc);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -587,20 +344,68 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBs(BasicSource newBs)
+  public void setSrc(Source newSrc)
   {
-    if (newBs != bs)
+    if (newSrc != src)
     {
       NotificationChain msgs = null;
-      if (bs != null)
-        msgs = ((InternalEObject)bs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS, null, msgs);
-      if (newBs != null)
-        msgs = ((InternalEObject)newBs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS, null, msgs);
-      msgs = basicSetBs(newBs, msgs);
+      if (src != null)
+        msgs = ((InternalEObject)src).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC, null, msgs);
+      if (newSrc != null)
+        msgs = ((InternalEObject)newSrc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC, null, msgs);
+      msgs = basicSetSrc(newSrc, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS, newBs, newBs));
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC, newSrc, newSrc));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BasicSourceStreamHandlers getBasic_ss_handlers()
+  {
+    return basic_ss_handlers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBasic_ss_handlers(BasicSourceStreamHandlers newBasic_ss_handlers, NotificationChain msgs)
+  {
+    BasicSourceStreamHandlers oldBasic_ss_handlers = basic_ss_handlers;
+    basic_ss_handlers = newBasic_ss_handlers;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS, oldBasic_ss_handlers, newBasic_ss_handlers);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBasic_ss_handlers(BasicSourceStreamHandlers newBasic_ss_handlers)
+  {
+    if (newBasic_ss_handlers != basic_ss_handlers)
+    {
+      NotificationChain msgs = null;
+      if (basic_ss_handlers != null)
+        msgs = ((InternalEObject)basic_ss_handlers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS, null, msgs);
+      if (newBasic_ss_handlers != null)
+        msgs = ((InternalEObject)newBasic_ss_handlers).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS, null, msgs);
+      msgs = basicSetBasic_ss_handlers(newBasic_ss_handlers, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS, newBasic_ss_handlers, newBasic_ss_handlers));
   }
 
   /**
@@ -613,18 +418,12 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   {
     switch (featureID)
     {
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT:
-        return basicSetLeft(null, msgs);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT:
-        return basicSetRight(null, msgs);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1:
-        return ((InternalEList<?>)getWt1()).basicRemove(otherEnd, msgs);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT:
-        return basicSetWt(null, msgs);
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__COLL:
         return basicSetColl(null, msgs);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS:
-        return basicSetBs(null, msgs);
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC:
+        return basicSetSrc(null, msgs);
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS:
+        return basicSetBasic_ss_handlers(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -639,16 +438,6 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   {
     switch (featureID)
     {
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT:
-        return getLeft();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP:
-        return getOp();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT:
-        return getRight();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1:
-        return getWt1();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT:
-        return getWt();
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__NAME:
         return getName();
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__COLL:
@@ -659,8 +448,10 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
         return getZero_or_one();
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__ONE_OR_MORE:
         return getOne_or_more();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS:
-        return getBs();
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC:
+        return getSrc();
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS:
+        return getBasic_ss_handlers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -670,28 +461,11 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT:
-        setLeft((SequenceSourceChain)newValue);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP:
-        setOp((String)newValue);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT:
-        setRight((SequenceSourceChain)newValue);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1:
-        getWt1().clear();
-        getWt1().addAll((Collection<? extends WithinTime>)newValue);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT:
-        setWt((WithinTime)newValue);
-        return;
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__NAME:
         setName((String)newValue);
         return;
@@ -707,8 +481,11 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__ONE_OR_MORE:
         setOne_or_more((String)newValue);
         return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS:
-        setBs((BasicSource)newValue);
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC:
+        setSrc((Source)newValue);
+        return;
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS:
+        setBasic_ss_handlers((BasicSourceStreamHandlers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -724,21 +501,6 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   {
     switch (featureID)
     {
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT:
-        setLeft((SequenceSourceChain)null);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP:
-        setOp(OP_EDEFAULT);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT:
-        setRight((SequenceSourceChain)null);
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1:
-        getWt1().clear();
-        return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT:
-        setWt((WithinTime)null);
-        return;
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -754,8 +516,11 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__ONE_OR_MORE:
         setOne_or_more(ONE_OR_MORE_EDEFAULT);
         return;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS:
-        setBs((BasicSource)null);
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC:
+        setSrc((Source)null);
+        return;
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS:
+        setBasic_ss_handlers((BasicSourceStreamHandlers)null);
         return;
     }
     super.eUnset(featureID);
@@ -771,16 +536,6 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   {
     switch (featureID)
     {
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT:
-        return left != null;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP:
-        return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT:
-        return right != null;
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1:
-        return wt1 != null && !wt1.isEmpty();
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT:
-        return wt != null;
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__COLL:
@@ -791,8 +546,10 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
         return ZERO_OR_ONE_EDEFAULT == null ? zero_or_one != null : !ZERO_OR_ONE_EDEFAULT.equals(zero_or_one);
       case SiddhiPackage.STANDARD_STATEFUL_SOURCE__ONE_OR_MORE:
         return ONE_OR_MORE_EDEFAULT == null ? one_or_more != null : !ONE_OR_MORE_EDEFAULT.equals(one_or_more);
-      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BS:
-        return bs != null;
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__SRC:
+        return src != null;
+      case SiddhiPackage.STANDARD_STATEFUL_SOURCE__BASIC_SS_HANDLERS:
+        return basic_ss_handlers != null;
     }
     return super.eIsSet(featureID);
   }
@@ -805,26 +562,14 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
-    if (baseClass == SequenceSourceChain.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT: return SiddhiPackage.SEQUENCE_SOURCE_CHAIN__LEFT;
-        case SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP: return SiddhiPackage.SEQUENCE_SOURCE_CHAIN__OP;
-        case SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT: return SiddhiPackage.SEQUENCE_SOURCE_CHAIN__RIGHT;
-        case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1: return SiddhiPackage.SEQUENCE_SOURCE_CHAIN__WT1;
-        default: return -1;
-      }
-    }
-    if (baseClass == SequenceSource.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT: return SiddhiPackage.SEQUENCE_SOURCE__WT;
-        default: return -1;
-      }
-    }
     if (baseClass == SequenceCollectionStatefulSource.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == PatternCollectionStatefulSource.class)
     {
       switch (derivedFeatureID)
       {
@@ -850,26 +595,14 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
-    if (baseClass == SequenceSourceChain.class)
-    {
-      switch (baseFeatureID)
-      {
-        case SiddhiPackage.SEQUENCE_SOURCE_CHAIN__LEFT: return SiddhiPackage.STANDARD_STATEFUL_SOURCE__LEFT;
-        case SiddhiPackage.SEQUENCE_SOURCE_CHAIN__OP: return SiddhiPackage.STANDARD_STATEFUL_SOURCE__OP;
-        case SiddhiPackage.SEQUENCE_SOURCE_CHAIN__RIGHT: return SiddhiPackage.STANDARD_STATEFUL_SOURCE__RIGHT;
-        case SiddhiPackage.SEQUENCE_SOURCE_CHAIN__WT1: return SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT1;
-        default: return -1;
-      }
-    }
-    if (baseClass == SequenceSource.class)
-    {
-      switch (baseFeatureID)
-      {
-        case SiddhiPackage.SEQUENCE_SOURCE__WT: return SiddhiPackage.STANDARD_STATEFUL_SOURCE__WT;
-        default: return -1;
-      }
-    }
     if (baseClass == SequenceCollectionStatefulSource.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == PatternCollectionStatefulSource.class)
     {
       switch (baseFeatureID)
       {
@@ -898,9 +631,7 @@ public class StandardStatefulSourceImpl extends PatternCollectionStatefulSourceI
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (op: ");
-    result.append(op);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(", zero_or_more: ");
     result.append(zero_or_more);

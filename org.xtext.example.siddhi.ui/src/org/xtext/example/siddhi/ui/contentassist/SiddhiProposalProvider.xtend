@@ -35,11 +35,11 @@ class SiddhiProposalProvider extends AbstractSiddhiProposalProvider {
 	}
 	
 	override void completeFROM_From(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		acceptor.accept(createCompletionProposal("from eventStream insert into outputStream",context))
+		acceptor.accept(createCompletionProposal("from eventStream insert into outputStream;",context))
         super.completeFROM_From(model, assignment, context, acceptor)
 	}
 	override void complete_FunctionId(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		acceptor.accept(createCompletionProposal("function_name () as id",context))
+		acceptor.accept(createCompletionProposal("function_name() as id",context))
         super.complete_FunctionId(model, ruleCall, context, acceptor)
 	}
 }

@@ -161,11 +161,7 @@ ruleDefinitionStream:
 	ruleAnnotation
 	*
 	ruleDEFINE
-	(
-		ruleSTREAM
-		    |
-		ruleTABLE
-	)
+	ruleSTREAM
 	ruleSource1
 	ruleOPEN_PAR
 	ruleFeatures
@@ -264,12 +260,12 @@ ruleAggregationTime:
 	(
 		ruleAggregationTimeRange
 		    |
-		ruleaggregation_time_interval
+		ruleAggregationTimeInterval
 	)
 ;
 
-// Rule aggregation_time_interval
-ruleaggregation_time_interval:
+// Rule AggregationTimeInterval
+ruleAggregationTimeInterval:
 	ruleAggregationTimeDuration
 	(
 		','
@@ -397,7 +393,19 @@ rulePropertySeparator:
 
 // Rule Features
 ruleFeatures:
-	ruleIdNew
+	(
+		(
+			(ruleIdNew
+			)=>
+			ruleIdNew
+		)
+		    |
+		(
+			(ruleName
+			)=>
+			ruleName
+		)
+	)
 	ruleAttributeType
 ;
 
@@ -418,6 +426,18 @@ ruleAttributeType:
 		    |
 		ruleOBJECT
 	)
+;
+
+// Rule Source
+ruleSource:
+	ruleIdNew
+;
+
+// Rule Source1
+ruleSource1:
+	'#'
+	?
+	ruleIdNew
 ;
 
 // Rule ExecPartition
@@ -477,7 +497,190 @@ ruleQuery:
 	ruleOutputRate
 	?
 	ruleQueryOutput
+;
+
+// Rule QueryOutput
+ruleQueryOutput:
+	(
+		ruleINSERT
+		ruleOutputEventType
+		?
+		ruleINTO
+		ruleTarget
+		    |
+		ruleDELETE
+		ruleTarget
+		(
+			ruleFOR
+			ruleOutputEventType
+		)?
+		ruleON
+		ruleExpression
+		    |
+		ruleUPDATE
+		(
+			ruleOR
+			ruleINSERT
+			ruleINTO
+		)?
+		ruleTarget
+		(
+			ruleFOR
+			ruleOutputEventType
+		)?
+		ruleSetClause
+		?
+		ruleON
+		ruleExpression
+		    |
+		ruleRETURN
+		ruleOutputEventType
+		?
+	)
+;
+
+// Rule Target
+ruleTarget:
+	(
+		(
+			(ruleSource1
+			)=>
+			ruleSource1
+		)
+		    |
+		(
+			(ruleSource
+			)=>
+			ruleSource
+		)
+	)
+;
+
+// Rule SetClause
+ruleSetClause:
+	ruleSET
+	ruleSetAssignment
+	(
+		','
+		ruleSetAssignment
+	)*
+;
+
+// Rule SetAssignment
+ruleSetAssignment:
+	ruleAttributeReference
+	'='
+	ruleExpression
+;
+
+// Rule OutputEventType
+ruleOutputEventType:
+	(
+		ruleALL
+		ruleEVENTS
+		    |
+		ruleALL
+		ruleRAW
+		ruleEVENTS
+		    |
+		ruleEXPIRED
+		ruleEVENTS
+		    |
+		ruleEXPIRED
+		ruleRAW
+		ruleEVENTS
+		    |
+		ruleCURRENT?
+		ruleEVENTS
+	)
+;
+
+// Rule OutputRate
+ruleOutputRate:
+	(
+		ruleOUTPUT
+		ruleOutputRateType
+		?
+		ruleEVERY
+		(
+			ruleTimeValue
+			    |
+			ruleINT_LITERAL
+			ruleEVENTS
+		)
+		    |
+		ruleOUTPUT
+		ruleSNAPSHOT
+		ruleEVERY
+		ruleTimeValue
+	)
+;
+
+// Rule OutputRateType
+ruleOutputRateType:
+	(
+		ruleALL
+		    |
+		ruleLAST
+		    |
+		ruleFIRST
+	)
+;
+
+// Rule GroupByQuerySelection
+ruleGroupByQuerySelection:
+	ruleSELECT
+	(
+		'*'
+		    |
+		ruleOutputAttribute
+		(
+			','
+			ruleOutputAttribute
+		)*
+	)
+	ruleGroupBy
 	?
+;
+
+// Rule QuerySection
+ruleQuerySection:
+	ruleGroupByQuerySelection
+	ruleHavingExpr
+	?
+;
+
+// Rule GroupBy
+ruleGroupBy:
+	ruleGROUP
+	ruleBY
+	ruleAttributeReference
+	(
+		','
+		ruleAttributeReference
+	)*
+;
+
+// Rule HavingExpr
+ruleHavingExpr:
+	ruleHAVING
+	ruleExpression
+;
+
+// Rule OutputAttribute
+ruleOutputAttribute:
+	(
+		ruleOutAttr
+		    |
+		ruleAttributeReference
+	)
+;
+
+// Rule OutAttr
+ruleOutAttr:
+	ruleAttribute
+	ruleAS
+	ruleIdNew
 ;
 
 // Rule QueryInput
@@ -502,575 +705,6 @@ ruleQueryInput:
 		)
 		    |
 		ruleAnonymousStream
-	)
-;
-
-// Rule JoinStream
-ruleJoinStream:
-	(
-		(
-			(ruleJoinSource
-			ruleJoinSource
-			)=>
-			ruleJoinSource
-			ruleJoinSource
-		)
-		ruleUNIDIRECTIONAL
-		(
-			ruleON
-			ruleExpression
-		)?
-		ruleWithinTime
-		?
-		    |
-		(
-			(ruleJoinSource
-			rulejoins
-			)=>
-			ruleJoinSource
-			rulejoins
-		)
-		ruleJoinSource
-		(
-			ruleON
-			ruleExpression
-		)?
-		ruleWithinTime
-		?
-		    |
-		(
-			(ruleJoinSource
-			ruleUNIDIRECTIONAL
-			)=>
-			ruleJoinSource
-			ruleUNIDIRECTIONAL
-		)
-		rulejoins
-		ruleJoinSource
-		(
-			ruleON
-			ruleExpression
-		)?
-		ruleWithinTime
-		?
-		    |
-		(
-			(ruleStandardStream)=>
-			ruleStandardStream
-		)
-	)
-;
-
-// Rule JoinSource
-ruleJoinSource:
-	ruleMainSource
-	(
-		ruleAS
-		ruleStreamAlias
-	)?
-;
-
-// Rule StreamAlias
-ruleStreamAlias:
-	ruleName
-;
-
-// Rule joins
-rulejoins:
-	(
-		ruleLEFT
-		ruleOUTER
-		ruleJOIN
-		    |
-		ruleRIGHT
-		ruleOUTER
-		ruleJOIN
-		    |
-		ruleFULL
-		ruleOUTER
-		ruleJOIN
-		    |
-		ruleOUTER
-		ruleJOIN
-		    |
-		ruleINNER?
-		ruleJOIN
-	)
-;
-
-// Rule StandardStream
-ruleStandardStream:
-	ruleMainSource
-	(
-		(ruleBasicSourceStreamHandlers
-		?
-		)=>
-		ruleBasicSourceStreamHandlers
-		?
-	)
-;
-
-// Rule MainSource
-ruleMainSource:
-	ruleSource
-	ruleBasicSourceStreamHandlers1
-;
-
-// Rule PatternStream
-rulePatternStream:
-	(
-		(
-			(ruleEveryPatternSourceChain)=>
-			ruleEveryPatternSourceChain
-		)
-		    |
-		(
-			(ruleAbsentPatternSourceChain)=>
-			ruleAbsentPatternSourceChain
-		)
-	)
-;
-
-// Rule EveryPatternSourceChain
-ruleEveryPatternSourceChain:
-	ruleEveryPatternSourceChain1
-	(
-		('->'
-		ruleEveryPatternSourceChain1
-		)=>
-		'->'
-		ruleEveryPatternSourceChain1
-	)*
-;
-
-// Rule EveryPatternSourceChain1
-ruleEveryPatternSourceChain1:
-	(
-		(
-			(ruleOPEN_PAR
-			ruleEveryPatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-			)=>
-			ruleOPEN_PAR
-			ruleEveryPatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-		)
-		    |
-		rulePatternSourceChain
-		    |
-		ruleEVERY
-		rulePatternSourceChain1
-	)
-;
-
-// Rule PatternSourceChain
-rulePatternSourceChain:
-	rulePatternSourceChain1
-	(
-		('->')=>
-		'->'
-		rulePatternSourceChain1
-	)*
-;
-
-// Rule PatternSourceChain1
-rulePatternSourceChain1:
-	(
-		(
-			(ruleOPEN_PAR
-			rulePatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-			)=>
-			ruleOPEN_PAR
-			rulePatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-		)
-		    |
-		rulePatternSource
-		ruleWithinTime
-		?
-	)
-;
-
-// Rule PatternSource
-rulePatternSource:
-	(
-		(
-			(ruleLogicalStatefulSource
-			)=>
-			ruleLogicalStatefulSource
-		)
-		    |
-		(
-			(rulePatternCollectionStatefulSource
-			)=>
-			rulePatternCollectionStatefulSource
-		)
-		    |
-		(
-			(ruleStandardStatefulSource
-			)=>
-			ruleStandardStatefulSource
-		)
-		    |
-		(
-			(ruleLogicalAbsentStatefulSource
-			)=>
-			ruleLogicalAbsentStatefulSource
-		)
-	)
-;
-
-// Rule LogicalStatefulSource
-ruleLogicalStatefulSource:
-	(
-		(
-			(ruleStandardStatefulSource
-			ruleAND
-			)=>
-			ruleStandardStatefulSource
-			ruleAND
-		)
-		ruleStandardStatefulSource
-		    |
-		(
-			(ruleStandardStatefulSource
-			ruleOR
-			)=>
-			ruleStandardStatefulSource
-			ruleOR
-		)
-		ruleStandardStatefulSource
-	)
-;
-
-// Rule PatternCollectionStatefulSource
-rulePatternCollectionStatefulSource:
-	ruleStandardStatefulSource
-	'<'
-	ruleCollect
-	'>'
-;
-
-// Rule Collect
-ruleCollect:
-	(
-		ruleINT_LITERAL
-		':'
-		ruleINT_LITERAL
-		    |
-		ruleINT_LITERAL
-		':'
-		    |
-		':'
-		ruleINT_LITERAL
-		    |
-		ruleINT_LITERAL
-	)
-;
-
-// Rule WithinTime
-ruleWithinTime:
-	ruleWITHIN
-	ruleTimeValue
-;
-
-// Rule LogicalAbsentStatefulSource
-ruleLogicalAbsentStatefulSource:
-	(
-		(
-			(ruleOPEN_PAR
-			ruleLogicalAbsentStatefulSource
-			ruleCLOSE_PAR
-			)=>
-			ruleOPEN_PAR
-			ruleLogicalAbsentStatefulSource
-			ruleCLOSE_PAR
-		)
-		    |
-		(
-			(ruleStandardStatefulSource
-			ruleAND
-			ruleNOT
-			ruleBasicSource
-			)=>
-			ruleStandardStatefulSource
-			ruleAND
-			ruleNOT
-			ruleBasicSource
-		)
-		    |
-		(
-			(ruleNOT
-			ruleBasicSource
-			ruleAND
-			)=>
-			ruleNOT
-			ruleBasicSource
-			ruleAND
-		)
-		ruleStandardStatefulSource
-		    |
-		(
-			(ruleStandardStatefulSource
-			ruleAND
-			ruleBasicAbsentPatternSource
-			)=>
-			ruleStandardStatefulSource
-			ruleAND
-			ruleBasicAbsentPatternSource
-		)
-		    |
-		(
-			(ruleBasicAbsentPatternSource
-			ruleAND
-			ruleStandardStatefulSource
-			)=>
-			ruleBasicAbsentPatternSource
-			ruleAND
-			ruleStandardStatefulSource
-		)
-		    |
-		(
-			(ruleBasicAbsentPatternSource
-			ruleAND
-			ruleBasicAbsentPatternSource
-			)=>
-			ruleBasicAbsentPatternSource
-			ruleAND
-			ruleBasicAbsentPatternSource
-		)
-		    |
-		(
-			(ruleStandardStatefulSource
-			ruleOR
-			ruleBasicAbsentPatternSource
-			)=>
-			ruleStandardStatefulSource
-			ruleOR
-			ruleBasicAbsentPatternSource
-		)
-		    |
-		(
-			(ruleBasicAbsentPatternSource
-			ruleOR
-			ruleStandardStatefulSource
-			)=>
-			ruleBasicAbsentPatternSource
-			ruleOR
-			ruleStandardStatefulSource
-		)
-		    |
-		(
-			(ruleBasicAbsentPatternSource
-			ruleOR
-			ruleBasicAbsentPatternSource
-			)=>
-			ruleBasicAbsentPatternSource
-			ruleOR
-			ruleBasicAbsentPatternSource
-		)
-	)
-;
-
-// Rule AbsentPatternSourceChain
-ruleAbsentPatternSourceChain:
-	(
-		(
-			(ruleEVERY?
-			ruleOPEN_PAR
-			ruleAbsentPatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-			)=>
-			ruleEVERY?
-			ruleOPEN_PAR
-			ruleAbsentPatternSourceChain
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-		)
-		    |
-		ruleEveryAbsentPatternSource
-		    |
-		(
-			(ruleLeftAbsentPatternSource)=>
-			ruleLeftAbsentPatternSource
-		)
-		    |
-		(
-			(ruleRightAbsentPatternSource)=>
-			ruleRightAbsentPatternSource
-		)
-	)
-;
-
-// Rule EveryAbsentPatternSource
-ruleEveryAbsentPatternSource:
-	(
-		(ruleEVERY?
-		ruleBasicAbsentPatternSource
-		)=>
-		ruleEVERY?
-		ruleBasicAbsentPatternSource
-	)
-;
-
-// Rule BasicAbsentPatternSource
-ruleBasicAbsentPatternSource:
-	(
-		(ruleNOT
-		ruleBasicSource
-		ruleForTime
-		)=>
-		ruleNOT
-		ruleBasicSource
-		ruleForTime
-	)
-;
-
-// Rule ForTime
-ruleForTime:
-	ruleFOR
-	ruleTimeValue
-;
-
-// Rule LeftAbsentPatternSource
-ruleLeftAbsentPatternSource:
-	ruleLeftAbsentPatternSource1
-	(
-		('->'
-		ruleLeftAbsentPatternSource1
-		)=>
-		'->'
-		ruleLeftAbsentPatternSource1
-	)*
-;
-
-// Rule LeftAbsentPatternSource1
-ruleLeftAbsentPatternSource1:
-	ruleLeftAbsentPatternSource2
-	(
-		('->'
-		ruleEveryAbsentPatternSource
-		)=>
-		'->'
-		ruleEveryAbsentPatternSource
-	)*
-;
-
-// Rule LeftAbsentPatternSource2
-ruleLeftAbsentPatternSource2:
-	(
-		(
-			(ruleEVERY?
-			ruleOPEN_PAR
-			ruleLeftAbsentPatternSource
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-			)=>
-			ruleEVERY?
-			ruleOPEN_PAR
-			ruleLeftAbsentPatternSource
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-		)
-		    |
-		(
-			(ruleEveryAbsentPatternSource
-			'->'
-			ruleEveryPatternSourceChain
-			)=>
-			ruleEveryAbsentPatternSource
-			'->'
-			ruleEveryPatternSourceChain
-		)
-		    |
-		(
-			(ruleEveryPatternSourceChain
-			'->'
-			ruleLeftAbsentPatternSource
-			)=>
-			ruleEveryPatternSourceChain
-			'->'
-			ruleLeftAbsentPatternSource
-		)
-	)
-;
-
-// Rule RightAbsentPatternSource
-ruleRightAbsentPatternSource:
-	ruleRightAbsentPatternSource1
-	(
-		('->'
-		ruleRightAbsentPatternSource1
-		)=>
-		'->'
-		ruleRightAbsentPatternSource1
-	)*
-;
-
-// Rule RightAbsentPatternSource1
-ruleRightAbsentPatternSource1:
-	ruleRightAbsentPatternSource2
-	(
-		('->'
-		ruleEveryAbsentPatternSource
-		)=>
-		'->'
-		ruleEveryAbsentPatternSource
-	)*
-;
-
-// Rule RightAbsentPatternSource2
-ruleRightAbsentPatternSource2:
-	(
-		(
-			(ruleEVERY?
-			ruleOPEN_PAR
-			ruleRightAbsentPatternSource
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-			)=>
-			ruleEVERY?
-			ruleOPEN_PAR
-			ruleRightAbsentPatternSource
-			ruleCLOSE_PAR
-			ruleWithinTime
-			?
-		)
-		    |
-		(
-			(ruleEveryPatternSourceChain
-			'->'
-			ruleEveryAbsentPatternSource
-			)=>
-			ruleEveryPatternSourceChain
-			'->'
-			ruleEveryAbsentPatternSource
-		)
-		    |
-		(
-			(ruleEveryAbsentPatternSource
-			'->'
-			ruleRightAbsentPatternSource
-			)=>
-			ruleEveryAbsentPatternSource
-			'->'
-			ruleRightAbsentPatternSource
-		)
 	)
 ;
 
@@ -1383,115 +1017,609 @@ ruleAnonymousStream:
 	)
 ;
 
-// Rule OutputRate
-ruleOutputRate:
+// Rule PatternStream
+rulePatternStream:
 	(
-		ruleOUTPUT
-		ruleOutputRateType
-		?
-		ruleEVERY
 		(
-			ruleTimeValue
-			    |
-			ruleINT_LITERAL
-			ruleEVENTS
+			(ruleEveryPatternSourceChain)=>
+			ruleEveryPatternSourceChain
 		)
 		    |
-		ruleOUTPUT
-		ruleSNAPSHOT
-		ruleEVERY
-		ruleTimeValue
+		(
+			(ruleAbsentPatternSourceChain)=>
+			ruleAbsentPatternSourceChain
+		)
 	)
 ;
 
-// Rule OutputRateType
-ruleOutputRateType:
+// Rule EveryPatternSourceChain
+ruleEveryPatternSourceChain:
+	ruleEveryPatternSourceChain1
 	(
-		ruleALL
-		    |
-		ruleLAST
-		    |
-		ruleFIRST
-	)
-;
-
-// Rule QueryOutput
-ruleQueryOutput:
-	(
-		ruleINSERT
-		ruleOutputEventType
-		?
-		ruleINTO
-		ruleSource1
-		    |
-		ruleDELETE
-		ruleSource1
-		(
-			ruleFOR
-			ruleOutputEventType
-		)?
-		ruleON
-		ruleExpression
-		    |
-		ruleUPDATE
-		(
-			ruleOR
-			ruleINSERT
-			ruleINTO
-		)?
-		ruleSource1
-		(
-			ruleFOR
-			ruleOutputEventType
-		)?
-		ruleSetClause
-		?
-		ruleON
-		ruleExpression
-		    |
-		ruleRETURN
-		ruleOutputEventType
-		?
-	)
-;
-
-// Rule SetClause
-ruleSetClause:
-	ruleSET
-	ruleSetAssignment
-	(
-		','
-		ruleSetAssignment
+		('->'
+		ruleEveryPatternSourceChain1
+		)=>
+		'->'
+		ruleEveryPatternSourceChain1
 	)*
 ;
 
-// Rule SetAssignment
-ruleSetAssignment:
-	ruleAttributeReference
-	'='
+// Rule EveryPatternSourceChain1
+ruleEveryPatternSourceChain1:
+	(
+		(
+			(ruleOPEN_PAR
+			ruleEveryPatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+			)=>
+			ruleOPEN_PAR
+			ruleEveryPatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+		)
+		    |
+		rulePatternSourceChain
+		    |
+		ruleEVERY
+		rulePatternSourceChain1
+	)
+;
+
+// Rule PatternSourceChain
+rulePatternSourceChain:
+	rulePatternSourceChain1
+	(
+		('->')=>
+		'->'
+		rulePatternSourceChain1
+	)*
+;
+
+// Rule PatternSourceChain1
+rulePatternSourceChain1:
+	(
+		(
+			(ruleOPEN_PAR
+			rulePatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+			)=>
+			ruleOPEN_PAR
+			rulePatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+		)
+		    |
+		rulePatternSource
+		ruleWithinTime
+		?
+	)
+;
+
+// Rule PatternSource
+rulePatternSource:
+	(
+		(
+			(ruleLogicalStatefulSource
+			)=>
+			ruleLogicalStatefulSource
+		)
+		    |
+		(
+			(rulePatternCollectionStatefulSource
+			)=>
+			rulePatternCollectionStatefulSource
+		)
+		    |
+		(
+			(ruleStandardStatefulSource
+			)=>
+			ruleStandardStatefulSource
+		)
+		    |
+		(
+			(ruleLogicalAbsentStatefulSource
+			)=>
+			ruleLogicalAbsentStatefulSource
+		)
+	)
+;
+
+// Rule LogicalStatefulSource
+ruleLogicalStatefulSource:
+	(
+		(
+			(ruleStandardStatefulSource
+			ruleAND
+			)=>
+			ruleStandardStatefulSource
+			ruleAND
+		)
+		ruleStandardStatefulSource
+		    |
+		(
+			(ruleStandardStatefulSource
+			ruleOR
+			)=>
+			ruleStandardStatefulSource
+			ruleOR
+		)
+		ruleStandardStatefulSource
+	)
+;
+
+// Rule PatternCollectionStatefulSource
+rulePatternCollectionStatefulSource:
+	ruleStandardStatefulSource
+	'<'
+	ruleCollect
+	'>'
+;
+
+// Rule Collect
+ruleCollect:
+	(
+		ruleINT_LITERAL
+		':'
+		ruleINT_LITERAL
+		    |
+		ruleINT_LITERAL
+		':'
+		    |
+		':'
+		ruleINT_LITERAL
+		    |
+		ruleINT_LITERAL
+	)
+;
+
+// Rule LogicalAbsentStatefulSource
+ruleLogicalAbsentStatefulSource:
+	(
+		(
+			(ruleOPEN_PAR
+			ruleLogicalAbsentStatefulSource
+			ruleCLOSE_PAR
+			)=>
+			ruleOPEN_PAR
+			ruleLogicalAbsentStatefulSource
+			ruleCLOSE_PAR
+		)
+		    |
+		(
+			(ruleStandardStatefulSource
+			ruleAND
+			ruleNOT
+			ruleBasicSource
+			)=>
+			ruleStandardStatefulSource
+			ruleAND
+			ruleNOT
+			ruleBasicSource
+		)
+		    |
+		(
+			(ruleNOT
+			ruleBasicSource
+			ruleAND
+			)=>
+			ruleNOT
+			ruleBasicSource
+			ruleAND
+		)
+		ruleStandardStatefulSource
+		    |
+		(
+			(ruleStandardStatefulSource
+			ruleAND
+			ruleBasicAbsentPatternSource
+			)=>
+			ruleStandardStatefulSource
+			ruleAND
+			ruleBasicAbsentPatternSource
+		)
+		    |
+		(
+			(ruleBasicAbsentPatternSource
+			ruleAND
+			ruleStandardStatefulSource
+			)=>
+			ruleBasicAbsentPatternSource
+			ruleAND
+			ruleStandardStatefulSource
+		)
+		    |
+		(
+			(ruleBasicAbsentPatternSource
+			ruleAND
+			ruleBasicAbsentPatternSource
+			)=>
+			ruleBasicAbsentPatternSource
+			ruleAND
+			ruleBasicAbsentPatternSource
+		)
+		    |
+		(
+			(ruleStandardStatefulSource
+			ruleOR
+			ruleBasicAbsentPatternSource
+			)=>
+			ruleStandardStatefulSource
+			ruleOR
+			ruleBasicAbsentPatternSource
+		)
+		    |
+		(
+			(ruleBasicAbsentPatternSource
+			ruleOR
+			ruleStandardStatefulSource
+			)=>
+			ruleBasicAbsentPatternSource
+			ruleOR
+			ruleStandardStatefulSource
+		)
+		    |
+		(
+			(ruleBasicAbsentPatternSource
+			ruleOR
+			ruleBasicAbsentPatternSource
+			)=>
+			ruleBasicAbsentPatternSource
+			ruleOR
+			ruleBasicAbsentPatternSource
+		)
+	)
+;
+
+// Rule AbsentPatternSourceChain
+ruleAbsentPatternSourceChain:
+	(
+		(
+			(ruleEVERY?
+			ruleOPEN_PAR
+			ruleAbsentPatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+			)=>
+			ruleEVERY?
+			ruleOPEN_PAR
+			ruleAbsentPatternSourceChain
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+		)
+		    |
+		ruleEveryAbsentPatternSource
+		    |
+		(
+			(ruleLeftAbsentPatternSource)=>
+			ruleLeftAbsentPatternSource
+		)
+		    |
+		(
+			(ruleRightAbsentPatternSource)=>
+			ruleRightAbsentPatternSource
+		)
+	)
+;
+
+// Rule EveryAbsentPatternSource
+ruleEveryAbsentPatternSource:
+	(
+		(ruleEVERY?
+		ruleBasicAbsentPatternSource
+		)=>
+		ruleEVERY?
+		ruleBasicAbsentPatternSource
+	)
+;
+
+// Rule BasicAbsentPatternSource
+ruleBasicAbsentPatternSource:
+	(
+		(ruleNOT
+		ruleBasicSource
+		ruleForTime
+		)=>
+		ruleNOT
+		ruleBasicSource
+		ruleForTime
+	)
+;
+
+// Rule ForTime
+ruleForTime:
+	ruleFOR
+	ruleTimeValue
+;
+
+// Rule LeftAbsentPatternSource
+ruleLeftAbsentPatternSource:
+	ruleLeftAbsentPatternSource1
+	(
+		('->'
+		ruleLeftAbsentPatternSource1
+		)=>
+		'->'
+		ruleLeftAbsentPatternSource1
+	)*
+;
+
+// Rule LeftAbsentPatternSource1
+ruleLeftAbsentPatternSource1:
+	ruleLeftAbsentPatternSource2
+	(
+		('->'
+		ruleEveryAbsentPatternSource
+		)=>
+		'->'
+		ruleEveryAbsentPatternSource
+	)*
+;
+
+// Rule LeftAbsentPatternSource2
+ruleLeftAbsentPatternSource2:
+	(
+		(
+			(ruleEVERY?
+			ruleOPEN_PAR
+			ruleLeftAbsentPatternSource
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+			)=>
+			ruleEVERY?
+			ruleOPEN_PAR
+			ruleLeftAbsentPatternSource
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+		)
+		    |
+		(
+			(ruleEveryAbsentPatternSource
+			'->'
+			ruleEveryPatternSourceChain
+			)=>
+			ruleEveryAbsentPatternSource
+			'->'
+			ruleEveryPatternSourceChain
+		)
+		    |
+		(
+			(ruleEveryPatternSourceChain
+			'->'
+			ruleLeftAbsentPatternSource
+			)=>
+			ruleEveryPatternSourceChain
+			'->'
+			ruleLeftAbsentPatternSource
+		)
+	)
+;
+
+// Rule RightAbsentPatternSource
+ruleRightAbsentPatternSource:
+	ruleRightAbsentPatternSource1
+	(
+		('->'
+		ruleRightAbsentPatternSource1
+		)=>
+		'->'
+		ruleRightAbsentPatternSource1
+	)*
+;
+
+// Rule RightAbsentPatternSource1
+ruleRightAbsentPatternSource1:
+	ruleRightAbsentPatternSource2
+	(
+		('->'
+		ruleEveryAbsentPatternSource
+		)=>
+		'->'
+		ruleEveryAbsentPatternSource
+	)*
+;
+
+// Rule RightAbsentPatternSource2
+ruleRightAbsentPatternSource2:
+	(
+		(
+			(ruleEVERY?
+			ruleOPEN_PAR
+			ruleRightAbsentPatternSource
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+			)=>
+			ruleEVERY?
+			ruleOPEN_PAR
+			ruleRightAbsentPatternSource
+			ruleCLOSE_PAR
+			ruleWithinTime
+			?
+		)
+		    |
+		(
+			(ruleEveryPatternSourceChain
+			'->'
+			ruleEveryAbsentPatternSource
+			)=>
+			ruleEveryPatternSourceChain
+			'->'
+			ruleEveryAbsentPatternSource
+		)
+		    |
+		(
+			(ruleEveryAbsentPatternSource
+			'->'
+			ruleRightAbsentPatternSource
+			)=>
+			ruleEveryAbsentPatternSource
+			'->'
+			ruleRightAbsentPatternSource
+		)
+	)
+;
+
+// Rule JoinStream
+ruleJoinStream:
+	(
+		(
+			(ruleJoinSource
+			ruleJoinSource
+			)=>
+			ruleJoinSource
+			ruleJoinSource
+		)
+		ruleUNIDIRECTIONAL
+		(
+			ruleON
+			ruleExpression
+		)?
+		(
+			ruleWithinTimeRange
+			rulePer1
+		)?
+		    |
+		(
+			(ruleJoinSource
+			rulejoins
+			)=>
+			ruleJoinSource
+			rulejoins
+		)
+		ruleJoinSource
+		(
+			ruleON
+			ruleExpression
+		)?
+		(
+			ruleWithinTimeRange
+			rulePer1
+		)?
+		    |
+		(
+			(ruleJoinSource
+			ruleUNIDIRECTIONAL
+			)=>
+			ruleJoinSource
+			ruleUNIDIRECTIONAL
+		)
+		rulejoins
+		ruleJoinSource
+		(
+			ruleON
+			ruleExpression
+		)?
+		(
+			ruleWithinTimeRange
+			rulePer1
+		)?
+		    |
+		(
+			(ruleStandardStream)=>
+			ruleStandardStream
+		)
+	)
+;
+
+// Rule WithinTimeRange
+ruleWithinTimeRange:
+	ruleWITHIN
+	ruleExpression
+	(
+		','
+		ruleExpression
+	)?
+;
+
+// Rule Per1
+rulePer1:
+	rulePER
 	ruleExpression
 ;
 
-// Rule OutputEventType
-ruleOutputEventType:
+// Rule JoinSource
+ruleJoinSource:
+	ruleMainSource
+	ruleWin
+	?
 	(
-		ruleALL
-		ruleEVENTS
+		ruleAS
+		ruleStreamAlias
+	)?
+;
+
+// Rule StreamAlias
+ruleStreamAlias:
+	(
+		(
+			(ruleIdNew
+			)=>
+			ruleIdNew
+		)
 		    |
-		ruleALL
-		ruleRAW
-		ruleEVENTS
-		    |
-		ruleEXPIRED
-		ruleEVENTS
-		    |
-		ruleEXPIRED
-		ruleRAW
-		ruleEVENTS
-		    |
-		ruleCURRENT?
-		ruleEVENTS
+		(
+			(ruleName
+			)=>
+			ruleName
+		)
 	)
+;
+
+// Rule WithinTime
+ruleWithinTime:
+	ruleWITHIN
+	ruleTimeValue
+;
+
+// Rule joins
+rulejoins:
+	(
+		ruleLEFT
+		ruleOUTER
+		ruleJOIN
+		    |
+		ruleRIGHT
+		ruleOUTER
+		ruleJOIN
+		    |
+		ruleFULL
+		ruleOUTER
+		ruleJOIN
+		    |
+		ruleOUTER
+		ruleJOIN
+		    |
+		ruleINNER?
+		ruleJOIN
+	)
+;
+
+// Rule StandardStream
+ruleStandardStream:
+	ruleMainSource
+	(
+		(ruleBasicSourceStreamHandlers
+		?
+		)=>
+		ruleBasicSourceStreamHandlers
+		?
+	)
+;
+
+// Rule MainSource
+ruleMainSource:
+	ruleSource
+	ruleBasicSourceStreamHandlers1
 ;
 
 // Rule BasicSourceStreamHandlers
@@ -1559,106 +1687,17 @@ ruleStreamFunction:
 	ruleFunctionOperation
 ;
 
+// Rule Win
+ruleWin:
+	'#'
+	ruleWINDOW
+	'.'
+	ruleFunctionOperation
+;
+
 // Rule Expression
 ruleExpression:
 	ruleMathOperation
-;
-
-// Rule FunctionOperation
-ruleFunctionOperation:
-	(
-		ruleFunctionNamespace
-		':'
-	)?
-	ruleFunctionId
-	ruleOPEN_PAR
-	ruleAttributeList
-	?
-	ruleCLOSE_PAR
-;
-
-// Rule FunctionNamespace
-ruleFunctionNamespace:
-	ruleIdNew
-;
-
-// Rule FunctionId
-ruleFunctionId:
-	ruleName
-;
-
-// Rule AttributeList
-ruleAttributeList:
-	(
-		ruleAttribute
-		(
-			','
-			ruleAttribute
-		)*
-		    |
-		'*'
-	)
-;
-
-// Rule Attribute
-ruleAttribute:
-	ruleMathOperation
-;
-
-// Rule GroupByQuerySelection
-ruleGroupByQuerySelection:
-	ruleSELECT
-	(
-		'*'
-		    |
-		ruleOutputAttribute
-		(
-			','
-			ruleOutputAttribute
-		)*
-	)
-	ruleGroupBy
-	?
-;
-
-// Rule QuerySection
-ruleQuerySection:
-	ruleGroupByQuerySelection
-	ruleHavingExpr
-	?
-;
-
-// Rule OutputAttribute
-ruleOutputAttribute:
-	(
-		ruleOutAttr
-		    |
-		ruleAttributeReference
-	)
-;
-
-// Rule OutAttr
-ruleOutAttr:
-	ruleAttribute
-	ruleAS
-	ruleIdNew
-;
-
-// Rule GroupBy
-ruleGroupBy:
-	ruleGROUP
-	ruleBY
-	ruleAttributeReference
-	(
-		','
-		ruleAttributeReference
-	)*
-;
-
-// Rule HavingExpr
-ruleHavingExpr:
-	ruleHAVING
-	ruleExpression
 ;
 
 // Rule MathOperation
@@ -1810,7 +1849,7 @@ ruleMathOtherOperations:
 			ruleNullCheck
 		)
 		    |
-		ruleMathOtherOperations1
+		ruleLiteral
 	)
 ;
 
@@ -1823,17 +1862,9 @@ ruleNullCheck:
 			ruleStreamReference
 		)
 		    |
-		(
-			(ruleAttributeReference
-			)=>
-			ruleAttributeReference
-		)
+		ruleAttributeReference
 		    |
-		(
-			(ruleFunctionOperation
-			)=>
-			ruleFunctionOperation
-		)
+		ruleFunctionOperation
 	)
 	ruleIS
 	ruleNULL
@@ -1851,8 +1882,8 @@ ruleStreamReference:
 	)?
 ;
 
-// Rule MathOtherOperations1
-ruleMathOtherOperations1:
+// Rule Literal
+ruleLiteral:
 	(
 		ruleConstantValue
 		    |
@@ -1865,11 +1896,16 @@ ruleMathOtherOperations1:
 // Rule AttributeReference
 ruleAttributeReference:
 	(
+		(
+			(ruleIdNew
+			)=>
+			ruleIdNew
+		)
+		    |
 		'#'
 		?
 		ruleSourceOrEventReference
 		(
-			ruleOPEN_SQARE_BRACKETS
 			ruleAttributeIndex
 			ruleCLOSE_SQARE_BRACKETS
 		)?
@@ -1877,20 +1913,46 @@ ruleAttributeReference:
 			'#'
 			ruleSourceOrEventReference
 			(
-				ruleOPEN_SQARE_BRACKETS
 				ruleAttributeIndex
 				ruleCLOSE_SQARE_BRACKETS
 			)?
 		)?
 		'.'
-		ruleAttributeNameReference
-		    |
 		ruleFeaturesOrOutAttrReference
+		    |
+		(
+			(ruleFeaturesOrOutAttrReference
+			)=>
+			ruleFeaturesOrOutAttrReference
+		)
 	)
 ;
 
-// Rule AttributeNameReference
-ruleAttributeNameReference:
+// Rule FeaturesOrOutAttrReference
+ruleFeaturesOrOutAttrReference:
+	ruleIdNew
+;
+
+// Rule StandardStatefulSource
+ruleStandardStatefulSource:
+	(
+		ruleIdNew
+		'='
+	)?
+	ruleSource
+	ruleBasicSourceStreamHandlers
+	?
+;
+
+// Rule BasicSource
+ruleBasicSource:
+	ruleSource
+	ruleBasicSourceStreamHandlers
+	?
+;
+
+// Rule SourceOrEventReference
+ruleSourceOrEventReference:
 	ruleIdNew
 ;
 
@@ -1905,32 +1967,6 @@ ruleAttributeIndex:
 			ruleINT_LITERAL
 		)?
 	)
-;
-
-// Rule StandardStatefulSource
-ruleStandardStatefulSource:
-	(
-		ruleIdNew
-		'='
-	)?
-	ruleBasicSource
-;
-
-// Rule SourceOrEventReference
-ruleSourceOrEventReference:
-	ruleIdNew
-;
-
-// Rule BasicSource
-ruleBasicSource:
-	ruleSource
-	ruleBasicSourceStreamHandlers
-	?
-;
-
-// Rule FeaturesOrOutAttrReference
-ruleFeaturesOrOutAttrReference:
-	ruleIdNew
 ;
 
 // Rule ConstantValue
@@ -1952,21 +1988,54 @@ ruleConstantValue:
 	)
 ;
 
+// Rule FunctionOperation
+ruleFunctionOperation:
+	(
+		ruleFunctionNamespace
+		':'
+	)?
+	ruleFunctionId
+	ruleOPEN_PAR
+	ruleAttributeList
+	?
+	ruleCLOSE_PAR
+;
+
+// Rule FunctionNamespace
+ruleFunctionNamespace:
+	ruleName
+;
+
+// Rule FunctionId
+ruleFunctionId:
+	ruleName
+;
+
+// Rule AttributeList
+ruleAttributeList:
+	(
+		ruleAttribute
+		(
+			','
+			ruleAttribute
+		)*
+		    |
+		'*'
+	)
+;
+
+// Rule Attribute
+ruleAttribute:
+	ruleMathOperation
+;
+
 // Rule Name
 ruleName:
-	ruleIdNew
-;
-
-// Rule Source
-ruleSource:
-	ruleIdNew
-;
-
-// Rule Source1
-ruleSource1:
-	'#'
-	?
-	ruleIdNew
+	(
+		ruleIdNew
+		    |
+		ruleKeyword
+	)
 ;
 
 // Rule BoolValue
@@ -2306,6 +2375,135 @@ ruleLONG_LITERAL:
 // Rule DIGIT
 ruleDIGIT:
 	RULE_INT
+;
+
+// Rule Keyword
+ruleKeyword:
+	(
+		ruleSTREAM
+		    |
+		ruleDEFINE
+		    |
+		ruleFROM
+		    |
+		ruleSELECT
+		    |
+		ruleAS
+		    |
+		ruleINSERT
+		    |
+		ruleINTO
+		    |
+		ruleALL
+		    |
+		ruleEVENTS
+		    |
+		ruleTABLE
+		    |
+		ruleWINDOW
+		    |
+		ruleOUTPUT
+		    |
+		ruleRAW
+		    |
+		ruleEXPIRED
+		    |
+		ruleCURRENT
+		    |
+		ruleRETURN
+		    |
+		rulePARTITION
+		    |
+		ruleEVERY
+		    |
+		ruleUNIDIRECTIONAL
+		    |
+		ruleON
+		    |
+		ruleWITHIN
+		    |
+		ruleLEFT
+		    |
+		ruleRIGHT
+		    |
+		ruleFULL
+		    |
+		ruleJOIN
+		    |
+		ruleOUTER
+		    |
+		ruleINNER
+		    |
+		ruleYEARS
+		    |
+		ruleMONTHS
+		    |
+		ruleWEEKS
+		    |
+		ruleDAYS
+		    |
+		ruleHOURS
+		    |
+		ruleMINUTES
+		    |
+		ruleSECONDS
+		    |
+		ruleMILLISECONDS
+		    |
+		ruleSTRINGS
+		    |
+		ruleINTS
+		    |
+		ruleLONG
+		    |
+		ruleFLOAT
+		    |
+		ruleDOUBLE
+		    |
+		ruleBOOL
+		    |
+		ruleOBJECT
+		    |
+		ruleAND
+		    |
+		ruleOR
+		    |
+		ruleNOT
+		    |
+		ruleIS
+		    |
+		ruleNULL
+		    |
+		ruleSNAPSHOT
+		    |
+		ruleLAST
+		    |
+		ruleFIRST
+		    |
+		ruleGROUP
+		    |
+		ruleBY
+		    |
+		ruleHAVING
+		    |
+		ruleWITH
+		    |
+		ruleOF
+		    |
+		ruleBEGIN
+		    |
+		ruleEND
+		    |
+		ruleDELETE
+		    |
+		ruleFOR
+		    |
+		ruleTRUE
+		    |
+		ruleFALSE
+		    |
+		ruleUPDATE
+	)
 ;
 
 // Rule AS
@@ -2770,13 +2968,11 @@ RULE_SCRIPT : '{' RULE_SCRIPT_ATOM* '}';
 
 fragment RULE_SCRIPT_ATOM : (~(('{'|'}'))|'"' ~('"')* '"'|'//' ~(('\r'|'\n'))*|RULE_SCRIPT);
 
-RULE_ID_QUOTES : '`' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`';
-
 RULE_ID : '`'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* '`'?;
 
 RULE_INT : '0'..'9';
 
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/' {skip();};
+RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/ ' {skip();};
 
 RULE_SL_COMMENT : '--' ~(('\n'|'\r'))* ('\r'? '\n')? {skip();};
 
@@ -2784,4 +2980,4 @@ RULE_WS : (' '|'\t'|'\r'|'\n')+ {skip();};
 
 RULE_ANY_OTHER : .;
 
-RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\''|'"""' .* '"""');

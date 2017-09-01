@@ -42,14 +42,14 @@ Workflow {
 			parserGenerator = {
 				debugGrammar=true
 				antlrParam = "-Xconversiontimeout"
-    			antlrParam = "10000"
+    			antlrParam = "20000"
 				options = {
 					ignoreCase = true
 					backtrack=false
 					memoize = true
 					classSplitting=true
-                	fieldsPerClass = "300"
-                	methodsPerClass= "800"
+                	fieldsPerClass = "1200"
+                	methodsPerClass= "1400"
 				}
 			}
 		}
